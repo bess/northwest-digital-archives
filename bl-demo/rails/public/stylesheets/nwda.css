@@ -3,6 +3,16 @@ body {
 	padding: 0;
 }
 
+div.yui-g {
+	background: #EEEEEE;
+}
+
+div#photos {
+	border: blue solid 1px;
+	float: left;
+	width: 40px;
+}
+
 #header {
 	position: relative;
 	background: #999999;
@@ -13,11 +23,7 @@ body {
 }
 
 h1{
-	margin: 0;
-	padding: 0;
-	position: absolute;
-	top: 30px;
-	left: 27px;
+
 }
 
 h1.site_title {

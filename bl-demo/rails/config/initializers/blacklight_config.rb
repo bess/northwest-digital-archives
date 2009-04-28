@@ -43,14 +43,16 @@ Blacklight.configure(:shared) do |config|
       "subject_facet",
       "geographic_subject_facet",
       "genreform_facet",
-      "format_facet"
+      "format_facet",
+      "publisher_facet"
     ],
     :labels => {
       "language_facet"           => "Language",
       "subject_facet"            => "Subject",
       "geographic_subject_facet" => "Subject - Geographic",
       "genreform_facet"          => "Genre / Form",
-      "format_facet"             => "Format"
+      "format_facet"             => "Format",
+      "publisher_facet"          => "Publisher"
     }
   }
 
