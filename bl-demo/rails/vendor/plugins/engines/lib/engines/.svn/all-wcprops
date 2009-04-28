@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/engines/lib/engines
+END
+testing.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/engines/lib/engines/testing.rb
+END
+plugin.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/engines/lib/engines/plugin.rb
+END
+assets.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/engines/lib/engines/assets.rb
+END

@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/1284/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/app/views/catalog
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/1284/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/app/views/catalog/index.html.erb
+END
+_document_list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/1284/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/app/views/catalog/_document_list.html.erb
+END
+_citation.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/1284/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/app/views/catalog/_citation.html.erb
+END
+citation.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/app/views/catalog/citation.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/1284/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/app/views/catalog/show.html.erb
+END
+facet.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/app/views/catalog/facet.html.erb
+END
+opensearch.xml.erb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/1284/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/app/views/catalog/opensearch.xml.erb
+END
+_solr_request.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/app/views/catalog/_solr_request.html.erb
+END
+_search_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/!svn/ver/1284/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/app/views/catalog/_search_form.html.erb
+END
+index.rss.builder
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/app/views/catalog/index.rss.builder
+END
+_facet_pagination.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/app/views/catalog/_facet_pagination.html.erb
+END
+opensearch.json.erb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/!svn/ver/1284/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/app/views/catalog/opensearch.json.erb
+END
+_show_tools.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/app/views/catalog/_show_tools.html.erb
+END
+_bookmark_control.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/app/views/catalog/_bookmark_control.html.erb
+END
+_facets.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/1284/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/app/views/catalog/_facets.html.erb
+END

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/vendor/plugins/resource_controller/test/vendor/plugins/shoulda/lib/shoulda
+END
+general.rb
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/vendor/plugins/resource_controller/test/vendor/plugins/shoulda/lib/shoulda/general.rb
+END
+color.rb
+K 25
+svn:wc:ra_dav:version-url
+V 157
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/vendor/plugins/resource_controller/test/vendor/plugins/shoulda/lib/shoulda/color.rb
+END
+context.rb
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/vendor/plugins/resource_controller/test/vendor/plugins/shoulda/lib/shoulda/context.rb
+END
+active_record_helpers.rb
+K 25
+svn:wc:ra_dav:version-url
+V 173
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/vendor/plugins/resource_controller/test/vendor/plugins/shoulda/lib/shoulda/active_record_helpers.rb
+END
+private_helpers.rb
+K 25
+svn:wc:ra_dav:version-url
+V 167
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/vendor/plugins/resource_controller/test/vendor/plugins/shoulda/lib/shoulda/private_helpers.rb
+END

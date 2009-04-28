@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/1284/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/lib/tasks
+END
+blacklight.rake
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/1284/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/lib/tasks/blacklight.rake
+END
+cucumber.rake
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/lib/tasks/cucumber.rake
+END
+rspec.rake
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/lib/tasks/rspec.rake
+END

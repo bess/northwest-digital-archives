@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/1286/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/app/controllers
+END
+catalog_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/!svn/ver/1286/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/app/controllers/catalog_controller.rb
+END
+application.rb
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/app/controllers/application.rb
+END
+users_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/app/controllers/users_controller.rb
+END
+feedback_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/app/controllers/feedback_controller.rb
+END
+search_history_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/app/controllers/search_history_controller.rb
+END
+sessions_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/app/controllers/sessions_controller.rb
+END
+bookmarks_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/app/controllers/bookmarks_controller.rb
+END
+home_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/app/controllers/home_controller.rb
+END

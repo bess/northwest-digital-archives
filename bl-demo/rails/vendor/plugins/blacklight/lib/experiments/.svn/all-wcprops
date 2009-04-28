@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/lib/experiments
+END
+installer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/lib/experiments/installer.rb
+END
+yahoo.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/lib/experiments/yahoo.rb
+END
+utils.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/lib/experiments/utils.rb
+END
+dbpedia.rb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/lib/experiments/dbpedia.rb
+END
+multi_param_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/lib/experiments/multi_param_test.rb
+END
+multi_param.rb
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/lib/experiments/multi_param.rb
+END
+cookies_required.rb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/lib/experiments/cookies_required.rb
+END

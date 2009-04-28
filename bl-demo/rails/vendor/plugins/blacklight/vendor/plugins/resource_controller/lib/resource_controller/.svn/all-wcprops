@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/vendor/plugins/resource_controller/lib/resource_controller
+END
+actions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/vendor/plugins/resource_controller/lib/resource_controller/actions.rb
+END
+helpers.rb
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/vendor/plugins/resource_controller/lib/resource_controller/helpers.rb
+END
+controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/vendor/plugins/resource_controller/lib/resource_controller/controller.rb
+END
+response_collector.rb
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/vendor/plugins/resource_controller/lib/resource_controller/response_collector.rb
+END
+accessors.rb
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/vendor/plugins/resource_controller/lib/resource_controller/accessors.rb
+END
+failable_action_options.rb
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/vendor/plugins/resource_controller/lib/resource_controller/failable_action_options.rb
+END
+action_options.rb
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/vendor/plugins/resource_controller/lib/resource_controller/action_options.rb
+END
+class_methods.rb
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/vendor/plugins/resource_controller/lib/resource_controller/class_methods.rb
+END
+base.rb
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/vendor/plugins/resource_controller/lib/resource_controller/base.rb
+END

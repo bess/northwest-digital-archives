@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/app/views/bookmarks
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/app/views/bookmarks/edit.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/app/views/bookmarks/index.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/app/views/bookmarks/new.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/app/views/bookmarks/show.html.erb
+END

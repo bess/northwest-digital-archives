@@ -1,0 +1,43 @@
+9
+
+dir
+1288
+http://blacklight.rubyforge.org/svn/branches/reorg-4-11-09/rails/vendor/plugins
+http://blacklight.rubyforge.org/svn
+
+
+
+2009-04-27T01:51:53.668784Z
+1286
+mwmitchell
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+0b89af5a-983b-4fe2-9b20-b11a079e11b7
+
+simplest_auth
+dir
+
+blacklight
+dir
+
+engines
+dir
+
+resource_controller
+dir
+
+acts_as_taggable_on_steroids
+dir
+

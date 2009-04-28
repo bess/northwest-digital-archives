@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/1285/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/lib/blacklight
+END
+solr_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/!svn/ver/1284/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/lib/blacklight/solr_helper.rb
+END
+solr.rb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/1284/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/lib/blacklight/solr.rb
+END
+configurable.rb
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/lib/blacklight/configurable.rb
+END
+facet_pagination.rb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/lib/blacklight/facet_pagination.rb
+END

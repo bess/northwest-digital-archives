@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/lib
+END
+block_mapper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/lib/block_mapper.rb
+END
+marc_record_ext.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/lib/marc_record_ext.rb
+END
+field_maps.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/lib/field_maps.rb
+END
+marc_mapper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/lib/marc_mapper.rb
+END

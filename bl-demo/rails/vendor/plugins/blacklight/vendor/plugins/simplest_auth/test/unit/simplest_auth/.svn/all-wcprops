@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/vendor/plugins/simplest_auth/test/unit/simplest_auth
+END
+model_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/vendor/plugins/simplest_auth/test/unit/simplest_auth/model_test.rb
+END
+controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/vendor/plugins/simplest_auth/test/unit/simplest_auth/controller_test.rb
+END

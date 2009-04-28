@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/1284/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/config/initializers
+END
+inflections.rb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/config/initializers/inflections.rb
+END
+.DS_Store
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/config/initializers/.DS_Store
+END
+blacklight_config.rb
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/!svn/ver/1284/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/config/initializers/blacklight_config.rb
+END
+new_rails_defaults.rb
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/config/initializers/new_rails_defaults.rb
+END
+mime_types.rb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/config/initializers/mime_types.rb
+END

@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/lib/experiments/services
+END
+library_thing.rb
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/lib/experiments/services/library_thing.rb
+END
+remote_image.rb
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/lib/experiments/services/remote_image.rb
+END
+album_covers.rb
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/lib/experiments/services/album_covers.rb
+END
+last_fm.rb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/lib/experiments/services/last_fm.rb
+END
+music_brainz.rb
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/lib/experiments/services/music_brainz.rb
+END
+syndetics.rb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/lib/experiments/services/syndetics.rb
+END
+wikipedia.rb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/lib/experiments/services/wikipedia.rb
+END
+solr_top_terms.rb
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/lib/experiments/services/solr_top_terms.rb
+END
+google.rb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/lib/experiments/services/google.rb
+END
+yahoo_geo_locator.rb
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/lib/experiments/services/yahoo_geo_locator.rb
+END

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/jetty/lib/jsp-2.1
+END
+core-3.1.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/jetty/lib/jsp-2.1/core-3.1.1.jar
+END
+ant-1.6.5.jar
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/jetty/lib/jsp-2.1/ant-1.6.5.jar
+END
+jsp-2.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/jetty/lib/jsp-2.1/jsp-2.1.jar
+END
+jsp-api-2.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/jetty/lib/jsp-2.1/jsp-api-2.1.jar
+END

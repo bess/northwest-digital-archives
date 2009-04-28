@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/vendor/plugins/resource_controller/test/test/fixtures
+END
+accounts.yml
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/vendor/plugins/resource_controller/test/test/fixtures/accounts.yml
+END
+somethings.yml
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/vendor/plugins/resource_controller/test/test/fixtures/somethings.yml
+END
+products.yml
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/vendor/plugins/resource_controller/test/test/fixtures/products.yml
+END
+comments.yml
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/vendor/plugins/resource_controller/test/test/fixtures/comments.yml
+END
+posts.yml
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/vendor/plugins/resource_controller/test/test/fixtures/posts.yml
+END
+projects.yml
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/vendor/plugins/resource_controller/test/test/fixtures/projects.yml
+END
+photos_tags.yml
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/vendor/plugins/resource_controller/test/test/fixtures/photos_tags.yml
+END
+options.yml
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/vendor/plugins/resource_controller/test/test/fixtures/options.yml
+END
+photos.yml
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/vendor/plugins/resource_controller/test/test/fixtures/photos.yml
+END
+tags.yml
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/vendor/plugins/resource_controller/test/test/fixtures/tags.yml
+END

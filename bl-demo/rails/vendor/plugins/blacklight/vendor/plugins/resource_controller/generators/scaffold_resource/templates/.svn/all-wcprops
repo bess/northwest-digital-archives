@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/vendor/plugins/resource_controller/generators/scaffold_resource/templates
+END
+unit_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/vendor/plugins/resource_controller/generators/scaffold_resource/templates/unit_test.rb
+END
+view_index.haml
+K 25
+svn:wc:ra_dav:version-url
+V 163
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/vendor/plugins/resource_controller/generators/scaffold_resource/templates/view_index.haml
+END
+helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 157
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/vendor/plugins/resource_controller/generators/scaffold_resource/templates/helper.rb
+END
+view_show.erb
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/vendor/plugins/resource_controller/generators/scaffold_resource/templates/view_show.erb
+END
+shoulda_functional_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 174
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/vendor/plugins/resource_controller/generators/scaffold_resource/templates/shoulda_functional_test.rb
+END
+controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/vendor/plugins/resource_controller/generators/scaffold_resource/templates/controller.rb
+END
+view_edit.erb
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/vendor/plugins/resource_controller/generators/scaffold_resource/templates/view_edit.erb
+END
+old_migration.rb
+K 25
+svn:wc:ra_dav:version-url
+V 164
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/vendor/plugins/resource_controller/generators/scaffold_resource/templates/old_migration.rb
+END
+view_new.erb
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/vendor/plugins/resource_controller/generators/scaffold_resource/templates/view_new.erb
+END
+view_show.haml
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/vendor/plugins/resource_controller/generators/scaffold_resource/templates/view_show.haml
+END
+migration.rb
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/vendor/plugins/resource_controller/generators/scaffold_resource/templates/migration.rb
+END
+view_edit.haml
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/vendor/plugins/resource_controller/generators/scaffold_resource/templates/view_edit.haml
+END
+model.rb
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/vendor/plugins/resource_controller/generators/scaffold_resource/templates/model.rb
+END
+view__form.erb
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/vendor/plugins/resource_controller/generators/scaffold_resource/templates/view__form.erb
+END
+functional_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 166
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/vendor/plugins/resource_controller/generators/scaffold_resource/templates/functional_test.rb
+END
+view_new.haml
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/vendor/plugins/resource_controller/generators/scaffold_resource/templates/view_new.haml
+END
+view_index.erb
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/vendor/plugins/resource_controller/generators/scaffold_resource/templates/view_index.erb
+END
+fixtures.yml
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/vendor/plugins/resource_controller/generators/scaffold_resource/templates/fixtures.yml
+END
+view__form.haml
+K 25
+svn:wc:ra_dav:version-url
+V 163
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/vendor/plugins/resource_controller/generators/scaffold_resource/templates/view__form.haml
+END

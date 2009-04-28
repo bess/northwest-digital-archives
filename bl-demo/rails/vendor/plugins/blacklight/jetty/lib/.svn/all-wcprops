@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/jetty/lib
+END
+jetty-util-6.1.3.jar
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/jetty/lib/jetty-util-6.1.3.jar
+END
+servlet-api-2.5-6.1.3.jar
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/jetty/lib/servlet-api-2.5-6.1.3.jar
+END
+jetty-6.1.3.jar
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/jetty/lib/jetty-6.1.3.jar
+END

@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/script
+END
+spec_server
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/script/spec_server
+END
+console
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/script/console
+END
+autospec
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/script/autospec
+END
+server
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/script/server
+END
+dbconsole
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/script/dbconsole
+END
+destroy
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/script/destroy
+END
+runner
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/script/runner
+END
+about
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/script/about
+END
+generate
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/script/generate
+END
+spec
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/script/spec
+END
+plugin
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/script/plugin
+END

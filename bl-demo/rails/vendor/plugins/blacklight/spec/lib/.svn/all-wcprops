@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/1284/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/spec/lib
+END
+test_solr_server.rb
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/spec/lib/test_solr_server.rb
+END
+configurable_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/spec/lib/configurable_spec.rb
+END

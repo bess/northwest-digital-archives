@@ -1,0 +1,33 @@
+<% @page_title = @document[Blacklight.config[:show][:html_title]] + " - " + application_name %>
+
+<div id="document">
+  <div id="doc_<%= @document[:id] %>">
+    
+    <h1><%= @document[Blacklight.config[:show][:heading]] %></h1>
+    <div class="tools"><%= render :partial => 'show_tools' %></div>
+    <div class="document">
+      <%= render_document_partial @document, :show %>
+    </div>
+    
+  </div>
+</div>
+
+<% if @previous_document || @next_document %>
+<div id="previousNextDocument">
+	<%= link_to_previous_document(@previous_document) %>
+	<% if @previous_document && @next_document %> | <% end %>
+	<%= link_to_next_document(@next_document)%>	
+</div>
+<% end %>
+
+
+<% @sidebar = capture do %>
+  <p><%= link_back_to_catalog :label=>'&lt;&lt; SEARCH' %></p>
+<% end %>
+
+<%= render :partial=>'solr_request' %>
+<div id="lightboxContainer" style="display:none;">
+</div>
+<div id="lightboxContent" style="display:none;">
+  <%= render :partial => 'citation' %>
+</div>

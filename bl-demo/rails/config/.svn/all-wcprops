@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/1286/branches/reorg-4-11-09/rails/config
+END
+CONFIG_README
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/1286/branches/reorg-4-11-09/rails/config/CONFIG_README
+END
+routes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/config/routes.rb
+END
+boot.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/config/boot.rb
+END
+environment.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/config/environment.rb
+END
+solr.example
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/config/solr.example
+END
+database.example
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/config/database.example
+END
