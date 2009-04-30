@@ -1,2 +1,3 @@
 bl-demo/jetty/solr/data/*
 raw_data/
+bl-demo/jetty/logs/
