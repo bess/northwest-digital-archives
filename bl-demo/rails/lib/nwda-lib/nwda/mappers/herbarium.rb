@@ -31,9 +31,12 @@ class NWDA::Mappers::Herbarium
       end
 
       def getID
-          @xml.xpath('./identifier[1]/text()').each do |id| 
-            @doc[:id] = id.content.gsub(/\//,"_").strip.gsub(/\s+/,"_").downcase unless id.to_s.strip=~/^.*\.[tif|pdf]$/
+          potential_ids=[]
+          @xml.xpath('./identifier/text()').each_with_index do |id,i| 
+            potential_ids[i] = id.content.gsub(/\//,"_").strip.gsub(/\s+/,"_").downcase.gsub(/\.pdf/,'')
           end
+          potential_ids = potential_ids.uniq
+          @doc[:id] = potential_ids[0]
       end
 
       def getTitle
