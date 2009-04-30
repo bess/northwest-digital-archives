@@ -1,5 +1,10 @@
+require 'rubygems'
+require 'xml/xslt'
 require 'find'
+require 'rsolr'
+require 'nokogiri'
 
+require 'nwda-lib/nwda'
 
 namespace :app do
   
@@ -53,9 +58,37 @@ namespace :app do
            puts "Indexing #{path}"
         end
         if File.file? path and path.to_s =~ /^.*\.xml$/
-          ead = EADMapper.new(path)
+          ead = NWDA::Mappers::EAD.new(path)
           solr.add(ead.doc)
         end
+      end
+      puts "Sending commit to Solr..."
+      solr.commit
+      puts "Complete."
+      puts "Total Time: #{Time.now - t}"
+    end
+  
+  
+    # *************************************************************** #
+    # Index Herbarium export
+    # *************************************************************** #
+    
+    desc 'Index herbarium export file located at FILE=<location-of-file>'
+    task :herbarium => :environment do
+      t = Time.now
+      
+      herbarium_export_file = ENV['FILE']
+      raise "Invalid file. Set the file by using the FILE argument." unless File.exists?(herbarium_export_file.to_s) and File.file?(herbarium_export_file.to_s)
+      
+      solr = Blacklight.solr
+      
+      if File.file? herbarium_export_file and herbarium_export_file.to_s =~ /^.*\.xml$/
+          xml = Nokogiri::XML(open(herbarium_export_file))
+          xml.xpath('/metadata/record').each do |record| 
+            doc = NWDA::Mappers::Herbarium.new(record)
+            puts doc.inspect
+            solr.add(doc.doc)
+          end
       end
       puts "Sending commit to Solr..."
       solr.commit
