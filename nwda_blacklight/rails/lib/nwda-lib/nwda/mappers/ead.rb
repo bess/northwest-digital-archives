@@ -6,6 +6,7 @@ require 'nokogiri'
 
 class NWDA::Mappers::EAD
   
+  attr_reader :doc, :xml
   
   #pass in an EAD document
   #set @ead_document
@@ -21,7 +22,6 @@ class NWDA::Mappers::EAD
     self.getPublisherFacet
     self.getGenreFormatFacet
     self.getLanguageFacet
-    @doc
   end
   
   def getFormatFacet
