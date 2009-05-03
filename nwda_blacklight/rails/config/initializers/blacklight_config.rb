@@ -100,11 +100,6 @@ Blacklight.configure(:shared) do |config|
     }
   }
 
-  # type of raw data in index.  Currently marcxml and marc21 are supported.
-  config[:raw_storage_type] = "marcxml"
-  # name of solr field containing raw data
-  config[:raw_storage_field] = "marc_display"
-
   # "fielded" search select (pulldown)
   # label in pulldown is followed by the name of a SOLR request handler as 
   # defined in solr/conf/solrconfig.xml
@@ -122,5 +117,33 @@ Blacklight.configure(:shared) do |config|
   config[:sort_fields] << ['relevance', '']
   config[:sort_fields] << ['title', 'title_sort asc']
   config[:sort_fields] << ['format', 'format_sort asc']
+  
+  # ###################################################################
+  # Configuration related to specific kinds of objects
+  
+  # ################
+  # MaRC
+  # type of raw data in index.  Currently marcxml and marc21 are supported.
+  config[:raw_storage_type] = "marcxml"
+  # name of solr field containing raw data
+  config[:raw_storage_field] = "marc_display"
+  
+  # ################
+  # EAD
+  # by default, an object is assumed to be an EAD if it has something stored in ead_display
+  config[:ead_storage_field] = "ead_display"
+  
+  # ################
+  # Dublin Core
+  # 
+  config[:dc_storage_field] = "dc_display"
+  
+  # ################
+  # MODS
+  config[:mods_storage_field] = "mods_display"
+  
+  # ################
+  # objects that have a parent
+  config[:parent_id] = "parent_id_s"
 end
 

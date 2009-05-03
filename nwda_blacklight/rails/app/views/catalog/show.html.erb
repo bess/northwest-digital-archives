@@ -6,7 +6,16 @@
     <h1><%= @document[Blacklight.config[:show][:heading]] %></h1>
     <div class="tools"><%#= render :partial => 'show_tools' %></div>
     <div class="document">
-      <%= render_document_partial @document, :show %>
+	  <% if @document.ead? %>
+	  	<%= render(:partial=>"catalog/_show_partials/ead") %>
+      <% else %>
+      	<%= render_document_partial @document, :show %>
+	  <% end%>
+
+	<%#= render(
+	    :partial=>"catalog/_show_partials/#{@document.doc_type}",
+	    :locals=>{:document=>@document,:current_user=>@current_user, :sidebar=>@sidebar}
+	  ) %>
     </div>
     
   </div>
