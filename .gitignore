@@ -3,3 +3,4 @@ nwda_blacklight/jetty/solr/data/*
 raw_data/
 bl-demo/jetty/logs/
 nwda_blacklight/jetty/logs
+**/.svn
