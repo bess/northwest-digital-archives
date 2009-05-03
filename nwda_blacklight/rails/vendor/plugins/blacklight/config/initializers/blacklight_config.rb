@@ -25,6 +25,7 @@ Blacklight.configure(:shared) do |config|
   config[:show] = {
     :html_title => "title_t",
     :heading => "title_t",
+    :byline => "byline_t", # this could be the author, or the responsibility statement, or the institution
     :display_type => "format_code_t"
   }
 

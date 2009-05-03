@@ -4,11 +4,16 @@
 <div id="document">
   <div id="doc_<%= @document[:id] %>">
     
-    <h1><%= @document[Blacklight.config[:show][:heading]] %></h1>
+    <h1 class="title"><%= @document[Blacklight.config[:show][:heading]] %></h1>
+    <h2 class="byline"><%= @document.inspect %></h2>
     <div class="tools"><%= render :partial => 'show_tools' %></div>
     <div class="document">
-      <%= render_document_partial @document, :show %>
-    </div>
+	  <% if @document.ead? %>
+	  	<%= render(:partial=>"catalog/_show_partials/ead") %>
+      <% else %>
+      	<%= render_document_partial @document, :show %>
+	  <% end%>	    
+	</div>
     
   </div>
 </div>
