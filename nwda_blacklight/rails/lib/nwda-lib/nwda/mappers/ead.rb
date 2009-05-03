@@ -80,7 +80,7 @@ class NWDA::Mappers::EAD
     @xml.xpath('/ead/eadheader/filedesc/publicationstmt/publisher[1]/text()[1]').each_with_index do |publisher, i|
       publisher_facet[i] = publisher.content.gsub(/\s+/," ").strip
     end
-    #@doc[:publisher_facet] = publisher_facet.uniq
+    @doc[:publisher_facet] = publisher_facet.uniq
     @doc[:byline_t] = publisher_facet.uniq
   end
   

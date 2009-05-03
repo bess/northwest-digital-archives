@@ -1,10 +1,10 @@
 <%# default partial to display solr document fields in catalog show view -%>
 <dl class="defList">
 
-	<h2><%= @document['publisher_facet']%></h2>
+	<h4>Abstract</h4>
+  	<%= @document['abstract_t'] %>
 
-  <%= @document['abstract_t'] %>
-
-
+	<h4>Biographical History</h4>
+	<%= @document['biography_t'] %>
 
 </dl>
