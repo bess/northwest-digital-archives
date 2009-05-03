@@ -41,6 +41,11 @@ h1.site_title {
     background-repeat: no-repeat;
 }
 
+h4 {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
 #header img {
 	border:0;
 }
