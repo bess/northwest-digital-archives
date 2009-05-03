@@ -2,6 +2,8 @@ log/*.log
 tmp/**/*
 doc/api
 doc/app
+db/
 db/*
 db/development.sqlite3
 vendor/plugins/blacklight/db/*
+nwda_blacklight/rails/vendor/plugins/blacklight/db
