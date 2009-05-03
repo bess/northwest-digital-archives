@@ -1,5 +1,4 @@
 require 'rubygems'
-require 'xml/xslt'
 require 'find'
 require 'rsolr'
 require 'nokogiri'
