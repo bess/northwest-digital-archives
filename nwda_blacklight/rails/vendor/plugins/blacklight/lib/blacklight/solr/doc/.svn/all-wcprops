@@ -1,11 +1,11 @@
 K 25
 svn:wc:ra_dav:version-url
 V 97
-/svn/!svn/ver/1284/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/lib/blacklight/solr/doc
+/svn/!svn/ver/1345/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/lib/blacklight/solr/doc
 END
 ext.rb
 K 25
 svn:wc:ra_dav:version-url
 V 104
-/svn/!svn/ver/1284/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/lib/blacklight/solr/doc/ext.rb
+/svn/!svn/ver/1345/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/lib/blacklight/solr/doc/ext.rb
 END

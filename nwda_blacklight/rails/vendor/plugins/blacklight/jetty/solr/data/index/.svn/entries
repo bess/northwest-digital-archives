@@ -1,7 +1,7 @@
 9
 
 dir
-1288
+1346
 http://blacklight.rubyforge.org/svn/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/jetty/solr/data/index
 http://blacklight.rubyforge.org/svn
 
@@ -332,40 +332,6 @@ has-props
 
 12048
 
-_1.tis
-file
-
-
-
-
-2009-04-27T21:49:13.000000Z
-1695ccef303798a3961fc09a079f3afd
-2009-04-14T05:48:08.379450Z
-1181
-eos8d
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-12052
-
 segments.gen
 file
 
@@ -399,6 +365,40 @@ has-props
 
 
 20
+
+_1.tis
+file
+
+
+
+
+2009-04-27T21:49:13.000000Z
+1695ccef303798a3961fc09a079f3afd
+2009-04-14T05:48:08.379450Z
+1181
+eos8d
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12052
 
 _0.prx
 file
@@ -434,40 +434,6 @@ has-props
 
 2086
 
-_1.prx
-file
-
-
-
-
-2009-04-27T21:49:13.000000Z
-2e66d3cf723633919878471aeb9e9713
-2009-04-14T05:48:08.379450Z
-1181
-eos8d
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2106
-
 segments_3
 file
 
@@ -501,6 +467,40 @@ has-props
 
 
 89
+
+_1.prx
+file
+
+
+
+
+2009-04-27T21:49:13.000000Z
+2e66d3cf723633919878471aeb9e9713
+2009-04-14T05:48:08.379450Z
+1181
+eos8d
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2106
 
 _0.fdt
 file

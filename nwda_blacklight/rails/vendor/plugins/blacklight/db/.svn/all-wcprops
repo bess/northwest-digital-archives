@@ -1,11 +1,11 @@
 K 25
 svn:wc:ra_dav:version-url
 V 76
-/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/db
+/svn/!svn/ver/1340/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/db
 END
 schema.rb
 K 25
 svn:wc:ra_dav:version-url
 V 86
-/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/db/schema.rb
+/svn/!svn/ver/1340/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/db/schema.rb
 END

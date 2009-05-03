@@ -1,14 +1,14 @@
 9
 
 dir
-1288
+1346
 http://blacklight.rubyforge.org/svn/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/spec/models
 http://blacklight.rubyforge.org/svn
 
 
 
-2009-04-27T01:48:32.557577Z
-1285
+2009-05-01T00:30:20.460834Z
+1340
 mwmitchell
 
 
@@ -59,6 +59,40 @@ mpc3c
 
 
 782
+
+search_spec.rb
+file
+
+
+
+
+2009-05-02T13:20:23.000000Z
+4d08eacc0449b2e1fcd1aff70187a09f
+2009-05-01T00:30:20.460834Z
+1340
+mwmitchell
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+909
 
 solr_document_spec.rb
 file

@@ -1,14 +1,14 @@
 9
 
 dir
-1288
+1346
 http://blacklight.rubyforge.org/svn/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/app/views
 http://blacklight.rubyforge.org/svn
 
 
 
-2009-04-25T22:23:08.571652Z
-1284
+2009-05-01T23:24:51.885339Z
+1344
 mwmitchell
 
 
@@ -26,6 +26,9 @@ svn:special svn:externals svn:needs-lock
 
 0b89af5a-983b-4fe2-9b20-b11a079e11b7
 
+saved_searches
+dir
+
 layouts
 dir
 
@@ -41,10 +44,10 @@ file
 
 
 
-2009-04-27T21:49:11.000000Z
-ff6b5887798a13d22ebc48d8a2f825f8
-2009-01-28T22:06:06.256834Z
-956
+2009-05-02T13:20:23.000000Z
+91b5874533dfbd8468d9d8e201851dde
+2009-05-01T00:30:20.460834Z
+1340
 mwmitchell
 has-props
 
@@ -67,7 +70,7 @@ has-props
 
 
 
-381
+523
 
 search_history
 dir

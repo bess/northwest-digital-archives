@@ -13,12 +13,14 @@ class CatalogController < ApplicationController
         session[:search][param_name] = params[param_name]
     end
     
-    logger.debug("***** session.inspect: #{session.inspect}")
     respond_to do |format|
       format.html do
-        params_copy = params.clone # don't think we need a deep copy for this
+        params_copy = session[:search].clone # don't think we need a deep copy for this
         params_copy.delete(:page)
-        session[:history].unshift(params_copy) unless session[:history].include?(params_copy)
+        unless @searches.collect { |search| search.query_params }.include?(params_copy)
+          new_search = Search.create(:query_params => params_copy)
+          session[:history].unshift(new_search.id)
+        end
       end
       format.rss do
         render :layout => false
@@ -70,7 +72,7 @@ class CatalogController < ApplicationController
   # collection/search UI via Google maps
   def map
   end
-
+  
   def opensearch
     respond_to do |format|
       format.xml do
@@ -128,6 +130,7 @@ class CatalogController < ApplicationController
   
   def history_session
     session[:history] ||= []
+    @searches = Search.all(session[:history])
   end
   
 end

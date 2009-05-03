@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 90
-/svn/!svn/ver/1284/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/spec/controllers
+/svn/!svn/ver/1344/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/spec/controllers
 END
 search_history_controller_spec.rb
 K 25
@@ -19,5 +19,5 @@ catalog_controller_spec.rb
 K 25
 svn:wc:ra_dav:version-url
 V 117
-/svn/!svn/ver/1284/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/spec/controllers/catalog_controller_spec.rb
+/svn/!svn/ver/1344/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/spec/controllers/catalog_controller_spec.rb
 END

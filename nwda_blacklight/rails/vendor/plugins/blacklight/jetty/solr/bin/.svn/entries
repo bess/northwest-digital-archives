@@ -1,7 +1,7 @@
 9
 
 dir
-1288
+1346
 http://blacklight.rubyforge.org/svn/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/jetty/solr/bin
 http://blacklight.rubyforge.org/svn
 
@@ -94,14 +94,14 @@ has-props
 
 3163
 
-snappuller
+abc
 file
 
 
 
 
 2009-04-27T21:49:13.000000Z
-eeef4de76a20ee675bb73220d6aed2df
+c3b082541c2d9f55ae586448b54081e5
 2009-04-14T05:48:08.379450Z
 1181
 eos8d
@@ -126,7 +126,7 @@ has-props
 
 
 
-8011
+4915
 
 rsyncd-stop
 file
@@ -162,14 +162,14 @@ has-props
 
 2295
 
-abc
+snappuller
 file
 
 
 
 
 2009-04-27T21:49:13.000000Z
-c3b082541c2d9f55ae586448b54081e5
+eeef4de76a20ee675bb73220d6aed2df
 2009-04-14T05:48:08.379450Z
 1181
 eos8d
@@ -194,41 +194,7 @@ has-props
 
 
 
-4915
-
-snappuller-disable
-file
-
-
-
-
-2009-04-27T21:49:13.000000Z
-484992d9cfe4ebcde1a895e176a0040b
-2009-04-14T05:48:08.379450Z
-1181
-eos8d
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1768
+8011
 
 rsyncd-enable
 file
@@ -263,6 +229,40 @@ has-props
 
 
 1740
+
+snappuller-disable
+file
+
+
+
+
+2009-04-27T21:49:13.000000Z
+484992d9cfe4ebcde1a895e176a0040b
+2009-04-14T05:48:08.379450Z
+1181
+eos8d
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1768
 
 commit
 file

@@ -1,13 +1,19 @@
 K 25
 svn:wc:ra_dav:version-url
 V 89
-/svn/!svn/ver/1286/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/app/controllers
+/svn/!svn/ver/1344/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/app/controllers
 END
 catalog_controller.rb
 K 25
 svn:wc:ra_dav:version-url
 V 111
-/svn/!svn/ver/1286/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/app/controllers/catalog_controller.rb
+/svn/!svn/ver/1344/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/app/controllers/catalog_controller.rb
+END
+saved_searches_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/!svn/ver/1340/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/app/controllers/saved_searches_controller.rb
 END
 application.rb
 K 25
@@ -31,13 +37,13 @@ search_history_controller.rb
 K 25
 svn:wc:ra_dav:version-url
 V 118
-/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/app/controllers/search_history_controller.rb
+/svn/!svn/ver/1340/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/app/controllers/search_history_controller.rb
 END
 sessions_controller.rb
 K 25
 svn:wc:ra_dav:version-url
 V 112
-/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/app/controllers/sessions_controller.rb
+/svn/!svn/ver/1340/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/app/controllers/sessions_controller.rb
 END
 bookmarks_controller.rb
 K 25

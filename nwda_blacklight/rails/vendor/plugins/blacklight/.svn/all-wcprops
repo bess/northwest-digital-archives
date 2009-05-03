@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 73
-/svn/!svn/ver/1286/branches/reorg-4-11-09/rails/vendor/plugins/blacklight
+/svn/!svn/ver/1345/branches/reorg-4-11-09/rails/vendor/plugins/blacklight
 END
 cruise_config.rb
 K 25
@@ -25,13 +25,13 @@ README.rdoc
 K 25
 svn:wc:ra_dav:version-url
 V 85
-/svn/!svn/ver/1284/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/README.rdoc
+/svn/!svn/ver/1344/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/README.rdoc
 END
 routes.rb
 K 25
 svn:wc:ra_dav:version-url
 V 83
-/svn/!svn/ver/1284/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/routes.rb
+/svn/!svn/ver/1344/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/routes.rb
 END
 init.rb
 K 25

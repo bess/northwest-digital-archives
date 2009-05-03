@@ -7,6 +7,9 @@ module Blacklight::SolrHelper
   def get_search_results(params={})
     args = params ? params.symbolize_keys : {}
     args[:qt] ||= Blacklight.config[:default_qt]
+
+    args[:facets] ||= Blacklight.config[:facet][:field_names]
+
     args[:per_page] ||= Blacklight.config[:index][:num_per_page] rescue 10
     
     mapper = RSolr::Ext::Request::Standard.new
@@ -14,7 +17,11 @@ module Blacklight::SolrHelper
       :q => args[:q],
       :phrase_filters => args[:f],
       :qt => args[:qt],
+
+      :facets => {:fields=>args[:facets]},
+
       :per_page => args[:per_page].to_i > 100 ? 100 : args[:per_page],
+
       :page => args[:page],
       :sort => args[:sort]
     })

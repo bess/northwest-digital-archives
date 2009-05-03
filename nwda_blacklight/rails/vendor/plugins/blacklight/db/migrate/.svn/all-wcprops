@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 84
-/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/db/migrate
+/svn/!svn/ver/1340/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/db/migrate
 END
 20090127164730_create_users.rb
 K 25
@@ -20,4 +20,10 @@ K 25
 svn:wc:ra_dav:version-url
 V 129
 /svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/db/migrate/20090127164750_acts_as_taggable_migration.rb
+END
+20090428182620_create_searches.rb
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/!svn/ver/1340/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/db/migrate/20090428182620_create_searches.rb
 END

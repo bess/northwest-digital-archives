@@ -81,22 +81,32 @@ Blacklight is open source discovery software. Libraries (or anyone else) may use
   (Please see vendor/plugins/blacklight/init.rb for the Blacklight plugin dependencies' versions.
   An example of a versioned install: sudo gem install rails --version '2.2.2')
 
-  sudo gem install rails -v 2.2.2
-  sudo gem install marc
   sudo gem install bcrypt-ruby
-  sudo gem install rspec rspec-rails
-  sudo gem sources -a http://gems.github.com
+  sudo gem install curb
+  sudo gem install marc
+  sudo gem install mislav-will_paginate
   sudo gem install mwmitchell-rsolr 
   sudo gem install mwmitchell-rsolr-ext
-  sudo gem install mislav-will_paginate
-    
+  sudo gem install rails -v 2.2.2
+  sudo gem install rspec
+  sudo gem install rspec-rails
+  
   You can confirm your gem installations and their release numbers with
     gem list
+
+  You will need the appropriate gem for your database:    
+    if you are using mysql:
+      sudo gem install mysql  
+    if you are using sqlite3:
+      sudo gem install sqlite3-ruby
+
 
 ==rake gems currently has problems!
 
   Currently, the rake gems tasks work only if the gems listed in init.rb by config.gem are installed. 
   If any are missing, an error is thrown.
+  
+  See http://blacklightopac.org:8080/jira/browse/CODEBASE-54
 
 ==Create a new generic Rails application named what you like:
  

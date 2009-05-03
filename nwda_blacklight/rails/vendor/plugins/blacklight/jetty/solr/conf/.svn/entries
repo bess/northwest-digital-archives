@@ -1,15 +1,15 @@
 9
 
 dir
-1288
+1346
 http://blacklight.rubyforge.org/svn/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/jetty/solr/conf
 http://blacklight.rubyforge.org/svn
 
 
 
-2009-04-14T05:48:08.379450Z
-1181
-eos8d
+2009-05-01T23:24:51.885339Z
+1344
+mwmitchell
 
 
 svn:special svn:externals svn:needs-lock
@@ -168,11 +168,11 @@ file
 
 
 
-2009-04-27T21:49:13.000000Z
-b60fc1006ebbc6fdd1383222470d57ba
-2009-04-14T05:48:08.379450Z
-1181
-eos8d
+2009-05-02T13:20:23.000000Z
+1cbeac31e070cb3310a06cc7a9fd17db
+2009-05-01T23:24:51.885339Z
+1344
+mwmitchell
 
 
 
@@ -194,7 +194,7 @@ eos8d
 
 
 
-38638
+38421
 
 mapping-ISOLatin1Accent.txt
 file

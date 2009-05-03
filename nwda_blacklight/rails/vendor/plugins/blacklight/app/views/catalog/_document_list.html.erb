@@ -5,6 +5,9 @@
     <%= hidden_field_tag :q, params[:q], :id => 'per_page_q' %>
     <%= hidden_field_tag(:qt, params[:qt], :id => 'per_page_qt') %>
     <%= hidden_field_tag(:sort, params[:sort], :id => 'per_page_sort') %>
+    <noscript>
+      <%= submit_tag 'submit' %>
+    </noscript>
   <% end %>
   <h2 id="results_label"><%= pluralize(@response.response['numFound'], "result", "results sorted by ") %></h2>
   <% unless @response.response['numFound'] < 2 %>
@@ -13,8 +16,12 @@
       <%= hidden_field_tag :q, params[:q], :id => 'sort_q' %>
       <%= hidden_field_tag(:qt, params[:qt], :id => 'sort_qt') %>
       <%= hidden_field_tag(:per_page, params[:per_page], :id => 'sort_per_page') %>
+      <noscript>
+        <%= submit_tag 'submit' %>
+      </noscript>
     <% end %>
   <% end %>
+
   <% # loop thru each doc -%>
   <% @response.docs.each_with_index do |document,counter| %>
 

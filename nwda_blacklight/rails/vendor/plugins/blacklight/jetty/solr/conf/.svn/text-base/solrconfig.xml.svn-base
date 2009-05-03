@@ -462,11 +462,6 @@
      <str name="facet.mincount">1</str>
      <str name="facet.limit">10</str>
      
-     <str name="facet.field">format_facet</str>
-     <str name="facet.field">subject_era_facet</str>
-     <str name="facet.field">language_facet</str>
-     <str name="facet.field">geographic_subject_facet</str>
-     
      <str name="mm">
         2&lt;-1 5&lt;-2 6&lt;90%
      </str>

@@ -11,6 +11,9 @@ module NavigationHelpers
     when /the search history page/
       search_history_index_path
     
+    when /the saved searches page/
+      saved_searches_path
+    
     # Add more page name => path mappings here
     
     else

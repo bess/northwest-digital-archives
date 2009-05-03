@@ -3,29 +3,35 @@ ActionController::Routing::Routes.draw do |map|
   map.resources(:sessions,
     # /sessions/cookies_test
     :collection=>{
-      :cookies_test=>:get
+      :cookies_test=>:get,
+      :logout => :get
     },
     # The SSL_ENABLED can be set in an environment file
     :protocol=>((defined?(SSL_ENABLED) and SSL_ENABLED) ? 'https' : 'http')
   )
+  map.logout "logout", :controller => "sessions", :action => "logout"
   
   # Set the default controller:
   map.root :controller => 'home'
-  map.connect 'catalog/opensearch/:format', :controller=>'catalog',:action=>'opensearch',:id=>'0'
+
   map.resources :bookmarks
   map.resources :users, :has_many=>[:bookmarks]
   
   map.catalog_facet "catalog/facet/:id", :controller=>'catalog', :action=>'facet'
   
   map.resources :search_history, :collection => {:clear => :delete}
+
+  map.resources :saved_searches, :collection => {:clear => :delete}, :member => {:save => :put}
+
   map.resources(:catalog,
     :only => [:index, :show, :update],
     # /catalog/:id/image <- for ajax cover requests
     # /catalog/:id/status
     # /catalog/:id/availability
-    :member=>{:image=>:get, :status=>:get, :availability=>:get, :citation=>:get, :opensearch=>:get},
+    :member=>{:image=>:get, :status=>:get, :availability=>:get, :citation=>:get},
+
     # /catalog/map
-    :collection => {:map => :get}
+    :collection => {:map => :get, :opensearch=>:get}
   )
   
   map.feedback 'feedback', :controller=>'feedback', :action=>'show'

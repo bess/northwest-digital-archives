@@ -1,4 +1,5 @@
-<% @page_title = @document[Blacklight.config[:show][:html_title]] + " - " + application_name %>
+
+<% @page_title = "#{@document[Blacklight.config[:show][:html_title]]} - #{application_name}" %>
 
 <div id="document">
   <div id="doc_<%= @document[:id] %>">

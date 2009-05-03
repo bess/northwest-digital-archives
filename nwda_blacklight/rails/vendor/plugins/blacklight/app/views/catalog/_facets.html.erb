@@ -10,12 +10,16 @@
           <% display_facet.items.each do |item| -%>
             <% if facet_in_params? solr_fname, item.value %>
               <li>
-                <span class="selected"><%= CGI::escapeHTML(item.value) %> (<%= format_num item.hits %>)</span>
+
+                <span class="selected"><%= h(item.value) %> (<%= format_num item.hits %>)</span>
+
                 [<%= link_to 'remove', remove_facet_params(solr_fname, item.value), :class=>'remove' %>]
               </li>
               <% else %>
               <li>
-                <%= link_to CGI::escapeHTML(item.value), add_facet_params(solr_fname, item.value) %> (<%= format_num item.hits %>)
+
+                <%= link_to h(item.value), add_facet_params(solr_fname, item.value) %> (<%= format_num item.hits %>)
+
               </li>
             <% end -%>
           <% end %>

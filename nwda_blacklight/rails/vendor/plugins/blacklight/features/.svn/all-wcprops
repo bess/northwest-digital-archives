@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 82
-/svn/!svn/ver/1284/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/features
+/svn/!svn/ver/1340/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/features
 END
 search.feature
 K 25
@@ -13,5 +13,11 @@ search_history.feature
 K 25
 svn:wc:ra_dav:version-url
 V 105
-/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/features/search_history.feature
+/svn/!svn/ver/1340/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/features/search_history.feature
+END
+saved_searches.feature
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/1340/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/features/saved_searches.feature
 END

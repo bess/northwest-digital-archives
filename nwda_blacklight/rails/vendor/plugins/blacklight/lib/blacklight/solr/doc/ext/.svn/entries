@@ -1,14 +1,14 @@
 9
 
 dir
-1291
+1346
 http://blacklight.rubyforge.org/svn/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/lib/blacklight/solr/doc/ext
 http://blacklight.rubyforge.org/svn
 
 
 
-2009-04-25T22:23:08.571652Z
-1284
+2009-05-01T23:26:42.421109Z
+1345
 mwmitchell
 
 
@@ -62,38 +62,4 @@ mwmitchell
 
 
 1028
-
-common.rb
-file
-
-
-
-
-2009-04-27T21:49:29.000000Z
-6a059091cd12b870460e01c47eafd74f
-2009-04-25T22:23:08.571652Z
-1284
-mwmitchell
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-171
 

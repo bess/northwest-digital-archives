@@ -1,7 +1,7 @@
 9
 
 dir
-1288
+1346
 http://blacklight.rubyforge.org/svn/branches/reorg-4-11-09/rails/vendor/plugins/blacklight/vendor/plugins/resource_controller/generators/scaffold_resource/templates
 http://blacklight.rubyforge.org/svn
 
@@ -60,14 +60,14 @@ jamieorc
 
 180
 
-view_index.haml
+view_show.erb
 file
 
 
 
 
 2009-04-27T21:49:12.000000Z
-9104b9fc8125b7c6b59ed81b4acdf540
+84af654fe60ec9a43b7c3d194f37c654
 2009-04-09T21:08:37.270872Z
 1148
 jamieorc
@@ -92,7 +92,7 @@ jamieorc
 
 
 
-602
+243
 
 helper.rb
 file
@@ -128,14 +128,14 @@ jamieorc
 
 46
 
-view_show.erb
+view_index.haml
 file
 
 
 
 
 2009-04-27T21:49:12.000000Z
-84af654fe60ec9a43b7c3d194f37c654
+9104b9fc8125b7c6b59ed81b4acdf540
 2009-04-09T21:08:37.270872Z
 1148
 jamieorc
@@ -160,7 +160,7 @@ jamieorc
 
 
 
-243
+602
 
 shoulda_functional_test.rb
 file
@@ -298,40 +298,6 @@ jamieorc
 
 310
 
-view_new.erb
-file
-
-
-
-
-2009-04-27T21:49:12.000000Z
-31aa48c84d55a213147ccc8c48db9576
-2009-04-09T21:08:37.270872Z
-1148
-jamieorc
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-324
-
 view_show.haml
 file
 
@@ -365,6 +331,40 @@ jamieorc
 
 
 213
+
+view_new.erb
+file
+
+
+
+
+2009-04-27T21:49:12.000000Z
+31aa48c84d55a213147ccc8c48db9576
+2009-04-09T21:08:37.270872Z
+1148
+jamieorc
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+324
 
 migration.rb
 file
@@ -468,40 +468,6 @@ jamieorc
 
 49
 
-functional_test.rb
-file
-
-
-
-
-2009-04-27T21:49:12.000000Z
-2a9fe3f3f5aa84cb463e28ebbca5a5d2
-2009-04-09T21:08:37.270872Z
-1148
-jamieorc
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1621
-
 view_new.haml
 file
 
@@ -535,6 +501,40 @@ jamieorc
 
 
 252
+
+functional_test.rb
+file
+
+
+
+
+2009-04-27T21:49:12.000000Z
+2a9fe3f3f5aa84cb463e28ebbca5a5d2
+2009-04-09T21:08:37.270872Z
+1148
+jamieorc
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1621
 
 view__form.erb
 file

@@ -1,5 +1,6 @@
 class SearchHistoryController < ApplicationController
   def index
+    @searches = session[:history].blank? ? [] : Search.all(session[:history])
   end
   
   def destroy

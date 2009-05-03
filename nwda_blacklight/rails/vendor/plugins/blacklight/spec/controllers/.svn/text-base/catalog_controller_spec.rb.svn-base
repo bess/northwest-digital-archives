@@ -260,6 +260,26 @@ describe CatalogController do
     end
     
   end
+  describe "opensearch" do
+    it "should return an opensearch description" do
+      get :opensearch, :format => 'xml'
+      response.should be_success
+    end
+    it "should return valid JSON" do
+      get :opensearch,:format => 'json', :q => "a"
+      response.should be_success
+    end    
+  end
+  describe "opensearch" do
+    it "should return an opensearch description" do
+      get :opensearch, :format => 'xml'
+      response.should be_success
+    end
+    it "should return valid JSON" do
+      get :opensearch,:format => 'json', :q => "a"
+      response.should be_success
+    end    
+  end
 end
 
 
