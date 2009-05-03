@@ -25,12 +25,14 @@ Blacklight.configure(:shared) do |config|
   config[:show] = {
     :html_title => "title_t",
     :heading => "title_t",
+    :byline => "byline_t",
     :display_type => "format_code_t"
   }
 
   # solr fld values given special treatment in the index (search results) view
   config[:index] = {
     :show_link => "title_t",
+    :byline => "byline_t",
     :num_per_page => 10,
     :record_display_type => "format_code_t"
   }
