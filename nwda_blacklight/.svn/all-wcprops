@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 41
-/svn/!svn/ver/1286/branches/reorg-4-11-09
+/svn/!svn/ver/1345/branches/reorg-4-11-09
 END
 screen_snap.jpg
 K 25
@@ -13,5 +13,5 @@ END
 K 25
 svn:wc:ra_dav:version-url
 V 52
-/svn/!svn/ver/1262/branches/reorg-4-11-09/.gitignore
+/svn/!svn/ver/1344/branches/reorg-4-11-09/.gitignore
 END
