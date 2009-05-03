@@ -1,11 +1,11 @@
 K 25
 svn:wc:ra_dav:version-url
 V 58
-/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/db/migrate
+/svn/!svn/ver/1344/branches/reorg-4-11-09/rails/db/migrate
 END
 20090127193406_blacklight_to_version_20090127164750.rb
 K 25
 svn:wc:ra_dav:version-url
 V 113
-/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/db/migrate/20090127193406_blacklight_to_version_20090127164750.rb
+/svn/!svn/ver/1344/branches/reorg-4-11-09/rails/db/migrate/20090127193406_blacklight_to_version_20090127164750.rb
 END

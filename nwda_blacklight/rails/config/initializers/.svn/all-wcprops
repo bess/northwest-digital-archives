@@ -1,19 +1,13 @@
 K 25
 svn:wc:ra_dav:version-url
 V 67
-/svn/!svn/ver/1286/branches/reorg-4-11-09/rails/config/initializers
+/svn/!svn/ver/1344/branches/reorg-4-11-09/rails/config/initializers
 END
 inflections.rb
 K 25
 svn:wc:ra_dav:version-url
 V 82
 /svn/!svn/ver/1262/branches/reorg-4-11-09/rails/config/initializers/inflections.rb
-END
-blacklight.rb.example
-K 25
-svn:wc:ra_dav:version-url
-V 89
-/svn/!svn/ver/1286/branches/reorg-4-11-09/rails/config/initializers/blacklight.rb.example
 END
 stanford_display.rb.example
 K 25

@@ -1,7 +1,7 @@
 class SolrDocument
 
   include Blacklight::Solr::Doc
-  include Blacklight::Solr::Doc::Ext::Common
+  include Blacklight::Solr::Doc::Ext
   #include NWDA::Solr::Doc::Ext::Common
 
   after_initialize do

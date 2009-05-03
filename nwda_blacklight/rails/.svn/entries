@@ -1,14 +1,14 @@
 9
 
 dir
-1288
+1346
 http://blacklight.rubyforge.org/svn/branches/reorg-4-11-09/rails
 http://blacklight.rubyforge.org/svn
 
 
 
-2009-04-27T01:51:53.668784Z
-1286
+2009-05-01T23:26:42.421109Z
+1345
 mwmitchell
 has-props
 
@@ -30,6 +30,9 @@ test
 dir
 
 app
+dir
+
+log
 dir
 
 cruise_config.rb
@@ -66,8 +69,39 @@ jamieorc
 
 1245
 
-log
-dir
+LICENSE
+file
+
+
+
+
+2009-04-27T21:49:31.000000Z
+fc233aab7d6fcea1af2ca880c8069039
+2009-01-23T14:20:53.999368Z
+941
+mwmitchell
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+687
 
 Rakefile
 file
@@ -103,47 +137,10 @@ ndushay
 
 5078
 
-LICENSE
-file
-
-
-
-
-2009-04-27T21:49:31.000000Z
-fc233aab7d6fcea1af2ca880c8069039
-2009-01-23T14:20:53.999368Z
-941
-mwmitchell
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-687
-
 db
 dir
 
 spec
-dir
-
-vendor
 dir
 
 README
@@ -180,16 +177,13 @@ mwmitchell
 
 929
 
+vendor
+dir
+
 tmp
 dir
 
 script
-dir
-
-doc
-dir
-
-config
 dir
 
 CHANGELOG.txt
@@ -225,6 +219,12 @@ mwmitchell
 
 
 0
+
+config
+dir
+
+doc
+dir
 
 lib
 dir

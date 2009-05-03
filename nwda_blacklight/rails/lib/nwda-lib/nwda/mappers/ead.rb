@@ -22,6 +22,9 @@ class NWDA::Mappers::EAD
     self.getPublisherFacet
     self.getGenreFormatFacet
     self.getLanguageFacet
+    self.getAbstract
+    self.getBiogHist
+    self.getEAD
   end
   
   def getFormatFacet
@@ -86,6 +89,19 @@ class NWDA::Mappers::EAD
       genreform_facet[i] = form.content.gsub(/\s+/," ").strip
     end
     @doc[:genreform_facet] = genreform_facet.uniq 
+  end
+  
+  def getAbstract
+    @doc[:abstract_t] = @xml.xpath('//abstract/text()').to_xml 
+   #puts @xml.xpath('//abstract/text()').to_xml.gsub(/\s+/," ")
+  end
+  
+  def getBiogHist
+    @doc[:biography_t] = @xml.xpath('//bioghist').to_xml
+  end
+  
+  def getEAD
+    @doc[:ead_display] = @xml.to_xml
   end
   
   def inspect

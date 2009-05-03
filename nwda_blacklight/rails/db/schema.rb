@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090127193406) do
+ActiveRecord::Schema.define(:version => 20090428182620) do
 
   create_table "bookmarks", :force => true do |t|
     t.integer  "user_id",     :null => false
@@ -20,6 +20,15 @@ ActiveRecord::Schema.define(:version => 20090127193406) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "searches", :force => true do |t|
+    t.text     "query_params"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "searches", ["user_id"], :name => "index_searches_on_user_id"
 
   create_table "taggings", :force => true do |t|
     t.integer  "tag_id"
