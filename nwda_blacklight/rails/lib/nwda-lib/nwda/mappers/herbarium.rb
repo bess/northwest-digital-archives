@@ -21,10 +21,15 @@ class NWDA::Mappers::Herbarium
       self.getSubjects
       self.getGeographicSubjects
       self.getPublisherFacet
-      #     self.getGenreFormatFacet
       self.getLanguageFacet
+      self.storeRecord
       @doc
     end
+    
+      # Store the whole record so we can display the parts we want at display time
+      def storeRecord
+        @doc[:herbarium_display] = @xml.to_xml
+      end
 
       def getFormatFacet
         @doc[:format_facet] = "Herbarium Specimen"
