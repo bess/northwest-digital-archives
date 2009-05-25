@@ -7,8 +7,10 @@
     <h3 class="byline"><%= @document[Blacklight.config[:show][:byline]] %></h3>
     <div class="tools"><%#= render :partial => 'show_tools' %></div>
     <div class="document">
-	  <% if @document.ead? %>
+	  <% if @document.ead? %>	
 	  	<%= render(:partial=>"catalog/_show_partials/ead") %>
+	  <% elsif @document.format_facet.to_s == 'Herbarium Specimen'%>
+	  	<%= render(:partial=>"catalog/_show_partials/herbarium") %>
       <% else %>
       	<%= render_document_partial @document, :show %>
 	  <% end%>
