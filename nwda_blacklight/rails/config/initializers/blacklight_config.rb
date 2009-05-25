@@ -25,6 +25,7 @@ Blacklight.configure(:shared) do |config|
   config[:show] = {
     :html_title => "title_t",
     :heading => "title_t",
+    :byline => "byline_t",
     :display_type => "format_code_t"
   }
 
@@ -57,14 +58,14 @@ Blacklight.configure(:shared) do |config|
   config[:index_fields] = {
     :field_names => [
       "title_t",
-      "author_t",
+      "byline_t",
       "format_facet",
       "language_facet",
       "published_t"
     ],
     :labels => {
       "title_t"        => "Title:",
-      "author_t"       => "Author:",
+      "byline_t"       => "Author:",
       "format_facet"   => "Format:",
       "language_facet" => "Language:",
       "published_t"    => "Published:"
@@ -77,7 +78,7 @@ Blacklight.configure(:shared) do |config|
     :field_names => [
       "title_t",
       "sub_title_t",
-      "author_t",
+      "byline_t",
       "format_facet",
       "material_type_t",
       "language_facet",
@@ -87,7 +88,7 @@ Blacklight.configure(:shared) do |config|
     :labels => {
       "title_t"         => "Title:",
       "sub_title_t"     => "Subtitle:",
-      "author_t"        => "Author:",
+      "byline_t"        => "Author:",
       "format_facet"    => "Format:",
       "material_type_t" => "Physical description:",
       "language_facet"  => "Language:",
