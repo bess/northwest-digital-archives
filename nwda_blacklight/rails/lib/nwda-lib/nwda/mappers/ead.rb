@@ -23,7 +23,7 @@ class NWDA::Mappers::EAD
     self.getLanguageFacet
     self.getAbstract
     self.getBiogHist
-    self.getEAD
+    #self.getEAD
   end
   
   def getFormatFacet
@@ -81,6 +81,8 @@ class NWDA::Mappers::EAD
     end
     @doc[:publisher_facet] = publisher_facet.uniq
     @doc[:byline_t] = publisher_facet.uniq
+    puts publisher_facet.uniq
+    puts @doc.inspect
   end
   
   def getGenreFormatFacet
