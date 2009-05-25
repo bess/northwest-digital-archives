@@ -2,8 +2,6 @@ module Blacklight
   
   autoload :Configurable, 'blacklight/configurable'
   autoload :SolrHelper, 'blacklight/solr_helper'
-  autoload :Solr, 'blacklight/solr'
-  
   extend Configurable
   
   class << self

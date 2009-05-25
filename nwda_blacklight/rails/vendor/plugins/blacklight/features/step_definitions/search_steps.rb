@@ -46,3 +46,12 @@ Given /^the application is configured to have sort fields "([^\"]*)"$/ do |field
     Blacklight.config[:sort_fields] << [label, '']
   end
 end
+
+Then /^I should get results$/ do 
+  response.should have_selector("div.document")
+end
+
+Then /^I should not get results$/ do 
+  response.should_not have_selector("div.document")
+end
+

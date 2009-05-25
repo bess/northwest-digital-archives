@@ -12,7 +12,7 @@
   <h2 id="results_label"><%= pluralize(@response.response['numFound'], "result", "results sorted by ") %></h2>
   <% unless @response.response['numFound'] < 2 %>
     <% form_tag catalog_index_path, :method=>:get, :class=>'sort' do %>
-      <%= select_tag(:sort, options_for_select(Blacklight.config[:sort_fields], h(params[:sort])), :onchange => 'this.form.submit()') %>
+      <%= select_tag(:sort, options_for_select(sort_fields, h(params[:sort])), :onchange => 'this.form.submit()') %>
       <%= hidden_field_tag :q, params[:q], :id => 'sort_q' %>
       <%= hidden_field_tag(:qt, params[:qt], :id => 'sort_qt') %>
       <%= hidden_field_tag(:per_page, params[:per_page], :id => 'sort_per_page') %>
@@ -21,7 +21,6 @@
       </noscript>
     <% end %>
   <% end %>
-
   <% # loop thru each doc -%>
   <% @response.docs.each_with_index do |document,counter| %>
 
@@ -39,7 +38,7 @@
         <% # main title container for doc partial view -%>
 
         <div class="yui-u">
-          <h3 class="index_title"><%= counter + 1 + @response.params[:start].to_i %>. <%= link_to_document document, :label=>Blacklight.config[:index][:show_link].to_sym, :counter => (counter + 1 + @response.params[:start].to_i) %></h3>
+          <h3 class="index_title"><%= counter + 1 + @response.params[:start].to_i %>. <%= link_to_document document, :label=>document_show_link_field, :counter => (counter + 1 + @response.params[:start].to_i) %></h3>
         </div>
         
       </div>

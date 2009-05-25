@@ -1,19 +1,13 @@
-
-<% @page_title = "#{@document[Blacklight.config[:show][:html_title]]} - #{application_name}" %>
+<% @page_title = "#{document_show_html_title} - #{application_name}" %>
 
 <div id="document">
   <div id="doc_<%= @document[:id] %>">
     
-    <h1 class="title"><%= @document[Blacklight.config[:show][:heading]] %></h1>
-    <h2 class="byline"><%= @document.inspect %></h2>
+    <h1><%= document_heading %></h1>
     <div class="tools"><%= render :partial => 'show_tools' %></div>
     <div class="document">
-	  <% if @document.ead? %>
-	  	<%= render(:partial=>"catalog/_show_partials/ead") %>
-      <% else %>
-      	<%= render_document_partial @document, :show %>
-	  <% end%>	    
-	</div>
+      <%= render_document_partial @document, :show %>
+    </div>
     
   </div>
 </div>
@@ -32,8 +26,6 @@
 <% end %>
 
 <%= render :partial=>'solr_request' %>
-<div id="lightboxContainer" style="display:none;">
-</div>
-<div id="lightboxContent" style="display:none;">
+<div class="lightboxContent" id="citation" style="display:none;">
   <%= render :partial => 'citation' %>
 </div>

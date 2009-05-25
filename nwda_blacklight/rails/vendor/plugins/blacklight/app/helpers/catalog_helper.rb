@@ -1,5 +1,86 @@
 module CatalogHelper
   
+  #
+  # Blacklight.config based helpers ->
+  #
+  
+  # used in the catalog/_facets partial
+  def facet_field_labels
+    Blacklight.config[:facet][:labels]
+  end
+  
+  # used in the catalog/_facets partial
+  def facet_field_names
+    Blacklight.config[:facet][:field_names]
+  end
+  
+  # used in the catalog/_index_partials/_default view
+  def index_field_names
+    Blacklight.config[:index_fields][:field_names]
+  end
+  
+  # used in the _index_partials/_default view
+  def index_field_labels
+    Blacklight.config[:index_fields][:labels]
+  end
+  
+  # Used in the show view for displaying the main solr document heading
+  def document_heading
+    @document[Blacklight.config[:show][:heading]]
+  end
+  
+  # Used in the show view for setting the main html document title
+  def document_show_html_title
+    @document[Blacklight.config[:show][:html_title]]
+  end
+  
+  # Used in the document_list partial (search view) for building a select element
+  def sort_fields
+    Blacklight.config[:sort_fields]
+  end
+  
+  # Used in the document list partial (search view) for creating a link to the document show action
+  def document_show_link_field
+    Blacklight.config[:index][:show_link].to_sym
+  end
+  
+  # Used in the search form partial for building a select tag
+  def search_fields
+    Blacklight.config[:search_fields]
+  end
+  
+  # used in the catalog/_show/_default partial
+  def document_show_fields
+    Blacklight.config[:show_fields][:field_names]
+  end
+  
+  # used in the catalog/_show/_default partial
+  def document_show_field_labels
+    Blacklight.config[:show_fields][:labels]
+  end
+  
+  # currently only used by the render_document_partial helper method (below)
+  def document_partial_name(document)
+    document[Blacklight.config[:show][:display_type]]
+  end
+  
+  # given a doc and action_name, this method attempts to render a partial template
+  # based on the value of doc[:format_code_t]
+  # if this value is blank (nil/empty) the "default" is used
+  # if the partial is not found, the "default" partial is rendered instead
+  def render_document_partial(doc, action_name)
+    format = document_partial_name(doc)
+    begin
+      render :partial=>"catalog/_#{action_name}_partials/#{format}", :locals=>{:document=>doc}
+    rescue ActionView::MissingTemplate
+      render :partial=>"catalog/_#{action_name}_partials/default", :locals=>{:document=>doc}
+    end
+  end
+  
+  #
+  # facet param helpers ->
+  #
+  
   # adds the value and/or field to params[:f]
   def add_facet_params(field, value)
     p = params.dup
@@ -22,7 +103,7 @@ module CatalogHelper
     p
   end
   
-  # true or false, depending on wether the field and value is in params[:f]
+  # true or false, depending on whether the field and value is in params[:f]
   def facet_in_params?(field, value)
     params[:f] and params[:f][field] and params[:f][field].include?(value)
   end
@@ -35,25 +116,25 @@ module CatalogHelper
     @__field_label_cache[field] ||= field.to_s.sub(/_facet$|_display$|_[a-z]$/,'').gsub(/_/,' ')
     @__field_label_cache[field]
   end
-
+  
   #
   # shortcut for built-in Rails helper, "number_with_delimiter"
   #
   def format_num(num); number_with_delimiter(num) end
-
-  # given a doc and action_name, this method attempts to render a partial template
-  # based on the value of doc[:format_code_t]
-  # if this value is blank (nil/empty) the "default" is used
-  # if the partial is not found, the "default" partial is rendered instead
-  def render_document_partial(doc, action_name)
-    format = doc[Blacklight.config[:show][:display_type].to_sym].blank? ? 'default' : doc[Blacklight.config[:show][:display_type].to_sym]
-    begin
-      render :partial=>"catalog/_#{action_name}_partials/#{format}", :locals=>{:document=>doc}
-    rescue ActionView::MissingTemplate
-      render :partial=>"catalog/_#{action_name}_partials/default", :locals=>{:document=>doc}
-    end
+  
+  #
+  # link based helpers ->
+  #
+  
+  # create link to query (e.g. spelling suggestion)
+  def link_to_query(query)
+    p = params.dup
+    p.delete :page
+    p[:q]=query
+    link_url = catalog_index_path(p)
+    link_to(query, link_url)
   end
-
+  
   # link_to_document(doc, :label=>'VIEW', :counter => 3)
   # Use the catalog_path RESTful route to create a link to the show page for a specific item. 
   # catalog_path accepts a HashWithIndifferentAccess object. The solr query params are stored in the session,

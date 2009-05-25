@@ -1,5 +1,5 @@
 <ul class="tools">
   <li>
-     <%= link_to "Cite This", {:controller => 'catalog', :action => 'citation', :id =>  @document.solr_id}, {:id => 'citeLink'} %>
+     <%= link_to "Cite This", {:controller => 'catalog', :action => 'citation', :id =>  @document.solr_id}, {:id => 'citeLink', :name => 'citation', :class => 'lightboxLink'} %>
   </li>
 </ul>

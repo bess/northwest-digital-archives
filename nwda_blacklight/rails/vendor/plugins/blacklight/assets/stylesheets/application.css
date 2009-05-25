@@ -198,7 +198,7 @@ ul.tools li {
   z-index:1;
 }
 
-#lightboxContent {
+#lightboxContent, .lightboxContent {
   position:absolute;
   display:block;
   background-color:#EFEFEF;

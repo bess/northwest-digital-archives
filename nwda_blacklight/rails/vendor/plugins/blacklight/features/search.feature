@@ -42,7 +42,7 @@ Feature: Search
     And I should see "3."
     And I should see "results sorted by"
 
-  Scenario: Results Page
+  Scenario: Results Page Has Sorting Available
     Given I am on the home page
     And the application is configured to have sort fields "relevance, title, format"
     And I fill in "q" with "book"

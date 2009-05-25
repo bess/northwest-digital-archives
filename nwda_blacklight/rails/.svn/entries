@@ -32,9 +32,6 @@ dir
 app
 dir
 
-log
-dir
-
 cruise_config.rb
 file
 
@@ -69,39 +66,8 @@ jamieorc
 
 1245
 
-LICENSE
-file
-
-
-
-
-2009-04-27T21:49:31.000000Z
-fc233aab7d6fcea1af2ca880c8069039
-2009-01-23T14:20:53.999368Z
-941
-mwmitchell
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-687
+log
+dir
 
 Rakefile
 file
@@ -137,10 +103,47 @@ ndushay
 
 5078
 
+LICENSE
+file
+
+
+
+
+2009-04-27T21:49:31.000000Z
+fc233aab7d6fcea1af2ca880c8069039
+2009-01-23T14:20:53.999368Z
+941
+mwmitchell
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+687
+
 db
 dir
 
 spec
+dir
+
+vendor
 dir
 
 README
@@ -177,13 +180,16 @@ mwmitchell
 
 929
 
-vendor
-dir
-
 tmp
 dir
 
 script
+dir
+
+doc
+dir
+
+config
 dir
 
 CHANGELOG.txt
@@ -219,12 +225,6 @@ mwmitchell
 
 
 0
-
-config
-dir
-
-doc
-dir
 
 lib
 dir

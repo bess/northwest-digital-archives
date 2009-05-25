@@ -28,7 +28,6 @@ def get_hash_with_marc21
 end
 
   describe SolrDocument do
-    
     before(:all) do
       @original_raw_storage_type = Blacklight.config[:raw_storage_type]
       @original_raw_storage_field = Blacklight.config[:raw_storage_field]
@@ -37,7 +36,6 @@ end
       @hash_with_marcxml = get_hash_with_marcxml['response']['docs'][0]
       @solrdoc = SolrDocument.new(@hash_with_marcxml)
     end
-    
     after(:all) do
       Blacklight.config[:raw_storage_type] = @original_raw_storage_type
       Blacklight.config[:raw_storage_field] = @original_raw_storage_field
@@ -50,28 +48,18 @@ end
       end
     end
     
-    
-    # Dynamic methods on solr docs -- this might not be a good
-    # idea due to the solr doc / module/extension scheme built-in to BL
-    # ...so the #format_facet method test is pointless
-    
     describe "access methods" do
-      
       it "should have the right value for format_facet" do
-        @solrdoc['format_facet'][0].should == 'Book'
+        @solrdoc.format_facet[0].should == 'Book'
       end
-      
       it "should provide the item's solr id" do
-        @solrdoc['id'].should == '00282214'
+        @solrdoc.solr_id.should == '00282214'
       end
-      
-      # no idea what "table" is or what it does?
-      
-      #it "should have a table method that returns a Hash" do
-      #  @solrdoc.table.should be_instance_of(Hash)
-      # 
-      #end
-      
+      it "should have a table method that returns a Hash" do
+        @solrdoc.table.should be_instance_of(Hash)
+        
+      end
+
       it "should have access methods for all special function fields named in initializer" do
         # the fields specified in Blacklight.config[:show] that
         Blacklight.config[:show].each_key do |function| 
@@ -93,7 +81,7 @@ end
  
       it "should have a valid storage field instatiated with an object" do
         #When we have more than marc, this will need to test each type.
-        @solrdoc.storage.should be_instance_of(Blacklight::Solr::Doc::Ext::Marc::Document)
+        @solrdoc.storage.should be_instance_of(BlacklightMarc::Document)
       end
       
       it "should not try to create marc for objects w/out stored marc (marcxml test only at this time)" do
@@ -101,7 +89,7 @@ end
         # sure everything fails gracefully
         @hash_without_marcxml = get_hash_without_marcxml['response']['docs'][0]
         @solrdoc_without_marc = SolrDocument.new(@hash_without_marcxml)
-        @solrdoc_without_marc.marc?.should be(false)
+        @solrdoc_without_marc.storage.should be(nil)        
       end
     end
   

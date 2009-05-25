@@ -12,17 +12,11 @@ require 'marc'
 =end
 describe 'Blacklight::SolrHelper' do
 
-    @@FLAVOR = 'DEMO'
-  #  @@FLAVOR = 'STANFORD'
-#     puts "\n\t solr FLAVOR is  *** #{@@FLAVOR} ***" 
-  
   before(:all) do
     @solr_helper = Object.new
     @solr_helper.extend(Blacklight::SolrHelper)
     
-    
     @solr_url = Blacklight.solr_config[:url]
-#     puts "\t SOLR url is ** #{@solr_url} **"
   end
 
   before(:each) do
@@ -239,21 +233,13 @@ describe 'Blacklight::SolrHelper' do
       solr_response5 = @solr_helper.get_search_results(:q => @all_docs_query, :per_page => big, :page => 1)
       solr_response5.docs.size.should > 0
     end
-    it 'should only return 100 docs when more that 100 are requested' do
-      big = 200
-      solr_response6 = @solr_helper.get_search_results(:q => @all_docs_query, :per_page => big, :page => 1)
-      #solr_response6.docs.size.should < 101
-      solr_response6.params[:rows].to_i.should == 100
-    end
+    
   end # page specs
 
   # SPECS FOR SINGLE DOCUMENT REQUESTS
   describe 'Get Document By Id' do
     before(:all) do
-      @doc_id = case @@FLAVOR
-        when 'DEMO' then '2007020969'
-        when 'STANFORD' then '5666387'
-      end
+      @doc_id = '2007020969'
       @bad_id = "redrum"
       @response2 = @solr_helper.get_solr_response_for_doc_id(@doc_id)
       @document = @response2.docs.first
@@ -344,13 +330,39 @@ describe 'Blacklight::SolrHelper' do
 
   end
 
+# SPECS FOR SPELLING SUGGESTIONS VIA SEARCH
+  describe "Searches should return spelling suggestions" do
+    it 'search results for poor, but nearly okay query, should have spelling suggestions' do
+      get_spelling_suggestion("boo").should_not be_nil
+    end
 
+    it "title search results for poor, but nearly okay query, should have spelling suggestions" do
+      get_spelling_suggestion("yehudiyam", 'title_search').should_not be_nil
+    end
+
+    it "author search results for poor, but nearly okay query, should have spelling suggestions" do
+      get_spelling_suggestion("shirma", 'author_search').should_not be_nil
+    end
+
+    def get_spelling_suggestion(query, qt=nil)
+      args = {:q => query, :qt => qt}
+      solr_response = @solr_helper.get_search_results(args)
+      spellcheck = solr_response[:spellcheck]
+      suggestions = spellcheck[:suggestions]
+      # suggestion is next in the array after collation 
+      #  (b/c it's the value of collation element in raw xml response)
+      i = suggestions.index("collation") 
+      suggestion = suggestions[i + 1]
+      suggestion.should_not be_nil
+    end
+
+  end
+  
 # TODO:  more complex queries!  phrases, offset into search results, non-latin, boosting(?)
 #  search within query building (?)
 #  search + facets (search done first; facet selected first, both selected)
 
 # TODO: maybe eventually check other types of solr requests
-#  spell checker
 #  more like this
 #  nearby on shelf 
  

@@ -7,9 +7,7 @@ module Blacklight::SolrHelper
   def get_search_results(params={})
     args = params ? params.symbolize_keys : {}
     args[:qt] ||= Blacklight.config[:default_qt]
-
     args[:facets] ||= Blacklight.config[:facet][:field_names]
-
     args[:per_page] ||= Blacklight.config[:index][:num_per_page] rescue 10
     
     mapper = RSolr::Ext::Request::Standard.new
@@ -17,22 +15,22 @@ module Blacklight::SolrHelper
       :q => args[:q],
       :phrase_filters => args[:f],
       :qt => args[:qt],
-
       :facets => {:fields=>args[:facets]},
-
       :per_page => args[:per_page].to_i > 100 ? 100 : args[:per_page],
-
       :page => args[:page],
       :sort => args[:sort]
     })
-    raw_response = Blacklight.solr.select(solr_params)
+    # spellcheck.q allows for non-latin suggestions
+    solr_params["spellcheck.q".to_sym] = args[:q]
+    
+    raw_response = Blacklight.solr.select(solr_params)    
     RSolr::Ext::Response::Standard.new(raw_response)
   end
   
   # retrieve a solr document, given the doc id
   def get_solr_response_for_doc_id(doc_id)
-    # TODO: shouldn't hardcode id field;  should be settable to unique_key field in schema.xml
-    # Note: hardcoding is also in rsolr connection base find_by_id() method
+    # TODO: shouldn't hardcode id field;  should be setable to unique_key field in schema.xml
+    #   Note: hardcoding is also in rsolr connection base find_by_id() method
     solr_params = {:qt=>:document, :id=>doc_id}
     raw_response = Blacklight.solr.select(solr_params)
     RSolr::Ext::Response::Standard.new(raw_response)

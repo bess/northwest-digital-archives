@@ -1,5 +1,0 @@
-module Blacklight::Solr::Doc::Ext
-  
-  autoload :Marc, 'blacklight/solr/doc/ext/marc'
-  
-end

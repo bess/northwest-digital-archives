@@ -25,4 +25,28 @@ describe CatalogHelper do
       )
     end
   end
+  
+  describe "link_to_query" do
+    it "should build a link tag to catalog using query string (no other params)" do
+      query = "brilliant"
+      tag = link_to_query(query)
+      tag.should =~ /q=#{query}/
+      tag.should =~ />#{query}<\/a>/
+    end
+    it "should build a link tag to catalog using query string and other existing params" do
+      query = "wonderful"
+      self.should_receive(:params).and_return({:qt => "title_search", :per_page => "50"})
+      tag = link_to_query(query)
+      tag.should =~ /qt=title_search/
+      tag.should =~ /per_page=50/
+    end
+    it "should ignore existing :page param" do
+      query = "yes"
+      self.should_receive(:params).and_return({:page => "2", :qt => "author_search"})
+      tag = link_to_query(query)
+      tag.should =~ /qt=author_search/
+      tag.should_not =~ /page/
+    end
+  end  
+  
 end

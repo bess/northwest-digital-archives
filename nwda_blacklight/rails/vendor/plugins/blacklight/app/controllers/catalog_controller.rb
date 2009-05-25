@@ -6,12 +6,15 @@ class CatalogController < ApplicationController
   # get search results from the solr index
   def index
     @response = get_search_results(params)
+    @spell_suggestion = get_spell_suggest
     
     # we want to remove the key if the value is blank or nil
-    [:q, :qt, :f, :per_page, :page, :sort].each do |param_name|
-      params[param_name].blank? ? session[:search].delete(param_name) : 
-        session[:search][param_name] = params[param_name]
-    end
+    params[:q].blank? ? session[:search].delete(:q) : session[:search][:q] = params[:q]
+    params[:qt].blank? ? session[:search].delete(:qt) : session[:search][:qt] = params[:qt]
+    params[:f].blank? ? session[:search].delete(:f) : session[:search][:f] = params[:f]
+    params[:per_page].blank? ? session[:search].delete(:per_page) : session[:search][:per_page] = params[:per_page]
+    params[:page].blank? ? session[:search].delete(:page) : session[:search][:page] = params[:page]
+    params[:sort].blank? ? session[:search].delete(:sort) : session[:search][:sort] = params[:sort]
     
     respond_to do |format|
       format.html do
@@ -72,7 +75,6 @@ class CatalogController < ApplicationController
   # collection/search UI via Google maps
   def map
   end
-  
   def opensearch
     respond_to do |format|
       format.xml do
@@ -100,13 +102,11 @@ class CatalogController < ApplicationController
       end
     end
   end
-  
   # citation action
   def citation
     @response = get_solr_response_for_doc_id(params[:id])
     @document = SolrDocument.new(@response.docs.first)
   end
-  
   protected
   
   # gets a document based on its position within a resultset  
@@ -127,10 +127,23 @@ class CatalogController < ApplicationController
   def search_session
     session[:search] ||= {}
   end
-  
   def history_session
     session[:history] ||= []
     @searches = Search.all(session[:history])
+  end
+  
+  # returns a spelling suggestion from the solr response
+  def get_spell_suggest
+    if @response.response['numFound'] <= Blacklight.config[:spell_max]
+      spellcheck = @response[:spellcheck] unless @response[:spellcheck].nil?
+      if (!spellcheck.nil? && spellcheck[:suggestions]) 
+        suggestions = spellcheck[:suggestions]
+        # suggestion is next in the array after collation 
+        #  (b/c it's the value of collation element in raw xml response)
+        i = suggestions.index("collation") unless suggestions.nil?
+        suggestion = suggestions[i + 1] unless i.nil?
+      end
+    end
   end
   
 end

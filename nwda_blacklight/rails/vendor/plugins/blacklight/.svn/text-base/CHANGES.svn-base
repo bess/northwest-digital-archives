@@ -1,3 +1,0 @@
-Friday March 3, 2009
-	Updated to RSolr 0.8.1
-	Removed strange calls to Blacklight.solr.commit

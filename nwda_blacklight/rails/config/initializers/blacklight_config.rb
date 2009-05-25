@@ -25,14 +25,12 @@ Blacklight.configure(:shared) do |config|
   config[:show] = {
     :html_title => "title_t",
     :heading => "title_t",
-    :byline => "byline_t",
     :display_type => "format_code_t"
   }
 
   # solr fld values given special treatment in the index (search results) view
   config[:index] = {
     :show_link => "title_t",
-    :byline => "byline_t",
     :num_per_page => 10,
     :record_display_type => "format_code_t"
   }
@@ -42,19 +40,15 @@ Blacklight.configure(:shared) do |config|
   config[:facet] = {
     :field_names => [
       "language_facet",
-      "subject_facet",
+      "subject_era_facet",
       "geographic_subject_facet",
-      "genreform_facet",
-      "format_facet",
-      "publisher_facet"
+      "format_facet"
     ],
     :labels => {
       "language_facet"           => "Language",
-      "subject_facet"            => "Subject",
+      "subject_era_facet"        => "Subject - Era",
       "geographic_subject_facet" => "Subject - Geographic",
-      "genreform_facet"          => "Genre / Form",
-      "format_facet"             => "Format",
-      "publisher_facet"          => "Publisher"
+      "format_facet"             => "Format"
     }
   }
 
@@ -102,6 +96,11 @@ Blacklight.configure(:shared) do |config|
     }
   }
 
+  # type of raw data in index.  Currently marcxml and marc21 are supported.
+  config[:raw_storage_type] = "marcxml"
+  # name of solr field containing raw data
+  config[:raw_storage_field] = "marc_display"
+
   # "fielded" search select (pulldown)
   # label in pulldown is followed by the name of a SOLR request handler as 
   # defined in solr/conf/solrconfig.xml
@@ -120,32 +119,8 @@ Blacklight.configure(:shared) do |config|
   config[:sort_fields] << ['title', 'title_sort asc']
   config[:sort_fields] << ['format', 'format_sort asc']
   
-  # ###################################################################
-  # Configuration related to specific kinds of objects
-  
-  # ################
-  # MaRC
-  # type of raw data in index.  Currently marcxml and marc21 are supported.
-  config[:raw_storage_type] = "marcxml"
-  # name of solr field containing raw data
-  config[:raw_storage_field] = "marc_display"
-  
-  # ################
-  # EAD
-  # by default, an object is assumed to be an EAD if it has something stored in ead_display
-  config[:ead_storage_field] = "ead_display"
-  
-  # ################
-  # Dublin Core
-  # 
-  config[:dc_storage_field] = "dc_display"
-  
-  # ################
-  # MODS
-  config[:mods_storage_field] = "mods_display"
-  
-  # ################
-  # objects that have a parent
-  config[:parent_id] = "parent_id_s"
+  # the maximum number of search results to allow display of a spelling 
+  #  ("did you mean") suggestion, if one is available.
+  config[:spell_max] = 5
 end
 

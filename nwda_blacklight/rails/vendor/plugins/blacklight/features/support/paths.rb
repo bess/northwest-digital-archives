@@ -23,7 +23,13 @@ module NavigationHelpers
   end
 end
 
+# Cucumber 0.3
+World(NavigationHelpers)
+
+# Cucumber 0.2
+=begin
 World do |world|
   world.extend NavigationHelpers
   world
 end
+=end

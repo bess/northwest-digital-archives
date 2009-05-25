@@ -79,17 +79,19 @@ Blacklight is open source discovery software. Libraries (or anyone else) may use
 ==Install Blacklight's Ruby Gem dependencies by running:
   
   (Please see vendor/plugins/blacklight/init.rb for the Blacklight plugin dependencies' versions.
-  An example of a versioned install: sudo gem install rails --version '2.2.2')
+  An example of a versioned install: sudo gem install rails --version '2.3.2')
 
   sudo gem install bcrypt-ruby
+  sudo gem install cucumber
   sudo gem install curb
   sudo gem install marc
   sudo gem install mislav-will_paginate
   sudo gem install mwmitchell-rsolr 
   sudo gem install mwmitchell-rsolr-ext
-  sudo gem install rails -v 2.2.2
+  sudo gem install rails
   sudo gem install rspec
   sudo gem install rspec-rails
+  sudo gem install webrat
   
   You can confirm your gem installations and their release numbers with
     gem list
@@ -165,21 +167,11 @@ Blacklight is open source discovery software. Libraries (or anyone else) may use
     config.plugins = %W(engines blacklight acts_as_taggable_on_steroids simplest_auth resource_controller)
 
 
-===Inherit Blacklight's routes
-
-  Put this in your config/routes.rb file, inside of the #draw block:
-
-    map.from_plugin :blacklight
-
-    Note that "blacklight" is the name of the engines plugin, not your 
-    top level rails application directory.
-
-
 ===Create a config/solr.yml file
 
   Copy the solr.yml file from the plugin to your rails application:
 
-	cp vendor/plugins/blacklight/config/solr.yml ./config/solr.yml
+	cp vendor/plugins/blacklight/config/solr.yml config/solr.yml
 
   Change the solr URLs in solr.yml to mach your solr instance.
 
@@ -193,7 +185,7 @@ Blacklight is open source discovery software. Libraries (or anyone else) may use
 
   Copy the initalizer files from the plugin to your rails application:
   
-  cp vendor/plugins/blacklight/config/initializers/blacklight_config.rb. config/initializers/blacklight_config.rb
+  cp vendor/plugins/blacklight/config/initializers/blacklight_config.rb config/initializers/blacklight_config.rb
 
   Change the values in blacklight_config.rb to match your solr fields.
 
