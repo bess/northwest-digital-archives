@@ -43,6 +43,8 @@ namespace :app do
     # Index EAD files 
     # *************************************************************** #
     
+    #TODO: This runs out of memory for a very large directory. Optimize not to put everything in 
+    #memory at once. 
     desc 'Recursively index a directory of EAD files at DIR=<location-of-dir>'
     task :ead => :environment do
       t = Time.now
