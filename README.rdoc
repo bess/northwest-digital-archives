@@ -1,0 +1,6 @@
+=Northwest Digital Archives Blacklight Installation
+
+This is a unified search and discovery interface for heterogenous collections from the Northwest Digital Archives and member institutions of the Orbis Cascade Alliance. It uses Blacklight as its search and discovery engine, but it is customized to cope with NWDA-specific data and styling. 
+
+==Installation:
+
