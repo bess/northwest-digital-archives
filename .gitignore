@@ -4,3 +4,5 @@ raw_data/
 bl-demo/jetty/logs/
 nwda_blacklight/jetty/logs
 **/.svn
+nwda_blacklight/rails/vendor/plugins/blacklight/jetty/solr/data/index/segments*
+**~
