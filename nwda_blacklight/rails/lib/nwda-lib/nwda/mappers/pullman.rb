@@ -36,7 +36,7 @@ class NWDA::Mappers::Pullman
         @doc[:format_facet] = []
         @doc[:genre_facet] = []
         
-        types = @xml.xpath('./dc:type/text()').first.to_s.split("&lt;br&gt;")
+        formats = @xml.xpath('./dc:type/text()').first.to_s.split("&lt;br&gt;")
         
         formats.each do |f|
           # record the genre as-is
