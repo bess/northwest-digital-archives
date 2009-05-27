@@ -96,6 +96,34 @@ namespace :app do
       puts "Complete."
       puts "Total Time: #{Time.now - t}"
     end
-  end
+
   
+  # *************************************************************** #
+  # Index City of Pullman Collection
+  # *************************************************************** #
+  
+  desc 'Index City of Pullman Collection located at FILE=<location-of-file>'
+  task :pullman => :environment do
+    t = Time.now
+    
+    pullman_export_file = ENV['FILE']
+    raise "Invalid file. Set the file by using the FILE argument." unless File.exists?(pullman_export_file.to_s) and File.file?(pullman_export_file.to_s)
+    
+    solr = Blacklight.solr
+    
+    if File.file? pullman_export_file and pullman_export_file.to_s =~ /^.*\.xml$/
+        xml = Nokogiri::XML(open(pullman_export_file))
+        xml.xpath('/rdf:RDF/rdf:Description').each do |record| 
+          doc = NWDA::Mappers::Pullman.new(record)
+          puts doc.inspect
+          solr.add(doc.doc)
+        end
+    end
+    puts "Sending commit to Solr..."
+    solr.commit
+    puts "Complete."
+    puts "Total Time: #{Time.now - t}"
+  end
+  # *************************************************************** #
+    end # end the index namespace
 end
