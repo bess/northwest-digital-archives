@@ -16,6 +16,9 @@ class NWDA::Mappers::Pullman
       self.getID
       self.getFormatFacet
       self.getTitle
+      self.getDescription
+
+      @doc[:collection_facet] = "City of Pullman Collection"
       # self.getSubjects
       # self.getGeographicSubjects
       # self.getPublisherFacet
@@ -50,6 +53,10 @@ class NWDA::Mappers::Pullman
 
       def getTitle
         @doc[:title_t] = @xml.xpath('./dc:title/text()').first
+      end
+      
+      def getDescription
+        @doc[:description_t] = @xml.xpath('./dc:description/text()').first
       end
       
       def getUniqueValuesBR(xpath)

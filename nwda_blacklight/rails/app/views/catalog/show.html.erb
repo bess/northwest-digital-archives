@@ -11,6 +11,8 @@
 	  	<%= render(:partial=>"catalog/_show_partials/ead") %>
 	  <% elsif @document.format_facet.to_s == 'Herbarium Specimen'%>
 	  	<%= render(:partial=>"catalog/_show_partials/herbarium") %>
+	  <% elsif @document.collection_facet.to_s == 'City of Pullman Collection'%>
+	  	<%= render(:partial=>"catalog/_show_partials/pullman") %>
       <% else %>
       	<%= render_document_partial @document, :show %>
 	  <% end%>
