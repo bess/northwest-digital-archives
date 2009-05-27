@@ -304,7 +304,7 @@
    
    <field name="title_sort" type="alphaOnlySort" indexed="true" stored="false"/>
    <field name="format_sort" type="alphaOnlySort" indexed="true" stored="false"/>
-   <copyField source="format_facet" dest="format_sort"/>
+   <!-- <copyField source="format_facet" dest="format_sort"/> -->
  </fields>
 
  <uniqueKey>id</uniqueKey>
