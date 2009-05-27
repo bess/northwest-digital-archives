@@ -42,7 +42,10 @@ class NWDA::Mappers::Pullman
       end
 
       def getID
-        @doc[:id] = @xml.xpath('./dc:identifier/text()').first
+        about = @xml.xpath('@about').text
+        puts "about = #{about}"
+        last_bit = about.split('http://kaga.wsulibs.wsu.edu/u?/')[1].tr(',','_')
+        @doc[:id] = last_bit
       end
 
       def getTitle
