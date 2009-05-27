@@ -34,8 +34,15 @@ class NWDA::Mappers::Pullman
 
       def getFormatFacet
         @doc[:format_facet] = []
-        formats = @xml.xpath('./dc:type/text()').first.to_s.split("&lt;br&gt;")
+        @doc[:genre_facet] = []
+        
+        types = @xml.xpath('./dc:type/text()').first.to_s.split("&lt;br&gt;")
+        
         formats.each do |f|
+          # record the genre as-is
+          @doc[:genre_facet] << f.strip.capitalize
+          
+          # but provide some normalization for the format facet
           if(f =~ /(P|p)hoto/)
             @doc[:format_facet] << "Photograph"
           else

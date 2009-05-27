@@ -1,6 +1,10 @@
 <%# default partial to display solr document fields in catalog show view -%>
 <dl class="defList">
 
-	Pullman View
-	<%= document_show_fields.inspect %>
+    <dt>Title</dt><dd><%= @document[:title_t] %></dd>
+    <dt>Description</dt><dd><%= @document[:description_t] %></dd>
+    <dt>Collection</dt><dd><%= @document[:collection_facet] %></dd>
+
+
+
 </dl>
