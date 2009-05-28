@@ -84,8 +84,7 @@ Blacklight.configure(:shared) do |config|
       "format_facet",
       "material_type_t",
       "language_facet",
-      "published_t",
-      "isbn_t"
+      "published_t"
     ],
     :labels => {
       "title_t"         => "Title:",
@@ -95,7 +94,6 @@ Blacklight.configure(:shared) do |config|
       "material_type_t" => "Physical description:",
       "language_facet"  => "Language:",
       "published_t"     => "Published:",
-      "isbn_t"          => "ISBN:"      
     }
   }
 

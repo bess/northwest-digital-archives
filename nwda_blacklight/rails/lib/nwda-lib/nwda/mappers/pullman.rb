@@ -3,6 +3,7 @@ require 'xml/xslt'
 require 'find'
 require 'rsolr'
 require 'nokogiri'
+require 'open-uri'
 
 
 class NWDA::Mappers::Pullman
@@ -13,18 +14,27 @@ class NWDA::Mappers::Pullman
     def initialize(record)
       @xml = record
       @doc = {}
-      self.getID
+      @doc[:id] = self.getID
       self.getFormatFacet
       self.getTitle
       self.getDescription
 
       @doc[:collection_facet] = "City of Pullman Collection"
+      
+      self.getImages
       # self.getSubjects
       # self.getGeographicSubjects
       # self.getPublisherFacet
       # self.getLanguageFacet
       # self.storeRecord
       @doc
+    end
+    
+    def getImages
+      about = @xml.xpath('@about').text
+      number = about.split(',')[1]
+      @doc[:preview_display] = "http://kaga.wsulibs.wsu.edu/cgi-bin/thumbnail.exe?CISOROOT=/pullman&CISOPTR=#{number}"
+      @doc[:fullimage_display] = "http://kaga.wsulibs.wsu.edu/cgi-bin/getimage.exe?CISOROOT=/pullman&CISOPTR=#{number}&DMSCALE=100.00000&DMWIDTH=1200&DMHEIGHT=1200&DMX=0&DMY=0&DMTEXT=&REC=1&DMTHUMB=0&DMROTATE=0"
     end
     
       # Store the whole record so we can display the parts we want at display time
@@ -55,7 +65,6 @@ class NWDA::Mappers::Pullman
         about = @xml.xpath('@about').text
         puts "about = #{about}"
         last_bit = about.split('http://kaga.wsulibs.wsu.edu/u?/')[1].tr(',','_')
-        @doc[:id] = last_bit
       end
 
       def getTitle
