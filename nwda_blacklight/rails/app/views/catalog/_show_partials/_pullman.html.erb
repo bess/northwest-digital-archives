@@ -6,7 +6,7 @@
     <dt>Collection</dt><dd><%= @document[:collection_facet] %></dd>
 	<%#= @document[:fullimage_display] %>
 	
-	<a href="<%=@document[:fullimage_display]%>" rel="lightbox" title="<% @document[:title_t]%>">
+	<a href="<%=@document[:fullimage_display]%>" rel="lightbox" title="<%= @document[:title_t]%>">
 	<%= image_tag(@document[:preview_display]) %>
 	</a>
 </dl>
