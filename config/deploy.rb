@@ -37,8 +37,8 @@ set :rails_env, "production"
 # but instead is in your deploy_to/shared directory. Database.yml
 # files should *never* go into subversion for security reasons.
 task :after_update_code do
-  #run "ln -nfs #{deploy_to}/shared/config/database.yml #{release_path}/config/database.yml"
-  #run "ln -nfs #{deploy_to}/shared/config/solr.yml #{release_path}/config/solr.yml"
+  run "ln -nfs #{deploy_to}/shared/config/database.yml #{release_path}/config/database.yml"
+  run "ln -nfs #{deploy_to}/shared/config/solr.yml #{release_path}/config/solr.yml"
 end
 
 # ========================

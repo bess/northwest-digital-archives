@@ -1,126 +1,0 @@
-9
-
-dir
-1346
-http://blacklight.rubyforge.org/svn/branches/reorg-4-11-09/jetty
-http://blacklight.rubyforge.org/svn
-
-
-
-2009-04-21T17:41:44.101272Z
-1253
-jamieorc
-
-
-svn:special svn:externals svn:needs-lock
-
-
-
-
-
-
-
-
-
-
-
-0b89af5a-983b-4fe2-9b20-b11a079e11b7
-
-exampleAnalysis
-dir
-
-solr
-dir
-
-webapps
-dir
-
-work
-dir
-
-multicore
-dir
-
-exampledocs
-dir
-
-logs
-dir
-
-lib
-dir
-
-start.jar
-file
-
-
-
-
-2009-05-02T23:13:54.000000Z
-e5a2245e35b816b6999a341560f46f3b
-2009-01-26T22:08:31.649515Z
-947
-mwmitchell
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-16411
-
-etc
-dir
-
-README.txt
-file
-
-
-
-
-2009-05-02T23:13:54.000000Z
-5131873539d88bc3920a2269ea4aaf0c
-2009-01-26T22:08:31.649515Z
-947
-mwmitchell
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1341
-
-example-DIH
-dir
-
