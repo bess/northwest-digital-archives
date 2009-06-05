@@ -1,5 +1,0 @@
-log/*.log
-tmp/**/*
-doc/api
-doc/app
-db/development.sqlite3
