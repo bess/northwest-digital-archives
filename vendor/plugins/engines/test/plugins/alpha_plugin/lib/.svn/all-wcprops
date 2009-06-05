@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/engines/test/plugins/alpha_plugin/lib
+END
+app_and_plugin_lib_model.rb
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/engines/test/plugins/alpha_plugin/lib/app_and_plugin_lib_model.rb
+END
+alpha_plugin_lib_model.rb
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/engines/test/plugins/alpha_plugin/lib/alpha_plugin_lib_model.rb
+END

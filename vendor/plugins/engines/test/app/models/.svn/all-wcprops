@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/engines/test/app/models
+END
+app_and_plugin_model.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/engines/test/app/models/app_and_plugin_model.rb
+END
+notify_mail.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/!svn/ver/1262/branches/reorg-4-11-09/rails/vendor/plugins/engines/test/app/models/notify_mail.rb
+END
