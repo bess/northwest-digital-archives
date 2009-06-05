@@ -1,0 +1,11 @@
+<%# default partial to display solr document fields in catalog show view -%>
+<dl class="defList">
+
+	Herbarium View
+	<%= document_show_fields.inspect %>
+	<%= @document.herbarium_display.inspect %>
+
+  
+        <dt>Basionym</dt><dd><%= @document[:format_facet] %></dd>
+
+</dl>

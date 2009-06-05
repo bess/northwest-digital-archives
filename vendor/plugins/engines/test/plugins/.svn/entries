@@ -1,0 +1,64 @@
+9
+
+dir
+1346
+http://blacklight.rubyforge.org/svn/branches/reorg-4-11-09/rails/vendor/plugins/engines/test/plugins
+http://blacklight.rubyforge.org/svn
+
+
+
+2009-01-28T15:12:52.505984Z
+951
+mwmitchell
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+0b89af5a-983b-4fe2-9b20-b11a079e11b7
+
+test_assets
+dir
+
+test_assets_with_assets_directory
+dir
+
+alpha_plugin
+dir
+
+test_code_mixing
+dir
+
+test_assets_with_no_subdirectory
+dir
+
+test_routing
+dir
+
+test_migration
+dir
+
+beta_plugin
+dir
+
+test_load_path
+dir
+
+test_testing
+dir
+
+test_plugin_mailing
+dir
+
+not_a_plugin
+dir
+
