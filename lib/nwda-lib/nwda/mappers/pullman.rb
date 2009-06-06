@@ -22,7 +22,7 @@ class NWDA::Mappers::Pullman
       @doc[:collection_facet] = "City of Pullman Collection"
       
       self.getImages
-      # self.getSubjects
+      self.getSubjects
       # self.getGeographicSubjects
       self.getPublisherFacet
       self.getLanguageFacet
@@ -79,15 +79,15 @@ class NWDA::Mappers::Pullman
         
       end
       
-      # 
-      # def getSubjects
-      #       general_subjects = []
-      #       @xml.xpath('./subject/text()').each_with_index do |subject, i|
-      #         general_subjects[i] = subject.content.gsub(/\s+/," ")
-      #       end
-      # 
-      #       @doc[:subject_facet] = general_subjects.uniq
-      #  end
+      
+      def getSubjects
+            general_subjects = []
+            @xml.xpath('./dc:subject/text()').each_with_index do |subject, i|
+              general_subjects.concat(subject.to_s.to_s.gsub("&amp;"," and ").gsub(/\s+/," ").split(';'))
+            end
+      
+            @doc[:subject_facet] = general_subjects.uniq
+       end
       # 
       # def getGeographicSubjects
       #   geographic_subject_facet = []
