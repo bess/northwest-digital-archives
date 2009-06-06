@@ -278,6 +278,10 @@ a img{
 
 .hidden{display:none;}
 
+div.yui-b h1 {
+	font-size: 1.8em;
+}
+
 div.yui-b dt {
 	font-size: 1.2em;
 	padding: 5px 0px 10px 0px;	
@@ -286,4 +290,24 @@ div.yui-b dt {
 div.yui-b dd {
 	font-size: 1.0em;
 	padding: 5px 0px 10px 0px;	
+}
+
+div.yui-b div#document img.preview {
+	float: left;
+}
+
+div.yui-b div#document dl.defList dt {
+	font-size: 1.2em;
+	font-weight: bold;
+	padding: 0px 10px 10px 0px;	
+}
+
+div.yui-b div#document dl.defList dd {
+	font-size: 1.2em;
+	font-weight: light;
+	padding: 0px 0px 10px 0px;	
+}
+
+div#document div.document {
+	border: none;
 }
