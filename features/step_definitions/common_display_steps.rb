@@ -7,3 +7,7 @@ end
 Then /^I should see a byline of "([^\"]*)"$/ do |byline|
   response.should have_tag("h3.byline", :text => byline)
 end
+
+Then /^I should see ([^\"]*) results$/ do |results|
+  response.should have_tag("h2#results_label", :text => /^#{results}*/)
+end
