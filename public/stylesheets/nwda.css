@@ -3,6 +3,8 @@ body {
 	padding: 0;
 	background-image: url("/images/sidebar.jpg");
 	background-repeat: repeat-y;
+	font-family: arial, helvetica, sans-serif;
+	
 }
 
 .yui-t2 {
@@ -275,3 +277,13 @@ a img{
 }
 
 .hidden{display:none;}
+
+div.yui-b dt {
+	font-size: 1.2em;
+	padding: 5px 0px 10px 0px;	
+}
+
+div.yui-b dd {
+	font-size: 1.0em;
+	padding: 5px 0px 10px 0px;	
+}
