@@ -1,9 +1,19 @@
 <%# default partial to display solr document fields in catalog show view -%>
+
+<% @sidebar = capture do %>
+	<p><%= link_back_to_catalog :label=>'&lt;&lt; SEARCH' %></p>
+    <dt>Subjects</dt>
+	<% @document[:subject_facet].each do |subject| %>
+		<dd><%= subject %></dd>
+	<% end %>
+<% end %>
+
 <dl class="defList">
 
     <dt>Title</dt><dd><%= @document[:title_t] %></dd>
     <dt>Description</dt><dd><%= @document[:description_t] %></dd>
     <dt>Collection</dt><dd><%= @document[:collection_facet] %></dd>
+
 	<%#= @document[:fullimage_display] %>
 	
 	<a href="<%=@document[:fullimage_display]%>" rel="lightbox" title="<%= @document[:title_t]%>">
