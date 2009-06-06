@@ -35,9 +35,9 @@
 <% end %>
 
 
-<% @sidebar = capture do %>
-  <p><%= link_back_to_catalog :label=>'&lt;&lt; SEARCH' %></p>
-<% end %>
+<%# @sidebar = capture do %>
+  <p><%#= link_back_to_catalog :label=>'&lt;&lt; SEARCH' %></p>
+<%# end %>
 
 <%= render :partial=>'solr_request' %>
 <div id="lightboxContainer" style="display:none;">
