@@ -1,9 +1,5 @@
-bl-demo/jetty/solr/data/*
-jetty/solr/data/*
 jetty/logs/*
 raw_data/
-bl-demo/jetty/logs/
-nwda_blacklight/jetty/logs
 **/.svn
 **/.svn/**
 **~
