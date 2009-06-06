@@ -60,4 +60,9 @@ namespace :deploy do
     # run without it
     #run "ln -nfs #{deploy_to}/current/vendor/plugins/blacklight/app/controllers/application_controller.rb #{deploy_to}/current/vendor/plugins/blacklight/app/controllers/application.rb"
   end
+  
+  task :after_symlink do
+    # stop solr
+    run ""
+  end
 end
