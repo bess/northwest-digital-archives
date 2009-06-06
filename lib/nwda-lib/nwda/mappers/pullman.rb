@@ -24,8 +24,8 @@ class NWDA::Mappers::Pullman
       self.getImages
       # self.getSubjects
       # self.getGeographicSubjects
-      # self.getPublisherFacet
-      # self.getLanguageFacet
+      self.getPublisherFacet
+      self.getLanguageFacet
       # self.storeRecord
       @doc
     end
@@ -72,7 +72,7 @@ class NWDA::Mappers::Pullman
       end
       
       def getDescription
-        @doc[:description_t] = @xml.xpath('./dc:description/text()').first
+        @doc[:description_t] = @xml.xpath('./dc:description/text()').first.to_s.gsub(/\s+/," ")
       end
       
       def getUniqueValuesBR(xpath)
@@ -97,13 +97,13 @@ class NWDA::Mappers::Pullman
       #   @doc[:geographic_subject_facet] = geographic_subject_facet.uniq
       # end
       # 
-      # def getLanguageFacet
-      #   @doc[:language_facet] = "English"
-      # end
+      def getLanguageFacet
+         @doc[:language_facet] = "English"
+      end
       # 
-      # def getPublisherFacet
-      #   @doc[:publisher_facet] = "Oregon State University Herbarium"
-      # end
+      def getPublisherFacet
+         @doc[:publisher_facet] = "Washington State University Libraries"
+      end
 
       # 
       # def getGenreFormatFacet
