@@ -24,15 +24,16 @@
     </div>
     
   </div>
-</div>
-
 <% if @previous_document || @next_document %>
-<div id="previousNextDocument">
+<div id="previousNextDocument" class="yui-t2">
 	<%= link_to_previous_document(@previous_document) %>
 	<% if @previous_document && @next_document %> | <% end %>
 	<%= link_to_next_document(@next_document)%>	
 </div>
 <% end %>
+</div>
+
+
 
 
 <%# @sidebar = capture do %>
