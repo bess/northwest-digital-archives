@@ -311,3 +311,8 @@ div.yui-b div#document dl.defList dd {
 div#document div.document {
 	border: none;
 }
+
+div#previousNextDocument {
+	float: left;
+	padding: 10px 0px 0px 0px;
+}
