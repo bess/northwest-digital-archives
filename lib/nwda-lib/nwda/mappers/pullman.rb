@@ -83,7 +83,7 @@ class NWDA::Mappers::Pullman
       def getSubjects
             general_subjects = []
             @xml.xpath('./dc:subject/text()').each_with_index do |subject, i|
-              general_subjects.concat(subject.to_s.to_s.gsub("&amp;"," and ").gsub(/\s+/," ").split(';'))
+              general_subjects.concat(subject.to_s.to_s.gsub("&amp;"," and ").gsub(/\s+/," ").gsub(/-+/,"-").gsub(/-/," -- ").split(';'))
             end
       
             @doc[:subject_facet] = general_subjects.uniq
