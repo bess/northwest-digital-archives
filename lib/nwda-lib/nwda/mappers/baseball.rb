@@ -16,51 +16,35 @@ class NWDA::Mappers::Baseball
       @doc = {}
       @doc[:id] = self.getID
       @doc[:text] = []
-      #       self.getFormatFacet
+      self.getFormatFacet
       self.getTitle
       self.getDescription
       # 
       @doc[:collection_facet] = "Oregon State Baseball"
       #       
       self.getImages
-      #       self.getSubjects
-      #       self.getDates
-      #       self.getPublisherFacet
-      #       self.getLanguageFacet
-      #       self.getCoverage
-      #       self.getSource
-      #       self.getRights
-      #       self.getContributors
+      self.getSubjects
+      self.getDates
+      self.getPublisherFacet
+      self.getLanguageFacet
+      self.getSource
+      self.getRights
+      self.getContributors
       @doc
     end
     
     def getContributors
-      @doc[:contributor_t] = @xml.xpath('./dc:contributor/text()').first.to_s
+      @doc[:contributor_t] = @xml.xpath('./contributor/text()').first.to_s
     end
     
     def getRights
-      @doc[:rights_t] = @xml.xpath('./dc:rights/text()').first.to_s
+      @doc[:rights_t] = @xml.xpath('./rights/text()').first.to_s
+      @doc[:text] << @doc[:rights_t]
     end
     
     def getSource
-      @doc[:source_t] = @xml.xpath('./dc:source/text()').first.to_s
+      @doc[:source_t] = @xml.xpath('./source/text()').first.to_s
       @doc[:text] << @doc[:source_t]
-    end
-    
-    # Get the geographic coverage of this item
-    # Store both the full string (all the bits appended)
-    # and the broken up string, to more easily find different levels of geographic hierarchy 
-    def getCoverage
-      cov_string = @xml.xpath('./dc:coverage/text()').first.to_s.gsub(/\s+/," ").gsub(/-+/,"-").gsub(/-/," -- ")
-      coverage = []
-      coverage << cov_string
-      coverage.concat(cov_string.split(' -- '))
-      coverage2 = []
-      coverage.each do |c|
-        coverage2 << c.strip
-      end
-      @doc[:geographic_subject_facet] = coverage2.uniq
-      @doc[:text] << @doc[:geographic_subject_facet].flatten
     end
     
     # index the dates
@@ -68,40 +52,47 @@ class NWDA::Mappers::Baseball
     # If there is no ca. values, store the first year in the list
     # put the rest into categories like "over fifty years ago" etc.  
     def getDates
-      date_string = @xml.xpath('./dc:date/text()').first.to_s
-      
+      date_string = @xml.xpath('./date/text()').first.to_s
+      puts 
+      puts date_string
       # Store the year as a string, along with the Ca., if it exists, so we can display it 
-      @doc[:date_display] = date_string[/^[Cc]a\.+ *\d+|^\d+ |^\w+ \d+, \d+ |^\w+, \d+/]
+      @doc[:date_display] = date_string
+      puts @doc[:date_display]
       
-      if @doc[:date_display]
+      
+      unless @doc[:date_display].nil?
         
         stripped_year = @doc[:date_display][/\d{4}/]
-        # Store the year as an actual date, so we can do math on it 
-        @doc[:creation_date] = stripped_year.concat("-01-01T23:59:59Z")
-        # Store a range value
-        creation_era = []
-        if 100.years.ago > DateTime.parse(stripped_year)
-          creation_era << "More than 100 years old"
+        
+        unless stripped_year.nil?
+          puts stripped_year
+          # Store the year as an actual date, so we can do math on it 
+          @doc[:creation_date] = stripped_year.concat("-01-01T23:59:59Z")
+          # Store a range value
+          creation_era = []
+          if 100.years.ago > DateTime.parse(stripped_year)
+            creation_era << "More than 100 years old"
+          end
+          if 50.years.ago > DateTime.parse(stripped_year)
+            creation_era << "More than 50 years old"
+          end
+          if 20.years.ago > DateTime.parse(stripped_year)
+            creation_era << "More than 20 years old"
+          end
+          if 10.years.ago > DateTime.parse(stripped_year)
+            creation_era << "More than 10 years old"
+          end
+          if 10.years.ago <= DateTime.parse(stripped_year)
+            creation_era << "Less than 10 years old"
+          end
+          if 5.years.ago <= DateTime.parse(stripped_year)
+            creation_era << "Less than 5 years old"
+          end
+          if 1.year.ago <= DateTime.parse(stripped_year)
+            creation_era << "Less than 1 year old"
+          end
+          @doc[:subject_era_facet] = creation_era
         end
-        if 50.years.ago > DateTime.parse(stripped_year)
-          creation_era << "More than 50 years old"
-        end
-        if 20.years.ago > DateTime.parse(stripped_year)
-          creation_era << "More than 20 years old"
-        end
-        if 10.years.ago > DateTime.parse(stripped_year)
-          creation_era << "More than 10 years old"
-        end
-        if 10.years.ago <= DateTime.parse(stripped_year)
-          creation_era << "Less than 10 years old"
-        end
-        if 5.years.ago <= DateTime.parse(stripped_year)
-          creation_era << "Less than 5 years old"
-        end
-        if 1.year.ago <= DateTime.parse(stripped_year)
-          creation_era << "Less than 1 year old"
-        end
-        @doc[:subject_era_facet] = creation_era
       end
       
       
@@ -113,7 +104,6 @@ class NWDA::Mappers::Baseball
       thumbnail_url = @xml.xpath('./thumbnailURL[1]/text()').first.to_s
       @doc[:preview_display] = thumbnail_url
       img_id = thumbnail_url[/CISOPTR=\d+/]
-      puts "img_id = #{img_id}"
       @doc[:fullimage_display] = "http://digitalcollections.library.oregonstate.edu/cgi-bin/getimage.exe?CISOROOT=/baseball&#{img_id}&DMSCALE=25.00000&DMWIDTH=1200&DMHEIGHT=1200&DMX=0&DMY=0&DMTEXT=&REC=1&DMTHUMB=0&DMROTATE=0"
     end
     
@@ -123,22 +113,13 @@ class NWDA::Mappers::Baseball
       end
 
       def getFormatFacet
-        @doc[:format_facet] = []
-        @doc[:genre_facet] = []
-        
-        formats = @xml.xpath('./dc:type/text()').first.to_s.split("&lt;br&gt;")
-        
-        formats.each do |f|
-          # record the genre as-is
-          @doc[:genre_facet] << f.strip.capitalize
-          
-          # but provide some normalization for the format facet
-          if(f =~ /(P|p)hoto/)
-            @doc[:format_facet] << "Photograph"
-          else
-            @doc[:format_facet] << f.strip.capitalize
-          end
-        end 
+        formats = []
+        @xml.xpath('./format/text()').each_with_index do |format, i|
+          formats.concat(format.to_s.gsub("&amp;"," and ").gsub(/\s+/," ").gsub(/-+/,"-").gsub(/-/," -- ").split(';'))
+        end
+  
+        @doc[:format_facet] = formats.uniq.map {|a| a.strip}
+        @doc[:text] << @doc[:format_facet].flatten
       end
 
       def getID
@@ -153,22 +134,19 @@ class NWDA::Mappers::Baseball
       end
       
       def getDescription
-        @doc[:team_t] = @xml.xpath('./description/text()').first.to_s.gsub(/\s+/," ").gsub("&lt;br&gt;","<br>")
-        @doc[:text] << @doc[:team_t]
+        @doc[:description_t] = @xml.xpath('./description/text()').first.to_s.gsub(/\s+/," ").gsub("&lt;br&gt;","<br>")
+        @doc[:text] << @doc[:description_t]
       end
       
       def getSubjects
             general_subjects = []
-            @xml.xpath('./dc:subject/text()').each_with_index do |subject, i|
+            @xml.xpath('./subject/text()').each_with_index do |subject, i|
               general_subjects.concat(subject.to_s.gsub("&amp;"," and ").gsub(/\s+/," ").gsub(/-+/,"-").gsub(/-/," -- ").split(';'))
             end
       
-            @doc[:subject_facet] = general_subjects.uniq
+            @doc[:subject_facet] = general_subjects.uniq.map {|a| a.strip}
             @doc[:text] << @doc[:subject_facet].flatten
        end
-       
-
-      
       
       # 
       # def getGeographicSubjects
@@ -184,7 +162,8 @@ class NWDA::Mappers::Baseball
       end
       # 
       def getPublisherFacet
-         @doc[:publisher_facet] = "Washington State University Libraries"
+         @doc[:publisher_facet] = @xml.xpath('./publisher/text()').first
+         @doc[:text] << @doc[:publisher_facet].to_s
       end
 
       # 
