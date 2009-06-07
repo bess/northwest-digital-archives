@@ -6,7 +6,31 @@ Feature: Display Pullman Archives files correctly
 	Then I should see 1275 results
 	When I follow "Less than 10 years old"
 	Then I should see 365 results
-
+	
+	Scenario: Search for Palouse
+	  Given I am on the homepage
+	  When I fill in "q" with "Palouse"
+	  And I press "search"
+	  Then I should see 393 results
+	
+	Scenario: Search for Paul Henning Collection
+	  Given I am on the homepage
+	  When I fill in "q" with '"Paul Henning Collection"'
+	  And I press "search"
+	  Then I should see 365 results
+	
+	Scenario: Search for string Theater in Pullman (no quotes)
+	  Given I am on the homepage
+	  When I fill in "q" with "Theater in Pullman"
+	  And I press "search"
+	  Then I should see 8 results
+	
+	Scenario: Search for phrase "Theater in Pullman"
+	  Given I am on the homepage
+	  When I fill in "q" with '"Theater in Pullman"'
+	  And I press "search"
+	  Then I should see 2 results
+	
 	Scenario: Check to see that a record has all its fields
       Given I am on the document page for id pullman_7
 	  Then I should see a title of "Olympic Highway ca. 1915"
