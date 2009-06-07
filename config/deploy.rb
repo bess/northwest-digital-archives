@@ -51,6 +51,10 @@ namespace :deploy do
   end
   
   task :restart, :roles => :app do
+    # this doesn't work. --bess
+    #run "pkill java"
+    #run "cd #{deploy_to}/current/jetty; nohup java -jar start.jar &"
+    
     run "touch #{deploy_to}/current/tmp/restart.txt"
   end
   
@@ -63,6 +67,6 @@ namespace :deploy do
   
   task :after_symlink do
     # stop solr
-    run ""
+
   end
 end
