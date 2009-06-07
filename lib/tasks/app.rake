@@ -87,7 +87,7 @@ namespace :app do
           xml = Nokogiri::XML(open(herbarium_export_file))
           xml.xpath('/metadata/record').each do |record| 
             doc = NWDA::Mappers::Herbarium.new(record)
-            puts doc.inspect
+            #puts doc.inspect
             solr.add(doc.doc)
           end
       end
