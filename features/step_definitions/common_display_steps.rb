@@ -11,3 +11,8 @@ end
 Then /^I should see ([^\"]*) results$/ do |results|
   response.should have_tag("h2#results_label", :text => /^#{results}*/)
 end
+
+Then /^I should see a "([^\"]*)" of "([^\"]*)"$/ do |key, value|
+  response.should have_tag("dl.defList dt", :text => key)
+  response.should have_tag("dl.defList dd", :text => value)
+end
