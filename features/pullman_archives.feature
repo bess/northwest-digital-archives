@@ -4,6 +4,8 @@ Feature: Display Pullman Archives files correctly
 	Given I am on the homepage
 	When I follow "City of Pullman Collection"
 	Then I should see 1275 results
+	When I follow "Less than 10 years old"
+	Then I should see 365 results
 
 	Scenario: Check to see that a record has all its fields
       Given I am on the document page for id pullman_7
@@ -26,7 +28,7 @@ Feature: Display Pullman Archives files correctly
 	  Then I should see a title of "Leonard Bros and Co., Uniontown, 2003"
 	  And I should not see a "Description" field	  
 	  And I should see a "Collection" of "City of Pullman Collection"
-	  And I should not see a "Date" field
+	  And I should see a "Date" of "June 16, 2003"
 	
 	
 	

@@ -115,7 +115,7 @@ namespace :app do
         xml = Nokogiri::XML(open(pullman_export_file))
         xml.xpath('/rdf:RDF/rdf:Description').each do |record| 
           doc = NWDA::Mappers::Pullman.new(record)
-          puts doc.inspect
+          #puts doc.inspect
           solr.add(doc.doc)
         end
     end
