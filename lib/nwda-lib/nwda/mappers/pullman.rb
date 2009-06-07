@@ -26,7 +26,23 @@ class NWDA::Mappers::Pullman
       self.getDates
       self.getPublisherFacet
       self.getLanguageFacet
+      self.getCoverage
       @doc
+    end
+    
+    # Get the geographic coverage of this item
+    # Store both the full string (all the bits appended)
+    # and the broken up string, to more easily find different levels of geographic hierarchy 
+    def getCoverage
+      cov_string = @xml.xpath('./dc:coverage/text()').first.to_s.gsub(/\s+/," ").gsub(/-+/,"-").gsub(/-/," -- ")
+      coverage = []
+      coverage << cov_string
+      coverage.concat(cov_string.split(' -- '))
+      coverage2 = []
+      coverage.each do |c|
+        coverage2 << c.strip
+      end
+      @doc[:geographic_subject_facet] = coverage2.uniq
     end
     
     # index the dates
@@ -115,7 +131,7 @@ class NWDA::Mappers::Pullman
       end
       
       def getDescription
-        @doc[:description_t] = @xml.xpath('./dc:description/text()').first.to_s.gsub(/\s+/," ")
+        @doc[:description_t] = @xml.xpath('./dc:description/text()').first.to_s.gsub(/\s+/," ").gsub("&lt;br&gt;","<br>")
       end
       
       def getUniqueValuesBR(xpath)
