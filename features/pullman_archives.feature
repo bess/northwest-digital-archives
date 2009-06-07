@@ -26,5 +26,8 @@ Feature: Display Pullman Archives files correctly
 	  Then I should see a title of "Leonard Bros and Co., Uniontown, 2003"
 	  And I should not see a "Description" field	  
 	  And I should see a "Collection" of "City of Pullman Collection"
-	  And I should not see a "Date" field	  
+	  And I should not see a "Date" field
+	
+	
+	
 	
