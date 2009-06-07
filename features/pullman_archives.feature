@@ -13,3 +13,9 @@ Feature: Display Pullman Archives files correctly
 	  And I should see a "Date" of "ca. 1915"
 	
 
+	Scenario: A record without a date
+      Given I am on the document page for id pullman_9
+	  Then I should see a title of "Washington Hotel, Pullman"
+	  And I should see a "Description" of "The Washington Hotel."
+	  And I should see a "Collection" of "City of Pullman Collection"
+	  And I should not see a "Date" field

@@ -16,3 +16,7 @@ Then /^I should see a "([^\"]*)" of "([^\"]*)"$/ do |key, value|
   response.should have_tag("dl.defList dt", :text => key)
   response.should have_tag("dl.defList dd", :text => value)
 end
+
+Then /^I should not see a "([^\"]*)" field$/ do |key|
+  response.should_not have_tag("dl.defList dt", :text => key)
+end
