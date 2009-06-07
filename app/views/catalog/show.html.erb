@@ -1,4 +1,4 @@
-<% @page_title = @document[Blacklight.config[:show][:html_title]][0] + " - " + application_name %>
+<% @page_title = @document[Blacklight.config[:show][:html_title]][0] rescue application_name %>
 
 <div id="document">
   <div id="doc_<%= @document[:id] %>">
@@ -10,9 +10,9 @@
 	  <% if @document.ead? %>	
 	  	<%= render(:partial=>"catalog/_show_partials/ead") %>
 	  <% elsif @document.format_facet.to_s == 'Herbarium Specimen'%>
-	  	<%= render(:partial=>"catalog/_show_partials/herbarium") %>
+		<%= render_specified_document_partial @document, :show, :herbarium %>
 	  <% elsif @document.collection_facet.to_s == 'City of Pullman Collection'%>
-	  	<%= render(:partial=>"catalog/_show_partials/pullman") %>
+		<%= render_specified_document_partial @document, :show, :pullman %>
       <% else %>
       	<%= render_document_partial @document, :show %>
 	  <% end%>

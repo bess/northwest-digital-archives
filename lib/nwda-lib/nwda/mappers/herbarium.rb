@@ -16,14 +16,26 @@ class NWDA::Mappers::Herbarium
       @xml = record
       @doc = {}
       self.getID
+      @doc[:text] = []
       self.getFormatFacet
       self.getTitle
+      self.getImages
+      
       self.getSubjects
       self.getGeographicSubjects
       self.getPublisherFacet
       self.getLanguageFacet
-      self.storeRecord
+      #self.storeRecord
+      @doc[:collection_facet] = "Oregon State University Herbarium"
       @doc
+    end
+    
+    def getImages
+      thumbnail_url = @xml.xpath('./thumbnailURL[1]/text()').first.to_s
+      @doc[:preview_display] = thumbnail_url
+      img_id = thumbnail_url[/CISOPTR=\d+/]
+      puts "img_id = #{img_id}"
+      @doc[:fullimage_display] = "http://digitalcollections.library.oregonstate.edu/cgi-bin/getimage.exe?CISOROOT=/herbarium&#{img_id}&DMSCALE=25.00000&DMWIDTH=1200&DMHEIGHT=1200&DMX=0&DMY=0&DMTEXT=&REC=1&DMTHUMB=0&DMROTATE=0"
     end
     
       # Store the whole record so we can display the parts we want at display time
@@ -45,11 +57,18 @@ class NWDA::Mappers::Herbarium
       end
 
       def getTitle
-        titles = []
-        @xml.xpath('./title/text()').each_with_index do |title,i|
-          titles[i] = title.content.gsub(/\s+/," ")
-        end
-        @doc[:title_t] = titles.uniq
+           t = @xml.xpath('./title[1]/text()').first.to_s
+           @doc[:title_t] = t
+           @doc[:original_identification_display] = @xml.xpath('./alternative[1]/text()').first
+           @doc[:family_display] = @xml.xpath('./subject[1]/text()').first
+           @doc[:current_taxation_display] = @xml.xpath('./alternative[2]/text()').first
+           @doc[:primary_collector_display] = @xml.xpath('./creator[1]/text()').first
+           @doc[:collection_date_display] = @xml.xpath('./date[1]/text()').first
+           
+           @doc[:text] << @doc[:title_t].to_s
+           @doc[:text] << @doc[:original_identification_display]
+           @doc[:text] << @doc[:family_display]
+           @doc[:text] << @doc[:primary_collector_display]
       end
 
       def getSubjects
