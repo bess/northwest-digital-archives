@@ -13,6 +13,8 @@
 		<%= render_specified_document_partial @document, :show, :herbarium %>
 	  <% elsif @document.collection_facet.to_s == 'City of Pullman Collection'%>
 		<%= render_specified_document_partial @document, :show, :pullman %>
+	  <% elsif @document.collection_facet.to_s == 'Oregon State Baseball'%>
+		<%= render_specified_document_partial @document, :show, :baseball %>
       <% else %>
       	<%= render_document_partial @document, :show %>
 	  <% end%>
