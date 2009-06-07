@@ -27,6 +27,14 @@
 	<% if @document[:source_t] %>
 	<dt>Source</dt><dd><%= @document[:source_t] %></dd>
 	<% end %>
+	
+	<% if @document[:contributor_t] %>
+	<dt>Contributor(s)</dt><dd><%= @document[:contributor_t] %></dd>
+	<% end %>
+	
+	<% if @document[:rights_t] %>
+	<dt>Rights</dt><dd><%= @document[:rights_t] %></dd>
+	<% end %>
 
 
 	<%#= @document[:fullimage_display] %>

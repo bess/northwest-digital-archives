@@ -29,7 +29,17 @@ class NWDA::Mappers::Pullman
       self.getLanguageFacet
       self.getCoverage
       self.getSource
+      self.getRights
+      self.getContributors
       @doc
+    end
+    
+    def getContributors
+      @doc[:contributor_t] = @xml.xpath('./dc:contributor/text()').first.to_s
+    end
+    
+    def getRights
+      @doc[:rights_t] = @xml.xpath('./dc:rights/text()').first.to_s
     end
     
     def getSource
