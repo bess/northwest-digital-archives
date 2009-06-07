@@ -16,6 +16,10 @@
 	<dt>Date</dt><dd><%= document[:date_display] %></dd>
 	<% end %>
 	
+	<% if document[:team_t] %>
+	<dt>Team</dt><dd><%= document[:team_t] %></dd>
+	<% end %>
+	
 	<% if document[:format_facet] %>
 		<dt>Format</dt><dd><%= document[:format_facet].join(", ") %></dd>
 	<% end %>
