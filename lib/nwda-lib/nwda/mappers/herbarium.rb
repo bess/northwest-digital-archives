@@ -25,9 +25,15 @@ class NWDA::Mappers::Herbarium
       self.getGeographicSubjects
       self.getPublisherFacet
       self.getLanguageFacet
+      self.getRights
+      
       #self.storeRecord
       @doc[:collection_facet] = "Oregon State University Herbarium"
       @doc
+    end
+    
+    def getRights
+      @doc[:rights_t] = @xml.xpath('./rights/text()').first.to_s
     end
     
     def getImages
@@ -61,8 +67,8 @@ class NWDA::Mappers::Herbarium
            @doc[:title_t] = t
            @doc[:original_identification_display] = @xml.xpath('./alternative[1]/text()').first
            @doc[:family_display] = @xml.xpath('./subject[1]/text()').first
-           @doc[:current_taxation_display] = @xml.xpath('./alternative[2]/text()').first
-           @doc[:primary_collector_display] = @xml.xpath('./creator[1]/text()').first
+           @doc[:current_taxon_display] = @xml.xpath('./alternative[2]/text()').first
+           @doc[:primary_collector_display] = @xml.xpath('./creator[2]/text()').first
            @doc[:collection_date_display] = @xml.xpath('./date[1]/text()').first
            
            @doc[:text] << @doc[:title_t].to_s
