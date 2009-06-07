@@ -16,7 +16,10 @@
 	
     <dt>Description</dt><dd><%= @document[:description_t] %></dd>
     <dt>Collection</dt><dd><%= @document[:collection_facet] %></dd>
+
+	<% if @document[:date_display] %>
 	<dt>Date</dt><dd><%= @document[:date_display] %></dd>
+	<% end %>
 
 
 	<%#= @document[:fullimage_display] %>
