@@ -23,12 +23,22 @@ class NWDA::Mappers::Pullman
       
       self.getImages
       self.getSubjects
-      # self.getGeographicSubjects
+      self.getDates
       self.getPublisherFacet
       self.getLanguageFacet
-      # self.storeRecord
       @doc
     end
+    
+    # index the dates
+    # store the first bit (e.g., "Ca. 1909") for display
+    # If there is no ca. values, store the first year in the list
+    # put the rest into categories like "over fifty years ago" etc.  
+    def getDates
+      date_string = @xml.xpath('./dc:date/text()').first.to_s
+      @doc[:date_display] = date_string[/^[Cc]a\.+ *\d+|^\d+/]
+      puts @doc[:date_display]
+    end
+    
     
     def getImages
       about = @xml.xpath('@about').text
@@ -63,7 +73,6 @@ class NWDA::Mappers::Pullman
 
       def getID
         about = @xml.xpath('@about').text
-        puts "about = #{about}"
         last_bit = about.split('http://kaga.wsulibs.wsu.edu/u?/')[1].tr(',','_')
       end
 
@@ -83,11 +92,15 @@ class NWDA::Mappers::Pullman
       def getSubjects
             general_subjects = []
             @xml.xpath('./dc:subject/text()').each_with_index do |subject, i|
-              general_subjects.concat(subject.to_s.to_s.gsub("&amp;"," and ").gsub(/\s+/," ").gsub(/-+/,"-").gsub(/-/," -- ").split(';'))
+              general_subjects.concat(subject.to_s.gsub("&amp;"," and ").gsub(/\s+/," ").gsub(/-+/,"-").gsub(/-/," -- ").split(';'))
             end
       
             @doc[:subject_facet] = general_subjects.uniq
        end
+       
+
+      
+      
       # 
       # def getGeographicSubjects
       #   geographic_subject_facet = []
