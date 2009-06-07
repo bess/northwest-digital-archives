@@ -29,6 +29,8 @@ Feature: Display Pullman Archives files correctly
 	  And I should not see a "Description" field	  
 	  And I should see a "Collection" of "City of Pullman Collection"
 	  And I should see a "Date" of "June 16, 2003"
+	  And I should see a "Source" of "Paul Henning Collection: Historic Architecture of the Palouse"
+	
 	
 	
 	
