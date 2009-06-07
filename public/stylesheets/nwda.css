@@ -11,9 +11,10 @@ body {
 	background: #FFFFFF;
 }
 
+/*
 div.yui-g {
 	background: #EEEEEE;
-}
+}*/
 
 div#photos {
 	border: blue solid 1px;
@@ -292,8 +293,38 @@ div.yui-b dd {
 	padding: 5px 0px 10px 0px;	
 }
 
+/*
+div.yui-b a {
+	color: #a57d41;
+}*/
+
+div.yui-b dd a {
+	color: #e56e24;
+}
+
 div.yui-b div#document img.preview {
 	float: left;
+}
+
+div.yui-b div.document dl.indexDefList dt{
+    float: left;
+    clear: left;
+    width: 8em;
+	text-align: right;
+	font-size: 1.2em;
+	padding-right: 10px;
+	font-weight: bold;
+}
+
+div.yui-b div.document dl.indexDefList dd{
+	font-size: 1.2em;
+}
+
+div.yui-b div.document a.indexImage img{
+	float: right;
+	margin: 10px 10px 10px 0;
+	padding: 0;
+	max-width: 150px;
 }
 
 div.yui-b div#document dl.defList dt {
@@ -315,4 +346,8 @@ div#document div.document {
 div#previousNextDocument {
 	float: left;
 	padding: 10px 0px 0px 0px;
+}
+
+div.yui-u h3 {
+	font-size: 1.3em;
 }

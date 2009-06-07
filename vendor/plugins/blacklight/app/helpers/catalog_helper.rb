@@ -77,6 +77,14 @@ module CatalogHelper
     end
   end
   
+  def render_specified_document_partial(doc, action_name, partial_name)
+    begin
+      render :partial=>"catalog/_#{action_name}_partials/#{partial_name}", :locals=>{:document=>doc}
+    rescue ActionView::MissingTemplate
+      render :partial=>"catalog/_#{action_name}_partials/default", :locals=>{:document=>doc}
+    end
+  end
+  
   #
   # facet param helpers ->
   #
