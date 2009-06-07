@@ -10,6 +10,6 @@ Feature: Display Pullman Archives files correctly
 	  Then I should see a title of "Olympic Highway ca. 1915"
 	  And I should see a "Description" of "A photo showing the old Olympic Highway."
 	  And I should see a "Collection" of "City of Pullman Collection"
-	  And I should see a "Date" of "ca. 1909"
+	  And I should see a "Date" of "ca. 1915"
 	
 
