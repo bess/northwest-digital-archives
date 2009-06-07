@@ -66,7 +66,7 @@ class NWDA::Mappers::Pullman
         if 1.year.ago <= DateTime.parse(stripped_year)
           creation_era << "Less than 1 year old"
         end
-        @doc[:creation_era_facet] = creation_era
+        @doc[:subject_era_facet] = creation_era
       end
       
       
