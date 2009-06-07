@@ -35,8 +35,42 @@ class NWDA::Mappers::Pullman
     # put the rest into categories like "over fifty years ago" etc.  
     def getDates
       date_string = @xml.xpath('./dc:date/text()').first.to_s
+      
+      # Store the year as a string, along with the Ca., if it exists, so we can display it 
       @doc[:date_display] = date_string[/^[Cc]a\.+ *\d+|^\d+/]
-      puts @doc[:date_display]
+      
+      if @doc[:date_display]
+        stripped_year = @doc[:date_display].gsub(/^[Cc]a\.+ */,'')
+        # Store the year as an actual date, so we can do math on it 
+        @doc[:creation_date] = stripped_year.concat("-01-01T23:59:59Z")
+        # Store a range value
+        creation_era = []
+        if 100.years.ago > DateTime.parse(stripped_year)
+          creation_era << "More than 100 years old"
+        end
+        if 50.years.ago > DateTime.parse(stripped_year)
+          creation_era << "More than 50 years old"
+        end
+        if 20.years.ago > DateTime.parse(stripped_year)
+          creation_era << "More than 20 years old"
+        end
+        if 10.years.ago > DateTime.parse(stripped_year)
+          creation_era << "More than 10 years old"
+        end
+        if 10.years.ago <= DateTime.parse(stripped_year)
+          creation_era << "Less than 10 years old"
+        end
+        if 5.years.ago <= DateTime.parse(stripped_year)
+          creation_era << "Less than 5 years old"
+        end
+        if 1.year.ago <= DateTime.parse(stripped_year)
+          creation_era << "Less than 1 year old"
+        end
+        @doc[:creation_era_facet] = creation_era
+      end
+      
+      
+      
     end
     
     
