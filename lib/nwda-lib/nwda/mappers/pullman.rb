@@ -15,6 +15,7 @@ class NWDA::Mappers::Pullman
       @xml = record
       @doc = {}
       @doc[:id] = self.getID
+      @doc[:text] = []
       self.getFormatFacet
       self.getTitle
       self.getDescription
@@ -27,7 +28,13 @@ class NWDA::Mappers::Pullman
       self.getPublisherFacet
       self.getLanguageFacet
       self.getCoverage
+      self.getSource
       @doc
+    end
+    
+    def getSource
+      @doc[:source_t] = @xml.xpath('./dc:source/text()').first.to_s
+      @doc[:text] << @doc[:source_t]
     end
     
     # Get the geographic coverage of this item
@@ -43,6 +50,7 @@ class NWDA::Mappers::Pullman
         coverage2 << c.strip
       end
       @doc[:geographic_subject_facet] = coverage2.uniq
+      @doc[:text] << @doc[:geographic_subject_facet].flatten
     end
     
     # index the dates
@@ -56,12 +64,8 @@ class NWDA::Mappers::Pullman
       @doc[:date_display] = date_string[/^[Cc]a\.+ *\d+|^\d+ |^\w+ \d+, \d+ |^\w+, \d+/]
       
       if @doc[:date_display]
-        puts 
-        puts date_string
-        puts @doc[:date_display]
         
         stripped_year = @doc[:date_display][/\d{4}/]
-        puts stripped_year
         # Store the year as an actual date, so we can do math on it 
         @doc[:creation_date] = stripped_year.concat("-01-01T23:59:59Z")
         # Store a range value
@@ -133,10 +137,12 @@ class NWDA::Mappers::Pullman
 
       def getTitle
         @doc[:title_t] = @xml.xpath('./dc:title/text()').first
+        @doc[:text] << @doc[:title_t].to_s
       end
       
       def getDescription
         @doc[:description_t] = @xml.xpath('./dc:description/text()').first.to_s.gsub(/\s+/," ").gsub("&lt;br&gt;","<br>")
+        @doc[:text] << @doc[:description_t]
       end
       
       def getUniqueValuesBR(xpath)
@@ -151,6 +157,7 @@ class NWDA::Mappers::Pullman
             end
       
             @doc[:subject_facet] = general_subjects.uniq
+            @doc[:text] << @doc[:subject_facet].flatten
        end
        
 
