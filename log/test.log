@@ -406,3 +406,383 @@ Rendered catalog/_solr_request (0.5ms)
 Rendered _user_util_links (0.4ms)
 Rendered _flash_msg (0.1ms)
 Completed in 65ms (View: 41, DB: 1) | 200 OK [http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=City+of+Pullman+Collection]
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x26abce0 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x26acc94 @connector=#<RSolr::HTTPClient::Connector:0x26ab1f0 @adapter_name=:curb>, @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}>>
+BLACKLIGHT: initialized with Blacklight.config: {:spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :raw_storage_type=>"marcxml", :raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :show=>{:html_title=>"title_t", :heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t"}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-07 09:59:54) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_search_form (1.4ms)
+Rendered home/_home_text (0.4ms)
+Rendered catalog/_facets (5.6ms)
+Rendered _user_util_links (13.2ms)
+Rendered _flash_msg (0.6ms)
+Completed in 53ms (View: 28, DB: 0) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET /?f%5Bcollection_facet%5D%5B%5D=City+of+Pullman+Collection with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-07 09:59:54) [GET]
+  Parameters: {"f"=>{"collection_facet"=>["City of Pullman Collection"]}}
+Redirected to http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=City+of+Pullman+Collection
+Completed in 7ms (DB: 0) | 302 Found [http://www.example.com/?f%5Bcollection_facet%5D%5B%5D=City+of+Pullman+Collection]
+REQUESTING PAGE: GET http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=City+of+Pullman+Collection with {} and HTTP headers {"HTTP_REFERER"=>"/?f%5Bcollection_facet%5D%5B%5D=City+of+Pullman+Collection"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-07 09:59:54) [GET]
+  Parameters: {"f"=>{"collection_facet"=>["City of Pullman Collection"]}}
+  [4;36;1mSearch Load (0.7ms)[0m   [0;1mSELECT * FROM "searches" [0m
+  [4;35;1mSearch Create (0.6ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2009-06-07 13:59:54', '2009-06-07 13:59:54', NULL, '--- 
+:f: !map:HashWithIndifferentAccess 
+ collection_facet: 
+ - City of Pullman Collection
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (0.6ms)
+Rendered catalog/_did_you_mean (0.4ms)
+Rendered catalog/_bookmark_control (1.3ms)
+Rendered catalog/_index_partials/_default (0.8ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (20.6ms)
+Rendered catalog/_facets (4.8ms)
+Rendered catalog/_solr_request (0.5ms)
+Rendered _user_util_links (0.4ms)
+Rendered _flash_msg (0.1ms)
+Completed in 65ms (View: 39, DB: 1) | 200 OK [http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=City+of+Pullman+Collection]
+REQUESTING PAGE: GET /catalog/pullman_7 with {} and HTTP headers {}
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-07 09:59:54) [GET]
+  Parameters: {"id"=>"pullman_7"}
+  [4;36;1mSearch Load (0.2ms)[0m   [0;1mSELECT * FROM "searches" [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_pullman (1.5ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.4ms)
+Rendered _flash_msg (0.1ms)
+Completed in 15ms (View: 7, DB: 0) | 200 OK [http://www.example.com/catalog/pullman_7]
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x26cae60 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x26cc044 @connector=#<RSolr::HTTPClient::Connector:0x26ca370 @adapter_name=:curb>, @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}>>
+BLACKLIGHT: initialized with Blacklight.config: {:spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :raw_storage_type=>"marcxml", :raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :show=>{:html_title=>"title_t", :heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t"}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-07 10:00:45) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_search_form (1.4ms)
+Rendered home/_home_text (0.5ms)
+Rendered catalog/_facets (5.7ms)
+Rendered _user_util_links (12.1ms)
+Rendered _flash_msg (0.6ms)
+Completed in 103ms (View: 27, DB: 0) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET /?f%5Bcollection_facet%5D%5B%5D=City+of+Pullman+Collection with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-07 10:00:45) [GET]
+  Parameters: {"f"=>{"collection_facet"=>["City of Pullman Collection"]}}
+Redirected to http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=City+of+Pullman+Collection
+Completed in 6ms (DB: 0) | 302 Found [http://www.example.com/?f%5Bcollection_facet%5D%5B%5D=City+of+Pullman+Collection]
+REQUESTING PAGE: GET http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=City+of+Pullman+Collection with {} and HTTP headers {"HTTP_REFERER"=>"/?f%5Bcollection_facet%5D%5B%5D=City+of+Pullman+Collection"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-07 10:00:45) [GET]
+  Parameters: {"f"=>{"collection_facet"=>["City of Pullman Collection"]}}
+  [4;36;1mSearch Load (0.7ms)[0m   [0;1mSELECT * FROM "searches" [0m
+  [4;35;1mSearch Create (0.6ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2009-06-07 14:00:45', '2009-06-07 14:00:45', NULL, '--- 
+:f: !map:HashWithIndifferentAccess 
+ collection_facet: 
+ - City of Pullman Collection
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (0.6ms)
+Rendered catalog/_did_you_mean (0.4ms)
+Rendered catalog/_bookmark_control (1.6ms)
+Rendered catalog/_index_partials/_default (0.7ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.2ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (20.4ms)
+Rendered catalog/_facets (5.2ms)
+Rendered catalog/_solr_request (0.5ms)
+Rendered _user_util_links (0.4ms)
+Rendered _flash_msg (0.1ms)
+Completed in 143ms (View: 39, DB: 1) | 200 OK [http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=City+of+Pullman+Collection]
+REQUESTING PAGE: GET /catalog/pullman_7 with {} and HTTP headers {}
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-07 10:00:45) [GET]
+  Parameters: {"id"=>"pullman_7"}
+  [4;36;1mSearch Load (0.2ms)[0m   [0;1mSELECT * FROM "searches" [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_pullman (1.6ms)
+Rendered catalog/_solr_request (0.3ms)
+Rendered _user_util_links (0.4ms)
+Rendered _flash_msg (0.1ms)
+Completed in 95ms (View: 87, DB: 0) | 200 OK [http://www.example.com/catalog/pullman_7]
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x26cae60 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x26cc044 @connector=#<RSolr::HTTPClient::Connector:0x26ca370 @adapter_name=:curb>, @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}>>
+BLACKLIGHT: initialized with Blacklight.config: {:spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :raw_storage_type=>"marcxml", :raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :show=>{:html_title=>"title_t", :heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t"}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-07 10:02:24) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_search_form (1.4ms)
+Rendered home/_home_text (0.4ms)
+Rendered catalog/_facets (5.8ms)
+Rendered _user_util_links (12.0ms)
+Rendered _flash_msg (0.7ms)
+Completed in 47ms (View: 27, DB: 0) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET /?f%5Bcollection_facet%5D%5B%5D=City+of+Pullman+Collection with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-07 10:02:24) [GET]
+  Parameters: {"f"=>{"collection_facet"=>["City of Pullman Collection"]}}
+Redirected to http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=City+of+Pullman+Collection
+Completed in 6ms (DB: 0) | 302 Found [http://www.example.com/?f%5Bcollection_facet%5D%5B%5D=City+of+Pullman+Collection]
+REQUESTING PAGE: GET http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=City+of+Pullman+Collection with {} and HTTP headers {"HTTP_REFERER"=>"/?f%5Bcollection_facet%5D%5B%5D=City+of+Pullman+Collection"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-07 10:02:24) [GET]
+  Parameters: {"f"=>{"collection_facet"=>["City of Pullman Collection"]}}
+  [4;36;1mSearch Load (0.7ms)[0m   [0;1mSELECT * FROM "searches" [0m
+  [4;35;1mSearch Create (0.6ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2009-06-07 14:02:24', '2009-06-07 14:02:24', NULL, '--- 
+:f: !map:HashWithIndifferentAccess 
+ collection_facet: 
+ - City of Pullman Collection
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (0.6ms)
+Rendered catalog/_did_you_mean (0.4ms)
+Rendered catalog/_bookmark_control (1.4ms)
+Rendered catalog/_index_partials/_default (0.8ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.2ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (20.9ms)
+Rendered catalog/_facets (5.0ms)
+Rendered catalog/_solr_request (0.5ms)
+Rendered _user_util_links (0.4ms)
+Rendered _flash_msg (0.1ms)
+Completed in 145ms (View: 39, DB: 1) | 200 OK [http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=City+of+Pullman+Collection]
+REQUESTING PAGE: GET /catalog/pullman_7 with {} and HTTP headers {}
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-07 10:02:24) [GET]
+  Parameters: {"id"=>"pullman_7"}
+  [4;36;1mSearch Load (0.2ms)[0m   [0;1mSELECT * FROM "searches" [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_pullman (1.4ms)
+Rendered catalog/_solr_request (0.3ms)
+Rendered _user_util_links (0.4ms)
+Rendered _flash_msg (0.1ms)
+Completed in 96ms (View: 89, DB: 0) | 200 OK [http://www.example.com/catalog/pullman_7]
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x26cae60 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x26cc044 @connector=#<RSolr::HTTPClient::Connector:0x26ca370 @adapter_name=:curb>, @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}>>
+BLACKLIGHT: initialized with Blacklight.config: {:spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :raw_storage_type=>"marcxml", :raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :show=>{:html_title=>"title_t", :heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t"}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-07 10:02:37) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_search_form (1.4ms)
+Rendered home/_home_text (0.4ms)
+Rendered catalog/_facets (5.8ms)
+Rendered _user_util_links (11.8ms)
+Rendered _flash_msg (0.6ms)
+Completed in 48ms (View: 27, DB: 0) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET /?f%5Bcollection_facet%5D%5B%5D=City+of+Pullman+Collection with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-07 10:02:37) [GET]
+  Parameters: {"f"=>{"collection_facet"=>["City of Pullman Collection"]}}
+Redirected to http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=City+of+Pullman+Collection
+Completed in 7ms (DB: 0) | 302 Found [http://www.example.com/?f%5Bcollection_facet%5D%5B%5D=City+of+Pullman+Collection]
+REQUESTING PAGE: GET http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=City+of+Pullman+Collection with {} and HTTP headers {"HTTP_REFERER"=>"/?f%5Bcollection_facet%5D%5B%5D=City+of+Pullman+Collection"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-07 10:02:37) [GET]
+  Parameters: {"f"=>{"collection_facet"=>["City of Pullman Collection"]}}
+  [4;36;1mSearch Load (0.7ms)[0m   [0;1mSELECT * FROM "searches" [0m
+  [4;35;1mSearch Create (0.6ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2009-06-07 14:02:37', '2009-06-07 14:02:37', NULL, '--- 
+:f: !map:HashWithIndifferentAccess 
+ collection_facet: 
+ - City of Pullman Collection
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (0.7ms)
+Rendered catalog/_did_you_mean (0.4ms)
+Rendered catalog/_bookmark_control (1.4ms)
+Rendered catalog/_index_partials/_default (0.8ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.2ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (20.7ms)
+Rendered catalog/_facets (5.2ms)
+Rendered catalog/_solr_request (0.6ms)
+Rendered _user_util_links (0.4ms)
+Rendered _flash_msg (0.1ms)
+Completed in 144ms (View: 39, DB: 1) | 200 OK [http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=City+of+Pullman+Collection]
+REQUESTING PAGE: GET /catalog/pullman_7 with {} and HTTP headers {}
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-07 10:02:37) [GET]
+  Parameters: {"id"=>"pullman_7"}
+  [4;36;1mSearch Load (0.2ms)[0m   [0;1mSELECT * FROM "searches" [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_pullman (1.5ms)
+Rendered catalog/_solr_request (0.3ms)
+Rendered _user_util_links (0.4ms)
+Rendered _flash_msg (0.1ms)
+Completed in 94ms (View: 86, DB: 0) | 200 OK [http://www.example.com/catalog/pullman_7]
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x26abce0 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x26acc94 @connector=#<RSolr::HTTPClient::Connector:0x26ab1f0 @adapter_name=:curb>, @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}>>
+BLACKLIGHT: initialized with Blacklight.config: {:spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :raw_storage_type=>"marcxml", :raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :show=>{:html_title=>"title_t", :heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t"}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-07 10:05:02) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_search_form (1.4ms)
+Rendered home/_home_text (0.4ms)
+Rendered catalog/_facets (5.8ms)
+Rendered _user_util_links (12.6ms)
+Rendered _flash_msg (0.7ms)
+Completed in 48ms (View: 28, DB: 0) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET /?f%5Bcollection_facet%5D%5B%5D=City+of+Pullman+Collection with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-07 10:05:03) [GET]
+  Parameters: {"f"=>{"collection_facet"=>["City of Pullman Collection"]}}
+Redirected to http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=City+of+Pullman+Collection
+Completed in 7ms (DB: 0) | 302 Found [http://www.example.com/?f%5Bcollection_facet%5D%5B%5D=City+of+Pullman+Collection]
+REQUESTING PAGE: GET http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=City+of+Pullman+Collection with {} and HTTP headers {"HTTP_REFERER"=>"/?f%5Bcollection_facet%5D%5B%5D=City+of+Pullman+Collection"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-07 10:05:03) [GET]
+  Parameters: {"f"=>{"collection_facet"=>["City of Pullman Collection"]}}
+  [4;36;1mSearch Load (0.7ms)[0m   [0;1mSELECT * FROM "searches" [0m
+  [4;35;1mSearch Create (0.6ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2009-06-07 14:05:03', '2009-06-07 14:05:03', NULL, '--- 
+:f: !map:HashWithIndifferentAccess 
+ collection_facet: 
+ - City of Pullman Collection
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (0.6ms)
+Rendered catalog/_did_you_mean (0.5ms)
+Rendered catalog/_bookmark_control (1.4ms)
+Rendered catalog/_index_partials/_default (0.7ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.2ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (21.1ms)
+Rendered catalog/_facets (4.9ms)
+Rendered catalog/_solr_request (0.5ms)
+Rendered _user_util_links (0.4ms)
+Rendered _flash_msg (0.1ms)
+Completed in 66ms (View: 39, DB: 1) | 200 OK [http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=City+of+Pullman+Collection]
+REQUESTING PAGE: GET /catalog/pullman_7 with {} and HTTP headers {}
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-07 10:05:03) [GET]
+  Parameters: {"id"=>"pullman_7"}
+  [4;36;1mSearch Load (0.2ms)[0m   [0;1mSELECT * FROM "searches" [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_pullman (1.8ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.5ms)
+Rendered _flash_msg (0.1ms)
+Completed in 15ms (View: 7, DB: 0) | 200 OK [http://www.example.com/catalog/pullman_7]

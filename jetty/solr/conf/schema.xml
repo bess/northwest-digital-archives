@@ -301,6 +301,9 @@
    
    <dynamicField name="*_facet" type="string" indexed="true" stored="true" multiValued="true" />
    <dynamicField name="*_display" type="string" indexed="false" stored="true" />
+   <dynamicField name="*_date" type="date" indexed="true" stored="true" multiValued="true"/>
+
+
    
    <field name="title_sort" type="alphaOnlySort" indexed="true" stored="false"/>
    <field name="format_sort" type="alphaOnlySort" indexed="true" stored="false"/>
