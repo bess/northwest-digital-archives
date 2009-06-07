@@ -19,3 +19,12 @@ Feature: Display Pullman Archives files correctly
 	  And I should see a "Description" of "The Washington Hotel."
 	  And I should see a "Collection" of "City of Pullman Collection"
 	  And I should not see a "Date" field
+	
+	
+	Scenario: A record without a description
+      Given I am on the document page for id pullman_1495
+	  Then I should see a title of "Leonard Bros and Co., Uniontown, 2003"
+	  And I should not see a "Description" field	  
+	  And I should see a "Collection" of "City of Pullman Collection"
+	  And I should not see a "Date" field	  
+	
