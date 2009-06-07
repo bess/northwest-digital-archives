@@ -53,10 +53,15 @@ class NWDA::Mappers::Pullman
       date_string = @xml.xpath('./dc:date/text()').first.to_s
       
       # Store the year as a string, along with the Ca., if it exists, so we can display it 
-      @doc[:date_display] = date_string[/^[Cc]a\.+ *\d+|^\d+/]
+      @doc[:date_display] = date_string[/^[Cc]a\.+ *\d+|^\d+ |^\w+ \d+, \d+ |^\w+, \d+/]
       
       if @doc[:date_display]
-        stripped_year = @doc[:date_display].gsub(/^[Cc]a\.+ */,'')
+        puts 
+        puts date_string
+        puts @doc[:date_display]
+        
+        stripped_year = @doc[:date_display][/\d{4}/]
+        puts stripped_year
         # Store the year as an actual date, so we can do math on it 
         @doc[:creation_date] = stripped_year.concat("-01-01T23:59:59Z")
         # Store a range value
