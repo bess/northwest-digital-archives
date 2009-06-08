@@ -53,19 +53,14 @@ class NWDA::Mappers::Baseball
     # put the rest into categories like "over fifty years ago" etc.  
     def getDates
       date_string = @xml.xpath('./date/text()').first.to_s
-      puts 
-      puts date_string
       # Store the year as a string, along with the Ca., if it exists, so we can display it 
       @doc[:date_display] = date_string
-      puts @doc[:date_display]
-      
-      
+            
       unless @doc[:date_display].nil?
         
         stripped_year = @doc[:date_display][/\d{4}/]
         
         unless stripped_year.nil?
-          puts stripped_year
           # Store the year as an actual date, so we can do math on it 
           @doc[:creation_date] = stripped_year.concat("-01-01T23:59:59Z")
           # Store a range value

@@ -2676,3 +2676,1271 @@ Rendered catalog/_solr_request (0.3ms)
 Rendered _user_util_links (0.5ms)
 Rendered _flash_msg (0.1ms)
 Completed in 13ms (View: 5, DB: 0) | 200 OK [http://www.example.com/catalog/pullman_1495]
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x26ab8a8 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x26ac85c @connector=#<RSolr::HTTPClient::Connector:0x26aadb8 @adapter_name=:curb>, @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}>>
+BLACKLIGHT: initialized with Blacklight.config: {:spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :raw_storage_type=>"marcxml", :raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :show=>{:html_title=>"title_t", :heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t"}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-07 19:57:40) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_search_form (1.5ms)
+Rendered home/_home_text (0.4ms)
+Rendered catalog/_facets (97.8ms)
+Rendered _user_util_links (44.6ms)
+Rendered _flash_msg (0.6ms)
+Completed in 186ms (View: 165, DB: 0) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET /?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-07 19:57:40) [GET]
+  Parameters: {"f"=>{"collection_facet"=>["Oregon State Baseball"]}}
+Redirected to http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball
+Completed in 10ms (DB: 0) | 302 Found [http://www.example.com/?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball]
+REQUESTING PAGE: GET http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball with {} and HTTP headers {"HTTP_REFERER"=>"/?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-07 19:57:40) [GET]
+  Parameters: {"f"=>{"collection_facet"=>["Oregon State Baseball"]}}
+  [4;36;1mSearch Load (1.8ms)[0m   [0;1mSELECT * FROM "searches" [0m
+  [4;35;1mSearch Create (0.6ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2009-06-07 23:57:40', '2009-06-07 23:57:40', NULL, '--- 
+:f: !map:HashWithIndifferentAccess 
+ collection_facet: 
+ - Oregon State Baseball
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (0.6ms)
+Rendered catalog/_did_you_mean (0.4ms)
+Rendered catalog/_bookmark_control (1.5ms)
+Rendered catalog/_index_partials/_baseball (1.4ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_document_list (21.5ms)
+Rendered catalog/_facets (7.3ms)
+Rendered catalog/_solr_request (0.5ms)
+Rendered _user_util_links (0.4ms)
+Rendered _flash_msg (0.1ms)
+Completed in 70ms (View: 43, DB: 2) | 200 OK [http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball]
+REQUESTING PAGE: GET /catalog?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball&f%5Bsubject_era_facet%5D%5B%5D=More+than+100+years+old with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-07 19:57:41) [GET]
+  Parameters: {"f"=>{"collection_facet"=>["Oregon State Baseball"], "subject_era_facet"=>["More than 100 years old"]}}
+  [4;36;1mSearch Load (0.4ms)[0m   [0;1mSELECT * FROM "searches" [0m
+  [4;35;1mSearch Create (0.2ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2009-06-07 23:57:41', '2009-06-07 23:57:41', NULL, '--- 
+:f: !map:HashWithIndifferentAccess 
+ collection_facet: 
+ - Oregon State Baseball
+ subject_era_facet: 
+ - More than 100 years old
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (0.7ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_document_list (14.8ms)
+Rendered catalog/_facets (5.2ms)
+Rendered catalog/_solr_request (0.3ms)
+Rendered _user_util_links (0.4ms)
+Rendered _flash_msg (0.1ms)
+Completed in 50ms (View: 31, DB: 1) | 200 OK [http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball&f%5Bsubject_era_facet%5D%5B%5D=More+than+100+years+old]
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x26ab8bc @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x26ac870 @connector=#<RSolr::HTTPClient::Connector:0x26aadcc @adapter_name=:curb>, @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}>>
+BLACKLIGHT: initialized with Blacklight.config: {:spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :raw_storage_type=>"marcxml", :raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :show=>{:html_title=>"title_t", :heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t"}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-07 20:02:23) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_search_form (1.5ms)
+Rendered home/_home_text (0.5ms)
+Rendered catalog/_facets (8.1ms)
+Rendered _user_util_links (94.4ms)
+Rendered _flash_msg (0.6ms)
+Completed in 135ms (View: 113, DB: 0) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET /?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-07 20:02:23) [GET]
+  Parameters: {"f"=>{"collection_facet"=>["Oregon State Baseball"]}}
+Redirected to http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball
+Completed in 6ms (DB: 0) | 302 Found [http://www.example.com/?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball]
+REQUESTING PAGE: GET http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball with {} and HTTP headers {"HTTP_REFERER"=>"/?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-07 20:02:23) [GET]
+  Parameters: {"f"=>{"collection_facet"=>["Oregon State Baseball"]}}
+  [4;36;1mSearch Load (0.7ms)[0m   [0;1mSELECT * FROM "searches" [0m
+  [4;35;1mSearch Create (0.6ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2009-06-08 00:02:23', '2009-06-08 00:02:23', NULL, '--- 
+:f: !map:HashWithIndifferentAccess 
+ collection_facet: 
+ - Oregon State Baseball
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (0.7ms)
+Rendered catalog/_did_you_mean (0.4ms)
+Rendered catalog/_bookmark_control (1.5ms)
+Rendered catalog/_index_partials/_baseball (1.3ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_document_list (21.6ms)
+Rendered catalog/_facets (7.6ms)
+Rendered catalog/_solr_request (0.6ms)
+Rendered _user_util_links (0.4ms)
+Rendered _flash_msg (0.1ms)
+Completed in 69ms (View: 43, DB: 1) | 200 OK [http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball]
+REQUESTING PAGE: GET /catalog?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball&f%5Bsubject_era_facet%5D%5B%5D=More+than+100+years+old with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-07 20:02:24) [GET]
+  Parameters: {"f"=>{"collection_facet"=>["Oregon State Baseball"], "subject_era_facet"=>["More than 100 years old"]}}
+  [4;36;1mSearch Load (0.3ms)[0m   [0;1mSELECT * FROM "searches" [0m
+  [4;35;1mSearch Create (0.2ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2009-06-08 00:02:24', '2009-06-08 00:02:24', NULL, '--- 
+:f: !map:HashWithIndifferentAccess 
+ collection_facet: 
+ - Oregon State Baseball
+ subject_era_facet: 
+ - More than 100 years old
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (0.6ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_document_list (15.3ms)
+Rendered catalog/_facets (5.2ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.4ms)
+Rendered _flash_msg (0.1ms)
+Completed in 111ms (View: 31, DB: 1) | 200 OK [http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball&f%5Bsubject_era_facet%5D%5B%5D=More+than+100+years+old]
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-07 20:02:24) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_search_form (0.6ms)
+Rendered home/_home_text (0.1ms)
+Rendered catalog/_facets (5.9ms)
+Rendered _user_util_links (0.5ms)
+Rendered _flash_msg (0.1ms)
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET /catalog with {"commit"=>"search", "qt"=>"search", "q"=>"Harriet's Collection", "per_page"=>"10"} and HTTP headers {"HTTP_REFERER"=>"/"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-07 20:02:24) [GET]
+  Parameters: {"commit"=>"search", "qt"=>"search", "q"=>"Harriet's Collection", "per_page"=>"10"}
+  [4;36;1mSearch Load (0.2ms)[0m   [0;1mSELECT * FROM "searches" [0m
+  [4;35;1mSearch Create (0.4ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2009-06-08 00:02:24', '2009-06-08 00:02:24', NULL, '--- 
+:q: Harriet''s Collection
+:qt: search
+:per_page: "10"
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (0.6ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_document_list (14.8ms)
+Rendered catalog/_facets (5.9ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.4ms)
+Rendered _flash_msg (0.1ms)
+Completed in 44ms (View: 33, DB: 1) | 200 OK [http://www.example.com/catalog]
+REQUESTING PAGE: GET /catalog/baseball_467 with {} and HTTP headers {}
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-07 20:02:24) [GET]
+  Parameters: {"id"=>"baseball_467"}
+  [4;36;1mSearch Load (0.2ms)[0m   [0;1mSELECT * FROM "searches" [0m
+Rendering template within layouts/application
+Rendering catalog/show
+
+
+Processing ApplicationController#show (for 127.0.0.1 at 2009-06-07 20:02:24) [GET]
+  Parameters: {"id"=>"baseball_467"}
+REQUESTING PAGE: GET /catalog/baseball_78 with {} and HTTP headers {}
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-07 20:02:24) [GET]
+  Parameters: {"id"=>"baseball_78"}
+  [4;35;1mSearch Load (0.2ms)[0m   [0mSELECT * FROM "searches" [0m
+Rendering template within layouts/application
+Rendering catalog/show
+
+
+Processing ApplicationController#show (for 127.0.0.1 at 2009-06-07 20:02:24) [GET]
+  Parameters: {"id"=>"baseball_78"}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x26c995c @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x26ca910 @connector=#<RSolr::HTTPClient::Connector:0x26c8e6c @adapter_name=:curb>, @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}>>
+BLACKLIGHT: initialized with Blacklight.config: {:spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :raw_storage_type=>"marcxml", :raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :show=>{:html_title=>"title_t", :heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t"}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-07 20:03:47) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_search_form (1.5ms)
+Rendered home/_home_text (0.5ms)
+Rendered catalog/_facets (7.9ms)
+Rendered _user_util_links (14.3ms)
+Rendered _flash_msg (0.6ms)
+Completed in 53ms (View: 32, DB: 0) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET /?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-07 20:03:47) [GET]
+  Parameters: {"f"=>{"collection_facet"=>["Oregon State Baseball"]}}
+Redirected to http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball
+Completed in 6ms (DB: 0) | 302 Found [http://www.example.com/?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball]
+REQUESTING PAGE: GET http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball with {} and HTTP headers {"HTTP_REFERER"=>"/?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-07 20:03:47) [GET]
+  Parameters: {"f"=>{"collection_facet"=>["Oregon State Baseball"]}}
+  [4;36;1mSearch Load (0.6ms)[0m   [0;1mSELECT * FROM "searches" [0m
+  [4;35;1mSearch Create (0.6ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2009-06-08 00:03:47', '2009-06-08 00:03:47', NULL, '--- 
+:f: !map:HashWithIndifferentAccess 
+ collection_facet: 
+ - Oregon State Baseball
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (0.7ms)
+Rendered catalog/_did_you_mean (0.4ms)
+Rendered catalog/_bookmark_control (1.3ms)
+Rendered catalog/_index_partials/_baseball (1.3ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_document_list (20.6ms)
+Rendered catalog/_facets (7.7ms)
+Rendered catalog/_solr_request (0.6ms)
+Rendered _user_util_links (0.4ms)
+Rendered _flash_msg (0.1ms)
+Completed in 68ms (View: 42, DB: 1) | 200 OK [http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball]
+REQUESTING PAGE: GET /catalog?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball&f%5Bsubject_era_facet%5D%5B%5D=More+than+100+years+old with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-07 20:03:48) [GET]
+  Parameters: {"f"=>{"collection_facet"=>["Oregon State Baseball"], "subject_era_facet"=>["More than 100 years old"]}}
+  [4;36;1mSearch Load (0.3ms)[0m   [0;1mSELECT * FROM "searches" [0m
+  [4;35;1mSearch Create (0.2ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2009-06-08 00:03:48', '2009-06-08 00:03:48', NULL, '--- 
+:f: !map:HashWithIndifferentAccess 
+ collection_facet: 
+ - Oregon State Baseball
+ subject_era_facet: 
+ - More than 100 years old
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (0.7ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_baseball (0.3ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_document_list (15.4ms)
+Rendered catalog/_facets (5.0ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.4ms)
+Rendered _flash_msg (0.1ms)
+Completed in 111ms (View: 31, DB: 1) | 200 OK [http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball&f%5Bsubject_era_facet%5D%5B%5D=More+than+100+years+old]
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-07 20:03:48) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_search_form (0.7ms)
+Rendered home/_home_text (0.1ms)
+Rendered catalog/_facets (5.8ms)
+Rendered _user_util_links (0.5ms)
+Rendered _flash_msg (0.1ms)
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET /catalog with {"commit"=>"search", "qt"=>"search", "q"=>"Harriet's Collection", "per_page"=>"10"} and HTTP headers {"HTTP_REFERER"=>"/"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-07 20:03:48) [GET]
+  Parameters: {"commit"=>"search", "qt"=>"search", "q"=>"Harriet's Collection", "per_page"=>"10"}
+  [4;36;1mSearch Load (0.2ms)[0m   [0;1mSELECT * FROM "searches" [0m
+  [4;35;1mSearch Create (0.4ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2009-06-08 00:03:48', '2009-06-08 00:03:48', NULL, '--- 
+:q: Harriet''s Collection
+:qt: search
+:per_page: "10"
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (0.7ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_document_list (14.3ms)
+Rendered catalog/_facets (5.9ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.4ms)
+Rendered _flash_msg (0.1ms)
+Completed in 44ms (View: 32, DB: 1) | 200 OK [http://www.example.com/catalog]
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-07 20:03:48) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_search_form (0.6ms)
+Rendered home/_home_text (0.1ms)
+Rendered catalog/_facets (6.0ms)
+Rendered _user_util_links (0.5ms)
+Rendered _flash_msg (0.1ms)
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET /catalog/baseball_467 with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-07 20:03:48) [GET]
+  Parameters: {"id"=>"baseball_467"}
+  [4;36;1mSearch Load (0.2ms)[0m   [0;1mSELECT * FROM "searches" [0m
+Rendering template within layouts/application
+Rendering catalog/show
+
+
+Processing ApplicationController#show (for 127.0.0.1 at 2009-06-07 20:03:48) [GET]
+  Parameters: {"id"=>"baseball_467"}
+REQUESTING PAGE: GET /catalog/baseball_78 with {} and HTTP headers {}
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-07 20:03:48) [GET]
+  Parameters: {"id"=>"baseball_78"}
+  [4;35;1mSearch Load (0.2ms)[0m   [0mSELECT * FROM "searches" [0m
+Rendering template within layouts/application
+Rendering catalog/show
+
+
+Processing ApplicationController#show (for 127.0.0.1 at 2009-06-07 20:03:48) [GET]
+  Parameters: {"id"=>"baseball_78"}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x26c995c @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x26ca910 @connector=#<RSolr::HTTPClient::Connector:0x26c8e6c @adapter_name=:curb>, @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}>>
+BLACKLIGHT: initialized with Blacklight.config: {:spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :raw_storage_type=>"marcxml", :raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :show=>{:html_title=>"title_t", :heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t"}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-07 20:05:34) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_search_form (1.6ms)
+Rendered home/_home_text (0.5ms)
+Rendered catalog/_facets (7.9ms)
+Rendered _user_util_links (13.8ms)
+Rendered _flash_msg (0.7ms)
+Completed in 53ms (View: 32, DB: 0) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET /?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-07 20:05:34) [GET]
+  Parameters: {"f"=>{"collection_facet"=>["Oregon State Baseball"]}}
+Redirected to http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball
+Completed in 7ms (DB: 0) | 302 Found [http://www.example.com/?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball]
+REQUESTING PAGE: GET http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball with {} and HTTP headers {"HTTP_REFERER"=>"/?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-07 20:05:34) [GET]
+  Parameters: {"f"=>{"collection_facet"=>["Oregon State Baseball"]}}
+  [4;36;1mSearch Load (0.6ms)[0m   [0;1mSELECT * FROM "searches" [0m
+  [4;35;1mSearch Create (0.6ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2009-06-08 00:05:34', '2009-06-08 00:05:34', NULL, '--- 
+:f: !map:HashWithIndifferentAccess 
+ collection_facet: 
+ - Oregon State Baseball
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (0.6ms)
+Rendered catalog/_did_you_mean (0.5ms)
+Rendered catalog/_bookmark_control (1.3ms)
+Rendered catalog/_index_partials/_baseball (1.3ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_document_list (20.9ms)
+Rendered catalog/_facets (7.4ms)
+Rendered catalog/_solr_request (0.6ms)
+Rendered _user_util_links (0.4ms)
+Rendered _flash_msg (0.1ms)
+Completed in 67ms (View: 42, DB: 1) | 200 OK [http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball]
+REQUESTING PAGE: GET /catalog?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball&f%5Bsubject_era_facet%5D%5B%5D=More+than+100+years+old with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-07 20:05:35) [GET]
+  Parameters: {"f"=>{"collection_facet"=>["Oregon State Baseball"], "subject_era_facet"=>["More than 100 years old"]}}
+  [4;36;1mSearch Load (0.3ms)[0m   [0;1mSELECT * FROM "searches" [0m
+  [4;35;1mSearch Create (0.2ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2009-06-08 00:05:35', '2009-06-08 00:05:35', NULL, '--- 
+:f: !map:HashWithIndifferentAccess 
+ collection_facet: 
+ - Oregon State Baseball
+ subject_era_facet: 
+ - More than 100 years old
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (0.6ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_baseball (0.3ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.3ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_document_list (15.5ms)
+Rendered catalog/_facets (5.1ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.4ms)
+Rendered _flash_msg (0.1ms)
+Completed in 110ms (View: 31, DB: 0) | 200 OK [http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball&f%5Bsubject_era_facet%5D%5B%5D=More+than+100+years+old]
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-07 20:05:35) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_search_form (0.6ms)
+Rendered home/_home_text (0.1ms)
+Rendered catalog/_facets (6.0ms)
+Rendered _user_util_links (0.5ms)
+Rendered _flash_msg (0.1ms)
+Completed in 18ms (View: 10, DB: 0) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET /catalog with {"commit"=>"search", "qt"=>"search", "q"=>"Harriet's Collection", "per_page"=>"10"} and HTTP headers {"HTTP_REFERER"=>"/"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-07 20:05:35) [GET]
+  Parameters: {"commit"=>"search", "qt"=>"search", "q"=>"Harriet's Collection", "per_page"=>"10"}
+  [4;36;1mSearch Load (0.3ms)[0m   [0;1mSELECT * FROM "searches" [0m
+  [4;35;1mSearch Create (0.4ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2009-06-08 00:05:35', '2009-06-08 00:05:35', NULL, '--- 
+:q: Harriet''s Collection
+:qt: search
+:per_page: "10"
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (0.6ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.3ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_document_list (14.4ms)
+Rendered catalog/_facets (5.9ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.4ms)
+Rendered _flash_msg (0.1ms)
+Completed in 43ms (View: 32, DB: 1) | 200 OK [http://www.example.com/catalog]
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-07 20:05:35) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_search_form (0.7ms)
+Rendered home/_home_text (0.1ms)
+Rendered catalog/_facets (6.0ms)
+Rendered _user_util_links (0.5ms)
+Rendered _flash_msg (0.1ms)
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET /catalog/baseball_467 with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-07 20:05:35) [GET]
+  Parameters: {"id"=>"baseball_467"}
+  [4;36;1mSearch Load (0.2ms)[0m   [0;1mSELECT * FROM "searches" [0m
+Rendering template within layouts/application
+Rendering catalog/show
+
+
+Processing ApplicationController#show (for 127.0.0.1 at 2009-06-07 20:05:35) [GET]
+  Parameters: {"id"=>"baseball_467"}
+REQUESTING PAGE: GET /catalog/baseball_78 with {} and HTTP headers {}
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-07 20:05:35) [GET]
+  Parameters: {"id"=>"baseball_78"}
+  [4;35;1mSearch Load (0.3ms)[0m   [0mSELECT * FROM "searches" [0m
+Rendering template within layouts/application
+Rendering catalog/show
+
+
+Processing ApplicationController#show (for 127.0.0.1 at 2009-06-07 20:05:35) [GET]
+  Parameters: {"id"=>"baseball_78"}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x26c995c @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x26ca910 @connector=#<RSolr::HTTPClient::Connector:0x26c8e6c @adapter_name=:curb>, @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}>>
+BLACKLIGHT: initialized with Blacklight.config: {:spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :raw_storage_type=>"marcxml", :raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :show=>{:html_title=>"title_t", :heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t"}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-07 20:11:51) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_search_form (1.5ms)
+Rendered home/_home_text (0.5ms)
+Rendered catalog/_facets (7.8ms)
+Rendered _user_util_links (13.6ms)
+Rendered _flash_msg (0.7ms)
+Completed in 53ms (View: 31, DB: 0) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET /?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-07 20:11:51) [GET]
+  Parameters: {"f"=>{"collection_facet"=>["Oregon State Baseball"]}}
+Redirected to http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball
+Completed in 7ms (DB: 0) | 302 Found [http://www.example.com/?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball]
+REQUESTING PAGE: GET http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball with {} and HTTP headers {"HTTP_REFERER"=>"/?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-07 20:11:51) [GET]
+  Parameters: {"f"=>{"collection_facet"=>["Oregon State Baseball"]}}
+  [4;36;1mSearch Load (1.1ms)[0m   [0;1mSELECT * FROM "searches" [0m
+  [4;35;1mSearch Create (0.6ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2009-06-08 00:11:51', '2009-06-08 00:11:51', NULL, '--- 
+:f: !map:HashWithIndifferentAccess 
+ collection_facet: 
+ - Oregon State Baseball
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (0.7ms)
+Rendered catalog/_did_you_mean (0.4ms)
+Rendered catalog/_bookmark_control (1.3ms)
+Rendered catalog/_index_partials/_baseball (1.3ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.3ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_baseball (0.5ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.3ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_document_list (22.7ms)
+Rendered catalog/_facets (8.1ms)
+Rendered catalog/_solr_request (0.6ms)
+Rendered _user_util_links (0.5ms)
+Rendered _flash_msg (0.1ms)
+Completed in 75ms (View: 45, DB: 2) | 200 OK [http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball]
+REQUESTING PAGE: GET /catalog?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball&f%5Bsubject_era_facet%5D%5B%5D=More+than+100+years+old with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-07 20:11:51) [GET]
+  Parameters: {"f"=>{"collection_facet"=>["Oregon State Baseball"], "subject_era_facet"=>["More than 100 years old"]}}
+  [4;36;1mSearch Load (0.9ms)[0m   [0;1mSELECT * FROM "searches" [0m
+  [4;35;1mSearch Create (0.2ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2009-06-08 00:11:51', '2009-06-08 00:11:51', NULL, '--- 
+:f: !map:HashWithIndifferentAccess 
+ collection_facet: 
+ - Oregon State Baseball
+ subject_era_facet: 
+ - More than 100 years old
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (0.7ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_document_list (15.4ms)
+Rendered catalog/_facets (5.1ms)
+Rendered catalog/_solr_request (0.9ms)
+Rendered _user_util_links (0.4ms)
+Rendered _flash_msg (0.1ms)
+Completed in 119ms (View: 33, DB: 1) | 200 OK [http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball&f%5Bsubject_era_facet%5D%5B%5D=More+than+100+years+old]
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-07 20:11:51) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_search_form (0.7ms)
+Rendered home/_home_text (0.1ms)
+Rendered catalog/_facets (6.1ms)
+Rendered _user_util_links (0.5ms)
+Rendered _flash_msg (0.1ms)
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET /catalog with {"commit"=>"search", "qt"=>"search", "q"=>"Harriet's Collection", "per_page"=>"10"} and HTTP headers {"HTTP_REFERER"=>"/"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-07 20:11:51) [GET]
+  Parameters: {"commit"=>"search", "qt"=>"search", "q"=>"Harriet's Collection", "per_page"=>"10"}
+  [4;36;1mSearch Load (0.2ms)[0m   [0;1mSELECT * FROM "searches" [0m
+  [4;35;1mSearch Create (0.4ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2009-06-08 00:11:51', '2009-06-08 00:11:51', NULL, '--- 
+:q: Harriet''s Collection
+:qt: search
+:per_page: "10"
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (0.6ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_document_list (14.6ms)
+Rendered catalog/_facets (6.1ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.4ms)
+Rendered _flash_msg (0.1ms)
+Completed in 43ms (View: 33, DB: 1) | 200 OK [http://www.example.com/catalog]
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-07 20:11:52) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_search_form (1.0ms)
+Rendered home/_home_text (0.1ms)
+Rendered catalog/_facets (8.4ms)
+Rendered _user_util_links (0.5ms)
+Rendered _flash_msg (0.1ms)
+Completed in 19ms (View: 13, DB: 0) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET /catalog/baseball_467 with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-07 20:11:52) [GET]
+  Parameters: {"id"=>"baseball_467"}
+  [4;36;1mSearch Load (0.6ms)[0m   [0;1mSELECT * FROM "searches" [0m
+Rendering template within layouts/application
+Rendering catalog/show
+
+
+Processing ApplicationController#show (for 127.0.0.1 at 2009-06-07 20:11:52) [GET]
+  Parameters: {"id"=>"baseball_467"}
+REQUESTING PAGE: GET /catalog/baseball_78 with {} and HTTP headers {}
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-07 20:11:52) [GET]
+  Parameters: {"id"=>"baseball_78"}
+  [4;35;1mSearch Load (0.2ms)[0m   [0mSELECT * FROM "searches" [0m
+Rendering template within layouts/application
+Rendering catalog/show
+
+
+Processing ApplicationController#show (for 127.0.0.1 at 2009-06-07 20:11:52) [GET]
+  Parameters: {"id"=>"baseball_78"}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x26c995c @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x26ca910 @connector=#<RSolr::HTTPClient::Connector:0x26c8e6c @adapter_name=:curb>, @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}>>
+BLACKLIGHT: initialized with Blacklight.config: {:spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :raw_storage_type=>"marcxml", :raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :show=>{:html_title=>"title_t", :heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t"}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-07 20:13:37) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_search_form (1.5ms)
+Rendered home/_home_text (0.6ms)
+Rendered catalog/_facets (8.0ms)
+Rendered _user_util_links (13.4ms)
+Rendered _flash_msg (0.7ms)
+Completed in 59ms (View: 32, DB: 0) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET /?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-07 20:13:37) [GET]
+  Parameters: {"f"=>{"collection_facet"=>["Oregon State Baseball"]}}
+Redirected to http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball
+Completed in 6ms (DB: 0) | 302 Found [http://www.example.com/?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball]
+REQUESTING PAGE: GET http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball with {} and HTTP headers {"HTTP_REFERER"=>"/?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-07 20:13:37) [GET]
+  Parameters: {"f"=>{"collection_facet"=>["Oregon State Baseball"]}}
+  [4;36;1mSearch Load (0.6ms)[0m   [0;1mSELECT * FROM "searches" [0m
+  [4;35;1mSearch Create (0.6ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2009-06-08 00:13:37', '2009-06-08 00:13:37', NULL, '--- 
+:f: !map:HashWithIndifferentAccess 
+ collection_facet: 
+ - Oregon State Baseball
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (0.7ms)
+Rendered catalog/_did_you_mean (0.4ms)
+Rendered catalog/_bookmark_control (1.3ms)
+Rendered catalog/_index_partials/_baseball (1.3ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.3ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_document_list (20.4ms)
+Rendered catalog/_facets (7.8ms)
+Rendered catalog/_solr_request (0.6ms)
+Rendered _user_util_links (0.4ms)
+Rendered _flash_msg (0.1ms)
+Completed in 68ms (View: 42, DB: 1) | 200 OK [http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball]
+REQUESTING PAGE: GET /catalog?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball&f%5Bsubject_era_facet%5D%5B%5D=More+than+100+years+old with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-07 20:13:38) [GET]
+  Parameters: {"f"=>{"collection_facet"=>["Oregon State Baseball"], "subject_era_facet"=>["More than 100 years old"]}}
+  [4;36;1mSearch Load (0.3ms)[0m   [0;1mSELECT * FROM "searches" [0m
+  [4;35;1mSearch Create (0.2ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2009-06-08 00:13:38', '2009-06-08 00:13:38', NULL, '--- 
+:f: !map:HashWithIndifferentAccess 
+ collection_facet: 
+ - Oregon State Baseball
+ subject_era_facet: 
+ - More than 100 years old
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (0.6ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_document_list (15.0ms)
+Rendered catalog/_facets (5.1ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.4ms)
+Rendered _flash_msg (0.1ms)
+Completed in 111ms (View: 30, DB: 1) | 200 OK [http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball&f%5Bsubject_era_facet%5D%5B%5D=More+than+100+years+old]
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-07 20:13:38) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_search_form (0.7ms)
+Rendered home/_home_text (0.1ms)
+Rendered catalog/_facets (6.0ms)
+Rendered _user_util_links (0.5ms)
+Rendered _flash_msg (0.1ms)
+Completed in 19ms (View: 10, DB: 0) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET /catalog with {"commit"=>"search", "qt"=>"search", "q"=>"Harriet's Collection", "per_page"=>"10"} and HTTP headers {"HTTP_REFERER"=>"/"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-07 20:13:38) [GET]
+  Parameters: {"commit"=>"search", "qt"=>"search", "q"=>"Harriet's Collection", "per_page"=>"10"}
+  [4;36;1mSearch Load (0.3ms)[0m   [0;1mSELECT * FROM "searches" [0m
+  [4;35;1mSearch Create (0.4ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2009-06-08 00:13:38', '2009-06-08 00:13:38', NULL, '--- 
+:q: Harriet''s Collection
+:qt: search
+:per_page: "10"
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (0.6ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_document_list (14.6ms)
+Rendered catalog/_facets (6.0ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.4ms)
+Rendered _flash_msg (0.1ms)
+Completed in 43ms (View: 32, DB: 1) | 200 OK [http://www.example.com/catalog]
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-07 20:13:38) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_search_form (0.6ms)
+Rendered home/_home_text (0.1ms)
+Rendered catalog/_facets (6.1ms)
+Rendered _user_util_links (0.5ms)
+Rendered _flash_msg (0.1ms)
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET /catalog/baseball_467 with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-07 20:13:38) [GET]
+  Parameters: {"id"=>"baseball_467"}
+  [4;36;1mSearch Load (0.2ms)[0m   [0;1mSELECT * FROM "searches" [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_baseball (3.1ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.4ms)
+Rendered _flash_msg (0.1ms)
+Completed in 19ms (View: 9, DB: 0) | 200 OK [http://www.example.com/catalog/baseball_467]
+REQUESTING PAGE: GET /catalog/baseball_78 with {} and HTTP headers {}
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-07 20:13:38) [GET]
+  Parameters: {"id"=>"baseball_78"}
+  [4;35;1mSearch Load (0.3ms)[0m   [0mSELECT * FROM "searches" [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_baseball (1.7ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.4ms)
+Rendered _flash_msg (0.1ms)
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://www.example.com/catalog/baseball_78]
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x26c995c @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x26ca910 @connector=#<RSolr::HTTPClient::Connector:0x26c8e6c @adapter_name=:curb>, @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}>>
+BLACKLIGHT: initialized with Blacklight.config: {:spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :raw_storage_type=>"marcxml", :raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :show=>{:html_title=>"title_t", :heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t"}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-07 20:40:15) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_search_form (1.5ms)
+Rendered home/_home_text (0.5ms)
+Rendered catalog/_facets (8.0ms)
+Rendered _user_util_links (14.0ms)
+Rendered _flash_msg (0.6ms)
+Completed in 56ms (View: 32, DB: 0) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET /?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-07 20:40:15) [GET]
+  Parameters: {"f"=>{"collection_facet"=>["Oregon State Baseball"]}}
+Redirected to http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball
+Completed in 6ms (DB: 0) | 302 Found [http://www.example.com/?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball]
+REQUESTING PAGE: GET http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball with {} and HTTP headers {"HTTP_REFERER"=>"/?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-07 20:40:15) [GET]
+  Parameters: {"f"=>{"collection_facet"=>["Oregon State Baseball"]}}
+  [4;36;1mSearch Load (0.7ms)[0m   [0;1mSELECT * FROM "searches" [0m
+  [4;35;1mSearch Create (0.6ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2009-06-08 00:40:15', '2009-06-08 00:40:15', NULL, '--- 
+:f: !map:HashWithIndifferentAccess 
+ collection_facet: 
+ - Oregon State Baseball
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (0.6ms)
+Rendered catalog/_did_you_mean (0.4ms)
+Rendered catalog/_bookmark_control (1.5ms)
+Rendered catalog/_index_partials/_baseball (1.3ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_document_list (20.4ms)
+Rendered catalog/_facets (7.4ms)
+Rendered catalog/_solr_request (0.6ms)
+Rendered _user_util_links (0.4ms)
+Rendered _flash_msg (0.1ms)
+Completed in 68ms (View: 41, DB: 1) | 200 OK [http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball]
+REQUESTING PAGE: GET /catalog?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball&f%5Bsubject_era_facet%5D%5B%5D=More+than+100+years+old with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-07 20:40:16) [GET]
+  Parameters: {"f"=>{"collection_facet"=>["Oregon State Baseball"], "subject_era_facet"=>["More than 100 years old"]}}
+  [4;36;1mSearch Load (0.3ms)[0m   [0;1mSELECT * FROM "searches" [0m
+  [4;35;1mSearch Create (0.2ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2009-06-08 00:40:16', '2009-06-08 00:40:16', NULL, '--- 
+:f: !map:HashWithIndifferentAccess 
+ collection_facet: 
+ - Oregon State Baseball
+ subject_era_facet: 
+ - More than 100 years old
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (0.7ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.3ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_document_list (15.7ms)
+Rendered catalog/_facets (5.3ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.4ms)
+Rendered _flash_msg (0.1ms)
+Completed in 112ms (View: 31, DB: 0) | 200 OK [http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball&f%5Bsubject_era_facet%5D%5B%5D=More+than+100+years+old]
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-07 20:40:16) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_search_form (0.6ms)
+Rendered home/_home_text (0.1ms)
+Rendered catalog/_facets (5.9ms)
+Rendered _user_util_links (0.5ms)
+Rendered _flash_msg (0.1ms)
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET /catalog with {"commit"=>"search", "qt"=>"search", "q"=>"Harriet's Collection", "per_page"=>"10"} and HTTP headers {"HTTP_REFERER"=>"/"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-07 20:40:16) [GET]
+  Parameters: {"commit"=>"search", "qt"=>"search", "q"=>"Harriet's Collection", "per_page"=>"10"}
+  [4;36;1mSearch Load (0.3ms)[0m   [0;1mSELECT * FROM "searches" [0m
+  [4;35;1mSearch Create (0.4ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2009-06-08 00:40:16', '2009-06-08 00:40:16', NULL, '--- 
+:q: Harriet''s Collection
+:qt: search
+:per_page: "10"
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (0.6ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_document_list (14.2ms)
+Rendered catalog/_facets (5.9ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.4ms)
+Rendered _flash_msg (0.1ms)
+Completed in 43ms (View: 32, DB: 1) | 200 OK [http://www.example.com/catalog]
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-07 20:40:16) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_search_form (0.8ms)
+Rendered home/_home_text (0.1ms)
+Rendered catalog/_facets (6.0ms)
+Rendered _user_util_links (0.6ms)
+Rendered _flash_msg (0.1ms)
+Completed in 17ms (View: 11, DB: 0) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET /catalog/baseball_467 with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-07 20:40:16) [GET]
+  Parameters: {"id"=>"baseball_467"}
+  [4;36;1mSearch Load (0.2ms)[0m   [0;1mSELECT * FROM "searches" [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_baseball (3.5ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.4ms)
+Rendered _flash_msg (0.1ms)
+Completed in 17ms (View: 9, DB: 0) | 200 OK [http://www.example.com/catalog/baseball_467]
+REQUESTING PAGE: GET /catalog/baseball_78 with {} and HTTP headers {}
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-07 20:40:16) [GET]
+  Parameters: {"id"=>"baseball_78"}
+  [4;35;1mSearch Load (0.2ms)[0m   [0mSELECT * FROM "searches" [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_baseball (1.9ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.4ms)
+Rendered _flash_msg (0.1ms)
+Completed in 13ms (View: 5, DB: 0) | 200 OK [http://www.example.com/catalog/baseball_78]

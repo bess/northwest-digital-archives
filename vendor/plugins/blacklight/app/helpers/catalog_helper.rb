@@ -138,6 +138,7 @@ module CatalogHelper
   def link_to_query(query)
     p = params.dup
     p.delete :page
+    p[:action]=:index
     p[:q]=query
     link_url = catalog_index_path(p)
     link_to(query, link_url)
