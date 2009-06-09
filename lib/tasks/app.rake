@@ -178,6 +178,39 @@ namespace :app do
     puts "Complete."
     puts "Total Time: #{Time.now - t}"
   end
+  
+  # *************************************************************** #
+  # Index WSU Theses
+  # *************************************************************** #
+  
+  desc 'Index WSU theses located at FILE=<location-of-file>'
+  task :theses => :environment do
+    t = Time.now
+    
+    export_file = ENV['FILE']
+    raise "Invalid file. Set the file by using the FILE argument." unless File.exists?(export_file.to_s) and File.file?(export_file.to_s)
+    
+    solr = Blacklight.solr
+    
+    if File.file? export_file and export_file.to_s =~ /^.*\.xml$/
+        raw = File.read(export_file)
+        # remove the default namespace,
+        # otherwise every query needs a "default:" prefix,
+        # and a namespace option
+        raw.gsub!(/xmlns=".*"/, '')
+      
+        xml = Nokogiri::XML(raw)
+        xml.xpath('/OAI-PMH/ListRecords/record').each do |record| 
+          doc = NWDA::Mappers::Theses.new(record)
+          puts doc.inspect
+          solr.add(doc.doc)
+        end
+    end
+    puts "Sending commit to Solr..."
+    solr.commit
+    puts "Complete."
+    puts "Total Time: #{Time.now - t}"
+  end
   # *************************************************************** #
     end # end the index namespace
 end
