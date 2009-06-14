@@ -7,17 +7,19 @@
     <h3 class="byline"><%= @document[Blacklight.config[:show][:byline]] %></h3>
     <div class="tools"><%#= render :partial => 'show_tools' %></div>
     <div class="document">
-	  <% if @document.ead? %>	
+	<% if @document.ead? %>	
 	  	<%= render(:partial=>"catalog/_show_partials/ead") %>
-	  <% elsif @document.format_facet.to_s == 'Herbarium Specimen'%>
+	<% elsif @document.format_facet.to_s == 'Herbarium Specimen'%>
 		<%= render_specified_document_partial @document, :show, :herbarium %>
-	  <% elsif @document.collection_facet.to_s == 'City of Pullman Collection'%>
+	<% elsif @document.collection_facet.to_s == 'City of Pullman Collection'%>
 		<%= render_specified_document_partial @document, :show, :pullman %>
-	  <% elsif @document.collection_facet.to_s == 'Oregon State Baseball'%>
+	<% elsif @document.collection_facet.to_s == 'Oregon State Baseball'%>
 		<%= render_specified_document_partial @document, :show, :baseball %>
-      <% else %>
-      	<%= render_document_partial @document, :show %>
-	  <% end%>
+	<% elsif @document.collection_facet.to_s == 'Washington State University Theses'%>
+		<%= render_specified_document_partial @document, :show, :uwtheses %>
+	<% else %>
+     	<%= render_document_partial @document, :show %>
+	<% end%>
 
 	<%#= render(
 	    :partial=>"catalog/_show_partials/#{@document.doc_type}",

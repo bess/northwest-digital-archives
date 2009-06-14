@@ -39,6 +39,7 @@ class NWDA::Mappers::Theses
       # ##################
       def getURI
         @doc[:uri_display] = @xml.xpath('./metadata/oai_dc:dc/dc:identifier/text()').first.to_s
+        puts "uri = #{@doc[:uri_display]}"
         @doc[:text] << @doc[:uri_display]
       end
       
@@ -128,6 +129,7 @@ class NWDA::Mappers::Theses
       # ##################
       def getAuthor
         @doc[:author_t] = @xml.xpath('./metadata/oai_dc:dc/dc:creator/text()').first.to_s.gsub(/\s+/," ")
+        @doc[:byline_t] = @doc[:author_t]
         @doc[:text] << @doc[:author_t]
       end
       
