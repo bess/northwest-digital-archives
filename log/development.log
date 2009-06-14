@@ -33325,3 +33325,573 @@ Rendered catalog/_solr_request (0.2ms)
 Rendered _user_util_links (0.3ms)
 Rendered _flash_msg (0.1ms)
 Completed in 57ms (View: 31, DB: 5) | 200 OK [http://nwda.local/catalog?]
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x28373ac @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x2838608 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x283672c @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :raw_storage_type=>"marcxml", :show=>{:heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t", :html_title=>"title_t"}}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x20ed574 @adapter=#<RSolr::Adapter::HTTP:0x20ee528 @connector=#<RSolr::HTTPClient::Connector:0x20ecb9c @adapter_name=:curb>, @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}>, @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}>
+BLACKLIGHT: initialized with Blacklight.config: {:index_fields=>{:labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}, :field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"]}, :spell_max=>5, :default_qt=>"search", :show_fields=>{:labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}, :field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"]}, :raw_storage_type=>"marcxml", :show=>{:html_title=>"title_t", :heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t"}, :raw_storage_field=>"marc_display", :facet=>{:labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}, :field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"]}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]]}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-08 19:17:09) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_search_form (1.6ms)
+Rendered home/_home_text (0.6ms)
+Rendered catalog/_facets (13.4ms)
+Rendered _user_util_links (15.7ms)
+Rendered _flash_msg (1.2ms)
+Completed in 392ms (View: 178, DB: 0) | 200 OK [http://nwda.local/]
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x28372d0 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x283852c @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x2836650 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :raw_storage_type=>"marcxml", :show=>{:heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t", :html_title=>"title_t"}}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x2837370 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x283861c @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x28366f0 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :raw_storage_type=>"marcxml", :show=>{:heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t", :html_title=>"title_t"}}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x2836c04 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x2837e74 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x2835f98 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :raw_storage_type=>"marcxml", :show=>{:heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t", :html_title=>"title_t"}}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x2836c18 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x2837e74 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x2835f20 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :raw_storage_type=>"marcxml", :show=>{:heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t", :html_title=>"title_t"}}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x2836c04 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x2837e74 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x2835f98 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :raw_storage_type=>"marcxml", :show=>{:heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t", :html_title=>"title_t"}}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x2836c04 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x2837e74 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x2835f98 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :raw_storage_type=>"marcxml", :show=>{:heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t", :html_title=>"title_t"}}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x2836c04 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x2837e74 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x2835f98 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :raw_storage_type=>"marcxml", :show=>{:heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t", :html_title=>"title_t"}}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x2836c04 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x2837e74 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x2835f98 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :raw_storage_type=>"marcxml", :show=>{:heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t", :html_title=>"title_t"}}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x2836c04 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x2837e74 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x2835f98 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :raw_storage_type=>"marcxml", :show=>{:heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t", :html_title=>"title_t"}}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x28310b0 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x2832500 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x28304a8 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :raw_storage_type=>"marcxml", :show=>{:heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t", :html_title=>"title_t"}}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x20ed678 @adapter=#<RSolr::Adapter::HTTP:0x20ee62c @connector=#<RSolr::HTTPClient::Connector:0x20ecca0 @adapter_name=:curb>, @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}>, @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}>
+BLACKLIGHT: initialized with Blacklight.config: {:index_fields=>{:labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}, :field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"]}, :spell_max=>5, :default_qt=>"search", :show_fields=>{:labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}, :field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"]}, :raw_storage_type=>"marcxml", :show=>{:html_title=>"title_t", :heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t"}, :raw_storage_field=>"marc_display", :facet=>{:labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}, :field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"]}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]]}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-08 19:32:31) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_search_form (1.7ms)
+Rendered home/_home_text (0.6ms)
+Rendered catalog/_facets (8.7ms)
+Rendered _user_util_links (6.3ms)
+Rendered _flash_msg (0.6ms)
+Completed in 309ms (View: 156, DB: 0) | 200 OK [http://nwda.local/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-08 19:32:38) [GET]
+  Parameters: {"f"=>{"collection_facet"=>["Washington State University Theses"]}}
+Redirected to http://nwda.local/catalog?f%5Bcollection_facet%5D%5B%5D=Washington+State+University+Theses
+Completed in 10ms (DB: 0) | 302 Found [http://nwda.local/?f%5Bcollection_facet%5D%5B%5D=Washington+State+University+Theses]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-08 19:32:38) [GET]
+  Parameters: {"f"=>{"collection_facet"=>["Washington State University Theses"]}}
+  [4;36;1mSearch Load (5.5ms)[0m   [0;1mSELECT * FROM "searches" [0m
+  [4;35;1mSearch Create (0.6ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2009-06-08 23:32:38', '2009-06-08 23:32:38', NULL, '--- 
+:counter: "1"
+:f: !map:HashWithIndifferentAccess 
+ collection_facet: 
+ - Washington State University Theses
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (0.7ms)
+Rendered catalog/_did_you_mean (0.4ms)
+Rendered catalog/_bookmark_control (1.2ms)
+Rendered catalog/_index_partials/_default (0.8ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.3ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (24.4ms)
+Rendered catalog/_facets (0.5ms)
+Rendered catalog/_solr_request (1.3ms)
+Rendered _user_util_links (0.3ms)
+Rendered _flash_msg (0.1ms)
+Completed in 103ms (View: 48, DB: 6) | 200 OK [http://nwda.local/catalog?f%5Bcollection_facet%5D%5B%5D=Washington+State+University+Theses]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-08 19:51:53) [GET]
+  Parameters: {"f"=>{"collection_facet"=>["Washington State University Theses"]}, "page"=>"2"}
+  [4;36;1mSearch Load (5.6ms)[0m   [0;1mSELECT * FROM "searches" [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (0.5ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (63.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (78.6ms)
+Rendered catalog/_facets (0.6ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.5ms)
+Rendered _flash_msg (0.1ms)
+Completed in 115ms (View: 94, DB: 6) | 200 OK [http://nwda.local/catalog?f%5Bcollection_facet%5D%5B%5D=Washington+State+University+Theses&page=2]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-08 19:54:51) [GET]
+  [4;35;1mSearch Load (5.5ms)[0m   [0mSELECT * FROM "searches" [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (0.6ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_baseball (1.5ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.3ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.3ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.3ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.3ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.3ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.3ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.3ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_document_list (14.3ms)
+Rendered catalog/_facets (7.1ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.3ms)
+Rendered _flash_msg (0.1ms)
+Completed in 59ms (View: 33, DB: 6) | 200 OK [http://nwda.local/catalog?]
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x28310b0 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x2832500 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x28304a8 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :raw_storage_type=>"marcxml", :show=>{:heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t", :html_title=>"title_t"}}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-08 20:02:32) [GET]
+  [4;36;1mSearch Load (6.4ms)[0m   [0;1mSELECT * FROM "searches" [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (1.3ms)
+Rendered catalog/_did_you_mean (0.5ms)
+Rendered catalog/_bookmark_control (6.7ms)
+Rendered catalog/_index_partials/_baseball (1.3ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.3ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.3ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.3ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.3ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.3ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.3ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.3ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_document_list (25.2ms)
+Rendered catalog/_facets (8.3ms)
+Rendered catalog/_solr_request (0.6ms)
+Rendered _user_util_links (1.1ms)
+Rendered _flash_msg (0.5ms)
+Completed in 236ms (View: 162, DB: 6) | 200 OK [http://nwda.local/catalog?]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-08 20:02:39) [GET]
+  Parameters: {"f"=>{"format_facet"=>["Thesis"]}}
+  [4;35;1mSearch Load (5.5ms)[0m   [0mSELECT * FROM "searches" [0m
+  [4;36;1mSearch Create (1.7ms)[0m   [0;1mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2009-06-09 00:02:39', '2009-06-09 00:02:39', NULL, '--- 
+:counter: "1"
+:f: !map:HashWithIndifferentAccess 
+ format_facet: 
+ - Thesis
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (0.6ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.9ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (20.5ms)
+Rendered catalog/_facets (1.3ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.3ms)
+Rendered _flash_msg (0.1ms)
+Completed in 71ms (View: 34, DB: 7) | 200 OK [http://nwda.local/catalog?f%5Bformat_facet%5D%5B%5D=Thesis]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-08 20:02:51) [GET]
+  Parameters: {"f"=>{"subject_era_facet"=>["Less than 5 years old"], "format_facet"=>["Thesis"]}}
+  [4;35;1mSearch Load (5.6ms)[0m   [0mSELECT * FROM "searches" [0m
+  [4;36;1mSearch Create (0.5ms)[0m   [0;1mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2009-06-09 00:02:51', '2009-06-09 00:02:51', NULL, '--- 
+:counter: "1"
+:f: !map:HashWithIndifferentAccess 
+ subject_era_facet: 
+ - Less than 5 years old
+ format_facet: 
+ - Thesis
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (0.6ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.3ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.3ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.3ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (14.2ms)
+Rendered catalog/_facets (1.4ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.3ms)
+Rendered _flash_msg (0.1ms)
+Completed in 117ms (View: 90, DB: 6) | 200 OK [http://nwda.local/catalog?f%5Bformat_facet%5D%5B%5D=Thesis&f%5Bsubject_era_facet%5D%5B%5D=Less+than+5+years+old]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-08 20:03:07) [GET]
+  Parameters: {"f"=>{"format_facet"=>["Thesis"]}}
+  [4;35;1mSearch Load (6.2ms)[0m   [0mSELECT * FROM "searches" [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (0.5ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.3ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.3ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.3ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.3ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.3ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.3ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.3ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (13.2ms)
+Rendered catalog/_facets (1.3ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.3ms)
+Rendered _flash_msg (0.1ms)
+Completed in 49ms (View: 26, DB: 6) | 200 OK [http://nwda.local/catalog?f%5Bformat_facet%5D%5B%5D=Thesis]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-08 20:03:08) [GET]
+  [4;36;1mSearch Load (5.4ms)[0m   [0;1mSELECT * FROM "searches" [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (0.5ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.3ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.3ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.3ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.3ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.3ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.3ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.3ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.3ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_document_list (10.6ms)
+Rendered catalog/_facets (6.8ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.3ms)
+Rendered _flash_msg (0.1ms)
+Completed in 50ms (View: 28, DB: 5) | 200 OK [http://nwda.local/catalog?]
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x2836c04 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x2837e74 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x2835f98 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :raw_storage_type=>"marcxml", :show=>{:heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t", :html_title=>"title_t"}}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x2836c04 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x2837e74 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x2835f98 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :raw_storage_type=>"marcxml", :show=>{:heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t", :html_title=>"title_t"}}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x2834058 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x2835494 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x28333d8 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :raw_storage_type=>"marcxml", :show=>{:heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t", :html_title=>"title_t"}}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x2834058 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x2835494 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x28333d8 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :raw_storage_type=>"marcxml", :show=>{:heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t", :html_title=>"title_t"}}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x2834058 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x2835494 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x28333d8 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :raw_storage_type=>"marcxml", :show=>{:heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t", :html_title=>"title_t"}}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x2834058 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x2835494 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x28333d8 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :raw_storage_type=>"marcxml", :show=>{:heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t", :html_title=>"title_t"}}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x2834058 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x2835494 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x28333d8 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :raw_storage_type=>"marcxml", :show=>{:heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t", :html_title=>"title_t"}}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x20d4628 @adapter=#<RSolr::Adapter::HTTP:0x20d55dc @connector=#<RSolr::HTTPClient::Connector:0x20d3c50 @adapter_name=:curb>, @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}>, @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}>
+BLACKLIGHT: initialized with Blacklight.config: {:index_fields=>{:labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}, :field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"]}, :spell_max=>5, :default_qt=>"search", :show_fields=>{:labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}, :field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"]}, :raw_storage_type=>"marcxml", :show=>{:html_title=>"title_t", :heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t"}, :raw_storage_field=>"marc_display", :facet=>{:labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}, :field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"]}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]]}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-13 21:48:38) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_search_form (2.3ms)
+Rendered home/_home_text (30.9ms)
+Rendered catalog/_facets (9.5ms)
+Rendered _user_util_links (7.7ms)
+Rendered _flash_msg (1.2ms)
+Completed in 300ms (View: 224, DB: 0) | 200 OK [http://nwda.local/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-13 21:49:15) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_search_form (0.6ms)
+Rendered home/_home_text (0.1ms)
+Rendered catalog/_facets (9.1ms)
+Rendered _user_util_links (0.9ms)
+Rendered _flash_msg (0.1ms)
+Completed in 412ms (View: 15, DB: 0) | 200 OK [http://nwda.local/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-13 21:49:21) [GET]
+  Parameters: {"f"=>{"collection_facet"=>["Washington State University Theses"]}}
+Redirected to http://nwda.local/catalog?f%5Bcollection_facet%5D%5B%5D=Washington+State+University+Theses
+Completed in 20ms (DB: 0) | 302 Found [http://nwda.local/?f%5Bcollection_facet%5D%5B%5D=Washington+State+University+Theses]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-13 21:49:21) [GET]
+  Parameters: {"f"=>{"collection_facet"=>["Washington State University Theses"]}}
+  [4;36;1mSearch Load (19.2ms)[0m   [0;1mSELECT * FROM "searches" [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (0.6ms)
+Rendered catalog/_did_you_mean (68.0ms)
+Rendered catalog/_bookmark_control (1.9ms)
+Rendered catalog/_index_partials/_default (13.8ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (58.5ms)
+Rendered catalog/_facets (1.8ms)
+Rendered catalog/_solr_request (1.2ms)
+Rendered _user_util_links (0.3ms)
+Rendered _flash_msg (0.1ms)
+Completed in 235ms (View: 162, DB: 19) | 200 OK [http://nwda.local/catalog?f%5Bcollection_facet%5D%5B%5D=Washington+State+University+Theses]
+
+
+Processing CatalogController#update (for 127.0.0.1 at 2009-06-13 21:49:26) [PUT]
+  Parameters: {"authenticity_token"=>"+ZoNBCV4K1+iYYyvVs7e//yyMr5XAMZsaPhxZ0gDbHw=", "id"=>"wsu_2376_70", "counter"=>"1"}
+  [4;35;1mSearch Load (5.9ms)[0m   [0mSELECT * FROM "searches" [0m
+Redirected to http://nwda.local/catalog/wsu_2376_70
+Completed in 9ms (DB: 6) | 302 Found [http://nwda.local/catalog/wsu_2376_70]
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-13 21:49:26) [GET]
+  Parameters: {"id"=>"wsu_2376_70"}
+  [4;36;1mSearch Load (6.6ms)[0m   [0;1mSELECT * FROM "searches" [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_default (10.6ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.3ms)
+Rendered _flash_msg (0.1ms)
+Completed in 176ms (View: 132, DB: 7) | 200 OK [http://nwda.local/catalog/wsu_2376_70]
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x272a8d8 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x272bb34 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x2729dfc @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :raw_storage_type=>"marcxml", :show=>{:heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t", :html_title=>"title_t"}}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x2820120 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x282137c @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x281f644 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :raw_storage_type=>"marcxml", :show=>{:heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t", :html_title=>"title_t"}}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x2820120 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x282137c @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x281f644 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :raw_storage_type=>"marcxml", :show=>{:heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t", :html_title=>"title_t"}}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x2820120 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x282137c @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x281f644 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :raw_storage_type=>"marcxml", :show=>{:heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t", :html_title=>"title_t"}}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x2820120 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x282137c @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x281f644 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :raw_storage_type=>"marcxml", :show=>{:heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t", :html_title=>"title_t"}}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x2820120 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x282137c @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x281f644 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :raw_storage_type=>"marcxml", :show=>{:heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t", :html_title=>"title_t"}}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x2820120 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x282137c @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x281f644 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :raw_storage_type=>"marcxml", :show=>{:heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t", :html_title=>"title_t"}}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x2820120 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x282137c @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x281f644 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :raw_storage_type=>"marcxml", :show=>{:heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t", :html_title=>"title_t"}}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x2820120 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x282137c @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x281f644 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :raw_storage_type=>"marcxml", :show=>{:heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t", :html_title=>"title_t"}}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x2820120 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x282137c @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x281f644 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :raw_storage_type=>"marcxml", :show=>{:heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t", :html_title=>"title_t"}}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x2820120 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x282137c @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x281f644 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :raw_storage_type=>"marcxml", :show=>{:heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t", :html_title=>"title_t"}}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x2820120 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x282137c @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x281f644 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :raw_storage_type=>"marcxml", :show=>{:heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t", :html_title=>"title_t"}}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x2820120 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x282137c @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x281f644 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :raw_storage_type=>"marcxml", :show=>{:heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t", :html_title=>"title_t"}}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x2820120 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x282137c @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x281f644 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :raw_storage_type=>"marcxml", :show=>{:heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t", :html_title=>"title_t"}}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x2820120 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x282137c @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x281f644 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :raw_storage_type=>"marcxml", :show=>{:heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t", :html_title=>"title_t"}}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x2820120 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x282137c @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x281f644 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :raw_storage_type=>"marcxml", :show=>{:heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t", :html_title=>"title_t"}}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x2820120 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x282137c @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x281f644 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :raw_storage_type=>"marcxml", :show=>{:heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t", :html_title=>"title_t"}}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x2820120 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x282137c @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x281f644 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :raw_storage_type=>"marcxml", :show=>{:heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t", :html_title=>"title_t"}}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x2820120 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x282137c @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x281f644 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :raw_storage_type=>"marcxml", :show=>{:heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t", :html_title=>"title_t"}}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x2820120 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x282137c @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x281f644 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :raw_storage_type=>"marcxml", :show=>{:heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t", :html_title=>"title_t"}}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x2820120 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x282137c @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x281f644 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :raw_storage_type=>"marcxml", :show=>{:heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t", :html_title=>"title_t"}}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x2820120 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x282137c @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x281f644 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :raw_storage_type=>"marcxml", :show=>{:heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t", :html_title=>"title_t"}}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x2820120 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x282137c @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x281f644 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :raw_storage_type=>"marcxml", :show=>{:heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t", :html_title=>"title_t"}}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x2820120 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x282137c @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x281f644 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :raw_storage_type=>"marcxml", :show=>{:heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t", :html_title=>"title_t"}}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x2820120 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x282137c @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x281f644 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :raw_storage_type=>"marcxml", :show=>{:heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t", :html_title=>"title_t"}}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x2820120 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x282137c @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x281f644 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index_fields=>{:field_names=>["title_t", "byline_t", "format_facet", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :spell_max=>5, :default_qt=>"search", :show_fields=>{:field_names=>["title_t", "sub_title_t", "byline_t", "format_facet", "material_type_t", "language_facet", "published_t"], :labels=>{"byline_t"=>"Author:", "published_t"=>"Published:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :raw_storage_type=>"marcxml", :show=>{:heading=>"title_t", :byline=>"byline_t", :display_type=>"format_code_t", :html_title=>"title_t"}}
+
+
+Processing CatalogController#update (for 127.0.0.1 at 2009-06-13 22:21:26) [PUT]
+  Parameters: {"authenticity_token"=>"+ZoNBCV4K1+iYYyvVs7e//yyMr5XAMZsaPhxZ0gDbHw=", "id"=>"wsu_2376_70", "counter"=>"1"}
+  [4;36;1mSearch Load (7.6ms)[0m   [0;1mSELECT * FROM "searches" [0m
+Redirected to http://nwda.local/catalog/wsu_2376_70
+Completed in 21ms (DB: 8) | 302 Found [http://nwda.local/catalog/wsu_2376_70]
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-13 22:21:26) [GET]
+  Parameters: {"id"=>"wsu_2376_70"}
+  [4;35;1mSearch Load (7.2ms)[0m   [0mSELECT * FROM "searches" [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_default (0.9ms)
+Rendered catalog/_solr_request (0.5ms)
+Rendered _user_util_links (6.1ms)
+Rendered _flash_msg (0.7ms)
+Completed in 215ms (View: 35, DB: 7) | 200 OK [http://nwda.local/catalog/wsu_2376_70]
