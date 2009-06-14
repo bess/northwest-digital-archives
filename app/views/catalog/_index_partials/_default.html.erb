@@ -1,0 +1,16 @@
+<%# default partial to display solr document fields in catalog index view -%>
+<div class="yui-g">
+
+		<dl class="indexDefList">
+	
+	<%#= document %>
+  
+			  <% index_field_names.each do |solr_fname| -%>
+			    <% if document.get solr_fname %>
+			        <dt><%= index_field_labels[solr_fname]%></dt>
+			        <dd><%= document.get solr_fname %></dd>
+			    <% end -%>
+			  <% end -%>
+
+		</dl>
+</div>
