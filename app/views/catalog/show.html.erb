@@ -4,7 +4,7 @@
   <div id="doc_<%= @document[:id] %>">
     
     <h1><%= @document[Blacklight.config[:show][:heading]] %></h1>
-    <h3 class="byline"><%= @document[Blacklight.config[:show][:byline]] %></h3>
+    <h3 class="byline"><%#= @document[Blacklight.config[:show][:byline]] %></h3>
     <div class="tools"><%#= render :partial => 'show_tools' %></div>
     <div class="document">
 	<% if @document.ead? %>	

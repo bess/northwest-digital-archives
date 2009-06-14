@@ -16,6 +16,13 @@
 
 <dl class="defList">
 	
+	<% if @document[:author_t] %>
+    <dt>Author(s)</dt><dd>
+		<% @document[:author_t].each do |d| %>
+			<%= d %><br/>
+		<% end %></dd>
+	<% end %>
+	
 	<% if @document[:description_t] %>
     <dt>Description</dt><dd>
 		<% @document[:description_t].each do |d| %>
@@ -26,21 +33,13 @@
     <dt>Collection</dt><dd><%= @document[:collection_facet] %></dd>
 
 	<% if @document[:date_display] %>
-	<dt>Date</dt><dd><%= @document[:date_display] %></dd>
-	<% end %>
-	
-	<% if @document[:source_t] %>
-	<dt>Source</dt><dd><%= @document[:source_t] %></dd>
+	<dt>Issue Date</dt><dd><%= @document[:date_display] %></dd>
 	<% end %>
 	
 	<% if @document[:uri_display] %>
-	<dt>Link</dt><dd><%= @document[:uri_display] %></dd>
+	<dt>URI</dt><dd><a href="<%= @document[:uri_display]%>"><%= @document[:uri_display] %></a></dd>
 	<% end %>
-	
-	<% if @document[:contributor_t] %>
-	<dt>Contributor(s)</dt><dd><%= @document[:contributor_t] %></dd>
-	<% end %>
-	
+
 	<% if @document[:rights_t] %>
 	<dt>Rights</dt><dd><%= @document[:rights_t] %></dd>
 	<% end %>
