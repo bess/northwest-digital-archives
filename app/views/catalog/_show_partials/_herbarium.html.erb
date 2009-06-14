@@ -1,0 +1,61 @@
+<%# default partial to display solr document fields in catalog show view -%>
+
+<% @sidebar = capture do %>
+	<p><%= link_back_to_catalog :label=>'&lt;&lt; SEARCH' %></p>
+    <dt>Subjects</dt>
+	<% @document[:subject_facet].each do |subject| %>
+		<dd>
+			<% subject_array = subject.split(" -- ") %>
+			<% subject_array.each_with_index do |s,i| %>
+				<% unless i == 0 %> -- <% end %>
+				<%= link_to_query(s.strip) %>
+			<% end %>
+		</dd>
+	<% end %>
+<% end %>
+
+<a href="<%=@document[:fullimage_display]%>" rel="lightbox" title="<%= @document[:title_t]%>">
+<%= image_tag(@document[:preview_display], :class => "preview", :alt => @document[:title_t]) %>
+</a>
+
+<dl class="defList">
+	
+	<% if @document[:title_t] %>
+    <dt>Basionym</dt><dd><%= @document[:title_t] %></dd>
+	<% end %>
+	
+	<% if @document[:original_identification_display] %>
+	<dt>Original Identification</dt><dd><%= @document[:original_identification_display] %></dd>
+	<% end %>
+	
+    <dt>Collection</dt><dd><%= @document[:collection_facet] %></dd>
+
+	<% if @document[:date_display] %>
+	<dt>Date</dt><dd><%= @document[:date_display] %></dd>
+	<% end %>
+	
+	<% if @document[:family_display] %>
+	<dt>Family</dt><dd><%= @document[:family_display] %></dd>
+	<% end %>
+	
+	<% if @document[:current_taxon_display] %>
+	<dt>Current taxon</dt><dd><%= @document[:current_taxon_display] %></dd>
+	<% end %>
+	
+	<% if @document[:primary_collector_display] %>
+	<dt>Primary Collector</dt><dd><%= @document[:primary_collector_display] %></dd>
+	<% end %>
+	
+	<% if @document[:collection_date_display] %>
+	<dt>Collection Date</dt><dd><%= @document[:collection_date_display] %></dd>
+	<% end %>
+	
+	<% if @document[:rights_t] %>
+	<dt>Rights</dt><dd><%= @document[:rights_t] %></dd>
+	<% end %>
+
+
+	<%#= @document[:fullimage_display] %>
+	
+
+</dl>

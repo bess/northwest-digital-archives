@@ -831,3 +831,1143 @@ BLACKLIGHT: initialized with Blacklight.config: {:search_fields=>[["All Fields",
 BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
 BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x266b53c @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x266d4f4 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x266a998 @adapter_name=:curb>>>
 BLACKLIGHT: initialized with Blacklight.config: {:search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :spell_max=>5, :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :show=>{:html_title=>"title_t", :display_type=>"format_code_t", :heading=>"title_t"}, :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet"], :labels=>{"subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :raw_storage_type=>"marcxml", :default_qt=>"search", :index=>{:num_per_page=>10, :record_display_type=>"format_code_t", :show_link=>"title_t"}, :raw_storage_field=>"marc_display"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-14 17:10:05) [GET]
+  Parameters: {"action"=>"index", "f"=>{"subject_era_facet"=>["More than 10 years old"]}, "controller"=>"catalog"}
+  [4;35;1mSearch Load (0.9ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (6,5,4)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (0.9ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_search_constraints (0.3ms)
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_hidden_filters (0.1ms)
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mBookmark Load (0.2ms)[0m   [0mSELECT * FROM "bookmarks" WHERE ("bookmarks".user_id = 1) [0m
+Rendered catalog/_bookmark_control (4.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (19.3ms)
+Rendered catalog/_facets (6.7ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.3ms)
+Rendered _flash_msg (0.1ms)
+Completed in 69ms (View: 38, DB: 2) | 200 OK [http://nwda.local/catalog?f%5Bsubject_era_facet%5D%5B%5D=More+than+10+years+old]
+
+
+Processing CatalogController#update (for 127.0.0.1 at 2009-06-14 17:10:12) [PUT]
+  Parameters: {"action"=>"update", "_method"=>"put", "authenticity_token"=>"Rn2mH+nOy0b+Dn6UmMIc7P7eTRUcPpxHlwdi9zGo9MU=", "id"=>"pullman_10", "controller"=>"catalog", "counter"=>"9"}
+  [4;36;1mSearch Load (0.8ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (6,5,4)) [0m
+Redirected to http://nwda.local/catalog/pullman_10
+Completed in 2ms (DB: 1) | 302 Found [http://nwda.local/catalog/pullman_10]
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-14 17:10:12) [GET]
+  Parameters: {"action"=>"show", "id"=>"pullman_10", "controller"=>"catalog"}
+  [4;35;1mSearch Load (0.8ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (6,5,4)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_tools (0.1ms)
+Rendered catalog/_show_partials/_default (0.1ms)
+Rendered catalog/_solr_request (0.1ms)
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendered _user_util_links (2.4ms)
+Rendered _flash_msg (0.1ms)
+Completed in 25ms (View: 7, DB: 1) | 200 OK [http://nwda.local/catalog/pullman_10]
+
+
+Processing CatalogController#update (for 127.0.0.1 at 2009-06-14 17:10:14) [PUT]
+  Parameters: {"action"=>"update", "_method"=>"put", "authenticity_token"=>"Rn2mH+nOy0b+Dn6UmMIc7P7eTRUcPpxHlwdi9zGo9MU=", "id"=>"pullman_11", "controller"=>"catalog", "counter"=>"10"}
+  [4;35;1mSearch Load (0.9ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (6,5,4)) [0m
+Redirected to http://nwda.local/catalog/pullman_11
+Completed in 2ms (DB: 1) | 302 Found [http://nwda.local/catalog/pullman_11]
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-14 17:10:14) [GET]
+  Parameters: {"action"=>"show", "id"=>"pullman_11", "controller"=>"catalog"}
+  [4;36;1mSearch Load (0.7ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (6,5,4)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_tools (0.1ms)
+Rendered catalog/_show_partials/_default (0.1ms)
+Rendered catalog/_solr_request (0.1ms)
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendered _user_util_links (2.5ms)
+Rendered _flash_msg (0.1ms)
+Completed in 26ms (View: 7, DB: 1) | 200 OK [http://nwda.local/catalog/pullman_11]
+
+
+Processing CatalogController#update (for 127.0.0.1 at 2009-06-14 17:10:15) [PUT]
+  Parameters: {"action"=>"update", "_method"=>"put", "authenticity_token"=>"Rn2mH+nOy0b+Dn6UmMIc7P7eTRUcPpxHlwdi9zGo9MU=", "id"=>"pullman_12", "controller"=>"catalog", "counter"=>"11"}
+  [4;36;1mSearch Load (0.8ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (6,5,4)) [0m
+Redirected to http://nwda.local/catalog/pullman_12
+Completed in 2ms (DB: 1) | 302 Found [http://nwda.local/catalog/pullman_12]
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-14 17:10:15) [GET]
+  Parameters: {"action"=>"show", "id"=>"pullman_12", "controller"=>"catalog"}
+  [4;35;1mSearch Load (0.8ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (6,5,4)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_tools (0.1ms)
+Rendered catalog/_show_partials/_default (0.1ms)
+Rendered catalog/_solr_request (0.1ms)
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendered _user_util_links (2.6ms)
+Rendered _flash_msg (0.1ms)
+Completed in 33ms (View: 7, DB: 1) | 200 OK [http://nwda.local/catalog/pullman_12]
+
+
+Processing CatalogController#update (for 127.0.0.1 at 2009-06-14 17:10:16) [PUT]
+  Parameters: {"action"=>"update", "_method"=>"put", "authenticity_token"=>"Rn2mH+nOy0b+Dn6UmMIc7P7eTRUcPpxHlwdi9zGo9MU=", "id"=>"pullman_13", "controller"=>"catalog", "counter"=>"12"}
+  [4;35;1mSearch Load (1.2ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (6,5,4)) [0m
+Redirected to http://nwda.local/catalog/pullman_13
+Completed in 3ms (DB: 1) | 302 Found [http://nwda.local/catalog/pullman_13]
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-14 17:10:16) [GET]
+  Parameters: {"action"=>"show", "id"=>"pullman_13", "controller"=>"catalog"}
+  [4;36;1mSearch Load (0.8ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (6,5,4)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_tools (0.1ms)
+Rendered catalog/_show_partials/_default (0.1ms)
+Rendered catalog/_solr_request (0.1ms)
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendered _user_util_links (2.6ms)
+Rendered _flash_msg (0.1ms)
+Completed in 24ms (View: 7, DB: 1) | 200 OK [http://nwda.local/catalog/pullman_13]
+
+
+Processing CatalogController#update (for 127.0.0.1 at 2009-06-14 17:10:17) [PUT]
+  Parameters: {"action"=>"update", "_method"=>"put", "authenticity_token"=>"Rn2mH+nOy0b+Dn6UmMIc7P7eTRUcPpxHlwdi9zGo9MU=", "id"=>"pullman_14", "controller"=>"catalog", "counter"=>"13"}
+  [4;36;1mSearch Load (0.9ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (6,5,4)) [0m
+Redirected to http://nwda.local/catalog/pullman_14
+Completed in 2ms (DB: 1) | 302 Found [http://nwda.local/catalog/pullman_14]
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-14 17:10:17) [GET]
+  Parameters: {"action"=>"show", "id"=>"pullman_14", "controller"=>"catalog"}
+  [4;35;1mSearch Load (0.9ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (6,5,4)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_tools (0.1ms)
+Rendered catalog/_show_partials/_default (0.2ms)
+Rendered catalog/_solr_request (0.2ms)
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendered _user_util_links (2.4ms)
+Rendered _flash_msg (0.1ms)
+Completed in 24ms (View: 7, DB: 1) | 200 OK [http://nwda.local/catalog/pullman_14]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-14 17:10:19) [GET]
+  Parameters: {"action"=>"index", "f"=>{"subject_era_facet"=>["More than 10 years old"]}, "controller"=>"catalog", "counter"=>"13"}
+  [4;35;1mSearch Load (0.9ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (6,5,4)) [0m
+  [4;36;1mSearch Create (0.5ms)[0m   [0;1mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2009-06-14 21:10:19', '2009-06-14 21:10:19', NULL, '--- 
+:counter: "13"
+:f: !map:HashWithIndifferentAccess 
+ subject_era_facet: 
+ - More than 10 years old
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (0.9ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_search_constraints (0.5ms)
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_hidden_filters (0.1ms)
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mBookmark Load (0.2ms)[0m   [0;1mSELECT * FROM "bookmarks" WHERE ("bookmarks".user_id = 1) [0m
+Rendered catalog/_bookmark_control (6.1ms)
+Rendered catalog/_index_partials/_default (0.2ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (1.0ms)
+Rendered catalog/_index_partials/_default (0.2ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_default (0.2ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (25.3ms)
+Rendered catalog/_facets (8.3ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.3ms)
+Rendered _flash_msg (0.1ms)
+Completed in 67ms (View: 48, DB: 2) | 200 OK [http://nwda.local/catalog?counter=13&f%5Bsubject_era_facet%5D%5B%5D=More+than+10+years+old]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-14 17:10:21) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog", "counter"=>"13"}
+  [4;35;1mSearch Load (1.1ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (7,6,5,4)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.0ms)
+Rendered catalog/_search_form (0.8ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_search_constraints (0.1ms)
+Rendered catalog/_hidden_filters (0.0ms)
+Rendered catalog/_hidden_filters (0.0ms)
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mBookmark Load (0.1ms)[0m   [0mSELECT * FROM "bookmarks" WHERE ("bookmarks".user_id = 1) [0m
+Rendered catalog/_bookmark_control (3.6ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (17.5ms)
+Rendered catalog/_facets (6.6ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.3ms)
+Rendered _flash_msg (0.1ms)
+Completed in 46ms (View: 35, DB: 2) | 200 OK [http://nwda.local/catalog?&counter=13]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-14 17:10:25) [GET]
+  Parameters: {"action"=>"index", "f"=>{"format_facet"=>["Herbarium Specimen"]}, "controller"=>"catalog", "counter"=>"13"}
+  [4;36;1mSearch Load (0.9ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (7,6,5,4)) [0m
+  [4;35;1mSearch Create (0.5ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2009-06-14 21:10:25', '2009-06-14 21:10:25', NULL, '--- 
+:counter: "13"
+:f: !map:HashWithIndifferentAccess 
+ format_facet: 
+ - Herbarium Specimen
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (0.8ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_search_constraints (0.4ms)
+Rendered catalog/_hidden_filters (0.2ms)
+Rendered catalog/_hidden_filters (0.1ms)
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mBookmark Load (0.1ms)[0m   [0mSELECT * FROM "bookmarks" WHERE ("bookmarks".user_id = 1) [0m
+Rendered catalog/_bookmark_control (3.7ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (18.3ms)
+Rendered catalog/_facets (3.6ms)
+Rendered catalog/_solr_request (60.8ms)
+Rendered _user_util_links (0.3ms)
+Rendered _flash_msg (0.1ms)
+Completed in 115ms (View: 95, DB: 2) | 200 OK [http://nwda.local/catalog?counter=13&f%5Bformat_facet%5D%5B%5D=Herbarium+Specimen]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-14 17:10:28) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog", "counter"=>"13"}
+  [4;36;1mSearch Load (1.0ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (8,7,6,5,4)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (0.8ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_search_constraints (0.1ms)
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_hidden_filters (0.0ms)
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mBookmark Load (0.1ms)[0m   [0;1mSELECT * FROM "bookmarks" WHERE ("bookmarks".user_id = 1) [0m
+Rendered catalog/_bookmark_control (3.9ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (19.0ms)
+Rendered catalog/_facets (7.0ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.3ms)
+Rendered _flash_msg (0.1ms)
+Completed in 48ms (View: 38, DB: 2) | 200 OK [http://nwda.local/catalog?&counter=13]
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x24fae78 @adapter=#<RSolr::Adapter::HTTP:0x24fcf84 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x24f8eac @adapter_name=:curb>>, @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}>
+BLACKLIGHT: initialized with Blacklight.config: {:spell_max=>5, :default_qt=>"search", :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :raw_storage_type=>"marcxml", :show=>{:display_type=>"format_code_t", :heading=>"title_t", :html_title=>"title_t"}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet"], :labels=>{"subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :raw_storage_field=>"marc_display", :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]]}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-14 17:11:06) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_hidden_filters (0.5ms)
+Rendered catalog/_search_form (3.9ms)
+Rendered home/_home_text (0.5ms)
+Rendered catalog/_facets (7.4ms)
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendered _user_util_links (17.7ms)
+Rendered _flash_msg (0.6ms)
+Completed in 150ms (View: 53, DB: 1) | 200 OK [http://nwda.local/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-14 17:11:07) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/slimbox2.js" with {:method=>:get}):
+  passenger (2.2.2) lib/phusion_passenger/rack/request_handler.rb:81:in `process_request'
+  passenger (2.2.2) lib/phusion_passenger/abstract_request_handler.rb:203:in `main_loop'
+  passenger (2.2.2) lib/phusion_passenger/railz/application_spawner.rb:340:in `start_request_handler'
+  passenger (2.2.2) lib/phusion_passenger/railz/application_spawner.rb:298:in `handle_spawn_application'
+  passenger (2.2.2) lib/phusion_passenger/utils.rb:181:in `safe_fork'
+  passenger (2.2.2) lib/phusion_passenger/railz/application_spawner.rb:296:in `handle_spawn_application'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:337:in `__send__'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:337:in `main_loop'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:187:in `start_synchronously'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:154:in `start'
+  passenger (2.2.2) lib/phusion_passenger/railz/application_spawner.rb:192:in `start'
+  passenger (2.2.2) lib/phusion_passenger/spawn_manager.rb:257:in `spawn_rails_application'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  passenger (2.2.2) lib/phusion_passenger/spawn_manager.rb:251:in `spawn_rails_application'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  passenger (2.2.2) lib/phusion_passenger/spawn_manager.rb:250:in `spawn_rails_application'
+  passenger (2.2.2) lib/phusion_passenger/spawn_manager.rb:153:in `spawn_application'
+  passenger (2.2.2) lib/phusion_passenger/spawn_manager.rb:282:in `handle_spawn_application'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:337:in `__send__'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:337:in `main_loop'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:187:in `start_synchronously'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-14 17:11:07) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/nwda.css" with {:method=>:get}):
+  passenger (2.2.2) lib/phusion_passenger/rack/request_handler.rb:81:in `process_request'
+  passenger (2.2.2) lib/phusion_passenger/abstract_request_handler.rb:203:in `main_loop'
+  passenger (2.2.2) lib/phusion_passenger/railz/application_spawner.rb:340:in `start_request_handler'
+  passenger (2.2.2) lib/phusion_passenger/railz/application_spawner.rb:298:in `handle_spawn_application'
+  passenger (2.2.2) lib/phusion_passenger/utils.rb:181:in `safe_fork'
+  passenger (2.2.2) lib/phusion_passenger/railz/application_spawner.rb:296:in `handle_spawn_application'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:337:in `__send__'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:337:in `main_loop'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:187:in `start_synchronously'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:154:in `start'
+  passenger (2.2.2) lib/phusion_passenger/railz/application_spawner.rb:192:in `start'
+  passenger (2.2.2) lib/phusion_passenger/spawn_manager.rb:257:in `spawn_rails_application'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  passenger (2.2.2) lib/phusion_passenger/spawn_manager.rb:251:in `spawn_rails_application'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  passenger (2.2.2) lib/phusion_passenger/spawn_manager.rb:250:in `spawn_rails_application'
+  passenger (2.2.2) lib/phusion_passenger/spawn_manager.rb:153:in `spawn_application'
+  passenger (2.2.2) lib/phusion_passenger/spawn_manager.rb:282:in `handle_spawn_application'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:337:in `__send__'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:337:in `main_loop'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:187:in `start_synchronously'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-14 17:11:07) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slimbox2.css" with {:method=>:get}):
+  passenger (2.2.2) lib/phusion_passenger/rack/request_handler.rb:81:in `process_request'
+  passenger (2.2.2) lib/phusion_passenger/abstract_request_handler.rb:203:in `main_loop'
+  passenger (2.2.2) lib/phusion_passenger/railz/application_spawner.rb:340:in `start_request_handler'
+  passenger (2.2.2) lib/phusion_passenger/railz/application_spawner.rb:298:in `handle_spawn_application'
+  passenger (2.2.2) lib/phusion_passenger/utils.rb:181:in `safe_fork'
+  passenger (2.2.2) lib/phusion_passenger/railz/application_spawner.rb:296:in `handle_spawn_application'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:337:in `__send__'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:337:in `main_loop'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:187:in `start_synchronously'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:154:in `start'
+  passenger (2.2.2) lib/phusion_passenger/railz/application_spawner.rb:192:in `start'
+  passenger (2.2.2) lib/phusion_passenger/spawn_manager.rb:257:in `spawn_rails_application'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  passenger (2.2.2) lib/phusion_passenger/spawn_manager.rb:251:in `spawn_rails_application'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  passenger (2.2.2) lib/phusion_passenger/spawn_manager.rb:250:in `spawn_rails_application'
+  passenger (2.2.2) lib/phusion_passenger/spawn_manager.rb:153:in `spawn_application'
+  passenger (2.2.2) lib/phusion_passenger/spawn_manager.rb:282:in `handle_spawn_application'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:337:in `__send__'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:337:in `main_loop'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:187:in `start_synchronously'
+
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-14 17:11:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (1.1ms)
+Rendered home/_home_text (0.1ms)
+Rendered catalog/_facets (11.0ms)
+Completed in 24ms (View: 18, DB: 0) | 200 OK [http://nwda.local/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-14 17:11:53) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (0.9ms)
+Rendered home/_home_text (0.0ms)
+Rendered catalog/_facets (8.2ms)
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendered _user_util_links (3.3ms)
+Rendered _flash_msg (0.1ms)
+Completed in 28ms (View: 20, DB: 1) | 200 OK [http://nwda.local/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-14 17:11:53) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/slimbox2.js" with {:method=>:get}):
+  passenger (2.2.2) lib/phusion_passenger/rack/request_handler.rb:81:in `process_request'
+  passenger (2.2.2) lib/phusion_passenger/abstract_request_handler.rb:203:in `main_loop'
+  passenger (2.2.2) lib/phusion_passenger/railz/application_spawner.rb:340:in `start_request_handler'
+  passenger (2.2.2) lib/phusion_passenger/railz/application_spawner.rb:298:in `handle_spawn_application'
+  passenger (2.2.2) lib/phusion_passenger/utils.rb:181:in `safe_fork'
+  passenger (2.2.2) lib/phusion_passenger/railz/application_spawner.rb:296:in `handle_spawn_application'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:337:in `__send__'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:337:in `main_loop'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:187:in `start_synchronously'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:154:in `start'
+  passenger (2.2.2) lib/phusion_passenger/railz/application_spawner.rb:192:in `start'
+  passenger (2.2.2) lib/phusion_passenger/spawn_manager.rb:257:in `spawn_rails_application'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  passenger (2.2.2) lib/phusion_passenger/spawn_manager.rb:251:in `spawn_rails_application'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  passenger (2.2.2) lib/phusion_passenger/spawn_manager.rb:250:in `spawn_rails_application'
+  passenger (2.2.2) lib/phusion_passenger/spawn_manager.rb:153:in `spawn_application'
+  passenger (2.2.2) lib/phusion_passenger/spawn_manager.rb:282:in `handle_spawn_application'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:337:in `__send__'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:337:in `main_loop'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:187:in `start_synchronously'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-14 17:11:53) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/nwda.css" with {:method=>:get}):
+  passenger (2.2.2) lib/phusion_passenger/rack/request_handler.rb:81:in `process_request'
+  passenger (2.2.2) lib/phusion_passenger/abstract_request_handler.rb:203:in `main_loop'
+  passenger (2.2.2) lib/phusion_passenger/railz/application_spawner.rb:340:in `start_request_handler'
+  passenger (2.2.2) lib/phusion_passenger/railz/application_spawner.rb:298:in `handle_spawn_application'
+  passenger (2.2.2) lib/phusion_passenger/utils.rb:181:in `safe_fork'
+  passenger (2.2.2) lib/phusion_passenger/railz/application_spawner.rb:296:in `handle_spawn_application'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:337:in `__send__'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:337:in `main_loop'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:187:in `start_synchronously'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:154:in `start'
+  passenger (2.2.2) lib/phusion_passenger/railz/application_spawner.rb:192:in `start'
+  passenger (2.2.2) lib/phusion_passenger/spawn_manager.rb:257:in `spawn_rails_application'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  passenger (2.2.2) lib/phusion_passenger/spawn_manager.rb:251:in `spawn_rails_application'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  passenger (2.2.2) lib/phusion_passenger/spawn_manager.rb:250:in `spawn_rails_application'
+  passenger (2.2.2) lib/phusion_passenger/spawn_manager.rb:153:in `spawn_application'
+  passenger (2.2.2) lib/phusion_passenger/spawn_manager.rb:282:in `handle_spawn_application'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:337:in `__send__'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:337:in `main_loop'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:187:in `start_synchronously'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-14 17:11:53) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/slimbox2.css" with {:method=>:get}):
+  passenger (2.2.2) lib/phusion_passenger/rack/request_handler.rb:81:in `process_request'
+  passenger (2.2.2) lib/phusion_passenger/abstract_request_handler.rb:203:in `main_loop'
+  passenger (2.2.2) lib/phusion_passenger/railz/application_spawner.rb:340:in `start_request_handler'
+  passenger (2.2.2) lib/phusion_passenger/railz/application_spawner.rb:298:in `handle_spawn_application'
+  passenger (2.2.2) lib/phusion_passenger/utils.rb:181:in `safe_fork'
+  passenger (2.2.2) lib/phusion_passenger/railz/application_spawner.rb:296:in `handle_spawn_application'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:337:in `__send__'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:337:in `main_loop'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:187:in `start_synchronously'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:154:in `start'
+  passenger (2.2.2) lib/phusion_passenger/railz/application_spawner.rb:192:in `start'
+  passenger (2.2.2) lib/phusion_passenger/spawn_manager.rb:257:in `spawn_rails_application'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  passenger (2.2.2) lib/phusion_passenger/spawn_manager.rb:251:in `spawn_rails_application'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  passenger (2.2.2) lib/phusion_passenger/spawn_manager.rb:250:in `spawn_rails_application'
+  passenger (2.2.2) lib/phusion_passenger/spawn_manager.rb:153:in `spawn_application'
+  passenger (2.2.2) lib/phusion_passenger/spawn_manager.rb:282:in `handle_spawn_application'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:337:in `__send__'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:337:in `main_loop'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:187:in `start_synchronously'
+
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-14 17:12:09) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_hidden_filters (0.5ms)
+Rendered catalog/_search_form (4.0ms)
+Rendered home/_home_text (0.5ms)
+Rendered catalog/_facets (7.6ms)
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendered _user_util_links (17.9ms)
+Rendered _flash_msg (0.6ms)
+Completed in 77ms (View: 53, DB: 1) | 200 OK [http://nwda.local/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-14 17:12:28) [GET]
+  Parameters: {"action"=>"index", "f"=>{"subject_era_facet"=>["More than 10 years old"]}, "controller"=>"home"}
+Redirected to http://nwda.local/catalog?f%5Bsubject_era_facet%5D%5B%5D=More+than+10+years+old
+Completed in 8ms (DB: 0) | 302 Found [http://nwda.local/?f%5Bsubject_era_facet%5D%5B%5D=More+than+10+years+old]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-14 17:12:28) [GET]
+  Parameters: {"action"=>"index", "f"=>{"subject_era_facet"=>["More than 10 years old"]}, "controller"=>"catalog"}
+  [4;35;1mSearch Load (0.7ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (8,7,6,5,4)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (1.0ms)
+Rendered catalog/_did_you_mean (0.7ms)
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mBookmark Load (0.2ms)[0m   [0mSELECT * FROM "bookmarks" WHERE ("bookmarks".user_id = 1) [0m
+Rendered catalog/_bookmark_control (69.2ms)
+Rendered catalog/_index_partials/_default (0.9ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (91.5ms)
+Rendered catalog/_facets (6.7ms)
+Rendered catalog/_solr_request (0.5ms)
+Rendered _user_util_links (0.5ms)
+Rendered _flash_msg (0.1ms)
+Completed in 147ms (View: 121, DB: 1) | 200 OK [http://nwda.local/catalog?f%5Bsubject_era_facet%5D%5B%5D=More+than+10+years+old]
+
+
+Processing CatalogController#update (for 127.0.0.1 at 2009-06-14 17:12:31) [PUT]
+  Parameters: {"action"=>"update", "_method"=>"put", "authenticity_token"=>"Rn2mH+nOy0b+Dn6UmMIc7P7eTRUcPpxHlwdi9zGo9MU=", "id"=>"pullman_0", "controller"=>"catalog", "counter"=>"1"}
+  [4;36;1mSearch Load (1.0ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (8,7,6,5,4)) [0m
+Redirected to http://nwda.local/catalog/pullman_0
+Completed in 2ms (DB: 1) | 302 Found [http://nwda.local/catalog/pullman_0]
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-14 17:12:31) [GET]
+  Parameters: {"action"=>"show", "id"=>"pullman_0", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.0ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (8,7,6,5,4)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+
+ActionView::TemplateError (undefined method `ead?' for #<Mash:0x24fd5ec>) on line #10 of app/views/catalog/show.html.erb:
+7:     <h3 class="byline"><%#= @document[Blacklight.config[:show][:byline]] %></h3>
+8:     <div class="tools"><%#= render :partial => 'show_tools' %></div>
+9:     <div class="document">
+10: 	<% if @document.ead? %>	
+11: 	  	<%= render(:partial=>"catalog/_show_partials/ead") %>
+12: 	<% elsif @document.format_facet.to_s == 'Herbarium Specimen'%>
+13: 		<%= render_specified_document_partial @document, :show, :herbarium %>
+
+    vendor/plugins/blacklight/vendor/gems/mwmitchell-rsolr-ext-0.7.35/lib/rsolr-ext/doc.rb:94:in `send'
+    vendor/plugins/blacklight/vendor/gems/mwmitchell-rsolr-ext-0.7.35/lib/rsolr-ext/doc.rb:94:in `method_missing'
+    app/views/catalog/show.html.erb:10
+    passenger (2.2.2) lib/phusion_passenger/rack/request_handler.rb:81:in `process_request'
+    passenger (2.2.2) lib/phusion_passenger/abstract_request_handler.rb:203:in `main_loop'
+    passenger (2.2.2) lib/phusion_passenger/railz/application_spawner.rb:340:in `start_request_handler'
+    passenger (2.2.2) lib/phusion_passenger/railz/application_spawner.rb:298:in `handle_spawn_application'
+    passenger (2.2.2) lib/phusion_passenger/utils.rb:181:in `safe_fork'
+    passenger (2.2.2) lib/phusion_passenger/railz/application_spawner.rb:296:in `handle_spawn_application'
+    passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:337:in `__send__'
+    passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:337:in `main_loop'
+    passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:187:in `start_synchronously'
+    passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:154:in `start'
+    passenger (2.2.2) lib/phusion_passenger/railz/application_spawner.rb:192:in `start'
+    passenger (2.2.2) lib/phusion_passenger/spawn_manager.rb:257:in `spawn_rails_application'
+    passenger (2.2.2) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+    passenger (2.2.2) lib/phusion_passenger/spawn_manager.rb:251:in `spawn_rails_application'
+    passenger (2.2.2) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+    passenger (2.2.2) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+    passenger (2.2.2) lib/phusion_passenger/spawn_manager.rb:250:in `spawn_rails_application'
+    passenger (2.2.2) lib/phusion_passenger/spawn_manager.rb:153:in `spawn_application'
+    passenger (2.2.2) lib/phusion_passenger/spawn_manager.rb:282:in `handle_spawn_application'
+    passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:337:in `__send__'
+    passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:337:in `main_loop'
+    passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:187:in `start_synchronously'
+
+Rendered rescues/_trace (42.7ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-14 17:12:39) [GET]
+  Parameters: {"action"=>"index", "f"=>{"subject_era_facet"=>["More than 10 years old"]}, "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.0ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (8,7,6,5,4)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (0.9ms)
+Rendered catalog/_did_you_mean (0.1ms)
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mBookmark Load (0.2ms)[0m   [0;1mSELECT * FROM "bookmarks" WHERE ("bookmarks".user_id = 1) [0m
+Rendered catalog/_bookmark_control (66.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.2ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_default (0.4ms)
+Rendered catalog/_bookmark_control (0.9ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (82.1ms)
+Rendered catalog/_facets (6.7ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.3ms)
+Rendered _flash_msg (0.1ms)
+Completed in 112ms (View: 101, DB: 2) | 200 OK [http://nwda.local/catalog?f%5Bsubject_era_facet%5D%5B%5D=More+than+10+years+old]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-14 17:12:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (0.8ms)
+Rendered home/_home_text (0.1ms)
+Rendered catalog/_facets (7.7ms)
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendered _user_util_links (3.0ms)
+Rendered _flash_msg (0.1ms)
+Completed in 24ms (View: 15, DB: 1) | 200 OK [http://nwda.local/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-14 17:12:48) [GET]
+  Parameters: {"action"=>"index", "f"=>{"geographic_subject_facet"=>["United States"]}, "controller"=>"home"}
+Redirected to http://nwda.local/catalog?f%5Bgeographic_subject_facet%5D%5B%5D=United+States
+Completed in 8ms (DB: 0) | 302 Found [http://nwda.local/?f%5Bgeographic_subject_facet%5D%5B%5D=United+States]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-14 17:12:48) [GET]
+  Parameters: {"action"=>"index", "f"=>{"geographic_subject_facet"=>["United States"]}, "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.0ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (8,7,6,5,4)) [0m
+  [4;35;1mSearch Create (0.6ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2009-06-14 21:12:48', '2009-06-14 21:12:48', NULL, '--- 
+:counter: "1"
+:f: !map:HashWithIndifferentAccess 
+ geographic_subject_facet: 
+ - United States
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (1.0ms)
+Rendered catalog/_did_you_mean (0.1ms)
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mBookmark Load (0.2ms)[0m   [0mSELECT * FROM "bookmarks" WHERE ("bookmarks".user_id = 1) [0m
+Rendered catalog/_bookmark_control (4.2ms)
+Rendered catalog/_index_partials/_default (0.2ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (18.1ms)
+Rendered catalog/_facets (6.6ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.3ms)
+Rendered _flash_msg (0.1ms)
+Completed in 55ms (View: 37, DB: 2) | 200 OK [http://nwda.local/catalog?f%5Bgeographic_subject_facet%5D%5B%5D=United+States]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-14 17:14:46) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_hidden_filters (0.0ms)
+Rendered catalog/_search_form (0.8ms)
+Rendered home/_home_text (0.0ms)
+Rendered catalog/_facets (7.5ms)
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendered _user_util_links (2.9ms)
+Rendered _flash_msg (0.1ms)
+Completed in 21ms (View: 15, DB: 1) | 200 OK [http://nwda.local/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-14 17:14:48) [GET]
+  Parameters: {"action"=>"index", "f"=>{"format_facet"=>["Herbarium Specimen"]}, "controller"=>"home"}
+Redirected to http://nwda.local/catalog?f%5Bformat_facet%5D%5B%5D=Herbarium+Specimen
+Completed in 7ms (DB: 0) | 302 Found [http://nwda.local/?f%5Bformat_facet%5D%5B%5D=Herbarium+Specimen]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-14 17:14:48) [GET]
+  Parameters: {"action"=>"index", "f"=>{"format_facet"=>["Herbarium Specimen"]}, "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.0ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (9,8,7,6,5,4)) [0m
+  [4;36;1mSearch Create (0.4ms)[0m   [0;1mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2009-06-14 21:14:48', '2009-06-14 21:14:48', NULL, '--- 
+:counter: "1"
+:f: !map:HashWithIndifferentAccess 
+ format_facet: 
+ - Herbarium Specimen
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (0.8ms)
+Rendered catalog/_did_you_mean (0.1ms)
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mBookmark Load (0.1ms)[0m   [0;1mSELECT * FROM "bookmarks" WHERE ("bookmarks".user_id = 1) [0m
+Rendered catalog/_bookmark_control (3.7ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (80.8ms)
+Rendered catalog/_facets (3.3ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.3ms)
+Rendered _flash_msg (0.1ms)
+Completed in 112ms (View: 96, DB: 2) | 200 OK [http://nwda.local/catalog?f%5Bformat_facet%5D%5B%5D=Herbarium+Specimen]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-14 17:15:17) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (0.9ms)
+Rendered home/_home_text (0.1ms)
+Rendered catalog/_facets (7.8ms)
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendered _user_util_links (3.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 25ms (View: 16, DB: 1) | 200 OK [http://nwda.local/]
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x24fb148 @adapter=#<RSolr::Adapter::HTTP:0x24fd088 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x24f8fec @adapter_name=:curb>>, @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}>
+BLACKLIGHT: initialized with Blacklight.config: {:spell_max=>5, :default_qt=>"search", :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :raw_storage_type=>"marcxml", :show=>{:display_type=>"format_code_t", :heading=>"title_t", :html_title=>"title_t"}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet"], :labels=>{"subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :raw_storage_field=>"marc_display", :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]]}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-14 17:15:23) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_hidden_filters (0.6ms)
+Rendered catalog/_search_form (4.2ms)
+Rendered home/_home_text (0.5ms)
+Rendered catalog/_facets (7.4ms)
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendered _user_util_links (17.3ms)
+Rendered _flash_msg (0.6ms)
+Completed in 73ms (View: 53, DB: 0) | 200 OK [http://nwda.local/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-14 17:15:25) [GET]
+  Parameters: {"action"=>"index", "f"=>{"format_facet"=>["Herbarium Specimen"]}, "controller"=>"home"}
+Redirected to http://nwda.local/catalog?f%5Bformat_facet%5D%5B%5D=Herbarium+Specimen
+Completed in 8ms (DB: 0) | 302 Found [http://nwda.local/?f%5Bformat_facet%5D%5B%5D=Herbarium+Specimen]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-14 17:15:25) [GET]
+  Parameters: {"action"=>"index", "f"=>{"format_facet"=>["Herbarium Specimen"]}, "controller"=>"catalog"}
+  [4;35;1mSearch Load (0.8ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (10,9,8,7,6,5,4)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (0.9ms)
+Rendered catalog/_did_you_mean (0.6ms)
+Rendered catalog/_search_constraints (1.3ms)
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_hidden_filters (0.1ms)
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mBookmark Load (0.2ms)[0m   [0mSELECT * FROM "bookmarks" WHERE ("bookmarks".user_id = 1) [0m
+Rendered catalog/_bookmark_control (68.5ms)
+Rendered catalog/_index_partials/_default (0.8ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (91.0ms)
+Rendered catalog/_facets (3.5ms)
+Rendered catalog/_solr_request (0.5ms)
+Rendered _user_util_links (0.3ms)
+Rendered _flash_msg (0.1ms)
+Completed in 147ms (View: 121, DB: 2) | 200 OK [http://nwda.local/catalog?f%5Bformat_facet%5D%5B%5D=Herbarium+Specimen]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-14 17:15:32) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.1ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (10,9,8,7,6,5,4)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (0.8ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_search_constraints (0.1ms)
+Rendered catalog/_hidden_filters (0.0ms)
+Rendered catalog/_hidden_filters (0.0ms)
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mBookmark Load (0.1ms)[0m   [0;1mSELECT * FROM "bookmarks" WHERE ("bookmarks".user_id = 1) [0m
+Rendered catalog/_bookmark_control (3.7ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (17.6ms)
+Rendered catalog/_facets (6.3ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.3ms)
+Rendered _flash_msg (0.1ms)
+Completed in 45ms (View: 35, DB: 2) | 200 OK [http://nwda.local/catalog?]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-14 17:15:34) [GET]
+  Parameters: {"action"=>"index", "f"=>{"geographic_subject_facet"=>["United States"]}, "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.7ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (10,9,8,7,6,5,4)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (0.8ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_search_constraints (0.3ms)
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_hidden_filters (0.1ms)
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mBookmark Load (0.1ms)[0m   [0mSELECT * FROM "bookmarks" WHERE ("bookmarks".user_id = 1) [0m
+Rendered catalog/_bookmark_control (3.8ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (19.5ms)
+Rendered catalog/_facets (7.2ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.3ms)
+Rendered _flash_msg (0.1ms)
+Completed in 50ms (View: 39, DB: 2) | 200 OK [http://nwda.local/catalog?f%5Bgeographic_subject_facet%5D%5B%5D=United+States]
+
+
+Processing CatalogController#update (for 127.0.0.1 at 2009-06-14 17:15:37) [PUT]
+  Parameters: {"action"=>"update", "_method"=>"put", "authenticity_token"=>"Rn2mH+nOy0b+Dn6UmMIc7P7eTRUcPpxHlwdi9zGo9MU=", "id"=>"pullman_0", "controller"=>"catalog", "counter"=>"1"}
+  [4;36;1mSearch Load (1.1ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (10,9,8,7,6,5,4)) [0m
+Redirected to http://nwda.local/catalog/pullman_0
+Completed in 3ms (DB: 1) | 302 Found [http://nwda.local/catalog/pullman_0]
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-14 17:15:37) [GET]
+  Parameters: {"action"=>"show", "id"=>"pullman_0", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.2ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (10,9,8,7,6,5,4)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_tools (0.5ms)
+Rendered catalog/_show_partials/_default (0.7ms)
+Rendered catalog/_solr_request (0.1ms)
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendered _user_util_links (2.6ms)
+Rendered _flash_msg (0.1ms)
+Completed in 29ms (View: 17, DB: 2) | 200 OK [http://nwda.local/catalog/pullman_0]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-14 17:15:40) [GET]
+  Parameters: {"action"=>"index", "f"=>{"geographic_subject_facet"=>["United States"]}, "controller"=>"catalog", "counter"=>"1"}
+  [4;35;1mSearch Load (1.2ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (10,9,8,7,6,5,4)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (0.9ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_search_constraints (0.5ms)
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_hidden_filters (0.1ms)
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mBookmark Load (0.2ms)[0m   [0mSELECT * FROM "bookmarks" WHERE ("bookmarks".user_id = 1) [0m
+Rendered catalog/_bookmark_control (3.7ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.2ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (17.9ms)
+Rendered catalog/_facets (7.3ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.3ms)
+Rendered _flash_msg (0.1ms)
+Completed in 48ms (View: 38, DB: 2) | 200 OK [http://nwda.local/catalog?counter=1&f%5Bgeographic_subject_facet%5D%5B%5D=United+States]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-14 17:15:42) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog", "counter"=>"1"}
+  [4;36;1mSearch Load (1.2ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (10,9,8,7,6,5,4)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (0.8ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_search_constraints (0.1ms)
+Rendered catalog/_hidden_filters (0.0ms)
+Rendered catalog/_hidden_filters (0.0ms)
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mBookmark Load (0.1ms)[0m   [0;1mSELECT * FROM "bookmarks" WHERE ("bookmarks".user_id = 1) [0m
+Rendered catalog/_bookmark_control (3.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.2ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (17.4ms)
+Rendered catalog/_facets (6.6ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.3ms)
+Rendered _flash_msg (0.1ms)
+Completed in 44ms (View: 35, DB: 2) | 200 OK [http://nwda.local/catalog?&counter=1]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-14 17:16:20) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog", "counter"=>"1"}
+  [4;35;1mSearch Load (1.2ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (10,9,8,7,6,5,4)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (0.8ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_search_constraints (0.1ms)
+Rendered catalog/_hidden_filters (0.0ms)
+Rendered catalog/_hidden_filters (0.0ms)
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mBookmark Load (0.1ms)[0m   [0mSELECT * FROM "bookmarks" WHERE ("bookmarks".user_id = 1) [0m
+Rendered catalog/_bookmark_control (3.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (62.7ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.6ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (80.3ms)
+Rendered catalog/_facets (6.8ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.3ms)
+Rendered _flash_msg (0.1ms)
+Completed in 112ms (View: 99, DB: 2) | 200 OK [http://nwda.local/catalog?&counter=1]
+
+
+Processing CatalogController#update (for 127.0.0.1 at 2009-06-14 17:16:21) [PUT]
+  Parameters: {"action"=>"update", "_method"=>"put", "authenticity_token"=>"Rn2mH+nOy0b+Dn6UmMIc7P7eTRUcPpxHlwdi9zGo9MU=", "id"=>"pullman_0", "controller"=>"catalog", "counter"=>"1"}
+  [4;36;1mSearch Load (1.2ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (10,9,8,7,6,5,4)) [0m
+Redirected to http://nwda.local/catalog/pullman_0
+Completed in 3ms (DB: 1) | 302 Found [http://nwda.local/catalog/pullman_0]
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-14 17:16:21) [GET]
+  Parameters: {"action"=>"show", "id"=>"pullman_0", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.1ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (10,9,8,7,6,5,4)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_tools (0.1ms)
+Rendered catalog/_show_partials/_default (0.1ms)
+Rendered catalog/_solr_request (0.1ms)
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendered _user_util_links (2.6ms)
+Rendered _flash_msg (0.1ms)
+Completed in 20ms (View: 10, DB: 1) | 200 OK [http://nwda.local/catalog/pullman_0]
