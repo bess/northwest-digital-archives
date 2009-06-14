@@ -1,0 +1,59 @@
+BLACKLIGHT: initialized with Blacklight.solr_config: {:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x26405d0 @adapter=#<RSolr::Adapter::HTTP:0x26415d4 @connector=#<RSolr::HTTPClient::Connector:0x263f9a0 @adapter_name=:curb>, @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}>, @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}>
+BLACKLIGHT: initialized with Blacklight.config: {:default_qt=>"search", :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :show=>{:display_type=>"format_code_t", :heading=>"title_t", :html_title=>"title_t"}, :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :raw_storage_type=>"marcxml", :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet"], :labels=>{"subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :raw_storage_field=>"marc_display", :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :spell_max=>5}
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.7ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.9ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090127164730)
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(255) NOT NULL, "email" varchar(255), "crypted_password" varchar(255), "last_search_url" text, "last_login" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090127164730')[0m
+Migrating to CreateBookmarks (20090127164740)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "bookmarks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "url" text, "document_id" varchar(255), "title" varchar(255), "notes" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090127164740')[0m
+Migrating to ActsAsTaggableMigration (20090127164750)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255)) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE TABLE "taggings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "tag_id" integer, "taggable_id" integer, "taggable_type" varchar(255), "created_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCREATE INDEX "index_taggings_on_tag_id" ON "taggings" ("tag_id")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCREATE INDEX "index_taggings_on_taggable_id_and_taggable_type" ON "taggings" ("taggable_id", "taggable_type")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090127164750')[0m
+Migrating to CreateSearches (20090428182620)
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "searches" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "query_params" text, "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCREATE INDEX "index_searches_on_user_id" ON "searches" ("user_id")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090428182620')[0m
+Migrating to AddAuthlogicFieldsToUsers (20090529161304)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mALTER TABLE "users" ADD "password_salt" varchar(255)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mALTER TABLE "users" ADD "persistence_token" varchar(255)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mALTER TABLE "users" ADD "current_login_at" datetime[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCREATE TEMPORARY TABLE "altered_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(255) NOT NULL, "email" varchar(255), "crypted_password" varchar(255), "last_search_url" text, "last_login_at" datetime, "created_at" datetime, "updated_at" datetime, "password_salt" varchar(255), "persistence_token" varchar(255), "current_login_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mDROP TABLE "users"[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(255) NOT NULL, "email" varchar(255), "crypted_password" varchar(255), "last_search_url" text, "last_login_at" datetime, "created_at" datetime, "updated_at" datetime, "password_salt" varchar(255), "persistence_token" varchar(255), "current_login_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("altered_users")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mDROP TABLE "altered_users"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090529161304')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("bookmarks")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("searches")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_info('index_searches_on_user_id')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mPRAGMA index_list("taggings")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_info('index_taggings_on_taggable_id_and_taggable_type')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_info('index_taggings_on_tag_id')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("tags")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("users")[0m
