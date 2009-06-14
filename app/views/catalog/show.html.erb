@@ -3,15 +3,30 @@
 <div id="document">
   <div id="doc_<%= @document[:id] %>">
     
-    <h1><%= document_heading %></h1>
-    <div class="tools"><%= render :partial => 'show_tools' %></div>
+    <h1><%= @document[Blacklight.config[:show][:heading]] %></h1>
+    <h3 class="byline"><%#= @document[Blacklight.config[:show][:byline]] %></h3>
+    <div class="tools"><%#= render :partial => 'show_tools' %></div>
     <div class="document">
-      <%= render_document_partial @document, :show %>
-    </div>
-    
-  </div>
-</div>
+	<%# if @document.ead? %>	
+	  	<%#= render(:partial=>"catalog/_show_partials/ead") %>
+	<% if @document['format_facet'].to_s == 'Herbarium Specimen'%>
+		<%= render_specified_document_partial @document, :show, :herbarium %>
+	<% elsif @document['collection_facet'].to_s == 'City of Pullman Collection'%>
+		<%= render_specified_document_partial @document, :show, :pullman %>
+	<% elsif @document['collection_facet'].to_s == 'Oregon State Baseball'%>
+		<%= render_specified_document_partial @document, :show, :baseball %>
+	<% elsif @document['collection_facet'].to_s == 'Washington State University Theses'%>
+		<%= render_specified_document_partial @document, :show, :uwtheses %>
+	<% else %>
+     	<%= render_document_partial @document, :show %>
+	<% end%>
 
+	<%#= render(
+	    :partial=>"catalog/_show_partials/#{@document.doc_type}",
+	    :locals=>{:document=>@document,:current_user=>@current_user, :sidebar=>@sidebar}
+	  ) %>
+    </div>
+  </div>
 <% if @previous_document || @next_document %>
 <div id="previousNextDocument">
 	<%= link_to_previous_document(@previous_document) %>
