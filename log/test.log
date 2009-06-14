@@ -1,0 +1,737 @@
+BLACKLIGHT: initialized with Blacklight.solr_config: {:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x26133a0 @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}, @adapter=#<RSolr::Adapter::HTTP:0x26143f4 @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}, @connector=#<RSolr::HTTPClient::Connector:0x2612748 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:show=>{:display_type=>"format_code_t", :heading=>"title_t", :html_title=>"title_t"}, :raw_storage_field=>"marc_display", :spell_max=>5, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :default_qt=>"search", :index_fields=>{:labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}, :field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"]}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :show_fields=>{:labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}, :field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"]}, :facet=>{:labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}, :field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"]}, :raw_storage_type=>"marcxml", :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]]}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-14 18:49:44) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_hidden_filters (1.0ms)
+Rendered catalog/_search_form (4.3ms)
+Rendered home/_home_text (0.7ms)
+Rendered catalog/_facets (19.3ms)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-14 18:49:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-14 18:49:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (1.0ms)
+Rendered home/_home_text (0.1ms)
+Rendered catalog/_facets (10.5ms)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-14 18:49:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-14 18:49:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (1.1ms)
+Rendered home/_home_text (0.1ms)
+Rendered catalog/_facets (11.1ms)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-14 18:49:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+REQUESTING PAGE: GET /catalog/baseball_78 with {} and HTTP headers {}
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-14 18:49:45) [GET]
+  Parameters: {"action"=>"show", "id"=>"baseball_78", "controller"=>"catalog"}
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_baseball (3.8ms)
+Rendered catalog/_solr_request (0.7ms)
+
+
+Processing ApplicationController#show (for 127.0.0.1 at 2009-06-14 18:49:45) [GET]
+  Parameters: {"action"=>"show", "id"=>"baseball_78", "controller"=>"catalog"}
+REQUESTING PAGE: GET /catalog/80444_xv94616 with {} and HTTP headers {}
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-14 18:49:45) [GET]
+  Parameters: {"action"=>"show", "id"=>"80444_xv94616", "controller"=>"catalog"}
+
+
+Processing ApplicationController#show (for 127.0.0.1 at 2009-06-14 18:49:45) [GET]
+  Parameters: {"action"=>"show", "id"=>"80444_xv94616", "controller"=>"catalog"}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-14 18:49:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (1.0ms)
+Rendered home/_home_text (0.1ms)
+Rendered catalog/_facets (10.7ms)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-14 18:49:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-14 18:49:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (1.0ms)
+Rendered home/_home_text (0.1ms)
+Rendered catalog/_facets (10.4ms)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-14 18:49:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-14 18:49:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (0.9ms)
+Rendered home/_home_text (0.1ms)
+Rendered catalog/_facets (10.3ms)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-14 18:49:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-14 18:49:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (1.0ms)
+Rendered home/_home_text (0.1ms)
+Rendered catalog/_facets (10.2ms)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-14 18:49:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-14 18:49:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (1.1ms)
+Rendered home/_home_text (0.1ms)
+Rendered catalog/_facets (10.4ms)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-14 18:49:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+REQUESTING PAGE: GET /catalog/pullman_7 with {} and HTTP headers {}
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-14 18:49:45) [GET]
+  Parameters: {"action"=>"show", "id"=>"pullman_7", "controller"=>"catalog"}
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_pullman (3.1ms)
+Rendered catalog/_solr_request (0.2ms)
+
+
+Processing ApplicationController#show (for 127.0.0.1 at 2009-06-14 18:49:45) [GET]
+  Parameters: {"action"=>"show", "id"=>"pullman_7", "controller"=>"catalog"}
+REQUESTING PAGE: GET /catalog/pullman_9 with {} and HTTP headers {}
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-14 18:49:45) [GET]
+  Parameters: {"action"=>"show", "id"=>"pullman_9", "controller"=>"catalog"}
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_pullman (3.6ms)
+Rendered catalog/_solr_request (0.2ms)
+
+
+Processing ApplicationController#show (for 127.0.0.1 at 2009-06-14 18:49:45) [GET]
+  Parameters: {"action"=>"show", "id"=>"pullman_9", "controller"=>"catalog"}
+REQUESTING PAGE: GET /catalog/pullman_1495 with {} and HTTP headers {}
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-14 18:49:45) [GET]
+  Parameters: {"action"=>"show", "id"=>"pullman_1495", "controller"=>"catalog"}
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_pullman (1.2ms)
+Rendered catalog/_solr_request (0.2ms)
+
+
+Processing ApplicationController#show (for 127.0.0.1 at 2009-06-14 18:49:45) [GET]
+  Parameters: {"action"=>"show", "id"=>"pullman_1495", "controller"=>"catalog"}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x2861760 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x28629d0 @connector=#<RSolr::HTTPClient::Connector:0x2860bbc @adapter_name=:curb>, @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}>>
+BLACKLIGHT: initialized with Blacklight.config: {:sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :spell_max=>5, :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :show=>{:display_type=>"format_code_t", :heading=>"title_t", :html_title=>"title_t"}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :raw_storage_type=>"marcxml", :default_qt=>"search", :index=>{:num_per_page=>10, :show_link=>"title_t", :record_display_type=>"format_code_t"}, :raw_storage_field=>"marc_display", :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}}
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.9ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090127164730)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(255) NOT NULL, "email" varchar(255), "crypted_password" varchar(255), "last_search_url" text, "last_login" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090127164730')[0m
+Migrating to CreateBookmarks (20090127164740)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCREATE TABLE "bookmarks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "url" text, "document_id" varchar(255), "title" varchar(255), "notes" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090127164740')[0m
+Migrating to ActsAsTaggableMigration (20090127164750)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255)) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE TABLE "taggings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "tag_id" integer, "taggable_id" integer, "taggable_type" varchar(255), "created_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCREATE INDEX "index_taggings_on_tag_id" ON "taggings" ("tag_id")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCREATE INDEX "index_taggings_on_taggable_id_and_taggable_type" ON "taggings" ("taggable_id", "taggable_type")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090127164750')[0m
+Migrating to CreateSearches (20090428182620)
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "searches" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "query_params" text, "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCREATE INDEX "index_searches_on_user_id" ON "searches" ("user_id")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090428182620')[0m
+Migrating to AddAuthlogicFieldsToUsers (20090529161304)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mALTER TABLE "users" ADD "password_salt" varchar(255)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mALTER TABLE "users" ADD "persistence_token" varchar(255)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mALTER TABLE "users" ADD "current_login_at" datetime[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE TEMPORARY TABLE "altered_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(255) NOT NULL, "email" varchar(255), "crypted_password" varchar(255), "last_search_url" text, "last_login_at" datetime, "created_at" datetime, "updated_at" datetime, "password_salt" varchar(255), "persistence_token" varchar(255), "current_login_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mDROP TABLE "users"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(255) NOT NULL, "email" varchar(255), "crypted_password" varchar(255), "last_search_url" text, "last_login_at" datetime, "created_at" datetime, "updated_at" datetime, "password_salt" varchar(255), "persistence_token" varchar(255), "current_login_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("altered_users")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mDROP TABLE "altered_users"[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090529161304')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("bookmarks")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("searches")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_info('index_searches_on_user_id')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("taggings")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_info('index_taggings_on_taggable_id_and_taggable_type')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('index_taggings_on_tag_id')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("tags")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+BLACKLIGHT: initialized with Blacklight.solr_config: {:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x26133a0 @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}, @adapter=#<RSolr::Adapter::HTTP:0x26143f4 @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}, @connector=#<RSolr::HTTPClient::Connector:0x2612748 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:show=>{:display_type=>"format_code_t", :heading=>"title_t", :html_title=>"title_t"}, :raw_storage_field=>"marc_display", :spell_max=>5, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :default_qt=>"search", :index_fields=>{:labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}, :field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"]}, :index=>{:show_link=>"title_t", :num_per_page=>10, :record_display_type=>"format_code_t"}, :show_fields=>{:labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}, :field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"]}, :facet=>{:labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}, :field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"]}, :raw_storage_type=>"marcxml", :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]]}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-14 18:50:23) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_hidden_filters (0.6ms)
+Rendered catalog/_search_form (2.5ms)
+Rendered home/_home_text (0.5ms)
+Rendered catalog/_facets (12.0ms)
+Rendered _user_util_links (13.0ms)
+Rendered _flash_msg (0.6ms)
+Completed in 161ms (View: 36, DB: 0) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET /?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-14 18:50:23) [GET]
+  Parameters: {"action"=>"index", "f"=>{"collection_facet"=>["Oregon State Baseball"]}, "controller"=>"home"}
+Redirected to http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball
+Completed in 10ms (DB: 0) | 302 Found [http://www.example.com/?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball]
+REQUESTING PAGE: GET http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball with {} and HTTP headers {"HTTP_REFERER"=>"/?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-14 18:50:23) [GET]
+  Parameters: {"action"=>"index", "f"=>{"collection_facet"=>["Oregon State Baseball"]}, "controller"=>"catalog"}
+  [4;36;1mSearch Create (0.8ms)[0m   [0;1mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2009-06-14 22:50:23', '2009-06-14 22:50:23', NULL, '--- 
+:f: !map:HashWithIndifferentAccess 
+ collection_facet: 
+ - Oregon State Baseball
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.2ms)
+Rendered catalog/_search_form (1.1ms)
+Rendered catalog/_did_you_mean (0.7ms)
+Rendered catalog/_search_constraints (1.5ms)
+Rendered catalog/_bookmark_control (1.9ms)
+Rendered catalog/_index_partials/_baseball (1.3ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_document_list (17.4ms)
+Rendered catalog/_facets (7.5ms)
+Rendered catalog/_solr_request (0.6ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 71ms (View: 42, DB: 1) | 200 OK [http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball]
+REQUESTING PAGE: GET /catalog?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball&f%5Bsubject_era_facet%5D%5B%5D=More+than+100+years+old with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-14 18:50:23) [GET]
+  Parameters: {"action"=>"index", "f"=>{"collection_facet"=>["Oregon State Baseball"], "subject_era_facet"=>["More than 100 years old"]}, "controller"=>"catalog"}
+  [4;35;1mSearch Load (0.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" = 1) [0m
+  [4;36;1mSearch Create (0.2ms)[0m   [0;1mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2009-06-14 22:50:23', '2009-06-14 22:50:23', NULL, '--- 
+:f: !map:HashWithIndifferentAccess 
+ collection_facet: 
+ - Oregon State Baseball
+ subject_era_facet: 
+ - More than 100 years old
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.2ms)
+Rendered catalog/_search_form (1.2ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_search_constraints (0.8ms)
+Rendered catalog/_bookmark_control (1.6ms)
+Rendered catalog/_index_partials/_baseball (0.3ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.3ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_document_list (90.5ms)
+Rendered catalog/_facets (5.1ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 122ms (View: 108, DB: 1) | 200 OK [http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=Oregon+State+Baseball&f%5Bsubject_era_facet%5D%5B%5D=More+than+100+years+old]
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-14 18:50:23) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (1.1ms)
+Rendered home/_home_text (0.1ms)
+Rendered catalog/_facets (10.5ms)
+Rendered _user_util_links (1.2ms)
+Rendered _flash_msg (0.1ms)
+Completed in 25ms (View: 16, DB: 0) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET /catalog with {"commit"=>"search", "qt"=>"search", "q"=>"Harriet's Collection", "per_page"=>"10"} and HTTP headers {"HTTP_REFERER"=>"/"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-14 18:50:24) [GET]
+  Parameters: {"commit"=>"search", "qt"=>"search", "action"=>"index", "q"=>"Harriet's Collection", "controller"=>"catalog", "per_page"=>"10"}
+  [4;35;1mSearch Create (0.6ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2009-06-14 22:50:24', '2009-06-14 22:50:24', NULL, '--- 
+:q: Harriet''s Collection
+:qt: search
+:per_page: "10"
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (1.1ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_search_constraints (0.1ms)
+Rendered catalog/_bookmark_control (1.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_document_list (11.8ms)
+Rendered catalog/_facets (5.9ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 63ms (View: 31, DB: 1) | 200 OK [http://www.example.com/catalog]
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-14 18:50:24) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (1.1ms)
+Rendered home/_home_text (0.1ms)
+Rendered catalog/_facets (10.4ms)
+Rendered _user_util_links (1.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 25ms (View: 16, DB: 0) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET /catalog/baseball_467 with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-14 18:50:24) [GET]
+  Parameters: {"action"=>"show", "id"=>"baseball_467", "controller"=>"catalog"}
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_baseball (3.2ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (1.0ms)
+Rendered _flash_msg (0.1ms)
+Completed in 18ms (View: 9, DB: 0) | 200 OK [http://www.example.com/catalog/baseball_467]
+REQUESTING PAGE: GET /catalog/baseball_78 with {} and HTTP headers {}
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-14 18:50:24) [GET]
+  Parameters: {"action"=>"show", "id"=>"baseball_78", "controller"=>"catalog"}
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_baseball (2.1ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (1.0ms)
+Rendered _flash_msg (0.1ms)
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://www.example.com/catalog/baseball_78]
+REQUESTING PAGE: GET /catalog/80444_xv94616 with {} and HTTP headers {}
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-14 18:50:24) [GET]
+  Parameters: {"action"=>"show", "id"=>"80444_xv94616", "controller"=>"catalog"}
+
+
+Processing ApplicationController#show (for 127.0.0.1 at 2009-06-14 18:50:24) [GET]
+  Parameters: {"action"=>"show", "id"=>"80444_xv94616", "controller"=>"catalog"}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-14 18:50:24) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (1.1ms)
+Rendered home/_home_text (0.1ms)
+Rendered catalog/_facets (10.6ms)
+Rendered _user_util_links (1.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 25ms (View: 16, DB: 0) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET /?f%5Bcollection_facet%5D%5B%5D=City+of+Pullman+Collection with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-14 18:50:24) [GET]
+  Parameters: {"action"=>"index", "f"=>{"collection_facet"=>["City of Pullman Collection"]}, "controller"=>"home"}
+Redirected to http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=City+of+Pullman+Collection
+Completed in 11ms (DB: 0) | 302 Found [http://www.example.com/?f%5Bcollection_facet%5D%5B%5D=City+of+Pullman+Collection]
+REQUESTING PAGE: GET http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=City+of+Pullman+Collection with {} and HTTP headers {"HTTP_REFERER"=>"/?f%5Bcollection_facet%5D%5B%5D=City+of+Pullman+Collection"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-14 18:50:24) [GET]
+  Parameters: {"action"=>"index", "f"=>{"collection_facet"=>["City of Pullman Collection"]}, "controller"=>"catalog"}
+  [4;36;1mSearch Create (0.5ms)[0m   [0;1mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2009-06-14 22:50:24', '2009-06-14 22:50:24', NULL, '--- 
+:f: !map:HashWithIndifferentAccess 
+ collection_facet: 
+ - City of Pullman Collection
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.2ms)
+Rendered catalog/_search_form (1.5ms)
+Rendered catalog/_did_you_mean (0.2ms)
+Rendered catalog/_search_constraints (0.5ms)
+Rendered catalog/_bookmark_control (1.1ms)
+Rendered catalog/_index_partials/_pullman (1.4ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_pullman (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_pullman (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_pullman (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_pullman (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_pullman (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_pullman (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_pullman (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_pullman (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_pullman (0.2ms)
+Rendered catalog/_document_list (12.5ms)
+Rendered catalog/_facets (11.3ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 50ms (View: 38, DB: 1) | 200 OK [http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=City+of+Pullman+Collection]
+REQUESTING PAGE: GET /catalog?f%5Bcollection_facet%5D%5B%5D=City+of+Pullman+Collection&f%5Bsubject_era_facet%5D%5B%5D=Less+than+10+years+old with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=City+of+Pullman+Collection"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-14 18:50:24) [GET]
+  Parameters: {"action"=>"index", "f"=>{"collection_facet"=>["City of Pullman Collection"], "subject_era_facet"=>["Less than 10 years old"]}, "controller"=>"catalog"}
+  [4;35;1mSearch Load (0.3ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" = 1) [0m
+  [4;36;1mSearch Create (0.2ms)[0m   [0;1mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2009-06-14 22:50:24', '2009-06-14 22:50:24', NULL, '--- 
+:f: !map:HashWithIndifferentAccess 
+ collection_facet: 
+ - City of Pullman Collection
+ subject_era_facet: 
+ - Less than 10 years old
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.2ms)
+Rendered catalog/_search_form (1.0ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_search_constraints (0.7ms)
+Rendered catalog/_bookmark_control (1.2ms)
+Rendered catalog/_index_partials/_pullman (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_pullman (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_pullman (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_pullman (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_pullman (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_pullman (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_pullman (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_pullman (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_pullman (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_pullman (0.2ms)
+Rendered catalog/_document_list (12.1ms)
+Rendered catalog/_facets (6.7ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 50ms (View: 32, DB: 0) | 200 OK [http://www.example.com/catalog?f%5Bcollection_facet%5D%5B%5D=City+of+Pullman+Collection&f%5Bsubject_era_facet%5D%5B%5D=Less+than+10+years+old]
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-14 18:50:24) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (1.0ms)
+Rendered home/_home_text (0.1ms)
+Rendered catalog/_facets (10.4ms)
+Rendered _user_util_links (1.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 24ms (View: 16, DB: 0) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET /catalog with {"commit"=>"search", "qt"=>"search", "q"=>"Palouse", "per_page"=>"10"} and HTTP headers {"HTTP_REFERER"=>"/"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-14 18:50:25) [GET]
+  Parameters: {"commit"=>"search", "qt"=>"search", "action"=>"index", "q"=>"Palouse", "controller"=>"catalog", "per_page"=>"10"}
+  [4;35;1mSearch Create (0.5ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2009-06-14 22:50:25', '2009-06-14 22:50:25', NULL, '--- 
+:q: Palouse
+:qt: search
+:per_page: "10"
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (1.0ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_search_constraints (0.1ms)
+Rendered catalog/_bookmark_control (1.3ms)
+Rendered catalog/_index_partials/_pullman (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_pullman (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_pullman (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_pullman (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_pullman (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_pullman (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_pullman (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_pullman (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_pullman (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_pullman (0.2ms)
+Rendered catalog/_document_list (11.6ms)
+Rendered catalog/_facets (12.0ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 61ms (View: 38, DB: 0) | 200 OK [http://www.example.com/catalog]
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-14 18:50:25) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (0.9ms)
+Rendered home/_home_text (0.1ms)
+Rendered catalog/_facets (10.4ms)
+Rendered _user_util_links (1.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 23ms (View: 15, DB: 0) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-14 18:50:25) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (1.0ms)
+Rendered home/_home_text (0.1ms)
+Rendered catalog/_facets (10.5ms)
+Rendered _user_util_links (1.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 115ms (View: 105, DB: 0) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET /catalog with {"commit"=>"search", "qt"=>"search", "q"=>"Theater in Pullman", "per_page"=>"10"} and HTTP headers {"HTTP_REFERER"=>"/"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-14 18:50:25) [GET]
+  Parameters: {"commit"=>"search", "qt"=>"search", "action"=>"index", "q"=>"Theater in Pullman", "controller"=>"catalog", "per_page"=>"10"}
+  [4;36;1mSearch Create (0.5ms)[0m   [0;1mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2009-06-14 22:50:25', '2009-06-14 22:50:25', NULL, '--- 
+:q: Theater in Pullman
+:qt: search
+:per_page: "10"
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (1.0ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_search_constraints (0.1ms)
+Rendered catalog/_bookmark_control (1.1ms)
+Rendered catalog/_index_partials/_pullman (1.5ms)
+Rendered catalog/_bookmark_control (0.2ms)
+Rendered catalog/_index_partials/_pullman (0.3ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_pullman (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_pullman (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_pullman (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_pullman (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_pullman (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_pullman (0.2ms)
+Rendered catalog/_document_list (12.0ms)
+Rendered catalog/_facets (9.6ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 49ms (View: 27, DB: 0) | 200 OK [http://www.example.com/catalog]
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-14 18:50:25) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (1.0ms)
+Rendered home/_home_text (0.1ms)
+Rendered catalog/_facets (10.4ms)
+Rendered _user_util_links (1.0ms)
+Rendered _flash_msg (0.1ms)
+Completed in 24ms (View: 16, DB: 0) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET /catalog/pullman_7 with {} and HTTP headers {}
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-14 18:50:25) [GET]
+  Parameters: {"action"=>"show", "id"=>"pullman_7", "controller"=>"catalog"}
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_pullman (3.2ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (1.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 17ms (View: 8, DB: 0) | 200 OK [http://www.example.com/catalog/pullman_7]
+REQUESTING PAGE: GET /catalog/pullman_9 with {} and HTTP headers {}
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-14 18:50:25) [GET]
+  Parameters: {"action"=>"show", "id"=>"pullman_9", "controller"=>"catalog"}
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_pullman (4.1ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (1.0ms)
+Rendered _flash_msg (0.1ms)
+Completed in 13ms (View: 9, DB: 0) | 200 OK [http://www.example.com/catalog/pullman_9]
+REQUESTING PAGE: GET /catalog/pullman_1495 with {} and HTTP headers {}
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-14 18:50:25) [GET]
+  Parameters: {"action"=>"show", "id"=>"pullman_1495", "controller"=>"catalog"}
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_pullman (1.2ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (1.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://www.example.com/catalog/pullman_1495]
