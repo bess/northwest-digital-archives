@@ -33,18 +33,18 @@
       </div>
 	    
 	    <div id="bd">
-      	
-      	<div id="yui-main">
-          <div class="yui-b">
-            <%= render :partial=>'/flash_msg' %>
-            <%= yield %>
-          </div>
-
-        </div>
-        
-        
-	    </div>
-	    <div class="yui-b" id="sidebar"><%= sidebar_items.join('') %></div>
+			<div class="doc3"> 
+				<div class="yui-b">
+					<%= sidebar_items.join('') %>
+				</div>
+				<div id="yui-main"> 
+					<div class="yui-b">
+						<%= render :partial=>'/flash_msg' %>
+				        <%= yield %>
+					</div>
+				</div>
+			</div> <!-- /yui-t2 -->
+	    </div> <!-- /bd -->
         
 	    <div id="ft"><%= @footer %></div>
 	    
