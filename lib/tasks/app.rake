@@ -200,10 +200,10 @@ namespace :app do
         raw.gsub!(/xmlns=".*"/, '')
       
         xml = Nokogiri::XML(raw)
-        xml.xpath('/OAI-PMH/ListRecords/record[1]').each do |record| 
+        xml.xpath('/OAI-PMH/ListRecords/record').each do |record| 
           doc = NWDA::Mappers::Theses.new(record)
           #puts doc.inspect
-          #solr.add(doc.doc)
+          solr.add(doc.doc)
         end
     end
     puts "Sending commit to Solr..."
