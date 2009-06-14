@@ -117,7 +117,7 @@
      <float name="tie">0.01</float>
 
      <!-- NOT using marc_display - this could be specified in a special "details" request handler -->
-     <str name="fl">id, format_code_t, format_facet, language_facet, geographic_subject_facet, subject_era_facet, subject_t, material_type_t, isbn_t, published_t, author_t, title_added_entry_t, alt_titles_t, sub_title_t, title_t, score</str>
+     <str name="fl">id, format_code_t, format_facet, language_facet, geographic_subject_facet, subject_era_facet, subject_t, material_type_t, isbn_t, published_t, author_t, title_added_entry_t, alt_titles_t, sub_title_t, title_t, score, collection_facet, fullimage_display, preview_display</str>
      
      <str name="facet">true</str>
      <str name="facet.mincount">1</str>
@@ -149,7 +149,7 @@
      <float name="tie">0.01</float>
 
      <!-- NOT using marc_display - this could be specified in a special "details" request handler -->
-     <str name="fl">id, format_code_t, format_facet, language_facet, geographic_subject_facet, subject_era_facet, subject_t, material_type_t, isbn_t, published_t, author_t, title_added_entry_t, alt_titles_t, sub_title_t, title_t, score</str>
+     <str name="fl">id, format_code_t, format_facet, language_facet, geographic_subject_facet, subject_era_facet, subject_t, material_type_t, isbn_t, published_t, author_t, title_added_entry_t, alt_titles_t, sub_title_t, title_t, score, collection_facet, fullimage_display, preview_display</str>
      
      <str name="facet">true</str>
      <str name="facet.mincount">1</str>
@@ -182,7 +182,7 @@
      <float name="tie">0.01</float>
 
      <!-- NOT using marc_display - this could be specified in a special "details" request handler -->
-     <str name="fl">id, format_code_t, format_facet, language_facet, geographic_subject_facet, subject_era_facet, subject_t, material_type_t, isbn_t, published_t, author_t, title_added_entry_t, alt_titles_t, sub_title_t, title_t, score</str>
+     <str name="fl">id, format_code_t, format_facet, language_facet, geographic_subject_facet, subject_era_facet, subject_t, material_type_t, isbn_t, published_t, author_t, title_added_entry_t, alt_titles_t, sub_title_t, title_t, score, collection_facet, fullimage_display, preview_display</str>
      
      <str name="facet">true</str>
      <str name="facet.mincount">1</str>
