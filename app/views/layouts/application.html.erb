@@ -39,12 +39,13 @@
             <%= render :partial=>'/flash_msg' %>
             <%= yield %>
           </div>
+
         </div>
         
-        <div class="yui-b"><%= sidebar_items.join('') %></div>
         
 	    </div>
-	    
+	    <div class="yui-b" id="sidebar"><%= sidebar_items.join('') %></div>
+        
 	    <div id="ft"><%= @footer %></div>
 	    
 	  </div>
