@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/1262/branches/reorg-4-11-09/jetty/example-DIH/solr/db/conf
+END
+schema.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/1262/branches/reorg-4-11-09/jetty/example-DIH/solr/db/conf/schema.xml
+END
+protwords.txt
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/1262/branches/reorg-4-11-09/jetty/example-DIH/solr/db/conf/protwords.txt
+END
+stopwords.txt
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/1262/branches/reorg-4-11-09/jetty/example-DIH/solr/db/conf/stopwords.txt
+END
+elevate.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/1262/branches/reorg-4-11-09/jetty/example-DIH/solr/db/conf/elevate.xml
+END
+solrconfig.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/1262/branches/reorg-4-11-09/jetty/example-DIH/solr/db/conf/solrconfig.xml
+END
+scripts.conf
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/1262/branches/reorg-4-11-09/jetty/example-DIH/solr/db/conf/scripts.conf
+END
+admin-extra.html
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/1262/branches/reorg-4-11-09/jetty/example-DIH/solr/db/conf/admin-extra.html
+END
+synonyms.txt
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/1262/branches/reorg-4-11-09/jetty/example-DIH/solr/db/conf/synonyms.txt
+END
+db-data-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/1262/branches/reorg-4-11-09/jetty/example-DIH/solr/db/conf/db-data-config.xml
+END
