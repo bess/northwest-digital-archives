@@ -1,6 +1,5 @@
 <%# default partial to display solr document fields in catalog show view -%>
-
-<% @sidebar = capture do %>
+<% sidebar_items << capture do %>
 	<p><%= link_back_to_catalog :label=>'&lt;&lt; SEARCH' %></p>
     <dt>Subjects</dt>
 	<% @document[:subject_facet].each do |subject| %>
