@@ -1,0 +1,71 @@
+9
+
+dir
+1346
+http://blacklight.rubyforge.org/svn/branches/reorg-4-11-09/jetty/solr
+http://blacklight.rubyforge.org/svn
+
+
+
+2009-04-21T17:41:44.101272Z
+1253
+jamieorc
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+0b89af5a-983b-4fe2-9b20-b11a079e11b7
+
+conf
+dir
+
+lib
+dir
+
+bin
+dir
+
+README.txt
+file
+
+
+
+
+2009-05-02T23:13:37.000000Z
+da790defed6d4e0bdf4d7c8a3883c434
+2009-01-26T22:08:31.649515Z
+947
+mwmitchell
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2150
+
