@@ -88,6 +88,20 @@ module ApplicationHelper
       render :partial=>"catalog/_#{action_name}_partials/default", :locals=>{:document=>doc}
     end
   end
+
+
+  # given a doc, an action_name, and the name of a specific partial, 
+  # this method attempts to render the named partial template
+  # if this value is blank (nil/empty) the "default" is used
+  # if the partial is not found, the "default" partial is rendered instead
+  def render_specified_document_partial(doc, action_name, partial_name)
+    begin
+      render :partial=>"catalog/_#{action_name}_partials/#{partial_name}", :locals=>{:document=>doc}
+    rescue ActionView::MissingTemplate
+      render :partial=>"catalog/_#{action_name}_partials/default", :locals=>{:document=>doc}
+    end
+  end
+
   
   # Search History and Saved Searches display
   def link_to_previous_search(params)
