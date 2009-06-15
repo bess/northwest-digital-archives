@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang='en'>
+  <head>
+    <title>: MARCRecordExt [NWDA Blacklight Documentation]</title>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
+    <link href='../rdoc-style.css' media='screen' rel='stylesheet' type='text/css'>
+    <script type='text/javascript'>
+      //<![CDATA[
+        function popupCode(url) {
+          window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+        }
+        
+        function toggleCode(id) {
+          var code = document.getElementById(id)
+        
+          code.style.display = code.style.display != 'block' ? 'block' : 'none'
+          return true
+        }
+        
+        // Make codeblocks hidden by default
+        document.writeln('<' + 'style type="text/css">.method .source pre { display: none }<\/style>')
+      //]]>
+    </script>
+  </head>
+  <body class='page'>
+    <div class='class' id='wrapper'>
+      <div class='header'>
+        <h1 class='name'>
+          <span class='type'>Module</span>
+          MARCRecordExt
+        </h1>
+        <ol class='paths'>
+          <li>
+            <a href="../files/lib/marc_record_ext_rb.html">lib/marc_record_ext.rb</a>
+          </li>
+        </ol>
+      </div>
+      <div id='content'>
+        <div id='text'>
+          <div id='method-list'>
+            <h2>Methods</h2>
+            <h3>public instance</h3>
+            <ol>
+              <li><a href="#M000062">extract</a></li>
+              <li><a href="#M000067">format</a></li>
+              <li><a href="#M000065">isbn</a></li>
+              <li><a href="#M000066">languages</a></li>
+              <li><a href="#M000064">valid_isbn?</a></li>
+              <li><a href="#M000063">values_for</a></li>
+            </ol>
+          </div>
+          <div id='section'>
+            <div id='methods'>
+              <h2>Public instance methods</h2>
+              <div class='public-instance method' id='method-M000062'>
+                <a name='M000062'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>extract</span>
+                  <span class='arguments'>(input, regexp=nil)</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  input is a string in the format of: field:subfield multiple fields can be
+                  given, use a single space to separate example: record.extract &#8216;245:a
+                  245:b&#8217;
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000062-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000062-source'><span class="ruby-comment cmt"># File lib/marc_record_ext.rb, line 13</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">extract</span>(<span class="ruby-identifier">input</span>, <span class="ruby-identifier">regexp</span>=<span class="ruby-keyword kw">nil</span>)&#x000A;    <span class="ruby-identifier">hash</span> = {}&#x000A;    <span class="ruby-identifier">input</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value str">' '</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span>&#x000A;      <span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span> = <span class="ruby-identifier">item</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value str">':'</span>)&#x000A;      <span class="ruby-keyword kw">next</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">k</span>&#x000A;      <span class="ruby-identifier">hash</span>[<span class="ruby-identifier">k</span>]<span class="ruby-operator">||=</span>[]&#x000A;      <span class="ruby-identifier">hash</span>[<span class="ruby-identifier">k</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">v</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">v</span>&#x000A;    <span class="ruby-keyword kw">end</span>&#x000A;    <span class="ruby-identifier">hash</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">field</span>,<span class="ruby-identifier">subfields</span><span class="ruby-operator">|</span>&#x000A;      <span class="ruby-identifier">values_for</span>(<span class="ruby-identifier">field</span>, <span class="ruby-identifier">subfields</span>, <span class="ruby-identifier">regexp</span>)&#x000A;    <span class="ruby-keyword kw">end</span>.<span class="ruby-identifier">flatten</span>&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000067'>
+                <a name='M000067'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>format</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  <a
+                  href="http://www.itsmarc.com/crs/Bib0021.htm#Leader_06_Definition">www.itsmarc.com/crs/Bib0021.htm#Leader_06_Definition</a>
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000067-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000067-source'><span class="ruby-comment cmt"># File lib/marc_record_ext.rb, line 84</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">format</span>&#x000A;    <span class="ruby-identifier">char_6</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">leader</span>[<span class="ruby-value">6</span><span class="ruby-operator">...</span><span class="ruby-value">7</span>]&#x000A;    <span class="ruby-identifier">char_7</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">leader</span>[<span class="ruby-value">7</span><span class="ruby-operator">...</span><span class="ruby-value">8</span>]&#x000A;    <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">char_6</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'a'</span> <span class="ruby-keyword kw">and</span> ??(<span class="ruby-identifier">a</span> <span class="ruby-identifier">c</span> <span class="ruby-identifier">d</span> <span class="ruby-identifier">m</span>).<span class="ruby-identifier">include?</span> <span class="ruby-identifier">char_7</span>&#x000A;      <span class="ruby-identifier">code</span> = <span class="ruby-value str">'a'</span>&#x000A;    <span class="ruby-keyword kw">elsif</span> ??(<span class="ruby-identifier">b</span> <span class="ruby-identifier">s</span>).<span class="ruby-identifier">include?</span> <span class="ruby-identifier">char_7</span>&#x000A;      <span class="ruby-identifier">code</span> = <span class="ruby-value str">'serials'</span>&#x000A;    <span class="ruby-keyword kw">else</span>&#x000A;      <span class="ruby-identifier">code</span> = <span class="ruby-identifier">char_6</span>&#x000A;    <span class="ruby-keyword kw">end</span>&#x000A;    <span class="ruby-constant">FieldMaps</span><span class="ruby-operator">::</span><span class="ruby-constant">FORMAT</span>[<span class="ruby-identifier">code</span>] <span class="ruby-operator">||</span> <span class="ruby-value str">'Unknown'</span>&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000065'>
+                <a name='M000065'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>isbn</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  extracts valid isbns
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000065-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000065-source'><span class="ruby-comment cmt"># File lib/marc_record_ext.rb, line 63</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">isbn</span>&#x000A;    <span class="ruby-identifier">values</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">extract</span>(<span class="ruby-value str">'020:a'</span>)&#x000A;    <span class="ruby-comment cmt"># go through each value</span>&#x000A;    <span class="ruby-identifier">values</span>.<span class="ruby-identifier">select</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-comment cmt"># &quot;select&quot; collects values only if the last line of this block is true</span>&#x000A;      <span class="ruby-comment cmt"># split on a space, grab the first</span>&#x000A;      <span class="ruby-identifier">isbn</span> = <span class="ruby-identifier">v</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value str">' '</span>).<span class="ruby-identifier">first</span>&#x000A;      <span class="ruby-comment cmt"># is it valid?</span>&#x000A;      <span class="ruby-identifier">valid_isbn?</span>(<span class="ruby-identifier">isbn</span>)&#x000A;    <span class="ruby-keyword kw">end</span>&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000066'>
+                <a name='M000066'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>languages</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  returns the mapped language value
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000066-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000066-source'><span class="ruby-comment cmt"># File lib/marc_record_ext.rb, line 75</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">languages</span>&#x000A;    <span class="ruby-identifier">values</span> = [<span class="ruby-keyword kw">self</span>[<span class="ruby-value str">'008'</span>].<span class="ruby-identifier">value</span>[<span class="ruby-value">35</span><span class="ruby-operator">..</span><span class="ruby-value">37</span>]]&#x000A;    <span class="ruby-identifier">values</span> <span class="ruby-operator">+=</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">extract</span>(<span class="ruby-value str">'041:a 041:d'</span>)&#x000A;    <span class="ruby-identifier">values</span>.<span class="ruby-identifier">uniq!</span>&#x000A;    <span class="ruby-identifier">mapped</span> = <span class="ruby-identifier">values</span>.<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">code</span><span class="ruby-operator">|</span> <span class="ruby-constant">FieldMaps</span><span class="ruby-operator">::</span><span class="ruby-constant">LANGUAGE</span>[<span class="ruby-identifier">code</span>] }&#x000A;    <span class="ruby-identifier">mapped</span>.<span class="ruby-identifier">reject</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">v</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">empty?</span> }&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000064'>
+                <a name='M000064'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>valid_isbn?</span>
+                  <span class='arguments'>(isbn, c_map = '0123456789X')</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  <a
+                  href="http://woss.name/2005/09/09/isbn-validation-part-2">woss.name/2005/09/09/isbn-validation-part-2</a>
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000064-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000064-source'><span class="ruby-comment cmt"># File lib/marc_record_ext.rb, line 52</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">valid_isbn?</span>(<span class="ruby-identifier">isbn</span>, <span class="ruby-identifier">c_map</span> = <span class="ruby-value str">'0123456789X'</span>)&#x000A;    <span class="ruby-identifier">sum</span> = <span class="ruby-value">0</span>&#x000A;    <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">isbn</span>&#x000A;    <span class="ruby-identifier">match</span> = <span class="ruby-identifier">isbn</span>[<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-value">-2</span>].<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp re">/\d/</span>)&#x000A;    <span class="ruby-identifier">match</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">c</span>,<span class="ruby-identifier">i</span><span class="ruby-operator">|</span>&#x000A;      <span class="ruby-identifier">sum</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">*</span> (<span class="ruby-identifier">i</span><span class="ruby-operator">+</span><span class="ruby-value">1</span>)&#x000A;    <span class="ruby-keyword kw">end</span>&#x000A;    <span class="ruby-identifier">isbn</span>[<span class="ruby-value">-1</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">c_map</span>[<span class="ruby-identifier">sum</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">c_map</span>.<span class="ruby-identifier">length</span>]&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000063'>
+                <a name='M000063'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>values_for</span>
+                  <span class='arguments'>(field_name, subs=nil, value_regx=nil)</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  This methods returns a single dimensional array of values for subfields (it
+                  also removes blank values) if subs is specified, only the matching
+                  subfields are returned if subs is nil, the all subfields are returned the
+                  value_regx can be used to match the value of the subfield
+                  </p>
+                  <h1>example: <a href="MARCRecordExt.html#M000063">values_for</a> &#8216;045&#8217;, [:a]</h1>
+                  <h1>parameters</h1>
+                  <p>
+                  field_name - &#8216;045&#8217; etc. subs - [:a, :b] etc. value_regx - a
+                  Regexp
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000063-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000063-source'><span class="ruby-comment cmt"># File lib/marc_record_ext.rb, line 37</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">values_for</span>(<span class="ruby-identifier">field_name</span>, <span class="ruby-identifier">subs</span>=<span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">value_regx</span>=<span class="ruby-keyword kw">nil</span>)&#x000A;    <span class="ruby-identifier">subs</span> <span class="ruby-operator">||=</span> []&#x000A;    <span class="ruby-identifier">subs</span> = [<span class="ruby-identifier">subs</span>] <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">subs</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Array</span>)&#x000A;    <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">fields</span>.<span class="ruby-identifier">collect</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">field</span><span class="ruby-operator">|</span>&#x000A;      <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">field</span>.<span class="ruby-identifier">tag</span><span class="ruby-operator">==</span><span class="ruby-identifier">field_name</span> <span class="ruby-keyword kw">and</span> <span class="ruby-operator">!</span> <span class="ruby-identifier">field</span>.<span class="ruby-identifier">value</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">empty?</span>&#x000A;        <span class="ruby-identifier">field</span>.<span class="ruby-identifier">subfields</span>.<span class="ruby-identifier">collect</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">subfield</span><span class="ruby-operator">|</span>&#x000A;          <span class="ruby-keyword kw">next</span> <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span> <span class="ruby-identifier">subs</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-keyword kw">and</span> <span class="ruby-operator">!</span> <span class="ruby-identifier">subs</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">subfield</span>.<span class="ruby-identifier">code</span>)&#x000A;          <span class="ruby-identifier">v</span> = <span class="ruby-identifier">value_regx</span> <span class="ruby-value">? </span><span class="ruby-identifier">subfield</span>.<span class="ruby-identifier">value</span>.<span class="ruby-identifier">match</span>(<span class="ruby-identifier">value_regx</span>) <span class="ruby-operator">:</span> <span class="ruby-identifier">subfield</span>.<span class="ruby-identifier">value</span>&#x000A;          <span class="ruby-identifier">v</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-value">? </span><span class="ruby-keyword kw">nil</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">v</span>&#x000A;        <span class="ruby-keyword kw">end</span>&#x000A;      <span class="ruby-keyword kw">end</span>&#x000A;    <span class="ruby-keyword kw">end</span>.<span class="ruby-identifier">flatten</span>.<span class="ruby-identifier">uniq</span>.<span class="ruby-identifier">reject</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">v</span><span class="ruby-operator">|</span><span class="ruby-identifier">v</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">empty?</span>}&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id='footer-push'></div>
+    </div>
+    <div id='footer'>
+      <a href="http://github.com/mislav/hanna/tree/master"><strong>Hanna</strong> RDoc template</a>
+    </div>
+  </body>
+</html>

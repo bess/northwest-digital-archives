@@ -1,0 +1,668 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang='en'>
+  <head>
+    <title>: ApplicationHelper [NWDA Blacklight Documentation]</title>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
+    <link href='../rdoc-style.css' media='screen' rel='stylesheet' type='text/css'>
+    <script type='text/javascript'>
+      //<![CDATA[
+        function popupCode(url) {
+          window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+        }
+        
+        function toggleCode(id) {
+          var code = document.getElementById(id)
+        
+          code.style.display = code.style.display != 'block' ? 'block' : 'none'
+          return true
+        }
+        
+        // Make codeblocks hidden by default
+        document.writeln('<' + 'style type="text/css">.method .source pre { display: none }<\/style>')
+      //]]>
+    </script>
+  </head>
+  <body class='page'>
+    <div class='class' id='wrapper'>
+      <div class='header'>
+        <h1 class='name'>
+          <span class='type'>Module</span>
+          ApplicationHelper
+        </h1>
+        <ol class='paths'>
+          <li>
+            <a href="../files/vendor/plugins/blacklight/app/helpers/application_helper_rb.html">vendor/plugins/blacklight/app/helpers/application_helper.rb</a>
+          </li>
+        </ol>
+      </div>
+      <div id='content'>
+        <div id='text'>
+          <div id='description'>
+            <p>
+            Methods added to this helper will be available to all templates in the
+            application.
+            </p>
+          </div>
+          <div id='method-list'>
+            <h2>Methods</h2>
+            <h3>public instance</h3>
+            <ol>
+              <li><a href="#M000136">add_facet_params</a></li>
+              <li><a href="#M000119">application_name</a></li>
+              <li><a href="#M000147">convert_options_to_javascript_with_data!</a></li>
+              <li><a href="#M000125">document_heading</a></li>
+              <li><a href="#M000132">document_partial_name</a></li>
+              <li><a href="#M000131">document_show_field_labels</a></li>
+              <li><a href="#M000130">document_show_fields</a></li>
+              <li><a href="#M000126">document_show_html_title</a></li>
+              <li><a href="#M000128">document_show_link_field</a></li>
+              <li><a href="#M000121">facet_field_labels</a></li>
+              <li><a href="#M000122">facet_field_names</a></li>
+              <li><a href="#M000138">facet_in_params?</a></li>
+              <li><a href="#M000139">field_label</a></li>
+              <li><a href="#M000140">format_num</a></li>
+              <li><a href="#M000124">index_field_labels</a></li>
+              <li><a href="#M000123">index_field_names</a></li>
+              <li><a href="#M000143">link_back_to_catalog</a></li>
+              <li><a href="#M000142">link_to_document</a></li>
+              <li><a href="#M000145">link_to_next_document</a></li>
+              <li><a href="#M000144">link_to_previous_document</a></li>
+              <li><a href="#M000135">link_to_previous_search</a></li>
+              <li><a href="#M000141">link_to_query</a></li>
+              <li><a href="#M000146">link_to_with_data</a></li>
+              <li><a href="#M000148">method_javascript_function_with_data</a></li>
+              <li><a href="#M000137">remove_facet_params</a></li>
+              <li><a href="#M000133">render_document_partial</a></li>
+              <li><a href="#M000134">render_specified_document_partial</a></li>
+              <li><a href="#M000129">search_fields</a></li>
+              <li><a href="#M000120">sidebar_items</a></li>
+              <li><a href="#M000127">sort_fields</a></li>
+              <li><a href="#M000149">xslt</a></li>
+            </ol>
+          </div>
+          <div id='section'>
+            <div id='methods'>
+              <h2>Public instance methods</h2>
+              <div class='public-instance method' id='method-M000136'>
+                <a name='M000136'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>add_facet_params</span>
+                  <span class='arguments'>(field, value)</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  adds the value and/or field to params[:f]
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000136-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000136-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/app/helpers/application_helper.rb, line 127</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add_facet_params</span>(<span class="ruby-identifier">field</span>, <span class="ruby-identifier">value</span>)&#x000A;    <span class="ruby-identifier">p</span> = <span class="ruby-identifier">params</span>.<span class="ruby-identifier">dup</span>&#x000A;    <span class="ruby-identifier">p</span>.<span class="ruby-identifier">delete</span> <span class="ruby-identifier">:page</span>&#x000A;    <span class="ruby-identifier">p</span>[<span class="ruby-identifier">:f</span>]<span class="ruby-operator">||=</span>{}&#x000A;    <span class="ruby-identifier">p</span>[<span class="ruby-identifier">:f</span>][<span class="ruby-identifier">field</span>] <span class="ruby-operator">||=</span> []&#x000A;    <span class="ruby-identifier">p</span>[<span class="ruby-identifier">:f</span>][<span class="ruby-identifier">field</span>].<span class="ruby-identifier">push</span>(<span class="ruby-identifier">value</span>)&#x000A;    <span class="ruby-identifier">p</span>&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000119'>
+                <a name='M000119'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>application_name</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000119-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000119-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/app/helpers/application_helper.rb, line 6</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">application_name</span>&#x000A;    <span class="ruby-value str">'Blacklight'</span>&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000147'>
+                <a name='M000147'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>convert_options_to_javascript_with_data!</span>
+                  <span class='arguments'>(html_options, url = '')</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  This is derived from <tt>convert_options_to_javascript</tt> from module
+                  <tt>UrlHelper</tt> in <tt>url_helper.rb</tt>
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000147-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000147-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/app/helpers/application_helper.rb, line 247</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">convert_options_to_javascript_with_data!</span>(<span class="ruby-identifier">html_options</span>, <span class="ruby-identifier">url</span> = <span class="ruby-value str">''</span>)&#x000A;    <span class="ruby-identifier">confirm</span>, <span class="ruby-identifier">popup</span> = <span class="ruby-identifier">html_options</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value str">&quot;confirm&quot;</span>), <span class="ruby-identifier">html_options</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value str">&quot;popup&quot;</span>)&#x000A;&#x000A;    <span class="ruby-identifier">method</span>, <span class="ruby-identifier">href</span> = <span class="ruby-identifier">html_options</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value str">&quot;method&quot;</span>), <span class="ruby-identifier">html_options</span>[<span class="ruby-value str">'href'</span>]&#x000A;    <span class="ruby-identifier">data</span> = <span class="ruby-identifier">html_options</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value str">&quot;data&quot;</span>)&#x000A;    <span class="ruby-identifier">data</span> = <span class="ruby-identifier">data</span>.<span class="ruby-identifier">stringify_keys</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">data</span>&#x000A;    &#x000A;    <span class="ruby-identifier">html_options</span>[<span class="ruby-value str">&quot;onclick&quot;</span>] = <span class="ruby-keyword kw">case</span>&#x000A;      <span class="ruby-keyword kw">when</span> <span class="ruby-identifier">method</span>&#x000A;        <span class="ruby-node">&quot;#{method_javascript_function_with_data(method, url, href, data)}return false;&quot;</span>&#x000A;      <span class="ruby-keyword kw">else</span>&#x000A;        <span class="ruby-identifier">html_options</span>[<span class="ruby-value str">&quot;onclick&quot;</span>]&#x000A;    <span class="ruby-keyword kw">end</span>&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000125'>
+                <a name='M000125'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>document_heading</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  Used in the show view for displaying the main solr document heading
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000125-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000125-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/app/helpers/application_helper.rb, line 40</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">document_heading</span>&#x000A;    <span class="ruby-ivar">@document</span>[<span class="ruby-constant">Blacklight</span>.<span class="ruby-identifier">config</span>[<span class="ruby-identifier">:show</span>][<span class="ruby-identifier">:heading</span>]]&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000132'>
+                <a name='M000132'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>document_partial_name</span>
+                  <span class='arguments'>(document)</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  currently only used by the <a
+                  href="ApplicationHelper.html#M000133">render_document_partial</a> helper
+                  method (below)
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000132-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000132-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/app/helpers/application_helper.rb, line 75</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">document_partial_name</span>(<span class="ruby-identifier">document</span>)&#x000A;    <span class="ruby-identifier">document</span>[<span class="ruby-constant">Blacklight</span>.<span class="ruby-identifier">config</span>[<span class="ruby-identifier">:show</span>][<span class="ruby-identifier">:display_type</span>]]&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000131'>
+                <a name='M000131'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>document_show_field_labels</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  used in the catalog/_show/_default partial
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000131-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000131-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/app/helpers/application_helper.rb, line 70</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">document_show_field_labels</span>&#x000A;    <span class="ruby-constant">Blacklight</span>.<span class="ruby-identifier">config</span>[<span class="ruby-identifier">:show_fields</span>][<span class="ruby-identifier">:labels</span>]&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000130'>
+                <a name='M000130'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>document_show_fields</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  used in the catalog/_show/_default partial
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000130-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000130-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/app/helpers/application_helper.rb, line 65</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">document_show_fields</span>&#x000A;    <span class="ruby-constant">Blacklight</span>.<span class="ruby-identifier">config</span>[<span class="ruby-identifier">:show_fields</span>][<span class="ruby-identifier">:field_names</span>]&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000126'>
+                <a name='M000126'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>document_show_html_title</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  Used in the show view for setting the main html document title
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000126-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000126-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/app/helpers/application_helper.rb, line 45</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">document_show_html_title</span>&#x000A;    <span class="ruby-ivar">@document</span>[<span class="ruby-constant">Blacklight</span>.<span class="ruby-identifier">config</span>[<span class="ruby-identifier">:show</span>][<span class="ruby-identifier">:html_title</span>]]&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000128'>
+                <a name='M000128'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>document_show_link_field</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  Used in the document list partial (search view) for creating a link to the
+                  document show action
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000128-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000128-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/app/helpers/application_helper.rb, line 55</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">document_show_link_field</span>&#x000A;    <span class="ruby-constant">Blacklight</span>.<span class="ruby-identifier">config</span>[<span class="ruby-identifier">:index</span>][<span class="ruby-identifier">:show_link</span>].<span class="ruby-identifier">to_sym</span>&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000121'>
+                <a name='M000121'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>facet_field_labels</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  used in the catalog/_facets partial
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000121-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000121-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/app/helpers/application_helper.rb, line 20</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">facet_field_labels</span>&#x000A;    <span class="ruby-constant">Blacklight</span>.<span class="ruby-identifier">config</span>[<span class="ruby-identifier">:facet</span>][<span class="ruby-identifier">:labels</span>]&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000122'>
+                <a name='M000122'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>facet_field_names</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  used in the catalog/_facets partial
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000122-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000122-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/app/helpers/application_helper.rb, line 25</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">facet_field_names</span>&#x000A;    <span class="ruby-constant">Blacklight</span>.<span class="ruby-identifier">config</span>[<span class="ruby-identifier">:facet</span>][<span class="ruby-identifier">:field_names</span>]&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000138'>
+                <a name='M000138'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>facet_in_params?</span>
+                  <span class='arguments'>(field, value)</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  true or false, depending on whether the field and value is in params[:f]
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000138-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000138-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/app/helpers/application_helper.rb, line 149</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">facet_in_params?</span>(<span class="ruby-identifier">field</span>, <span class="ruby-identifier">value</span>)&#x000A;    <span class="ruby-identifier">params</span>[<span class="ruby-identifier">:f</span>] <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">params</span>[<span class="ruby-identifier">:f</span>][<span class="ruby-identifier">field</span>] <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">params</span>[<span class="ruby-identifier">:f</span>][<span class="ruby-identifier">field</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">value</span>)&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000139'>
+                <a name='M000139'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>field_label</span>
+                  <span class='arguments'>(field)</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  NOTE: as of 2009-04-20, this is only used for facet.html.erb, which
+                  </p>
+                  <pre>is facet pagination ... and it probably shouldn't be used there.</pre>
+                  <p>
+                  creates a formatted label for a field (removes _facet and _display etc.)
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000139-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000139-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/app/helpers/application_helper.rb, line 156</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">field_label</span>(<span class="ruby-identifier">field</span>)&#x000A;    <span class="ruby-ivar">@__field_label_cache</span> <span class="ruby-operator">||=</span> {}&#x000A;    <span class="ruby-ivar">@__field_label_cache</span>[<span class="ruby-identifier">field</span>] <span class="ruby-operator">||=</span> <span class="ruby-identifier">field</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-regexp re">/_facet$|_display$|_[a-z]$/</span>,<span class="ruby-value str">''</span>).<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/_/</span>,<span class="ruby-value str">' '</span>)&#x000A;    <span class="ruby-ivar">@__field_label_cache</span>[<span class="ruby-identifier">field</span>]&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000140'>
+                <a name='M000140'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>format_num</span>
+                  <span class='arguments'>(num)</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  shortcut for built-in Rails helper, &#8220;number_with_delimiter&#8220;
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000140-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000140-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/app/helpers/application_helper.rb, line 165</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">format_num</span>(<span class="ruby-identifier">num</span>); <span class="ruby-identifier">number_with_delimiter</span>(<span class="ruby-identifier">num</span>) <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000124'>
+                <a name='M000124'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>index_field_labels</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  used in the _index_partials/_default view
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000124-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000124-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/app/helpers/application_helper.rb, line 35</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">index_field_labels</span>&#x000A;    <span class="ruby-constant">Blacklight</span>.<span class="ruby-identifier">config</span>[<span class="ruby-identifier">:index_fields</span>][<span class="ruby-identifier">:labels</span>]&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000123'>
+                <a name='M000123'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>index_field_names</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  used in the catalog/_index_partials/_default view
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000123-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000123-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/app/helpers/application_helper.rb, line 30</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">index_field_names</span>&#x000A;    <span class="ruby-constant">Blacklight</span>.<span class="ruby-identifier">config</span>[<span class="ruby-identifier">:index_fields</span>][<span class="ruby-identifier">:field_names</span>]&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000143'>
+                <a name='M000143'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>link_back_to_catalog</span>
+                  <span class='arguments'>(opts={:label=&gt;'Back to Search'})</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  <a
+                  href="ApplicationHelper.html#M000143">link_back_to_catalog</a>(:label=>&#8217;Back
+                  to Search&#8217;) Create a link back to the index screen, keeping the
+                  user&#8217;s facet, query and paging choices intact by using session.
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000143-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000143-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/app/helpers/application_helper.rb, line 198</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">link_back_to_catalog</span>(<span class="ruby-identifier">opts</span>={<span class="ruby-identifier">:label=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">'Back to Search'</span>})&#x000A;    <span class="ruby-identifier">query_params</span> = <span class="ruby-identifier">session</span>[<span class="ruby-identifier">:search</span>] <span class="ruby-operator">||</span> {}&#x000A;    <span class="ruby-identifier">link_url</span> = <span class="ruby-identifier">catalog_index_path</span>(<span class="ruby-identifier">query_params</span>)&#x000A;    <span class="ruby-identifier">link_to</span> <span class="ruby-identifier">opts</span>[<span class="ruby-identifier">:label</span>], <span class="ruby-identifier">link_url</span>&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000142'>
+                <a name='M000142'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>link_to_document</span>
+                  <span class='arguments'>(doc, opts={:label=&gt;Blacklight.config[:index][:show_link].to_sym, :counter =&gt; nil})</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  <a href="ApplicationHelper.html#M000142">link_to_document</a>(doc,
+                  :label=>&#8217;VIEW&#8217;, :counter => 3) Use the catalog_path RESTful
+                  route to create a link to the show page for a specific item. catalog_path
+                  accepts a HashWithIndifferentAccess object. The solr query params are
+                  stored in the session, so we only need the <tt>counter</tt> param here.
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000142-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000142-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/app/helpers/application_helper.rb, line 184</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">link_to_document</span>(<span class="ruby-identifier">doc</span>, <span class="ruby-identifier">opts</span>={<span class="ruby-identifier">:label=</span><span class="ruby-operator">&gt;</span><span class="ruby-constant">Blacklight</span>.<span class="ruby-identifier">config</span>[<span class="ruby-identifier">:index</span>][<span class="ruby-identifier">:show_link</span>].<span class="ruby-identifier">to_sym</span>, <span class="ruby-identifier">:counter</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>})&#x000A;    <span class="ruby-identifier">label</span> = <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">opts</span>[<span class="ruby-identifier">:label</span>]&#x000A;    <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Symbol</span>&#x000A;      <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">get</span>(<span class="ruby-identifier">opts</span>[<span class="ruby-identifier">:label</span>])&#x000A;    <span class="ruby-keyword kw">when</span> <span class="ruby-constant">String</span>&#x000A;      <span class="ruby-identifier">opts</span>[<span class="ruby-identifier">:label</span>]&#x000A;    <span class="ruby-keyword kw">else</span>&#x000A;      <span class="ruby-identifier">raise</span> <span class="ruby-value str">'Invalid label argument'</span>&#x000A;    <span class="ruby-keyword kw">end</span>&#x000A;    <span class="ruby-identifier">link_to_with_data</span>(<span class="ruby-identifier">label</span>, <span class="ruby-identifier">catalog_path</span>(<span class="ruby-identifier">doc</span>[<span class="ruby-identifier">:id</span>]), {<span class="ruby-identifier">:method</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:put</span>, <span class="ruby-identifier">:data</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-identifier">:counter</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">opts</span>[<span class="ruby-identifier">:counter</span>]}})&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000145'>
+                <a name='M000145'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>link_to_next_document</span>
+                  <span class='arguments'>(next_document)</span>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000145-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000145-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/app/helpers/application_helper.rb, line 209</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">link_to_next_document</span>(<span class="ruby-identifier">next_document</span>)&#x000A;    <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">next_document</span> <span class="ruby-operator">==</span> <span class="ruby-keyword kw">nil</span>&#x000A;    <span class="ruby-identifier">link_to_document</span> <span class="ruby-identifier">next_document</span>, <span class="ruby-identifier">:label=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">'Next &gt;'</span>, <span class="ruby-identifier">:counter</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">session</span>[<span class="ruby-identifier">:search</span>][<span class="ruby-identifier">:counter</span>].<span class="ruby-identifier">to_i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000144'>
+                <a name='M000144'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>link_to_previous_document</span>
+                  <span class='arguments'>(previous_document)</span>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000144-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000144-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/app/helpers/application_helper.rb, line 204</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">link_to_previous_document</span>(<span class="ruby-identifier">previous_document</span>)&#x000A;    <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">previous_document</span> <span class="ruby-operator">==</span> <span class="ruby-keyword kw">nil</span>&#x000A;    <span class="ruby-identifier">link_to_document</span> <span class="ruby-identifier">previous_document</span>, <span class="ruby-identifier">:label=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">'&lt; Previous'</span>, <span class="ruby-identifier">:counter</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">session</span>[<span class="ruby-identifier">:search</span>][<span class="ruby-identifier">:counter</span>].<span class="ruby-identifier">to_i</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000135'>
+                <a name='M000135'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>link_to_previous_search</span>
+                  <span class='arguments'>(params)</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  <a href="Search.html">Search</a> History and Saved Searches display
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000135-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000135-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/app/helpers/application_helper.rb, line 107</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">link_to_previous_search</span>(<span class="ruby-identifier">params</span>)&#x000A;    <span class="ruby-identifier">query_part</span> = <span class="ruby-identifier">params</span>[<span class="ruby-identifier">:qt</span>] <span class="ruby-operator">==</span> <span class="ruby-constant">Blacklight</span>.<span class="ruby-identifier">config</span>[<span class="ruby-identifier">:default_qt</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">params</span>[<span class="ruby-identifier">:q</span>] <span class="ruby-operator">:</span> <span class="ruby-node">&quot;#{params[:qt]}:(#{params[:q]})&quot;</span>&#x000A;    <span class="ruby-identifier">facet_part</span> = &#x000A;    <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-identifier">:f</span>]&#x000A;      <span class="ruby-identifier">tmp</span> = &#x000A;      <span class="ruby-identifier">params</span>[<span class="ruby-identifier">:f</span>].<span class="ruby-identifier">collect</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">pair</span><span class="ruby-operator">|</span>&#x000A;        <span class="ruby-node">&quot;#{Blacklight.config[:facet][:labels][pair.first]}:#{pair.last}&quot;</span>&#x000A;      <span class="ruby-keyword kw">end</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot; AND &quot;</span>)&#x000A;      <span class="ruby-node">&quot;{#{tmp}}&quot;</span>&#x000A;    <span class="ruby-keyword kw">else</span>&#x000A;      <span class="ruby-value str">&quot;&quot;</span>&#x000A;    <span class="ruby-keyword kw">end</span>&#x000A;    <span class="ruby-identifier">link_to</span>(<span class="ruby-node">&quot;#{query_part} #{facet_part}&quot;</span>, <span class="ruby-identifier">catalog_index_path</span>(<span class="ruby-identifier">params</span>))&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000141'>
+                <a name='M000141'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>link_to_query</span>
+                  <span class='arguments'>(query)</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  create link to query (e.g. spelling suggestion)
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000141-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000141-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/app/helpers/application_helper.rb, line 172</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">link_to_query</span>(<span class="ruby-identifier">query</span>)&#x000A;    <span class="ruby-identifier">p</span> = <span class="ruby-identifier">params</span>.<span class="ruby-identifier">dup</span>&#x000A;    <span class="ruby-identifier">p</span>.<span class="ruby-identifier">delete</span> <span class="ruby-identifier">:page</span>&#x000A;    <span class="ruby-identifier">p</span>[<span class="ruby-identifier">:q</span>]=<span class="ruby-identifier">query</span>&#x000A;    <span class="ruby-identifier">link_url</span> = <span class="ruby-identifier">catalog_index_path</span>(<span class="ruby-identifier">p</span>)&#x000A;    <span class="ruby-identifier">link_to</span>(<span class="ruby-identifier">query</span>, <span class="ruby-identifier">link_url</span>)&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000146'>
+                <a name='M000146'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>link_to_with_data</span>
+                  <span class='arguments'>(*args, &amp;block)</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  This is an updated <tt>link_to</tt> that allows you to pass a <tt>data</tt>
+                  hash along with the <tt>html_options</tt> which are then written to the
+                  generated form for non-GET requests. The key is the form element name and
+                  the value is the value:
+                  </p>
+                  <pre>link_to_with_data('Name', some_path(some_id), :method =&gt; :post, :html)</pre>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000146-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000146-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/app/helpers/application_helper.rb, line 220</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">link_to_with_data</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)&#x000A;    <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">block_given?</span>&#x000A;      <span class="ruby-identifier">options</span>      = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">first</span> <span class="ruby-operator">||</span> {}&#x000A;      <span class="ruby-identifier">html_options</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">second</span>&#x000A;      <span class="ruby-identifier">concat</span>(<span class="ruby-identifier">link_to</span>(<span class="ruby-identifier">capture</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>), <span class="ruby-identifier">options</span>, <span class="ruby-identifier">html_options</span>))&#x000A;    <span class="ruby-keyword kw">else</span>&#x000A;      <span class="ruby-identifier">name</span>         = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">first</span>&#x000A;      <span class="ruby-identifier">options</span>      = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">second</span> <span class="ruby-operator">||</span> {}&#x000A;      <span class="ruby-identifier">html_options</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">third</span>&#x000A;&#x000A;      <span class="ruby-identifier">url</span> = <span class="ruby-identifier">url_for</span>(<span class="ruby-identifier">options</span>)&#x000A;&#x000A;      <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">html_options</span>&#x000A;        <span class="ruby-identifier">html_options</span> = <span class="ruby-identifier">html_options</span>.<span class="ruby-identifier">stringify_keys</span>&#x000A;        <span class="ruby-identifier">href</span> = <span class="ruby-identifier">html_options</span>[<span class="ruby-value str">'href'</span>]&#x000A;        <span class="ruby-identifier">convert_options_to_javascript_with_data!</span>(<span class="ruby-identifier">html_options</span>, <span class="ruby-identifier">url</span>)&#x000A;        <span class="ruby-identifier">tag_options</span> = <span class="ruby-identifier">tag_options</span>(<span class="ruby-identifier">html_options</span>)&#x000A;      <span class="ruby-keyword kw">else</span>&#x000A;        <span class="ruby-identifier">tag_options</span> = <span class="ruby-keyword kw">nil</span>&#x000A;      <span class="ruby-keyword kw">end</span>&#x000A;&#x000A;      <span class="ruby-identifier">href_attr</span> = <span class="ruby-node">&quot;href=\&quot;#{url}\&quot;&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">href</span>&#x000A;      <span class="ruby-node">&quot;&lt;a #{href_attr}#{tag_options}&gt;#{h(name) || h(url)}&lt;/a&gt;&quot;</span>&#x000A;    <span class="ruby-keyword kw">end</span>&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000148'>
+                <a name='M000148'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>method_javascript_function_with_data</span>
+                  <span class='arguments'>(method, url = '', href = nil, data=nil)</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  This is derived from <tt>method_javascript_function</tt> from module
+                  <tt>UrlHelper</tt> in <tt>url_helper.rb</tt>
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000148-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000148-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/app/helpers/application_helper.rb, line 263</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">method_javascript_function_with_data</span>(<span class="ruby-identifier">method</span>, <span class="ruby-identifier">url</span> = <span class="ruby-value str">''</span>, <span class="ruby-identifier">href</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">data</span>=<span class="ruby-keyword kw">nil</span>)&#x000A;    <span class="ruby-identifier">action</span> = (<span class="ruby-identifier">href</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">url</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>) <span class="ruby-operator">?</span> <span class="ruby-node">&quot;'#{url}'&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-value str">'this.href'</span>&#x000A;    <span class="ruby-identifier">submit_function</span> =&#x000A;      <span class="ruby-value str">&quot;var f = document.createElement('form'); f.style.display = 'none'; &quot;</span> <span class="ruby-operator">+</span>&#x000A;      <span class="ruby-node">&quot;this.parentNode.appendChild(f); f.method = 'POST'; f.action = #{action};&quot;</span>&#x000A;&#x000A;    <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">data</span>&#x000A;      <span class="ruby-identifier">data</span>.<span class="ruby-identifier">each_pair</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span>&#x000A;        <span class="ruby-identifier">submit_function</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;var d = document.createElement('input'); d.setAttribute('type', 'hidden'); &quot;</span>&#x000A;        <span class="ruby-identifier">submit_function</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;d.setAttribute('name', '#{key}'); d.setAttribute('value', '#{value}'); f.appendChild(d);&quot;</span>&#x000A;      <span class="ruby-keyword kw">end</span>&#x000A;    <span class="ruby-keyword kw">end</span>&#x000A;    <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">method</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">:post</span>&#x000A;      <span class="ruby-identifier">submit_function</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); &quot;</span>&#x000A;      <span class="ruby-identifier">submit_function</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;m.setAttribute('name', '_method'); m.setAttribute('value', '#{method}'); f.appendChild(m);&quot;</span>&#x000A;    <span class="ruby-keyword kw">end</span>&#x000A;&#x000A;    <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">protect_against_forgery?</span>&#x000A;      <span class="ruby-identifier">submit_function</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;var s = document.createElement('input'); s.setAttribute('type', 'hidden'); &quot;</span>&#x000A;      <span class="ruby-identifier">submit_function</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;s.setAttribute('name', '#{request_forgery_protection_token}'); s.setAttribute('value', '#{escape_javascript form_authenticity_token}'); f.appendChild(s);&quot;</span>&#x000A;    <span class="ruby-keyword kw">end</span>&#x000A;    <span class="ruby-identifier">submit_function</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;f.submit();&quot;</span>&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000137'>
+                <a name='M000137'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>remove_facet_params</span>
+                  <span class='arguments'>(field, value)</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  copies the current params removes the field value from params[:f] removes
+                  the field if there are no more values in params[:f][field] removes the
+                  :page param
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000137-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000137-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/app/helpers/application_helper.rb, line 140</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">remove_facet_params</span>(<span class="ruby-identifier">field</span>, <span class="ruby-identifier">value</span>)&#x000A;    <span class="ruby-identifier">p</span>=<span class="ruby-identifier">params</span>.<span class="ruby-identifier">dup</span>&#x000A;    <span class="ruby-identifier">p</span>.<span class="ruby-identifier">delete</span> <span class="ruby-identifier">:page</span>&#x000A;    <span class="ruby-identifier">p</span>[<span class="ruby-identifier">:f</span>][<span class="ruby-identifier">field</span>] = <span class="ruby-identifier">p</span>[<span class="ruby-identifier">:f</span>][<span class="ruby-identifier">field</span>] <span class="ruby-operator">-</span> [<span class="ruby-identifier">value</span>]&#x000A;    <span class="ruby-identifier">p</span>[<span class="ruby-identifier">:f</span>].<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">field</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">p</span>[<span class="ruby-identifier">:f</span>][<span class="ruby-identifier">field</span>].<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>&#x000A;    <span class="ruby-identifier">p</span>&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000133'>
+                <a name='M000133'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>render_document_partial</span>
+                  <span class='arguments'>(doc, action_name)</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  given a doc and action_name, this method attempts to render a partial
+                  template based on the value of doc[:format_code_t] if this value is blank
+                  (nil/empty) the &#8220;default&#8221; is used if the partial is not found,
+                  the &#8220;default&#8221; partial is rendered instead
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000133-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000133-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/app/helpers/application_helper.rb, line 83</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">render_document_partial</span>(<span class="ruby-identifier">doc</span>, <span class="ruby-identifier">action_name</span>)&#x000A;    <span class="ruby-identifier">format</span> = <span class="ruby-identifier">document_partial_name</span>(<span class="ruby-identifier">doc</span>)&#x000A;    <span class="ruby-keyword kw">begin</span>&#x000A;      <span class="ruby-identifier">render</span> <span class="ruby-identifier">:partial=</span><span class="ruby-operator">&gt;</span><span class="ruby-node">&quot;catalog/_#{action_name}_partials/#{format}&quot;</span>, <span class="ruby-identifier">:locals=</span><span class="ruby-operator">&gt;</span>{<span class="ruby-identifier">:document=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">doc</span>}&#x000A;    <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">ActionView</span><span class="ruby-operator">::</span><span class="ruby-constant">MissingTemplate</span>&#x000A;      <span class="ruby-identifier">render</span> <span class="ruby-identifier">:partial=</span><span class="ruby-operator">&gt;</span><span class="ruby-node">&quot;catalog/_#{action_name}_partials/default&quot;</span>, <span class="ruby-identifier">:locals=</span><span class="ruby-operator">&gt;</span>{<span class="ruby-identifier">:document=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">doc</span>}&#x000A;    <span class="ruby-keyword kw">end</span>&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000134'>
+                <a name='M000134'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>render_specified_document_partial</span>
+                  <span class='arguments'>(doc, action_name, partial_name)</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  given a doc, an action_name, and the name of a specific partial, this
+                  method attempts to render the named partial template if this value is blank
+                  (nil/empty) the &#8220;default&#8221; is used if the partial is not found,
+                  the &#8220;default&#8221; partial is rendered instead
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000134-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000134-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/app/helpers/application_helper.rb, line 97</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">render_specified_document_partial</span>(<span class="ruby-identifier">doc</span>, <span class="ruby-identifier">action_name</span>, <span class="ruby-identifier">partial_name</span>)&#x000A;    <span class="ruby-keyword kw">begin</span>&#x000A;      <span class="ruby-identifier">render</span> <span class="ruby-identifier">:partial=</span><span class="ruby-operator">&gt;</span><span class="ruby-node">&quot;catalog/_#{action_name}_partials/#{partial_name}&quot;</span>, <span class="ruby-identifier">:locals=</span><span class="ruby-operator">&gt;</span>{<span class="ruby-identifier">:document=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">doc</span>}&#x000A;    <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">ActionView</span><span class="ruby-operator">::</span><span class="ruby-constant">MissingTemplate</span>&#x000A;      <span class="ruby-identifier">render</span> <span class="ruby-identifier">:partial=</span><span class="ruby-operator">&gt;</span><span class="ruby-node">&quot;catalog/_#{action_name}_partials/default&quot;</span>, <span class="ruby-identifier">:locals=</span><span class="ruby-operator">&gt;</span>{<span class="ruby-identifier">:document=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">doc</span>}&#x000A;    <span class="ruby-keyword kw">end</span>&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000129'>
+                <a name='M000129'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>search_fields</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  Used in the search form partial for building a select tag
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000129-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000129-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/app/helpers/application_helper.rb, line 60</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">search_fields</span>&#x000A;    <span class="ruby-constant">Blacklight</span>.<span class="ruby-identifier">config</span>[<span class="ruby-identifier">:search_fields</span>]&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000120'>
+                <a name='M000120'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>sidebar_items</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  collection of items to be rendered in the @sidebar
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000120-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000120-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/app/helpers/application_helper.rb, line 11</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">sidebar_items</span>&#x000A;    <span class="ruby-ivar">@sidebar_items</span> <span class="ruby-operator">||=</span> []&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000127'>
+                <a name='M000127'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>sort_fields</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  Used in the document_list partial (search view) for building a select
+                  element
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000127-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000127-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/app/helpers/application_helper.rb, line 50</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">sort_fields</span>&#x000A;    <span class="ruby-constant">Blacklight</span>.<span class="ruby-identifier">config</span>[<span class="ruby-identifier">:sort_fields</span>]&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000149'>
+                <a name='M000149'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>xslt</span>
+                  <span class='arguments'>(stylesheet_file_path, document, params={})</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  performs an XSLT transform
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000149-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000149-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/app/helpers/application_helper.rb, line 288</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">xslt</span>(<span class="ruby-identifier">stylesheet_file_path</span>, <span class="ruby-identifier">document</span>, <span class="ruby-identifier">params</span>={})&#x000A;    <span class="ruby-identifier">require</span> <span class="ruby-value str">'nokogiri'</span>&#x000A;    <span class="ruby-identifier">document</span> = <span class="ruby-constant">Nokogiri</span><span class="ruby-operator">::</span><span class="ruby-constant">XML</span>(<span class="ruby-identifier">document</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">document</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>)&#x000A;    <span class="ruby-identifier">stylesheet</span> = <span class="ruby-constant">Nokogiri</span><span class="ruby-operator">::</span><span class="ruby-constant">XSLT</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">render</span>(<span class="ruby-identifier">stylesheet_file_path</span>))&#x000A;    <span class="ruby-identifier">stylesheet</span>.<span class="ruby-identifier">apply_to</span>(<span class="ruby-constant">Nokogiri</span><span class="ruby-operator">::</span><span class="ruby-constant">XML</span>(<span class="ruby-identifier">document</span>.<span class="ruby-identifier">to_xml</span>), <span class="ruby-identifier">params</span>)&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id='footer-push'></div>
+    </div>
+    <div id='footer'>
+      <a href="http://github.com/mislav/hanna/tree/master"><strong>Hanna</strong> RDoc template</a>
+    </div>
+  </body>
+</html>

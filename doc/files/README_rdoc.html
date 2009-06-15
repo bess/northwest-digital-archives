@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang='en'>
+  <head>
+    <title>File: README.rdoc [NWDA Blacklight Documentation]</title>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
+    <link href='../rdoc-style.css' media='screen' rel='stylesheet' type='text/css'>
+    <script type='text/javascript'>
+      //<![CDATA[
+        function popupCode(url) {
+          window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+        }
+        
+        function toggleCode(id) {
+          var code = document.getElementById(id)
+        
+          code.style.display = code.style.display != 'block' ? 'block' : 'none'
+          return true
+        }
+        
+        // Make codeblocks hidden by default
+        document.writeln('<' + 'style type="text/css">.method .source pre { display: none }<\/style>')
+      //]]>
+    </script>
+  </head>
+  <body class='page'>
+    <div class='file' id='wrapper'>
+      <div class='header'>
+        <div class='name'>README.rdoc</div>
+        <div class='paths'>
+          README.rdoc
+        </div>
+        <div class='last-update'>
+          Last Update:
+          <span class='datetime'>Sun Jun 14 20:18:46 -0400 2009</span>
+        </div>
+      </div>
+      <div id='content'>
+        <div id='text'>
+          <div id='description'>
+            <h1>The Northwest Digital Archives <a href="../classes/Blacklight.html">Blacklight</a> installation</h1>
+            <p>
+            This is an application to allow the Northwest Digital Archives to search
+            across many collections and many kinds of documents within a single
+            discovery application. It is an installation of blacklight (<a
+            href="http://projectblacklight.org">projectblacklight.org</a>) with some
+            local customizations.
+            </p>
+            <h1>Installation instructions for the <a href="../classes/NWDA.html">NWDA</a> application</h1>
+            <p>
+            June 14, 2009 blacklight release 2.2
+            </p>
+            <h2>Be sure to install the <a href="vendor/plugins/blacklight/PRE-REQUISITES_rdoc.html">pre-requisites</a> first</h2>
+            <h2>Installation</h2>
+            <h3>Create a local development copy</h3>
+            <p>
+            It&#8217;s going to sound a little round-about, but your life will be much
+            easier if you create yourself a local development copy of the application
+            and then use the capistrano deploy script to deploy it to the server.
+            </p>
+            <h4>Clone the code from git to your local machine</h4>
+            <pre>git clone git://github.com/bess/northwest-digital-archives.git</pre>
+            <h4>Setup your database (for storing user accounts and bookmarks)</h4>
+            <p>
+            The default database settings are configured to use sqlite3. If you want to
+            use mysql instead, create a database called blacklight_development (or
+            whatever you like):
+            </p>
+            <pre>mysqladmin create blacklight_development # your command will vary</pre>
+            <p>
+            Then put this into your config/database.yml file instead of the default
+            settings:
+            </p>
+            <pre>development:&#x000A;        adapter: mysql&#x000A;        database: blacklight_development&#x000A;        username: whatever&#x000A;        password: *****&#x000A;        host: localhost&#x000A;        socket: /opt/local/var/run/mysql5/mysqld.sock # or whatever</pre>
+            <p>
+            Regardless of which database you&#8217;re using, you&#8217;ll need to run
+            the database migrations:
+            </p>
+            <pre>rake db:migrate</pre>
+            <h4>Set up solr</h4>
+            <p>
+            Now start Solr via Jetty. Change into the northwest-digital-archives/jetty
+            directory:
+            </p>
+            <pre>cd ../jetty&#x000A;java -jar start.jar</pre>
+            <p>
+            OR
+            </p>
+            <pre>nohup java -jar start.jar &amp; &lt;-- to run it and keep it running after you close your window</pre>
+            <p>
+            You should see a bunch of logging and should stop after a few seconds. Solr
+            should now be running and you can test it by browsing to:
+            </p>
+            <pre>http://localhost:8983/solr</pre>
+            <h4>Index the data</h4>
+            <p>
+            The project you checked out of git has all of the data indexed already, so
+            re-indexing data is optional, until such time as you want to change the
+            indexing options or add new data. When you do want to index the data,
+            here&#8217;s how: Open a terminal window and move into the
+            northwest-digital-archives directory The command
+            </p>
+            <pre>rake -T app</pre>
+            <p>
+            will give you several rake tasks you can use for indexing data. For
+            example:
+            </p>
+            <pre>rake app:index:herbarium FILE=/path/to/file/herbarium_export.xml</pre>
+            <p>
+            If you need to add a new kind of document, take a look at <a
+            href="../classes/NWDA/Mappers.html">NWDA::Mappers</a>, and use those
+            mappings as templates.
+            </p>
+            <h4>Start Rails</h4>
+            <p>
+            When the indexing is done, fire up Rails:
+            </p>
+            <pre>ruby ./script/server</pre>
+            <p>
+            Browse to:
+            </p>
+            <pre>http://localhost:3000/</pre>
+            <p>
+            You should now have a local copy of the <a
+            href="../classes/NWDA.html">NWDA</a> application.
+            </p>
+            <h3>Deploy to a server</h3>
+            <h4>Be sure you have all the pre-requisites installed on the target server</h4>
+            <h4>Edit the file config/deploy.rb to match the settings for your target server</h4>
+            <p>
+            You&#8217;ll especially want to check the settings for the user who will
+            own the files and the path to the file store.
+            </p>
+            <h4>(optional) set up your public key</h4>
+            <p>
+            For ease of deployment, you might want to put your ssh public key in the
+            authorized_keys file of the user who will own the application, and in the
+            code repository from which the application will be checked out. This lets
+            you deploy without typing in your password each time.
+            </p>
+            <h4>Run <tt>cap deploy cold</tt> to set it up the first time, and work through any errors</h4>
+            <p>
+            The first time you run it there are bound to be errors, but after initial
+            setup you can just run <tt>cap deploy</tt> ever after and it&#8217;s all
+            good. Note: I want to create a capistrano script for restarting solr, but I
+            don&#8217;t have that working yet.
+            </p>
+            <h3>Keep this documentation up to date!</h3>
+            <p>
+            You can do that by commenting methods and editing <a
+            href="README_rdoc.html">README.rdoc</a>. When you&#8217;re ready to
+            re-generate the docs, type
+            </p>
+            <pre>rake rdoc</pre>
+          </div>
+          <div id='section'>
+          </div>
+        </div>
+      </div>
+      <div id='footer-push'></div>
+    </div>
+    <div id='footer'>
+      <a href="http://github.com/mislav/hanna/tree/master"><strong>Hanna</strong> RDoc template</a>
+    </div>
+  </body>
+</html>

@@ -6,5 +6,21 @@ require(File.join(File.dirname(__FILE__), 'config', 'boot'))
 require 'rake'
 require 'rake/testtask'
 require 'rake/rdoctask'
-
 require 'tasks/rails'
+
+desc "Generate rdoc for the demo app and the blacklight plugin." 
+task "rdoc"
+    require 'hanna/rdoctask'
+    Rake::RDocTask.new('rdoc') do |t| 
+    t.rdoc_files.include('README.rdoc', 'LICENSE')
+    t.rdoc_files.include('vendor/plugins/blacklight/*.rdoc')
+    t.rdoc_files.include('lib/**/*.rb', 'config/initializers/blacklight_config.rb')
+    t.rdoc_files.include('vendor/plugins/blacklight/app/controllers', 'vendor/plugins/blacklight/app/helpers', 'vendor/plugins/blacklight/app/models')
+    t.rdoc_files.include('vendor/plugins/blacklight/lib')
+    #t.rdoc_files.include('vendor/plugins/blacklight/vendor/gems')
+    t.options << "--exclude=vendor/plugins/blacklight/lib/experiments"
+  
+    t.main = 'README.rdoc'
+    t.title = "NWDA Blacklight Documentation"
+    t.rdoc_dir = 'doc' 
+end

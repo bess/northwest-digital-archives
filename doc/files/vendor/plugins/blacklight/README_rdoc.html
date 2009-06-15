@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang='en'>
+  <head>
+    <title>File: README.rdoc [NWDA Blacklight Documentation]</title>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
+    <link href='../../../../rdoc-style.css' media='screen' rel='stylesheet' type='text/css'>
+    <script type='text/javascript'>
+      //<![CDATA[
+        function popupCode(url) {
+          window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+        }
+        
+        function toggleCode(id) {
+          var code = document.getElementById(id)
+        
+          code.style.display = code.style.display != 'block' ? 'block' : 'none'
+          return true
+        }
+        
+        // Make codeblocks hidden by default
+        document.writeln('<' + 'style type="text/css">.method .source pre { display: none }<\/style>')
+      //]]>
+    </script>
+  </head>
+  <body class='page'>
+    <div class='file' id='wrapper'>
+      <div class='header'>
+        <div class='name'>README.rdoc</div>
+        <div class='paths'>
+          vendor/plugins/blacklight/README.rdoc
+        </div>
+        <div class='last-update'>
+          Last Update:
+          <span class='datetime'>Sun Jun 14 19:22:49 -0400 2009</span>
+        </div>
+      </div>
+      <div id='content'>
+        <div id='text'>
+          <div id='description'>
+            <h1><a href="../../../../classes/Blacklight.html">Blacklight</a></h1>
+            <p>
+            Please see Project Info below for main information about this project and
+            plugin.
+            </p>
+            <p>
+            Please see Solr in <a
+            href="../../../../classes/Blacklight.html">Blacklight</a> below for
+            information about setting up and configuring Solr.
+            </p>
+            <p>
+            Note: these instructions appy to releases 2.2.0 and above.
+            </p>
+            <p>
+            Note: issue commands from your Rails application&#8217;s root directory.
+            </p>
+            <h2>How to Install the <a href="../../../../classes/Blacklight.html">Blacklight</a> Plugin into Your Rails Project</h2>
+            <ol>
+            <li>Create your rails app: <a
+            href="http://guides.rubyonrails.org/getting_started.html#creating-a-new-rails-project">guides.rubyonrails.org/getting_started.html#creating-a-new-rails-project</a>
+            
+            </li>
+            <li>Install Blacklight:
+            
+            <pre>script/plugin -v install http://blacklight.rubyforge.org/svn/releases/plugins/blacklight</pre>
+            </li>
+            </ol>
+            <p>
+            Using <tt>script/plugin install</tt> calls the plugin&#8217;s install.rb
+            script, which does the following:
+            </p>
+            <ol>
+            <li>automatically installs the Engines plugin ( <a
+            href="http://rails-engines.org">rails-engines.org</a> )
+            
+            </li>
+            <li>updates config/environment.rb with the necessary lines for Engines and <a
+            href="../../../../classes/Blacklight.html">Blacklight</a>
+            
+            </li>
+            <li>copies the vendorized Authlogic gem from
+            vendor/plugins/blacklight/vendor/gems to vendor/gems
+            
+            </li>
+            <li>adds default solr.yml to config dir
+            
+            </li>
+            <li>copies the migration files from vendor/plugins/blacklight/db/migrate to
+            db/migrate
+            
+            </li>
+            <li>copies the default blacklight_config.rb file to <a
+            href="../../../config/initializers/blacklight_config_rb.html">config/initializers/blacklight_config.rb</a>
+            
+            </li>
+            </ol>
+            <p>
+            If you need to manually install <a
+            href="../../../../classes/Blacklight.html">Blacklight</a>, see Installing
+            <a href="../../../../classes/Blacklight.html">Blacklight</a> Manually
+            below, then return to Post Installation.
+            </p>
+            <h2>Post Installation</h2>
+            <p>
+            Remove public/index.html, app/controllers/application_controller.rb and
+            app/helpers/application_helper.rb:
+            </p>
+            <pre>rm public/index.html&#x000A;rm app/controllers/application_controller.rb&#x000A;rm app/helpers/application_helper.rb</pre>
+            <p>
+            Next, run the migrations. By default, Rails uses a SQLite3 database.
+            Configure others in config/databases.yml:
+            </p>
+            <pre>rake db:migrate</pre>
+            <p>
+            You need a running instance of Solr. Just to get going you can use the test
+            instance in the <a
+            href="../../../../classes/Blacklight.html">Blacklight</a> plugin:
+            </p>
+            <pre>cd vendor/plugins/blacklight/jetty&#x000A;java -jar start.jar</pre>
+            <p>
+            This starts an instance of jetty with Solr running on port 8983. If you
+            want to start on another port, use Java&#8217;s -D argument:
+            </p>
+            <pre>java -Djetty.port=8888 -jar start.jar</pre>
+            <p>
+            This Solr instance has data. Once you start it you can run the Rails app
+            against this.
+            </p>
+            <pre>script/server</pre>
+            <p>
+            Now navigate to <a href="http://localhost:3000">localhost:3000</a> and you
+            should see a running app with the test data set!
+            </p>
+            <h2>Installing <a href="../../../../classes/Blacklight.html">Blacklight</a> Manually</h2>
+            <p>
+            This assumes that for some reason you can&#8217;t install the plugin via
+            <tt>script/plugin install</tt> or there was a problem and you need to
+            finish manually. Otherwise, see the instructions above.
+            </p>
+            <ol>
+            <li>Create your Rails app: <a
+            href="http://guides.rubyonrails.org/getting_started.html#creating-a-new-rails-project">guides.rubyonrails.org/getting_started.html#creating-a-new-rails-project</a>
+            
+            </li>
+            <li>Get the <a href="../../../../classes/Blacklight.html">Blacklight</a> plugin
+            and put it in your plugins directory:
+            
+            <pre>Edge: svn export http://blacklight.rubyforge.org/svn/trunk/rails/vendor/plugins/blacklight vendor/plugins/blacklight&#x000A;&#x000A;Specific Release:&#x000A;&#x000A;  1. Find the release you want here: http://blacklight.rubyforge.org/svn/releases/plugins/&#x000A;  2. Then navigate to the plugin, for example: http://blacklight.rubyforge.org/svn/releases/plugins/blacklight-plugin-2.2.0&#x000A;  3. Use SVN to export it: svn export http://blacklight.rubyforge.org/svn/releases/plugins/blacklight-plugin-2.2.0&#x000A;&#x000A;Finally, you can also downlowd the archive and unpack it in vendor/plugins/blacklight:&#x000A;&#x000A;  1. Find the release you want here: http://rubyforge.org/frs/?group_id=5235&#x000A;  2. Download it into vendor/plugins&#x000A;  3. Move to the directory: cd vendor/plugins&#x000A;  4. Unarchive: tar xvzf blacklight-plugin-2.2.0&#x000A;  5. Rename the directory: mv blacklight-plugin-2.2.0 blacklight</pre>
+            </li>
+            <li>Install the Engines plugin:
+            
+            <pre>script/plugin install git://github.com/lazyatom/engines.git&#x000A;&#x000A; If you aren't using or can't use script/plugin, then install it manually:&#x000A;&#x000A;   1. git clone git://github.com/lazyatom/engines.git vendor/plugins/engines&#x000A;   2. rm -rf vendor/plugins/engines/.git</pre>
+            </li>
+            <li>Update <em>config/environment.rb</em> with necessary lines:
+            
+            <pre>1. Below require File.join(File.dirname(__FILE__), 'boot'):&#x000A;&#x000A;  require File.join(File.dirname(__FILE__), '../vendor/plugins/engines/boot')&#x000A;&#x000A;2. Inside Rails::Initializer.run do |config| block:&#x000A;&#x000A;  config.gem 'authlogic'&#x000A;  config.plugin_paths += [&quot;#{RAILS_ROOT}/vendor/plugins/blacklight/vendor/plugins&quot;]&#x000A;  config.plugins = %W(engines blacklight acts_as_taggable_on_steroids resource_controller)</pre>
+            </li>
+            <li>Install the Authlogic gem. You can install this as a system gem or copy it
+            from the <a href="../../../../classes/Blacklight.html">Blacklight</a>
+            plugin:
+            
+            <pre>* As a system gem:&#x000A;&#x000A;  sudo gem install authlogic&#x000A;&#x000A;* As a vendorized gem (this is what the Blacklight installer does--see above):&#x000A;&#x000A;  mkdir vendor/gems&#x000A;  cp -rp vendor/plugins/blacklight/vendor/gems/authlogic-&lt;version&gt; vendor/gems/authlogic-&lt;version&gt;</pre>
+            </li>
+            <li>Copy solr.yml to config dir:
+            
+            <pre>cp vendor/plugins/blacklight/install/solr.yml config/</pre>
+            </li>
+            <li>Copy the migration files to your app:
+            
+            <pre>cp -pR vendor/plugins/blacklight/db/migrate db/migrate</pre>
+            </li>
+            <li>Copy the default blacklight_config.rb file to config/initializers:
+            
+            <pre>cp vendor/plugins/blacklight/config/initializers/blacklight_config.rb config/initializers/</pre>
+            </li>
+            <li>Go to &#8220;Post Installation&#8221;, above.
+            
+            </li>
+            </ol>
+          </div>
+          <div id='section'>
+          </div>
+        </div>
+      </div>
+      <div id='footer-push'></div>
+    </div>
+    <div id='footer'>
+      <a href="http://github.com/mislav/hanna/tree/master"><strong>Hanna</strong> RDoc template</a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang='en'>
+  <head>
+    <title>: ActiveRecord::Acts::Taggable::SingletonMethods [NWDA Blacklight Documentation]</title>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
+    <link href='../../../../rdoc-style.css' media='screen' rel='stylesheet' type='text/css'>
+    <script type='text/javascript'>
+      //<![CDATA[
+        function popupCode(url) {
+          window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+        }
+        
+        function toggleCode(id) {
+          var code = document.getElementById(id)
+        
+          code.style.display = code.style.display != 'block' ? 'block' : 'none'
+          return true
+        }
+        
+        // Make codeblocks hidden by default
+        document.writeln('<' + 'style type="text/css">.method .source pre { display: none }<\/style>')
+      //]]>
+    </script>
+  </head>
+  <body class='page'>
+    <div class='class' id='wrapper'>
+      <div class='header'>
+        <h1 class='name'>
+          <span class='type'>Module</span>
+          ActiveRecord::Acts::Taggable::SingletonMethods
+        </h1>
+        <ol class='paths'>
+          <li>
+            <a href="../../../../files/vendor/plugins/blacklight/lib/taggable_pagination_rb.html">vendor/plugins/blacklight/lib/taggable_pagination.rb</a>
+          </li>
+        </ol>
+      </div>
+      <div id='content'>
+        <div id='text'>
+          <div id='method-list'>
+            <h2>Methods</h2>
+            <h3>public instance</h3>
+            <ol>
+              <li><a href="#M000069">paginate_by_tag</a></li>
+              <li><a href="#M000068">tagging_counts</a></li>
+            </ol>
+          </div>
+          <div id='section'>
+            <div id='methods'>
+              <h2>Public instance methods</h2>
+              <div class='public-instance method' id='method-M000069'>
+                <a name='M000069'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>paginate_by_tag</span>
+                  <span class='arguments'>(tag, options = {}, find_options = {})</span>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000069-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000069-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/lib/taggable_pagination.rb, line 14</span>&#x000A;        <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">paginate_by_tag</span>(<span class="ruby-identifier">tag</span>, <span class="ruby-identifier">options</span> = {}, <span class="ruby-identifier">find_options</span> = {})&#x000A;          <span class="ruby-identifier">page</span>, <span class="ruby-identifier">per_page</span>, <span class="ruby-identifier">total</span> = <span class="ruby-identifier">wp_parse_options</span>(<span class="ruby-identifier">options</span>)<span class="ruby-comment cmt">#WillPaginate::Finder::ClassMethods.send(:wp_parse_options, options)</span>&#x000A;          <span class="ruby-identifier">offset</span> = (<span class="ruby-identifier">page</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>) <span class="ruby-operator">*</span> <span class="ruby-identifier">per_page</span>&#x000A;          <span class="ruby-identifier">find_options</span>.<span class="ruby-identifier">merge!</span>(<span class="ruby-identifier">:offset</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">offset</span>, <span class="ruby-identifier">:limit</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">per_page</span>.<span class="ruby-identifier">to_i</span>)&#x000A;          <span class="ruby-identifier">items</span> = <span class="ruby-identifier">tag</span> <span class="ruby-value">? </span><span class="ruby-identifier">find_tagged_with</span>(<span class="ruby-identifier">tag</span>, <span class="ruby-identifier">find_options</span>) <span class="ruby-operator">:</span> <span class="ruby-identifier">paginate</span>(<span class="ruby-identifier">options</span>)&#x000A;          <span class="ruby-identifier">options</span>.<span class="ruby-identifier">delete</span> <span class="ruby-identifier">:page</span>&#x000A;          <span class="ruby-identifier">options</span>.<span class="ruby-identifier">delete</span> <span class="ruby-identifier">:per_page</span>&#x000A;          <span class="ruby-identifier">count</span> = <span class="ruby-identifier">tag</span> <span class="ruby-value">? </span><span class="ruby-identifier">tagging_counts</span>(<span class="ruby-identifier">tag</span>) <span class="ruby-operator">:</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">count</span>(<span class="ruby-identifier">options</span>)&#x000A;          <span class="ruby-identifier">returning</span> <span class="ruby-constant">WillPaginate</span><span class="ruby-operator">::</span><span class="ruby-constant">Collection</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">page</span>, <span class="ruby-identifier">per_page</span>, <span class="ruby-identifier">count</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">p</span><span class="ruby-operator">|</span>&#x000A;            <span class="ruby-identifier">p</span>.<span class="ruby-identifier">replace</span> <span class="ruby-identifier">items</span>&#x000A;          <span class="ruby-keyword kw">end</span>&#x000A;        <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000068'>
+                <a name='M000068'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>tagging_counts</span>
+                  <span class='arguments'>(tag)</span>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000068-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000068-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/lib/taggable_pagination.rb, line 10</span>&#x000A;        <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">tagging_counts</span>(<span class="ruby-identifier">tag</span>)&#x000A;          <span class="ruby-identifier">count_by_sql</span>(<span class="ruby-value str">&quot;select count(*) FROM tags, taggings WHERE &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">sanitize_sql</span>([<span class="ruby-value str">'tags.name = ? AND tags.id = taggings.tag_id AND taggings.taggable_type = ?'</span>, <span class="ruby-identifier">tag</span>, <span class="ruby-identifier">name</span>]))&#x000A;        <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id='footer-push'></div>
+    </div>
+    <div id='footer'>
+      <a href="http://github.com/mislav/hanna/tree/master"><strong>Hanna</strong> RDoc template</a>
+    </div>
+  </body>
+</html>
