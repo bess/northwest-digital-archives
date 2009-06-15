@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang='en'>
+  <head>
+    <title>File: PRE-REQUISITES.rdoc [NWDA Blacklight Documentation]</title>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
+    <link href='../../../../rdoc-style.css' media='screen' rel='stylesheet' type='text/css'>
+    <script type='text/javascript'>
+      //<![CDATA[
+        function popupCode(url) {
+          window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+        }
+        
+        function toggleCode(id) {
+          var code = document.getElementById(id)
+        
+          code.style.display = code.style.display != 'block' ? 'block' : 'none'
+          return true
+        }
+        
+        // Make codeblocks hidden by default
+        document.writeln('<' + 'style type="text/css">.method .source pre { display: none }<\/style>')
+      //]]>
+    </script>
+  </head>
+  <body class='page'>
+    <div class='file' id='wrapper'>
+      <div class='header'>
+        <h1 class='name'>PRE-REQUISITES.rdoc</h1>
+        <div class='paths'>
+          vendor/plugins/blacklight/PRE-REQUISITES.rdoc
+        </div>
+        <div class='last-update'>
+          Last Update:
+          <span class='datetime'>Sun Jun 14 19:22:49 -0400 2009</span>
+        </div>
+      </div>
+      <div id='content'>
+        <div id='text'>
+          <div id='description'>
+            <h2>Pre-requisites</h2>
+            <h3>Ruby</h3>
+            <p>
+            Version 1.8.6 or higher is required. You can find out which version you are
+            running by executing:
+            </p>
+            <pre>ruby -v</pre>
+            <p>
+            Information on installing Ruby can be found here: <a
+            href="http://www.ruby-lang.org/en/downloads">www.ruby-lang.org/en/downloads</a>
+            </p>
+            <h3>Ruby Gems</h3>
+            <p>
+            You&#8217;ll need Ruby Gems version 1.3.1 or later. You can check which
+            version of “gem” you have by running:
+            </p>
+            <pre>gem -v</pre>
+            <p>
+            Information on installing Ruby Gems can be found here:
+            </p>
+            <pre>http://www.rubygems.org/read/chapter/3</pre>
+            <p>
+            To update your Ruby Gems, run (YMMV for various operating systems):
+            </p>
+            <pre>sudo gem install rubygems-update&#x000A;sudo update_rubygems</pre>
+            <p>
+            You can also manually install Ruby Gems:
+            </p>
+            <pre>wget http://rubyforge.org/frs/download.php/45905/rubygems-1.3.1.tgz&#x000A;tar xzf rubygems-1.3.1.tgz&#x000A;cd rubygems-1.3.1&#x000A;sudo ruby setup.rb&#x000A;gem -v</pre>
+            <p>
+            These commands should work for Linux and OSX, but we haven&#8217;t yet
+            written any instructions for Windows installation. If anyone is able to
+            volunteer for this task, please let us know!
+            </p>
+            <h3>Ruby Gems Sources</h3>
+            <p>
+            Make sure you have the standard ruby gem sources available:
+            </p>
+            <pre>gem sources -l</pre>
+            <p>
+            should show
+            </p>
+            <pre>http://gems.rubyforge.org&#x000A;http://gems.rubyonrails.org</pre>
+            <p>
+            If you&#8217;re missing those gem sources, add them like this:
+            </p>
+            <pre>gem sources -a http://gems.rubyforge.org&#x000A;gem sources -a http://gems.rubyonrails.org&#x000A;&#x000A;==Git Client&#x000A;&#x000A;Information on getting the git client installed can be found here:&#x000A;&#x000A;http://git-scm.com/&#x000A;http://book.git-scm.com/2_installing_git.html&#x000A;&#x000A;If you are behind a firewall, you may need to open port 9418 for Git.</pre>
+            <h3>Install Blacklight&#8217;s Ruby Gem TEST dependencies by running:</h3>
+            <p>
+            (Please see vendor/plugins/blacklight/init.rb for the <a
+            href="../../../../classes/Blacklight.html">Blacklight</a> plugin
+            dependencies&#8217; versions. An example of a versioned install: sudo gem
+            install rails &#8212;version &#8216;2.3.2&#8217;)
+            </p>
+            <pre>sudo gem install cucumber     &lt;-- for testing, must be version 0.3.5 or higher&#x000A;sudo gem install curb         &lt;-- used by rsolr&#x000A;sudo gem install rails&#x000A;sudo gem install rspec        &lt;-- for testing&#x000A;sudo gem install rspec-rails  &lt;-- for testing&#x000A;sudo gem install webrat       &lt;-- for testing, must be version 0.4.4 or higher&#x000A;sudo gem install authlogic    &lt;-- for authentication</pre>
+            <p>
+            You can confirm your gem installations and their release numbers with
+            </p>
+            <pre>gem list</pre>
+            <h3>Database dependencies</h3>
+            <p>
+            You can choose to use any database that has ruby on rails bindings, but
+            sqlite and mysql are used most commonly and are documented here.
+            </p>
+            <ul>
+            <li>if you are using sqlite3:
+            
+            <pre>sudo gem install sqlite3-ruby</pre>
+            </li>
+            </ul>
+            <p>
+            If you want to use sqlite, you will need to install sqlite3 and its ruby
+            bindings
+            </p>
+            <p>
+            On Red Hat Fedora the command is:
+            </p>
+            <pre>sudo yum install sqlite sqlite-devel ruby-sqlite3</pre>
+            <p>
+            On OSX macports the command is:
+            </p>
+            <pre>sudo port install sqlite3 rb-sqlite3</pre>
+            <p>
+            On FreeBSD the command is:
+            </p>
+            <pre>cd /usr/ports/databases/rubygem-sqlite3 &amp;&amp; make install clean</pre>
+            <ul>
+            <li>if you are using mysql, make sure mysql is installed, and run:
+            
+            <pre>sudo gem install mysql</pre>
+            </li>
+            </ul>
+            <h3>Dependencies included with <a href="../../../../classes/Blacklight.html">Blacklight</a></h3>
+            <ul>
+            <li>ActsAsTaggableOnSteroids plugin docs: <a
+            href="http://agilewebdevelopment.com/plugins/acts_as_taggable_on_steroids">agilewebdevelopment.com/plugins/acts_as_taggable_on_steroids</a>
+            
+            </li>
+            <li>Resource Controller: <a
+            href="http://github.com/giraffesoft/resource_controller/tree/master">github.com/giraffesoft/resource_controller/tree/master</a>
+            There is a very good
+            
+            </li>
+            </ul>
+            <p>
+            video tutorial on the resource_controller plugin: <a
+            href="http://www.vimeo.com/637894">www.vimeo.com/637894</a>
+            </p>
+          </div>
+          <div id='section'>
+          </div>
+        </div>
+      </div>
+      <div id='footer-push'></div>
+    </div>
+    <div id='footer'>
+      <a href="http://github.com/mislav/hanna/tree/master"><strong>Hanna</strong> RDoc template</a>
+    </div>
+  </body>
+</html>

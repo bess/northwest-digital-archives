@@ -1,0 +1,272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang='en'>
+  <head>
+    <title>: NWDA::Mappers::Herbarium [NWDA Blacklight Documentation]</title>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
+    <link href='../../../rdoc-style.css' media='screen' rel='stylesheet' type='text/css'>
+    <script type='text/javascript'>
+      //<![CDATA[
+        function popupCode(url) {
+          window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+        }
+        
+        function toggleCode(id) {
+          var code = document.getElementById(id)
+        
+          code.style.display = code.style.display != 'block' ? 'block' : 'none'
+          return true
+        }
+        
+        // Make codeblocks hidden by default
+        document.writeln('<' + 'style type="text/css">.method .source pre { display: none }<\/style>')
+      //]]>
+    </script>
+  </head>
+  <body class='page'>
+    <div class='class' id='wrapper'>
+      <div class='header'>
+        <h1 class='name'>
+          <span class='type'>Class</span>
+          NWDA::Mappers::Herbarium
+        </h1>
+        <ol class='paths'>
+          <li>
+            <a href="../../../files/lib/nwda-lib/nwda/mappers/herbarium_rb.html">lib/nwda-lib/nwda/mappers/herbarium.rb</a>
+          </li>
+        </ol>
+        <div class='parent'>
+          Parent:
+          <strong>Object</strong>
+        </div>
+      </div>
+      <div id='content'>
+        <div id='text'>
+          <div id='method-list'>
+            <h2>Methods</h2>
+            <h3>public class</h3>
+            <ol>
+              <li><a href="#M000168">new</a></li>
+            </ol>
+            <h3>public instance</h3>
+            <ol>
+              <li><a href="#M000172">getFormatFacet</a></li>
+              <li><a href="#M000176">getGeographicSubjects</a></li>
+              <li><a href="#M000173">getID</a></li>
+              <li><a href="#M000170">getImages</a></li>
+              <li><a href="#M000177">getLanguageFacet</a></li>
+              <li><a href="#M000178">getPublisherFacet</a></li>
+              <li><a href="#M000169">getRights</a></li>
+              <li><a href="#M000175">getSubjects</a></li>
+              <li><a href="#M000174">getTitle</a></li>
+              <li><a href="#M000179">inspect</a></li>
+              <li><a href="#M000171">storeRecord</a></li>
+            </ol>
+          </div>
+          <div id='section'>
+            <div id='attribute-list'>
+              <h2 class='section-bar'>Attributes</h2>
+              <div class='name-list'>
+                <table>
+                  <tr class='top-aligned-row context-row'>
+                    <td class='context-item-name'>doc</td>
+                    <td class='context-item-value'>[R]</td>
+                    <td class='context-item-desc'></td>
+                  </tr>
+                  <tr class='top-aligned-row context-row'>
+                    <td class='context-item-name'>xml</td>
+                    <td class='context-item-value'>[R]</td>
+                    <td class='context-item-desc'></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div id='methods'>
+              <h2>Public class methods</h2>
+              <div class='public-class method' id='method-M000168'>
+                <a name='M000168'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>new</span>
+                  <span class='arguments'>(record)</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  pass in an <a href="EAD.html">EAD</a> document set @ead_document kick off
+                  mapping method
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000168-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000168-source'><span class="ruby-comment cmt"># File lib/nwda-lib/nwda/mappers/herbarium.rb, line 15</span>&#x000A;    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">record</span>)&#x000A;      <span class="ruby-ivar">@xml</span> = <span class="ruby-identifier">record</span>&#x000A;      <span class="ruby-ivar">@doc</span> = {}&#x000A;      <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">getID</span>&#x000A;      <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:text</span>] = []&#x000A;      <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">getFormatFacet</span>&#x000A;      <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">getTitle</span>&#x000A;      <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">getImages</span>&#x000A;      &#x000A;      <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">getSubjects</span>&#x000A;      <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">getGeographicSubjects</span>&#x000A;      <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">getPublisherFacet</span>&#x000A;      <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">getLanguageFacet</span>&#x000A;      <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">getRights</span>&#x000A;      &#x000A;      <span class="ruby-comment cmt">#self.storeRecord</span>&#x000A;      <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:collection_facet</span>] = <span class="ruby-value str">&quot;Oregon State University Herbarium&quot;</span>&#x000A;      <span class="ruby-ivar">@doc</span>&#x000A;    <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <h2>Public instance methods</h2>
+              <div class='public-instance method' id='method-M000172'>
+                <a name='M000172'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>getFormatFacet</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000172-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000172-source'><span class="ruby-comment cmt"># File lib/nwda-lib/nwda/mappers/herbarium.rb, line 52</span>&#x000A;      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">getFormatFacet</span>&#x000A;        <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:format_facet</span>] = <span class="ruby-value str">&quot;Herbarium Specimen&quot;</span>&#x000A;      <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000176'>
+                <a name='M000176'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>getGeographicSubjects</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000176-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000176-source'><span class="ruby-comment cmt"># File lib/nwda-lib/nwda/mappers/herbarium.rb, line 89</span>&#x000A;      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">getGeographicSubjects</span>&#x000A;        <span class="ruby-identifier">geographic_subject_facet</span> = []&#x000A;        <span class="ruby-ivar">@xml</span>.<span class="ruby-identifier">xpath</span>(<span class="ruby-value str">'./spatial/text()'</span>).<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">subject</span>, <span class="ruby-identifier">i</span><span class="ruby-operator">|</span>&#x000A;          <span class="ruby-identifier">geographic_subject_facet</span>[<span class="ruby-identifier">i</span>] = <span class="ruby-identifier">subject</span>.<span class="ruby-identifier">content</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/\s+/</span>,<span class="ruby-value str">&quot; &quot;</span>)&#x000A;        <span class="ruby-keyword kw">end</span>&#x000A;        <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:geographic_subject_facet</span>] = <span class="ruby-identifier">geographic_subject_facet</span>.<span class="ruby-identifier">uniq</span>&#x000A;      <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000173'>
+                <a name='M000173'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>getID</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000173-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000173-source'><span class="ruby-comment cmt"># File lib/nwda-lib/nwda/mappers/herbarium.rb, line 56</span>&#x000A;      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">getID</span>&#x000A;          <span class="ruby-identifier">potential_ids</span>=[]&#x000A;          <span class="ruby-ivar">@xml</span>.<span class="ruby-identifier">xpath</span>(<span class="ruby-value str">'./identifier/text()'</span>).<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">id</span>,<span class="ruby-identifier">i</span><span class="ruby-operator">|</span> &#x000A;            <span class="ruby-identifier">potential_ids</span>[<span class="ruby-identifier">i</span>] = <span class="ruby-identifier">id</span>.<span class="ruby-identifier">content</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/\//</span>,<span class="ruby-value str">&quot;_&quot;</span>).<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/\s+/</span>,<span class="ruby-value str">&quot;_&quot;</span>).<span class="ruby-identifier">downcase</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/\.pdf/</span>,<span class="ruby-value str">''</span>)&#x000A;          <span class="ruby-keyword kw">end</span>&#x000A;          <span class="ruby-identifier">potential_ids</span> = <span class="ruby-identifier">potential_ids</span>.<span class="ruby-identifier">uniq</span>&#x000A;          <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:id</span>] = <span class="ruby-identifier">potential_ids</span>[<span class="ruby-value">0</span>]&#x000A;      <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000170'>
+                <a name='M000170'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>getImages</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000170-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000170-source'><span class="ruby-comment cmt"># File lib/nwda-lib/nwda/mappers/herbarium.rb, line 39</span>&#x000A;    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">getImages</span>&#x000A;      <span class="ruby-identifier">thumbnail_url</span> = <span class="ruby-ivar">@xml</span>.<span class="ruby-identifier">xpath</span>(<span class="ruby-value str">'./thumbnailURL[1]/text()'</span>).<span class="ruby-identifier">first</span>.<span class="ruby-identifier">to_s</span>&#x000A;      <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:preview_display</span>] = <span class="ruby-identifier">thumbnail_url</span>&#x000A;      <span class="ruby-identifier">img_id</span> = <span class="ruby-identifier">thumbnail_url</span>[<span class="ruby-regexp re">/CISOPTR=\d+/</span>]&#x000A;      <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;img_id = #{img_id}&quot;</span>&#x000A;      <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:fullimage_display</span>] = <span class="ruby-node">&quot;http://digitalcollections.library.oregonstate.edu/cgi-bin/getimage.exe?CISOROOT=/herbarium&amp;#{img_id}&amp;DMSCALE=25.00000&amp;DMWIDTH=1200&amp;DMHEIGHT=1200&amp;DMX=0&amp;DMY=0&amp;DMTEXT=&amp;REC=1&amp;DMTHUMB=0&amp;DMROTATE=0&quot;</span>&#x000A;    <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000177'>
+                <a name='M000177'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>getLanguageFacet</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000177-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000177-source'><span class="ruby-comment cmt"># File lib/nwda-lib/nwda/mappers/herbarium.rb, line 97</span>&#x000A;      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">getLanguageFacet</span>&#x000A;        <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:language_facet</span>] = <span class="ruby-value str">&quot;English&quot;</span>&#x000A;      <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000178'>
+                <a name='M000178'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>getPublisherFacet</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000178-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000178-source'><span class="ruby-comment cmt"># File lib/nwda-lib/nwda/mappers/herbarium.rb, line 101</span>&#x000A;      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">getPublisherFacet</span>&#x000A;        <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:publisher_facet</span>] = <span class="ruby-value str">&quot;Oregon State University Herbarium&quot;</span>&#x000A;      <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000169'>
+                <a name='M000169'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>getRights</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000169-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000169-source'><span class="ruby-comment cmt"># File lib/nwda-lib/nwda/mappers/herbarium.rb, line 35</span>&#x000A;    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">getRights</span>&#x000A;      <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:rights_t</span>] = <span class="ruby-ivar">@xml</span>.<span class="ruby-identifier">xpath</span>(<span class="ruby-value str">'./rights/text()'</span>).<span class="ruby-identifier">first</span>.<span class="ruby-identifier">to_s</span>&#x000A;    <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000175'>
+                <a name='M000175'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>getSubjects</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000175-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000175-source'><span class="ruby-comment cmt"># File lib/nwda-lib/nwda/mappers/herbarium.rb, line 80</span>&#x000A;      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">getSubjects</span>&#x000A;            <span class="ruby-identifier">general_subjects</span> = []&#x000A;            <span class="ruby-ivar">@xml</span>.<span class="ruby-identifier">xpath</span>(<span class="ruby-value str">'./subject/text()'</span>).<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">subject</span>, <span class="ruby-identifier">i</span><span class="ruby-operator">|</span>&#x000A;              <span class="ruby-identifier">general_subjects</span>[<span class="ruby-identifier">i</span>] = <span class="ruby-identifier">subject</span>.<span class="ruby-identifier">content</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/\s+/</span>,<span class="ruby-value str">&quot; &quot;</span>)&#x000A;            <span class="ruby-keyword kw">end</span>&#x000A;&#x000A;            <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:subject_facet</span>] = <span class="ruby-identifier">general_subjects</span>.<span class="ruby-identifier">uniq</span>&#x000A;       <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000174'>
+                <a name='M000174'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>getTitle</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000174-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000174-source'><span class="ruby-comment cmt"># File lib/nwda-lib/nwda/mappers/herbarium.rb, line 65</span>&#x000A;      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">getTitle</span>&#x000A;           <span class="ruby-identifier">t</span> = <span class="ruby-ivar">@xml</span>.<span class="ruby-identifier">xpath</span>(<span class="ruby-value str">'./title[1]/text()'</span>).<span class="ruby-identifier">first</span>.<span class="ruby-identifier">to_s</span>&#x000A;           <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:title_t</span>] = <span class="ruby-identifier">t</span>&#x000A;           <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:original_identification_display</span>] = <span class="ruby-ivar">@xml</span>.<span class="ruby-identifier">xpath</span>(<span class="ruby-value str">'./alternative[1]/text()'</span>).<span class="ruby-identifier">first</span>&#x000A;           <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:family_display</span>] = <span class="ruby-ivar">@xml</span>.<span class="ruby-identifier">xpath</span>(<span class="ruby-value str">'./subject[1]/text()'</span>).<span class="ruby-identifier">first</span>&#x000A;           <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:current_taxon_display</span>] = <span class="ruby-ivar">@xml</span>.<span class="ruby-identifier">xpath</span>(<span class="ruby-value str">'./alternative[2]/text()'</span>).<span class="ruby-identifier">first</span>&#x000A;           <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:primary_collector_display</span>] = <span class="ruby-ivar">@xml</span>.<span class="ruby-identifier">xpath</span>(<span class="ruby-value str">'./creator[2]/text()'</span>).<span class="ruby-identifier">first</span>&#x000A;           <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:collection_date_display</span>] = <span class="ruby-ivar">@xml</span>.<span class="ruby-identifier">xpath</span>(<span class="ruby-value str">'./date[1]/text()'</span>).<span class="ruby-identifier">first</span>&#x000A;           &#x000A;           <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:text</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:title_t</span>].<span class="ruby-identifier">to_s</span>&#x000A;           <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:text</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:original_identification_display</span>]&#x000A;           <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:text</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:family_display</span>]&#x000A;           <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:text</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:primary_collector_display</span>]&#x000A;      <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000179'>
+                <a name='M000179'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>inspect</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  def getGenreFormatFacet
+                  </p>
+                  <pre>genreform_facet = []&#x000A;@xml.xpath('//genreform/text()').each_with_index do |form, i|&#x000A;  genreform_facet[i] = form.content.gsub(/\s+/,&quot; &quot;).strip&#x000A;end&#x000A;@doc[:genreform_facet] = genreform_facet.uniq</pre>
+                  <p>
+                  end
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000179-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000179-source'><span class="ruby-comment cmt"># File lib/nwda-lib/nwda/mappers/herbarium.rb, line 114</span>&#x000A;       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">inspect</span>&#x000A;         <span class="ruby-identifier">puts</span> <span class="ruby-ivar">@doc</span>.<span class="ruby-identifier">inspect</span>&#x000A;       <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000171'>
+                <a name='M000171'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>storeRecord</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  Store the whole record so we can display the parts we want at display time
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000171-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000171-source'><span class="ruby-comment cmt"># File lib/nwda-lib/nwda/mappers/herbarium.rb, line 48</span>&#x000A;      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">storeRecord</span>&#x000A;        <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:herbarium_display</span>] = <span class="ruby-ivar">@xml</span>.<span class="ruby-identifier">to_xml</span>&#x000A;      <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id='footer-push'></div>
+    </div>
+    <div id='footer'>
+      <a href="http://github.com/mislav/hanna/tree/master"><strong>Hanna</strong> RDoc template</a>
+    </div>
+  </body>
+</html>

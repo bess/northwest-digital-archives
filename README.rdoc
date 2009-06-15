@@ -1,0 +1,87 @@
+= The Northwest Digital Archives Blacklight installation
+
+This is an application to allow the Northwest Digital Archives to search across many collections and many 
+kinds of documents within a single discovery application. It is an installation of blacklight (http://projectblacklight.org) with some local customizations.
+
+= Installation instructions for the NWDA application
+
+June 14, 2009
+blacklight release 2.2
+
+== Be sure to install the {pre-requisites}[link:files/vendor/plugins/blacklight/PRE-REQUISITES_rdoc.html] first
+
+== Installation
+	
+=== Create a local development copy
+It's going to sound a little round-about, but your life will be much easier if you create yourself a local development
+copy of the application and then use the capistrano deploy script to deploy it to the server. 
+		
+====Clone the code from git to your local machine
+	git clone git://github.com/bess/northwest-digital-archives.git 
+	
+====Setup your database (for storing user accounts and bookmarks)
+
+The default database settings are configured to use sqlite3. If you want to use mysql instead, create a database called blacklight_development (or whatever you like):
+
+	mysqladmin create blacklight_development # your command will vary
+
+Then put this into your config/database.yml file instead of the default settings: 
+
+	development:
+		adapter: mysql
+		database: blacklight_development
+		username: whatever
+		password: *****
+		host: localhost
+		socket: /opt/local/var/run/mysql5/mysqld.sock # or whatever
+
+Regardless of which database you're using, you'll need to run the database migrations:
+	rake db:migrate
+
+====Set up solr
+
+Now start Solr via Jetty. Change into the northwest-digital-archives/jetty directory:
+
+	cd ../jetty
+	java -jar start.jar
+OR
+	nohup java -jar start.jar & <-- to run it and keep it running after you close your window
+
+You should see a bunch of logging and should stop after a few seconds. Solr should now be running and you can test it by browsing to:
+	http://localhost:8983/solr
+
+====Index the data
+The project you checked out of git has all of the data indexed already, so re-indexing data is optional, until such
+time as you want to change the indexing options or add new data. When you do want to index the data, here's how: 
+Open a terminal window and move into the northwest-digital-archives directory
+The command
+	rake -T app
+will give you several rake tasks you can use for indexing data. For example: 
+	rake app:index:herbarium FILE=/path/to/file/herbarium_export.xml
+If you need to add a new kind of document, take a look at NWDA::Mappers, and use those mappings as templates. 
+
+====Start Rails
+
+When the indexing is done, fire up Rails:
+
+	ruby ./script/server
+
+Browse to:
+	http://localhost:3000/
+
+You should now have a local copy of the NWDA application. 
+
+=== Deploy to a server
+
+==== Be sure you have all the pre-requisites installed on the target server
+==== Edit the file config/deploy.rb to match the settings for your target server
+You'll especially want to check the settings for the user who will own the files and the path to the file store. 
+==== (optional) set up your public key 
+For ease of deployment, you might want to put your ssh public key in the authorized_keys file of the user who will own the application, and in the code repository from which the application will be checked out. This lets you deploy without typing in your password each time. 
+==== Run <tt>cap deploy cold</tt> to set it up the first time, and work through any errors
+The first time you run it there are bound to be errors, but after initial setup you can just run <tt>cap deploy</tt> ever after and it's all good. 
+Note: I want to create a capistrano script for restarting solr, but I don't have that working yet. 
+
+=== Keep this documentation up to date! 
+You can do that by commenting methods and editing README.rdoc. When you're ready to re-generate the docs, type
+	rake rdoc

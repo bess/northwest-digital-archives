@@ -1,0 +1,409 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang='en'>
+  <head>
+    <title>: CatalogController [NWDA Blacklight Documentation]</title>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
+    <link href='../rdoc-style.css' media='screen' rel='stylesheet' type='text/css'>
+    <script type='text/javascript'>
+      //<![CDATA[
+        function popupCode(url) {
+          window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+        }
+        
+        function toggleCode(id) {
+          var code = document.getElementById(id)
+        
+          code.style.display = code.style.display != 'block' ? 'block' : 'none'
+          return true
+        }
+        
+        // Make codeblocks hidden by default
+        document.writeln('<' + 'style type="text/css">.method .source pre { display: none }<\/style>')
+      //]]>
+    </script>
+  </head>
+  <body class='page'>
+    <div class='class' id='wrapper'>
+      <div class='header'>
+        <h1 class='name'>
+          <span class='type'>Class</span>
+          CatalogController
+        </h1>
+        <ol class='paths'>
+          <li>
+            <a href="../files/vendor/plugins/blacklight/app/controllers/catalog_controller_rb.html">vendor/plugins/blacklight/app/controllers/catalog_controller.rb</a>
+          </li>
+        </ol>
+        <div class='parent'>
+          Parent:
+          <strong><a href="ApplicationController.html">ApplicationController</a></strong>
+        </div>
+      </div>
+      <div id='content'>
+        <div id='text'>
+          <div id='method-list'>
+            <h2>Methods</h2>
+            <h3>public instance</h3>
+            <ol>
+              <li><a href="#M000016">availability</a></li>
+              <li><a href="#M000019">citation</a></li>
+              <li><a href="#M000013">facet</a></li>
+              <li><a href="#M000014">image</a></li>
+              <li><a href="#M000010">index</a></li>
+              <li><a href="#M000017">map</a></li>
+              <li><a href="#M000018">opensearch</a></li>
+              <li><a href="#M000012">show</a></li>
+              <li><a href="#M000015">status</a></li>
+              <li><a href="#M000011">update</a></li>
+            </ol>
+            <h3>protected instance</h3>
+            <ol>
+              <li><a href="#M000026">delete_or_assign_search_session_params</a></li>
+              <li><a href="#M000025">history_session</a></li>
+              <li><a href="#M000027">save_current_search_params</a></li>
+              <li><a href="#M000024">search_session</a></li>
+              <li><a href="#M000021">setup_document_by_counter</a></li>
+              <li><a href="#M000020">setup_next_and_previous_documents</a></li>
+              <li><a href="#M000023">setup_next_document</a></li>
+              <li><a href="#M000022">setup_previous_document</a></li>
+            </ol>
+          </div>
+          <div id='context'>
+            <div id='includes'>
+              <h2>Included modules</h2>
+              <ol>
+                <li><a href="Blacklight/SolrHelper.html">Blacklight::SolrHelper</a></li>
+              </ol>
+            </div>
+          </div>
+          <div id='section'>
+            <div id='methods'>
+              <h2>Public instance methods</h2>
+              <div class='public-instance method' id='method-M000016'>
+                <a name='M000016'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>availability</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  single document availability info
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000016-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000016-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/app/controllers/catalog_controller.rb, line 48</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">availability</span>&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000019'>
+                <a name='M000019'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>citation</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  citation action
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000019-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000019-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/app/controllers/catalog_controller.rb, line 68</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">citation</span>&#x000A;    <span class="ruby-ivar">@response</span> = <span class="ruby-identifier">get_solr_response_for_doc_id</span>&#x000A;    <span class="ruby-ivar">@document</span> = <span class="ruby-constant">SolrDocument</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@response</span>.<span class="ruby-identifier">docs</span>.<span class="ruby-identifier">first</span>)&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000013'>
+                <a name='M000013'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>facet</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  displays values and pagination links for a single facet field
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000013-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000013-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/app/controllers/catalog_controller.rb, line 35</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">facet</span>&#x000A;    <span class="ruby-ivar">@pagination</span> = <span class="ruby-identifier">get_facet_pagination</span>&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000014'>
+                <a name='M000014'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>image</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  single document image resource
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000014-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000014-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/app/controllers/catalog_controller.rb, line 40</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">image</span>&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000010'>
+                <a name='M000010'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>index</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  get search results from the solr index
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000010-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000010-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/app/controllers/catalog_controller.rb, line 9</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">index</span>&#x000A;    <span class="ruby-ivar">@response</span> = <span class="ruby-identifier">get_search_results</span>&#x000A;    <span class="ruby-ivar">@filters</span> = <span class="ruby-identifier">params</span>[<span class="ruby-identifier">:f</span>] <span class="ruby-operator">||</span> []&#x000A;    <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>&#x000A;      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">save_current_search_params</span> }&#x000A;      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">rss</span>  { <span class="ruby-identifier">render</span> <span class="ruby-identifier">:layout</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">false</span> }&#x000A;    <span class="ruby-keyword kw">end</span>&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000017'>
+                <a name='M000017'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>map</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  collection/search UI via Google maps
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000017-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000017-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/app/controllers/catalog_controller.rb, line 52</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">map</span>&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000018'>
+                <a name='M000018'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>opensearch</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000018-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000018-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/app/controllers/catalog_controller.rb, line 56</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">opensearch</span>&#x000A;    <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>&#x000A;      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">xml</span> <span class="ruby-keyword kw">do</span>&#x000A;        <span class="ruby-identifier">render</span> <span class="ruby-identifier">:layout</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">false</span>&#x000A;      <span class="ruby-keyword kw">end</span>&#x000A;      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> <span class="ruby-keyword kw">do</span>&#x000A;        <span class="ruby-identifier">render</span> <span class="ruby-identifier">:json</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">get_opensearch_response</span>&#x000A;      <span class="ruby-keyword kw">end</span>&#x000A;    <span class="ruby-keyword kw">end</span>&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000012'>
+                <a name='M000012'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>show</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  get single document from the solr index
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000012-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000012-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/app/controllers/catalog_controller.rb, line 25</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">show</span>&#x000A;    <span class="ruby-ivar">@response</span> = <span class="ruby-identifier">get_solr_response_for_doc_id</span>&#x000A;    <span class="ruby-ivar">@document</span> = <span class="ruby-constant">SolrDocument</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@response</span>.<span class="ruby-identifier">docs</span>.<span class="ruby-identifier">first</span>)&#x000A;    <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>&#x000A;      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> {<span class="ruby-identifier">setup_next_and_previous_documents</span>}&#x000A;      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">xml</span>  {<span class="ruby-identifier">render</span> <span class="ruby-identifier">:xml</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@document</span>.<span class="ruby-identifier">marc</span>.<span class="ruby-identifier">to_xml</span>}&#x000A;    <span class="ruby-keyword kw">end</span>&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000015'>
+                <a name='M000015'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>status</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  single document availability status (true/false)
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000015-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000015-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/app/controllers/catalog_controller.rb, line 44</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">status</span>&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000011'>
+                <a name='M000011'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>update</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  updates the search counter (allows the show view to paginate)
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000011-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000011-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/app/controllers/catalog_controller.rb, line 19</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">update</span>&#x000A;    <span class="ruby-identifier">session</span>[<span class="ruby-identifier">:search</span>][<span class="ruby-identifier">:counter</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-identifier">:counter</span>]&#x000A;    <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;show&quot;</span>&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <h2>Protected instance methods</h2>
+              <div class='protected-instance method' id='method-M000026'>
+                <a name='M000026'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>delete_or_assign_search_session_params</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  This method will remove certain params from the session[:search] hash if
+                  the values are blank? (nil or empty string) if the values aren&#8217;t
+                  blank, they are saved to the session in the :search hash.
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000026-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000026-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/app/controllers/catalog_controller.rb, line 116</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">delete_or_assign_search_session_params</span>&#x000A;    [<span class="ruby-identifier">:q</span>, <span class="ruby-identifier">:qt</span>, <span class="ruby-identifier">:f</span>, <span class="ruby-identifier">:per_page</span>, <span class="ruby-identifier">:page</span>, <span class="ruby-identifier">:sort</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">pname</span><span class="ruby-operator">|</span>&#x000A;      <span class="ruby-identifier">params</span>[<span class="ruby-identifier">pname</span>].<span class="ruby-identifier">blank?</span> <span class="ruby-value">? </span><span class="ruby-identifier">session</span>[<span class="ruby-identifier">:search</span>].<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">pname</span>) <span class="ruby-operator">:</span> <span class="ruby-identifier">session</span>[<span class="ruby-identifier">:search</span>][<span class="ruby-identifier">pname</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-identifier">pname</span>]&#x000A;    <span class="ruby-keyword kw">end</span>&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='protected-instance method' id='method-M000025'>
+                <a name='M000025'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>history_session</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  sets up the session[:history] hash if it doesn&#8217;t already exist.
+                  assigns all <a href="Search.html">Search</a> objects (that match the
+                  searches in session[:history]) to a variable @searches.
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000025-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000025-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/app/controllers/catalog_controller.rb, line 108</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">history_session</span>&#x000A;    <span class="ruby-identifier">session</span>[<span class="ruby-identifier">:history</span>] <span class="ruby-operator">||=</span> []&#x000A;    <span class="ruby-ivar">@searches</span> = <span class="ruby-identifier">searches_from_history</span>&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='protected-instance method' id='method-M000027'>
+                <a name='M000027'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>save_current_search_params</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  Saves the current search (if it does not already exist) as a models/search
+                  object then adds the id of the serach object to session[:history]
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000027-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000027-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/app/controllers/catalog_controller.rb, line 124</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">save_current_search_params</span>&#x000A;    <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">search_session</span>[<span class="ruby-identifier">:q</span>].<span class="ruby-identifier">blank?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">search_session</span>[<span class="ruby-identifier">:f</span>].<span class="ruby-identifier">blank?</span>&#x000A;    <span class="ruby-identifier">params_copy</span> = <span class="ruby-identifier">search_session</span>.<span class="ruby-identifier">clone</span> <span class="ruby-comment cmt"># don't think we need a deep copy for this</span>&#x000A;    <span class="ruby-identifier">params_copy</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">:page</span>)&#x000A;    <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@searches</span>.<span class="ruby-identifier">collect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">search</span><span class="ruby-operator">|</span> <span class="ruby-identifier">search</span>.<span class="ruby-identifier">query_params</span> }.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">params_copy</span>)&#x000A;      <span class="ruby-identifier">new_search</span> = <span class="ruby-constant">Search</span>.<span class="ruby-identifier">create</span>(<span class="ruby-identifier">:query_params</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params_copy</span>)&#x000A;      <span class="ruby-identifier">session</span>[<span class="ruby-identifier">:history</span>].<span class="ruby-identifier">unshift</span>(<span class="ruby-identifier">new_search</span>.<span class="ruby-identifier">id</span>)&#x000A;    <span class="ruby-keyword kw">end</span>&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='protected-instance method' id='method-M000024'>
+                <a name='M000024'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>search_session</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  sets up the session[:search] hash if it doesn&#8217;t already exist
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000024-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000024-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/app/controllers/catalog_controller.rb, line 102</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">search_session</span>&#x000A;    <span class="ruby-identifier">session</span>[<span class="ruby-identifier">:search</span>] <span class="ruby-operator">||=</span> {}&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='protected-instance method' id='method-M000021'>
+                <a name='M000021'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>setup_document_by_counter</span>
+                  <span class='arguments'>(counter)</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  gets a document based on its position within a resultset
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000021-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000021-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/app/controllers/catalog_controller.rb, line 87</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">setup_document_by_counter</span>(<span class="ruby-identifier">counter</span>)&#x000A;    <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">counter</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">1</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">session</span>[<span class="ruby-identifier">:search</span>].<span class="ruby-identifier">blank?</span>&#x000A;    <span class="ruby-identifier">search</span> = <span class="ruby-identifier">session</span>[<span class="ruby-identifier">:search</span>] <span class="ruby-operator">||</span> {}&#x000A;    <span class="ruby-identifier">get_single_doc_via_search</span>(<span class="ruby-identifier">search</span>.<span class="ruby-identifier">merge</span>({<span class="ruby-identifier">:page</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">counter</span>}))&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='protected-instance method' id='method-M000020'>
+                <a name='M000020'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>setup_next_and_previous_documents</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  calls <a href="CatalogController.html#M000022">setup_previous_document</a>
+                  then setup_next_document. used in the show action for single view
+                  pagination.
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000020-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000020-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/app/controllers/catalog_controller.rb, line 81</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">setup_next_and_previous_documents</span>&#x000A;    <span class="ruby-identifier">setup_previous_document</span>&#x000A;    <span class="ruby-identifier">setup_next_document</span>&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='protected-instance method' id='method-M000023'>
+                <a name='M000023'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>setup_next_document</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000023-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000023-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/app/controllers/catalog_controller.rb, line 97</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">setup_next_document</span>&#x000A;    <span class="ruby-ivar">@next_document</span> = <span class="ruby-identifier">session</span>[<span class="ruby-identifier">:search</span>][<span class="ruby-identifier">:counter</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">setup_document_by_counter</span>(<span class="ruby-identifier">session</span>[<span class="ruby-identifier">:search</span>][<span class="ruby-identifier">:counter</span>].<span class="ruby-identifier">to_i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>) <span class="ruby-operator">:</span> <span class="ruby-keyword kw">nil</span>&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='protected-instance method' id='method-M000022'>
+                <a name='M000022'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>setup_previous_document</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000022-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000022-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/app/controllers/catalog_controller.rb, line 93</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">setup_previous_document</span>&#x000A;    <span class="ruby-ivar">@previous_document</span> = <span class="ruby-identifier">session</span>[<span class="ruby-identifier">:search</span>][<span class="ruby-identifier">:counter</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">setup_document_by_counter</span>(<span class="ruby-identifier">session</span>[<span class="ruby-identifier">:search</span>][<span class="ruby-identifier">:counter</span>].<span class="ruby-identifier">to_i</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>) <span class="ruby-operator">:</span> <span class="ruby-keyword kw">nil</span>&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id='footer-push'></div>
+    </div>
+    <div id='footer'>
+      <a href="http://github.com/mislav/hanna/tree/master"><strong>Hanna</strong> RDoc template</a>
+    </div>
+  </body>
+</html>

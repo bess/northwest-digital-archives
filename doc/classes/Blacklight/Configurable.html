@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang='en'>
+  <head>
+    <title>: Blacklight::Configurable [NWDA Blacklight Documentation]</title>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
+    <link href='../../rdoc-style.css' media='screen' rel='stylesheet' type='text/css'>
+    <script type='text/javascript'>
+      //<![CDATA[
+        function popupCode(url) {
+          window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+        }
+        
+        function toggleCode(id) {
+          var code = document.getElementById(id)
+        
+          code.style.display = code.style.display != 'block' ? 'block' : 'none'
+          return true
+        }
+        
+        // Make codeblocks hidden by default
+        document.writeln('<' + 'style type="text/css">.method .source pre { display: none }<\/style>')
+      //]]>
+    </script>
+  </head>
+  <body class='page'>
+    <div class='class' id='wrapper'>
+      <div class='header'>
+        <h1 class='name'>
+          <span class='type'>Module</span>
+          Blacklight::Configurable
+        </h1>
+        <ol class='paths'>
+          <li>
+            <a href="../../files/vendor/plugins/blacklight/lib/blacklight/configurable_rb.html">vendor/plugins/blacklight/lib/blacklight/configurable.rb</a>
+          </li>
+        </ol>
+      </div>
+      <div id='content'>
+        <div id='text'>
+          <div id='method-list'>
+            <h2>Methods</h2>
+            <h3>public instance</h3>
+            <ol>
+              <li><a href="#M000117">config</a></li>
+              <li><a href="#M000116">configs</a></li>
+              <li><a href="#M000118">configure</a></li>
+              <li><a href="#M000115">reset_configs!</a></li>
+            </ol>
+          </div>
+          <div id='section'>
+            <div id='methods'>
+              <h2>Public instance methods</h2>
+              <div class='public-instance method' id='method-M000117'>
+                <a name='M000117'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>config</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  The main config accessor. It merges the current configs[RAILS_ENV] with
+                  configs[:shared] and lazy-loads @config to the result.
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000117-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000117-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/lib/blacklight/configurable.rb, line 32</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">config</span>&#x000A;    <span class="ruby-ivar">@config</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">configs</span>[<span class="ruby-identifier">:shared</span>].<span class="ruby-identifier">merge</span>(<span class="ruby-identifier">configs</span>[<span class="ruby-constant">RAILS_ENV</span>] <span class="ruby-operator">||=</span> {})&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000116'>
+                <a name='M000116'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>configs</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  A hash of all environment configs The key is the environment name, the
+                  value a Hash
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000116-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000116-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/lib/blacklight/configurable.rb, line 26</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">configs</span>&#x000A;    <span class="ruby-ivar">@configs</span> <span class="ruby-operator">?</span> <span class="ruby-ivar">@configs</span> <span class="ruby-operator">:</span> (<span class="ruby-identifier">reset_configs!</span> <span class="ruby-keyword kw">and</span> <span class="ruby-ivar">@configs</span>)&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000118'>
+                <a name='M000118'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>configure</span>
+                  <span class='arguments'>(env = :shared) {|configs[env]| ...}</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  Accepts a value for the environment to configure and a block A hash is
+                  yielded to the block If the &#8220;env&#8221; != :shared, the hash is
+                  created by deep cloning the :shared environment config. This makes it
+                  possible to create defaults in the :shared config
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000118-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000118-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/lib/blacklight/configurable.rb, line 41</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">configure</span>(<span class="ruby-identifier">env</span> = <span class="ruby-identifier">:shared</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">blk</span>)&#x000A;    <span class="ruby-identifier">configs</span>[<span class="ruby-identifier">env</span>] = {}&#x000A;    <span class="ruby-keyword kw">yield</span> <span class="ruby-identifier">configs</span>[<span class="ruby-identifier">env</span>]&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000115'>
+                <a name='M000115'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>reset_configs!</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  sets the @configs variable to a new Hash with empty Hash for :shared key
+                  and @config to nil
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000115-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000115-source'><span class="ruby-comment cmt"># File vendor/plugins/blacklight/lib/blacklight/configurable.rb, line 19</span>&#x000A;  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">reset_configs!</span>&#x000A;    <span class="ruby-ivar">@config</span> = <span class="ruby-keyword kw">nil</span>&#x000A;    <span class="ruby-ivar">@configs</span> = {<span class="ruby-identifier">:shared=</span><span class="ruby-operator">&gt;</span>{}}&#x000A;  <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id='footer-push'></div>
+    </div>
+    <div id='footer'>
+      <a href="http://github.com/mislav/hanna/tree/master"><strong>Hanna</strong> RDoc template</a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang='en'>
+  <head>
+    <title>File: blacklight.rake [NWDA Blacklight Documentation]</title>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
+    <link href='../../../../../../rdoc-style.css' media='screen' rel='stylesheet' type='text/css'>
+    <script type='text/javascript'>
+      //<![CDATA[
+        function popupCode(url) {
+          window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+        }
+        
+        function toggleCode(id) {
+          var code = document.getElementById(id)
+        
+          code.style.display = code.style.display != 'block' ? 'block' : 'none'
+          return true
+        }
+        
+        // Make codeblocks hidden by default
+        document.writeln('<' + 'style type="text/css">.method .source pre { display: none }<\/style>')
+      //]]>
+    </script>
+  </head>
+  <body class='page'>
+    <div class='file' id='wrapper'>
+      <div class='header'>
+        <h1 class='name'>blacklight.rake</h1>
+        <div class='paths'>
+          vendor/plugins/blacklight/lib/tasks/blacklight.rake
+        </div>
+        <div class='last-update'>
+          Last Update:
+          <span class='datetime'>Sun Jun 14 11:36:44 -0400 2009</span>
+        </div>
+      </div>
+      <div id='content'>
+        <div id='text'>
+          <div id='description'>
+            <p>
+            # Rake tasks for <a
+            href="../../../../../../classes/Blacklight.html">Blacklight</a> plugin
+            </p>
+            <p>
+            desc &#8220;Runs db:migrate then spec for Cruise Control.&#8221; task
+            :ccspec => [&#8220;db:migrate&#8221;, &#8220;solr:spec&#8221;]
+            </p>
+            <p>
+            desc &#8220;Runs db:migrate then features for Cruise Control.&#8221; task
+            :ccfeatures => [&#8220;db:migrate&#8221;, &#8220;solr:features&#8221;]
+            </p>
+            <p>
+            # if you would like to see solr startup messages on STDERR # when starting
+            solr test server during functional tests use: # # rake SOLR_CONSOLE=true
+            require File.expand_path(File.dirname(<em>FILE</em>) +
+            &#8216;/../../spec/lib/test_solr_server.rb&#8217;)
+            </p>
+            <p>
+            SOLR_PARAMS = {
+            </p>
+            <pre>:quiet =&gt; ENV['SOLR_CONSOLE'] ? false : true,&#x000A;:jetty_home =&gt; ENV['SOLR_JETTY_HOME'] || File.expand_path('./jetty'),&#x000A;:jetty_port =&gt; ENV['SOLR_JETTY_PORT'] || 8888,&#x000A;:solr_home =&gt; ENV['SOLR_HOME'] || File.expand_path('./jetty/solr')</pre>
+            <p>
+            }
+            </p>
+            <p>
+            namespace :solr do
+            </p>
+            <pre>desc &quot;Calls RSpec Examples wrapped in the test instance of Solr&quot;&#x000A;task :spec do&#x000A;  # wrap tests with a test-specific Solr server&#x000A;  got_error = TestSolrServer.wrap(SOLR_PARAMS) do&#x000A;    Rake::Task[&quot;rake:spec&quot;].invoke&#x000A;    #puts `ps aux | grep start.jar`&#x000A;  end&#x000A;  raise &quot;test failures&quot; if got_error&#x000A;end&#x000A;&#x000A;desc &quot;Calls Cucumber Features wrapped in the test instance of Solr&quot;&#x000A;task :features do&#x000A;  # wrap tests with a test-specific Solr server&#x000A;  got_error = TestSolrServer.wrap(SOLR_PARAMS) do&#x000A;    Rake::Task[&quot;rake:features&quot;].invoke&#x000A;    #puts `ps aux | grep start.jar`&#x000A;  end&#x000A;  raise &quot;test failures&quot; if got_error&#x000A;end</pre>
+            <p>
+            end
+            </p>
+          </div>
+          <div id='section'>
+          </div>
+        </div>
+      </div>
+      <div id='footer-push'></div>
+    </div>
+    <div id='footer'>
+      <a href="http://github.com/mislav/hanna/tree/master"><strong>Hanna</strong> RDoc template</a>
+    </div>
+  </body>
+</html>

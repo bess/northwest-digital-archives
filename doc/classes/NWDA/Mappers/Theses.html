@@ -1,0 +1,337 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang='en'>
+  <head>
+    <title>: NWDA::Mappers::Theses [NWDA Blacklight Documentation]</title>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
+    <link href='../../../rdoc-style.css' media='screen' rel='stylesheet' type='text/css'>
+    <script type='text/javascript'>
+      //<![CDATA[
+        function popupCode(url) {
+          window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+        }
+        
+        function toggleCode(id) {
+          var code = document.getElementById(id)
+        
+          code.style.display = code.style.display != 'block' ? 'block' : 'none'
+          return true
+        }
+        
+        // Make codeblocks hidden by default
+        document.writeln('<' + 'style type="text/css">.method .source pre { display: none }<\/style>')
+      //]]>
+    </script>
+  </head>
+  <body class='page'>
+    <div class='class' id='wrapper'>
+      <div class='header'>
+        <h1 class='name'>
+          <span class='type'>Class</span>
+          NWDA::Mappers::Theses
+        </h1>
+        <ol class='paths'>
+          <li>
+            <a href="../../../files/lib/nwda-lib/nwda/mappers/theses_rb.html">lib/nwda-lib/nwda/mappers/theses.rb</a>
+          </li>
+        </ol>
+        <div class='parent'>
+          Parent:
+          <strong>Object</strong>
+        </div>
+      </div>
+      <div id='content'>
+        <div id='text'>
+          <div id='method-list'>
+            <h2>Methods</h2>
+            <h3>public class</h3>
+            <ol>
+              <li><a href="#M000180">new</a></li>
+            </ol>
+            <h3>public instance</h3>
+            <ol>
+              <li><a href="#M000188">getAuthor</a></li>
+              <li><a href="#M000183">getDates</a></li>
+              <li><a href="#M000189">getDescription</a></li>
+              <li><a href="#M000185">getFormatFacet</a></li>
+              <li><a href="#M000186">getID</a></li>
+              <li><a href="#M000191">getLanguageFacet</a></li>
+              <li><a href="#M000182">getPDF</a></li>
+              <li><a href="#M000192">getPublisherFacet</a></li>
+              <li><a href="#M000190">getSubjects</a></li>
+              <li><a href="#M000187">getTitle</a></li>
+              <li><a href="#M000181">getURI</a></li>
+              <li><a href="#M000193">inspect</a></li>
+              <li><a href="#M000184">storeRecord</a></li>
+            </ol>
+          </div>
+          <div id='section'>
+            <div id='attribute-list'>
+              <h2 class='section-bar'>Attributes</h2>
+              <div class='name-list'>
+                <table>
+                  <tr class='top-aligned-row context-row'>
+                    <td class='context-item-name'>doc</td>
+                    <td class='context-item-value'>[R]</td>
+                    <td class='context-item-desc'></td>
+                  </tr>
+                  <tr class='top-aligned-row context-row'>
+                    <td class='context-item-name'>xml</td>
+                    <td class='context-item-value'>[R]</td>
+                    <td class='context-item-desc'></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div id='methods'>
+              <h2>Public class methods</h2>
+              <div class='public-class method' id='method-M000180'>
+                <a name='M000180'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>new</span>
+                  <span class='arguments'>(record)</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  kick off mapping method
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000180-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000180-source'><span class="ruby-comment cmt"># File lib/nwda-lib/nwda/mappers/theses.rb, line 14</span>&#x000A;      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">record</span>)&#x000A;        <span class="ruby-ivar">@xml</span> = <span class="ruby-identifier">record</span>&#x000A;        <span class="ruby-ivar">@doc</span> = {}&#x000A;        <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:id</span>] = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">getID</span>&#x000A;        <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:text</span>] = []&#x000A;        <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">getFormatFacet</span>&#x000A;        <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">getTitle</span>&#x000A;        <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">getAuthor</span>&#x000A;        <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">getDescription</span>&#x000A;        <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">getURI</span>&#x000A;&#x000A;        <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:collection_facet</span>] = <span class="ruby-value str">&quot;Washington State University Theses&quot;</span>&#x000A;      &#x000A;        <span class="ruby-comment cmt">#self.getPDF</span>&#x000A;        <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">getSubjects</span>&#x000A;        <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">getDates</span>&#x000A;        <span class="ruby-comment cmt"># self.getPublisherFacet</span>&#x000A;        <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">getLanguageFacet</span>&#x000A;        <span class="ruby-comment cmt"># self.getCoverage</span>&#x000A;        <span class="ruby-comment cmt"># self.getSource</span>&#x000A;        <span class="ruby-comment cmt"># self.getRights</span>&#x000A;        <span class="ruby-comment cmt"># self.getContributors</span>&#x000A;        <span class="ruby-ivar">@doc</span>&#x000A;      <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <h2>Public instance methods</h2>
+              <div class='public-instance method' id='method-M000188'>
+                <a name='M000188'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>getAuthor</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  ##################
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000188-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000188-source'><span class="ruby-comment cmt"># File lib/nwda-lib/nwda/mappers/theses.rb, line 130</span>&#x000A;      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">getAuthor</span>&#x000A;        <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:author_t</span>] = <span class="ruby-ivar">@xml</span>.<span class="ruby-identifier">xpath</span>(<span class="ruby-value str">'./metadata/oai_dc:dc/dc:creator/text()'</span>).<span class="ruby-identifier">first</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/\s+/</span>,<span class="ruby-value str">&quot; &quot;</span>)&#x000A;        <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:byline_t</span>] = <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:author_t</span>]&#x000A;        <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:text</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:author_t</span>]&#x000A;      <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000183'>
+                <a name='M000183'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>getDates</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  index the dates store the first bit (e.g., &#8220;Ca. 1909&#8221;) for
+                  display If there is no ca. values, store the first year in the list put the
+                  rest into categories like &#8220;over fifty years ago&#8221; etc.
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000183-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000183-source'><span class="ruby-comment cmt"># File lib/nwda-lib/nwda/mappers/theses.rb, line 71</span>&#x000A;      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">getDates</span>&#x000A;        <span class="ruby-identifier">date_string</span> = <span class="ruby-ivar">@xml</span>.<span class="ruby-identifier">xpath</span>(<span class="ruby-value str">'./metadata/oai_dc:dc/dc:date[3]/text()'</span>).<span class="ruby-identifier">first</span>.<span class="ruby-identifier">to_s</span>&#x000A;      &#x000A;        <span class="ruby-comment cmt"># Store the year as a string, along with the Ca., if it exists, so we can display it </span>&#x000A;        <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:date_display</span>] = <span class="ruby-identifier">date_string</span>[<span class="ruby-regexp re">/\d{4}/</span>]&#x000A;      &#x000A;        <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:date_display</span>]&#x000A;        &#x000A;          <span class="ruby-identifier">stripped_year</span> = <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:date_display</span>][<span class="ruby-regexp re">/\d{4}/</span>]&#x000A;          <span class="ruby-comment cmt"># Store the year as an actual date, so we can do math on it </span>&#x000A;          <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:creation_date</span>] = <span class="ruby-identifier">stripped_year</span>.<span class="ruby-identifier">concat</span>(<span class="ruby-value str">&quot;-01-01T23:59:59Z&quot;</span>)&#x000A;          <span class="ruby-comment cmt"># Store a range value</span>&#x000A;          <span class="ruby-identifier">creation_era</span> = []&#x000A;          <span class="ruby-keyword kw">if</span> <span class="ruby-value">100</span>.<span class="ruby-identifier">years</span>.<span class="ruby-identifier">ago</span> <span class="ruby-operator">&gt;</span> <span class="ruby-constant">DateTime</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">stripped_year</span>)&#x000A;            <span class="ruby-identifier">creation_era</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;More than 100 years old&quot;</span>&#x000A;          <span class="ruby-keyword kw">end</span>&#x000A;          <span class="ruby-keyword kw">if</span> <span class="ruby-value">50</span>.<span class="ruby-identifier">years</span>.<span class="ruby-identifier">ago</span> <span class="ruby-operator">&gt;</span> <span class="ruby-constant">DateTime</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">stripped_year</span>)&#x000A;            <span class="ruby-identifier">creation_era</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;More than 50 years old&quot;</span>&#x000A;          <span class="ruby-keyword kw">end</span>&#x000A;          <span class="ruby-keyword kw">if</span> <span class="ruby-value">20</span>.<span class="ruby-identifier">years</span>.<span class="ruby-identifier">ago</span> <span class="ruby-operator">&gt;</span> <span class="ruby-constant">DateTime</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">stripped_year</span>)&#x000A;            <span class="ruby-identifier">creation_era</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;More than 20 years old&quot;</span>&#x000A;          <span class="ruby-keyword kw">end</span>&#x000A;          <span class="ruby-keyword kw">if</span> <span class="ruby-value">10</span>.<span class="ruby-identifier">years</span>.<span class="ruby-identifier">ago</span> <span class="ruby-operator">&gt;</span> <span class="ruby-constant">DateTime</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">stripped_year</span>)&#x000A;            <span class="ruby-identifier">creation_era</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;More than 10 years old&quot;</span>&#x000A;          <span class="ruby-keyword kw">end</span>&#x000A;          <span class="ruby-keyword kw">if</span> <span class="ruby-value">10</span>.<span class="ruby-identifier">years</span>.<span class="ruby-identifier">ago</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-constant">DateTime</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">stripped_year</span>)&#x000A;            <span class="ruby-identifier">creation_era</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;Less than 10 years old&quot;</span>&#x000A;          <span class="ruby-keyword kw">end</span>&#x000A;          <span class="ruby-keyword kw">if</span> <span class="ruby-value">5</span>.<span class="ruby-identifier">years</span>.<span class="ruby-identifier">ago</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-constant">DateTime</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">stripped_year</span>)&#x000A;            <span class="ruby-identifier">creation_era</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;Less than 5 years old&quot;</span>&#x000A;          <span class="ruby-keyword kw">end</span>&#x000A;          <span class="ruby-keyword kw">if</span> <span class="ruby-value">1</span>.<span class="ruby-identifier">year</span>.<span class="ruby-identifier">ago</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-constant">DateTime</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">stripped_year</span>)&#x000A;            <span class="ruby-identifier">creation_era</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;Less than 1 year old&quot;</span>&#x000A;          <span class="ruby-keyword kw">end</span>&#x000A;          <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:subject_era_facet</span>] = <span class="ruby-identifier">creation_era</span>&#x000A;        <span class="ruby-keyword kw">end</span>&#x000A;      <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000189'>
+                <a name='M000189'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>getDescription</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  get all of the description nodes
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000189-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000189-source'><span class="ruby-comment cmt"># File lib/nwda-lib/nwda/mappers/theses.rb, line 137</span>&#x000A;      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">getDescription</span>&#x000A;        <span class="ruby-identifier">d</span> = []&#x000A;        <span class="ruby-ivar">@xml</span>.<span class="ruby-identifier">xpath</span>(<span class="ruby-value str">'./metadata/oai_dc:dc/dc:description/text()'</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">node</span><span class="ruby-operator">|</span>&#x000A;          <span class="ruby-identifier">d</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">node</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/\s+/</span>,<span class="ruby-value str">&quot; &quot;</span>).<span class="ruby-identifier">gsub</span>(<span class="ruby-value str">&quot;&amp;lt;br&amp;gt;&quot;</span>,<span class="ruby-value str">&quot;&lt;br&gt;&quot;</span>)&#x000A;        <span class="ruby-keyword kw">end</span>&#x000A;        <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:description_t</span>] = <span class="ruby-identifier">d</span>&#x000A;        <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:text</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:description_t</span>]&#x000A;      <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000185'>
+                <a name='M000185'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>getFormatFacet</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000185-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000185-source'><span class="ruby-comment cmt"># File lib/nwda-lib/nwda/mappers/theses.rb, line 114</span>&#x000A;      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">getFormatFacet</span>&#x000A;        <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:format_facet</span>] = <span class="ruby-ivar">@xml</span>.<span class="ruby-identifier">xpath</span>(<span class="ruby-value str">'./metadata/oai_dc:dc/dc:type/text()'</span>).<span class="ruby-identifier">first</span>.<span class="ruby-identifier">to_s</span>&#x000A;        <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:text</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:format_facet</span>]&#x000A;      <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000186'>
+                <a name='M000186'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>getID</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000186-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000186-source'><span class="ruby-comment cmt"># File lib/nwda-lib/nwda/mappers/theses.rb, line 119</span>&#x000A;      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">getID</span>&#x000A;        <span class="ruby-identifier">identifier</span> = <span class="ruby-ivar">@xml</span>.<span class="ruby-identifier">xpath</span>(<span class="ruby-value str">'./header/identifier'</span>).<span class="ruby-identifier">text</span>&#x000A;        <span class="ruby-keyword kw">return</span> <span class="ruby-value str">&quot;wsu_&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">identifier</span>[<span class="ruby-regexp re">/\d+\/\d+$/</span>].<span class="ruby-identifier">tr</span>(<span class="ruby-value str">'/'</span>,<span class="ruby-value str">'_'</span>)&#x000A;      <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000191'>
+                <a name='M000191'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>getLanguageFacet</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  ##################
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000191-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000191-source'><span class="ruby-comment cmt"># File lib/nwda-lib/nwda/mappers/theses.rb, line 158</span>&#x000A;      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">getLanguageFacet</span>&#x000A;         <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:language_facet</span>] = <span class="ruby-value str">&quot;English&quot;</span>&#x000A;      <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000182'>
+                <a name='M000182'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>getPDF</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  ##################
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000182-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000182-source'><span class="ruby-comment cmt"># File lib/nwda-lib/nwda/mappers/theses.rb, line 47</span>&#x000A;      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">getPDF</span>&#x000A;        <span class="ruby-comment cmt"># fetch the remote document</span>&#x000A;        <span class="ruby-identifier">id</span> = <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:uri_display</span>][<span class="ruby-regexp re">/\d+\/\d+$/</span>]&#x000A;        <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">id</span>.<span class="ruby-identifier">nil?</span>&#x000A;          <span class="ruby-identifier">conn</span> = <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">'research.wsulibs.wsu.edu'</span>,<span class="ruby-value str">'8443'</span>)&#x000A;          <span class="ruby-identifier">conn</span>.<span class="ruby-identifier">use_ssl</span> = <span class="ruby-keyword kw">true</span>&#x000A;          <span class="ruby-identifier">conn</span>.<span class="ruby-identifier">verify_mode</span> = <span class="ruby-constant">OpenSSL</span><span class="ruby-operator">::</span><span class="ruby-constant">SSL</span><span class="ruby-operator">::</span><span class="ruby-constant">VERIFY_NONE</span>&#x000A;          <span class="ruby-identifier">uri</span> = <span class="ruby-value str">&quot;/dspace/handle/&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">id</span>.<span class="ruby-identifier">to_s</span>&#x000A;          <span class="ruby-identifier">d</span> = <span class="ruby-identifier">conn</span>.<span class="ruby-identifier">get</span> <span class="ruby-identifier">uri</span>&#x000A;          <span class="ruby-comment cmt">#puts doc.class</span>&#x000A;          <span class="ruby-identifier">doc</span> = <span class="ruby-constant">Nokogiri</span><span class="ruby-operator">::</span><span class="ruby-constant">HTML</span>(<span class="ruby-identifier">d</span>.<span class="ruby-identifier">body</span>)&#x000A;          <span class="ruby-identifier">l</span> = <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">css</span>(<span class="ruby-value str">'a'</span>).<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">link</span><span class="ruby-operator">|</span> <span class="ruby-identifier">link</span>[<span class="ruby-value str">'href'</span>] }&#x000A;          <span class="ruby-identifier">puts</span> <span class="ruby-identifier">l</span>.<span class="ruby-identifier">class</span>&#x000A;          <span class="ruby-identifier">puts</span> <span class="ruby-identifier">l</span>.<span class="ruby-identifier">grep</span> <span class="ruby-regexp re">/[pdf]/</span>&#x000A;          <span class="ruby-comment cmt">#puts doc.body</span>&#x000A;        <span class="ruby-comment cmt">#puts doc.css(&quot;a&quot;).find_all { |x| x['href'] =~ /\.pdf/ }</span>&#x000A;        <span class="ruby-comment cmt">#puts uri</span>&#x000A;        <span class="ruby-keyword kw">end</span>&#x000A;      <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000192'>
+                <a name='M000192'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>getPublisherFacet</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  ##################
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000192-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000192-source'><span class="ruby-comment cmt"># File lib/nwda-lib/nwda/mappers/theses.rb, line 163</span>&#x000A;      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">getPublisherFacet</span>&#x000A;         <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:publisher_facet</span>] = <span class="ruby-value str">&quot;Washington State University Libraries&quot;</span>&#x000A;      <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000190'>
+                <a name='M000190'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>getSubjects</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  ##################
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000190-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000190-source'><span class="ruby-comment cmt"># File lib/nwda-lib/nwda/mappers/theses.rb, line 147</span>&#x000A;      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">getSubjects</span>&#x000A;            <span class="ruby-identifier">general_subjects</span> = []&#x000A;            <span class="ruby-ivar">@xml</span>.<span class="ruby-identifier">xpath</span>(<span class="ruby-value str">'./metadata/oai_dc:dc/dc:subject/text()'</span>).<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">subject</span>, <span class="ruby-identifier">i</span><span class="ruby-operator">|</span>&#x000A;              <span class="ruby-identifier">general_subjects</span>.<span class="ruby-identifier">concat</span>(<span class="ruby-identifier">subject</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-value str">&quot;&amp;amp;&quot;</span>,<span class="ruby-value str">&quot; and &quot;</span>).<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/\s+/</span>,<span class="ruby-value str">&quot; &quot;</span>).<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/-+/</span>,<span class="ruby-value str">&quot;-&quot;</span>).<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/-/</span>,<span class="ruby-value str">&quot; -- &quot;</span>).<span class="ruby-identifier">split</span>(<span class="ruby-value str">';'</span>))&#x000A;            <span class="ruby-keyword kw">end</span>&#x000A;      &#x000A;            <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:subject_facet</span>] = <span class="ruby-identifier">general_subjects</span>.<span class="ruby-identifier">uniq</span>&#x000A;            <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:text</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:subject_facet</span>].<span class="ruby-identifier">flatten</span>&#x000A;       <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000187'>
+                <a name='M000187'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>getTitle</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000187-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000187-source'><span class="ruby-comment cmt"># File lib/nwda-lib/nwda/mappers/theses.rb, line 124</span>&#x000A;      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">getTitle</span>&#x000A;        <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:title_t</span>] = <span class="ruby-ivar">@xml</span>.<span class="ruby-identifier">xpath</span>(<span class="ruby-value str">'./metadata/oai_dc:dc/dc:title/text()'</span>).<span class="ruby-identifier">first</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/\s+/</span>,<span class="ruby-value str">&quot; &quot;</span>)&#x000A;        <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:text</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:title_t</span>]&#x000A;      <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000181'>
+                <a name='M000181'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>getURI</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  ##################
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000181-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000181-source'><span class="ruby-comment cmt"># File lib/nwda-lib/nwda/mappers/theses.rb, line 40</span>&#x000A;      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">getURI</span>&#x000A;        <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:uri_display</span>] = <span class="ruby-ivar">@xml</span>.<span class="ruby-identifier">xpath</span>(<span class="ruby-value str">'./metadata/oai_dc:dc/dc:identifier/text()'</span>).<span class="ruby-identifier">first</span>.<span class="ruby-identifier">to_s</span>&#x000A;        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;uri = #{@doc[:uri_display]}&quot;</span>&#x000A;        <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:text</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:uri_display</span>]&#x000A;      <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000193'>
+                <a name='M000193'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>inspect</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  ##################
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000193-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000193-source'><span class="ruby-comment cmt"># File lib/nwda-lib/nwda/mappers/theses.rb, line 168</span>&#x000A;     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">inspect</span>&#x000A;       <span class="ruby-identifier">puts</span> <span class="ruby-ivar">@doc</span>.<span class="ruby-identifier">inspect</span>&#x000A;     <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000184'>
+                <a name='M000184'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>storeRecord</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  Store the whole record so we can display the parts we want at display time
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000184-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000184-source'><span class="ruby-comment cmt"># File lib/nwda-lib/nwda/mappers/theses.rb, line 110</span>&#x000A;      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">storeRecord</span>&#x000A;        <span class="ruby-ivar">@doc</span>[<span class="ruby-identifier">:xml_display</span>] = <span class="ruby-ivar">@xml</span>.<span class="ruby-identifier">to_xml</span>&#x000A;      <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id='footer-push'></div>
+    </div>
+    <div id='footer'>
+      <a href="http://github.com/mislav/hanna/tree/master"><strong>Hanna</strong> RDoc template</a>
+    </div>
+  </body>
+</html>

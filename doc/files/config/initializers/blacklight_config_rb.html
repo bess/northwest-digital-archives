@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang='en'>
+  <head>
+    <title>File: blacklight_config.rb [NWDA Blacklight Documentation]</title>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
+    <link href='../../../rdoc-style.css' media='screen' rel='stylesheet' type='text/css'>
+    <script type='text/javascript'>
+      //<![CDATA[
+        function popupCode(url) {
+          window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+        }
+        
+        function toggleCode(id) {
+          var code = document.getElementById(id)
+        
+          code.style.display = code.style.display != 'block' ? 'block' : 'none'
+          return true
+        }
+        
+        // Make codeblocks hidden by default
+        document.writeln('<' + 'style type="text/css">.method .source pre { display: none }<\/style>')
+      //]]>
+    </script>
+  </head>
+  <body class='page'>
+    <div class='file' id='wrapper'>
+      <div class='header'>
+        <h1 class='name'>blacklight_config.rb</h1>
+        <div class='paths'>
+          config/initializers/blacklight_config.rb
+        </div>
+        <div class='last-update'>
+          Last Update:
+          <span class='datetime'>Sun Jun 14 19:22:46 -0400 2009</span>
+        </div>
+      </div>
+      <div id='content'>
+        <div id='text'>
+          <div id='description'>
+            <p>
+            You can configure <a href="../../../classes/Blacklight.html">Blacklight</a>
+            from here.
+            </p>
+            <pre>Blacklight.configure(:environment) do |config| end</pre>
+            <p>
+            :shared (or leave it blank) is used by all environments. You can override a
+            shared key by using that key in a particular environment&#8217;s
+            configuration.
+            </p>
+            <p>
+            If you have no configuration beyond :shared for an environment, you do not
+            need to call configure() for that envirnoment.
+            </p>
+            <p>
+            For specific environments:
+            </p>
+            <pre>Blacklight.configure(:test) {}&#x000A;Blacklight.configure(:development) {}&#x000A;Blacklight.configure(:production) {}</pre>
+          </div>
+          <div id='section'>
+          </div>
+        </div>
+      </div>
+      <div id='footer-push'></div>
+    </div>
+    <div id='footer'>
+      <a href="http://github.com/mislav/hanna/tree/master"><strong>Hanna</strong> RDoc template</a>
+    </div>
+  </body>
+</html>
