@@ -19,7 +19,7 @@ ActionController::Routing::Routes.draw do |map|
     # /catalog/:id/image <- for ajax cover requests
     # /catalog/:id/status
     # /catalog/:id/availability
-    :member=>{:image=>:get, :status=>:get, :availability=>:get, :citation=>:get},
+    :member=>{:image=>:get, :status=>:get, :availability=>:get, :citation=>:get, :export=>:get},
     # /catalog/map
     :collection => {:map => :get, :opensearch=>:get}
   )
