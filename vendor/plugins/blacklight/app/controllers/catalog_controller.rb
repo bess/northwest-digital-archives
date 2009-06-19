@@ -70,6 +70,15 @@ class CatalogController < ApplicationController
     @document = SolrDocument.new(@response.docs.first)
   end
   
+  def export
+    @response = get_solr_response_for_doc_id
+    @document = SolrDocument.new(@response.docs.first)
+    case params[:style]
+      when 'refworks'
+        render :partial => 'catalog/refworks_export', :layout => false
+    end
+  end
+  
   protected
   
   #

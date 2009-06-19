@@ -24,10 +24,20 @@ module Blacklight::SolrHelper
     qt = input[:qt].blank? ? Blacklight.config[:default_qt] : input[:qt]
     
     # TODO -- remove :facets
-    # when are we passing in "facets" here? just for tests?
+    # when are we passing in "facets" here? just for tests? -- no, always.  
+    #   Bess prefers to pass in the desired facets this way.  
+    #   Naomi prefers it as part of the Solr request handler
     # ** we need to be consistent about what is getting passed in:
     # ** -- solr params or controller params that need to be mapped?
     facet_fields = input[:facets].blank? ? Blacklight.config[:facet][:field_names] : input[:facets]
+    # add any facet fields from the argument list (that aren't in the config list)
+    #  for example, if a selected facet value means a *new* facet is desired
+    #   (Stanford is doing faux "hierarchical" facets this way;  the 
+    #    hierarchical facet code for SOLR isn't fully baked yet and won't be
+    #    included until Solr 1.5)
+    if params.has_key?("facet.field") and !facet_fields.include?(params["facet.field"])
+      facet_fields.push(params["facet.field"])
+    end
     
     # try a per_page, if it's not set, grab it from Blacklight.config
     per_page = input[:per_page].blank? ? (Blacklight.config[:index][:num_per_page] rescue 10) : input[:per_page]

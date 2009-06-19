@@ -1,5 +1,65 @@
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
+require 'marc'
+def exportable_record
+"<record>
+  <leader>01828cjm a2200409 a 4500</leader>
+  <controlfield tag=\"001\">a4768316</controlfield>
+  <controlfield tag=\"003\">SIRSI</controlfield>
+  <controlfield tag=\"007\">sd fungnnmmned</controlfield>
+  <controlfield tag=\"008\">020117p20011990xxuzz    h              d</controlfield>
 
+  <datafield tag=\"245\" ind1=\"0\" ind2=\"0\">
+    <subfield code=\"a\">Music for horn</subfield>
+    <subfield code=\"h\">[sound recording] /</subfield>
+    <subfield code=\"c\">Brahms, Beethoven, von Krufft.</subfield>
+  </datafield>
+
+  <datafield tag=\"260\" ind1=\" \" ind2=\" \">
+    <subfield code=\"a\">[United States] :</subfield>
+    <subfield code=\"b\">Harmonia Mundi USA,</subfield>
+    <subfield code=\"c\">p2001.</subfield>
+  </datafield>
+
+  <datafield tag=\"700\" ind1=\"1\" ind2=\" \">
+    <subfield code=\"a\">Greer, Lowell.</subfield>
+  </datafield>
+
+  <datafield tag=\"700\" ind1=\"1\" ind2=\" \">
+    <subfield code=\"a\">Lubin, Steven.</subfield>
+  </datafield>
+
+  <datafield tag=\"700\" ind1=\"1\" ind2=\" \">
+    <subfield code=\"a\">Chase, Stephanie,</subfield>
+    <subfield code=\"d\">1957-</subfield>
+  </datafield>
+
+  <datafield tag=\"700\" ind1=\"1\" ind2=\"2\">
+    <subfield code=\"a\">Brahms, Johannes,</subfield>
+    <subfield code=\"d\">1833-1897.</subfield>
+    <subfield code=\"t\">Trios,</subfield>
+    <subfield code=\"m\">piano, violin, horn,</subfield>
+    <subfield code=\"n\">op. 40,</subfield>
+    <subfield code=\"r\">E? major.</subfield>
+  </datafield>
+
+  <datafield tag=\"700\" ind1=\"1\" ind2=\"2\">
+    <subfield code=\"a\">Beethoven, Ludwig van,</subfield>
+    <subfield code=\"d\">1770-1827.</subfield>
+    <subfield code=\"t\">Sonatas,</subfield>
+    <subfield code=\"m\">horn, piano,</subfield>
+    <subfield code=\"n\">op. 17,</subfield>
+    <subfield code=\"r\">F major.</subfield>
+  </datafield>
+
+  <datafield tag=\"700\" ind1=\"1\" ind2=\"2\">
+    <subfield code=\"a\">Krufft, Nikolaus von,</subfield>
+    <subfield code=\"d\">1779-1818.</subfield>
+    <subfield code=\"t\">Sonata,</subfield>
+    <subfield code=\"m\">horn, piano,</subfield>
+    <subfield code=\"r\">F major.</subfield>
+  </datafield>
+</record>"
+end
 describe ApplicationHelper do
   include ApplicationHelper
   
@@ -48,5 +108,20 @@ describe ApplicationHelper do
       tag.should_not =~ /page/
     end
   end  
+  
+  describe "Export" do
+    before(:all) do
+      reader = MARC::XMLReader.new(StringIO.new(exportable_record)).to_a
+      doc = reader[0] 
+      @export_record = stub('export_mock')
+      @export_record.stub!('marc').and_return('marc_attr')
+      @export_record.marc.stub!('marc').and_return(doc)
+    end
+    describe "RefWorks" do
+      it "should display RefWorks export text correctly" do
+        render_refworks_text(@export_record).should == "LEADER 01828cjm a2200409 a 4500001    a4768316\n003    SIRSI\n007    sd fungnnmmned\n008    020117p20011990xxuzz    h              d\n245 00 Music for horn |h[sound recording] / |cBrahms, Beethoven, von Krufft.\n260    [United States] : |bHarmonia Mundi USA, |cp2001.\n700 1  Greer, Lowell.\n700 1  Lubin, Steven.\n700 1  Chase, Stephanie, |d1957-\n700 12 Brahms, Johannes, |d1833-1897. |tTrios, |mpiano, violin, horn, |nop. 40, |rE? major.\n700 12 Beethoven, Ludwig van, |d1770-1827. |tSonatas, |mhorn, piano, |nop. 17, |rF major.\n700 12 Krufft, Nikolaus von, |d1779-1818. |tSonata, |mhorn, piano, |rF major.\n"
+      end
+    end
+  end
   
 end
