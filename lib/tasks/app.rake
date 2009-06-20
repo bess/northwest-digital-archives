@@ -5,6 +5,11 @@ require 'nokogiri'
 
 require 'nwda-lib/nwda'
 
+def require_env_file
+  raise("The FILE environment variable is required!") if ENV['FILE'].to_s.empty?
+  ENV['FILE']
+end
+
 namespace :app do
   
   namespace :index do
@@ -39,33 +44,30 @@ namespace :app do
       
     end
     
-    # *************************************************************** #
-    # Index EAD files 
-    # *************************************************************** #
-    
-    #TODO: This runs out of memory for a very large directory. Optimize not to put everything in 
-    #memory at once. 
-    desc 'Recursively index a directory of EAD files at DIR=<location-of-dir>'
-    task :ead => :environment do
+    desc "Index an EAD file at FILE=<location-of-file> using the lib/ead_mapper class."
+    task :ead=>:environment do
+      require 'ead_solr_mapper'
       t = Time.now
-      
-      ead_dir = ENV['DIR']
-      raise "Invalid directory. Set the directory by using the DIR argument." unless File.exists?(ead_dir.to_s) and File.directory?(ead_dir.to_s)
-      
-      solr = Blacklight.solr
-      
-      Find.find(ead_dir) do |path| 
-        if File.directory? path
-           puts "Indexing #{path}"
-        end
-        if File.file? path and path.to_s =~ /^.*\.xml$/
-          ead = NWDA::Mappers::EAD.new(path)
-          solr.add(ead.doc)
-        end
+      input_file = require_env_file
+      if input_file =~ /\*/
+        files = Dir[input_file].collect
+      else
+        files = [input_file]
       end
-      puts "Sending commit to Solr..."
-      solr.commit
-      puts "Complete."
+      solr_docs = []
+      files.each do |f|
+        puts "FILE == #{f}"
+        mapper = EADSolrMapper.new f
+        puts "Using #{mapper.collection_id} as the collection_id"
+        # delete the previous set of docs in this collection...
+        Blacklight.solr.delete_by_query "collection_id_s:\"#{mapper.collection_id}\""
+        solr_docs += mapper.map
+        puts "Mapping #{solr_docs.size} docs..."
+        puts "Total Time: #{Time.now - t}"
+      end
+      puts "Indexing #{solr_docs.size} docs..."
+      Blacklight.solr.add solr_docs
+      Blacklight.solr.commit
       puts "Total Time: #{Time.now - t}"
     end
   

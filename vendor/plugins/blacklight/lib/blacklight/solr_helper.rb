@@ -35,8 +35,12 @@ module Blacklight::SolrHelper
     #   (Stanford is doing faux "hierarchical" facets this way;  the 
     #    hierarchical facet code for SOLR isn't fully baked yet and won't be
     #    included until Solr 1.5)
-    if params.has_key?("facet.field") and !facet_fields.include?(params["facet.field"])
-      facet_fields.push(params["facet.field"])
+    if params.has_key?("facet.field")
+      params["facet.field"].each do |ff|
+        if !facet_fields.include?(ff)
+          facet_fields << ff
+        end
+      end
     end
     
     # try a per_page, if it's not set, grab it from Blacklight.config
