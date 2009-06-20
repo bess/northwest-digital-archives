@@ -82,9 +82,22 @@
     <field name="title_sort" type="alphaOnlySort" indexed="true" stored="false"/>
     <field name="format_sort" type="alphaOnlySort" indexed="true" stored="false"/>
     
+    <!--
+	    "hierarchy" - A materialized path which describes a hierarchy; Colors::Blue::Navy::Dark
+	    "hierarchy_scope" - Links together documents that should be in the same "tree"
+	    Hint: use hierarchy_scope in the fq param for maintaining the tree scope.
+    -->
+    <field name="hierarchy"  type="string"  indexed="true"  stored="true" multiValued="false"/>
+    <field name="hierarchy_scope"  type="string"  indexed="true"  stored="true" multiValued="false"/>
+    
+    <!-- used to link related documents together -->
+    <field name="collection_id"  type="string"  indexed="true"  stored="true" multiValued="false"/>
+    
     <dynamicField name="*_i"  type="sint"    indexed="true"  stored="true"/>
-    <dynamicField name="*_ss"  type="string"  indexed="true"  stored="true"/>
     <dynamicField name="*_s"  type="string"  indexed="true"  stored="true" multiValued="true"/>
+    
+    <!-- *_ss is for single valued string fields -->
+    <dynamicField name="*_ss"  type="string"  indexed="true"  stored="true" multiValued="false"/>
     <dynamicField name="*_l"  type="slong"   indexed="true"  stored="true"/>
     <dynamicField name="*_t"  type="text"    indexed="true"  stored="true" multiValued="true"/>
     <dynamicField name="*_b"  type="boolean" indexed="true"  stored="true"/>

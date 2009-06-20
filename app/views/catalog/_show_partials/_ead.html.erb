@@ -1,0 +1,51 @@
+<% sidebar_items << capture do %>
+  <%= contextual_navigation_tree(@document.id, @document.ead.navigation) %>
+<% end %>
+
+<% require 'nokogiri' %>
+<% d = Nokogiri::XML(@document[:xml_display].to_s) %>
+
+<%#= h d.to_xml %>
+
+<% if d.root.name == 'did' %>
+  
+  <h3><%= d.at('unittitle').text %></h3>
+  
+  <dl class="defList">
+    <div>
+      <dt>Repository</dt>
+      <dd><%= d.at('repository').text %></dd>
+    </div>
+    <div>
+      <dt>Origination</dt>
+      <dd><%= d.at('origination').text %></dd>
+    </div>
+    <div>
+      <dt>Date(s)</dt>
+      <dd><%= d.at('unitdate').text %></dd>
+    </div>
+    <div>
+      <dt>Physical Description</dt>
+      <dd><%= d.at('physdesc').text %></dd>
+    </div>
+    <div>
+      <dt>Abstract</dt>
+      <dd><%= d.at('abstract').text %></dd>
+    </div>
+    <div>
+      <dt>Language</dt>
+      <dd><%= d.at('langmaterial').text %></dd>
+    </div>
+  </dl>
+
+<% elsif ['bioghist', 'scopecontent', 'arrangement'].include? d.root.name %>
+  <% d.search('p').each do |p| %>
+    <p><%= p.text %></p>
+  <% end %>
+<% elsif d.root.name == 'c01' %>
+  <% d.search('c02').each do |c02| %>
+    <p><%= c02.text %></p>
+  <% end %>
+<% end %>
+
+<% # xslt 'catalog/_show_partials/_ead/show.xsl', @document[:xml_display] %>
