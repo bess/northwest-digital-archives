@@ -4,6 +4,7 @@ raw_data/
 **/.svn/**
 **~
 config/database.yml
-jetty/solr/data
 jetty/work/*
 .DS_Store
+log/*
+db/test.sqlite3
