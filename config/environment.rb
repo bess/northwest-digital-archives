@@ -8,9 +8,13 @@ require File.join(File.dirname(__FILE__), 'boot')
 require File.join(File.dirname(__FILE__), '../vendor/plugins/engines/boot')
 
 Rails::Initializer.run do |config|
+  
   config.gem 'authlogic'
   config.plugin_paths += ["#{RAILS_ROOT}/vendor/plugins/blacklight/vendor/plugins"]
   config.plugins = %W(engines blacklight acts_as_taggable_on_steroids resource_controller)
+  
+  config.gem 'mwmitchell-material_girl', :lib=>'material_girl', :source=>'http://gems.github.com', :version=>'0.0.2'
+  
   # Settings in config/environments/* take precedence over those specified here.
   # Application configuration should go into files in config/initializers
   # -- all .rb files in that directory are automatically loaded.
@@ -43,3 +47,7 @@ Rails::Initializer.run do |config|
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # config.i18n.default_locale = :de
 end
+
+# temporary override of the Blacklight solr ead stuff
+# -- we can put this back into BL after we work out the details here...
+require 'lib/blacklight_solr_document_ead.rb'

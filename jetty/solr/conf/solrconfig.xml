@@ -90,22 +90,24 @@
     <useColdSearcher>false</useColdSearcher>
     <maxWarmingSearchers>2</maxWarmingSearchers>
   </query>
-
+  
   <requestDispatcher handleSelect="true" >
     <requestParsers enableRemoteStreaming="false" multipartUploadLimitInKB="2048" />
     <httpCaching lastModifiedFrom="openTime" etagSeed="Solr" />
   </requestDispatcher>
-
+  
+  <searchComponent name="collapse" class="org.apache.solr.handler.component.CollapseComponent" />
+  
   <!-- blacklight does not use the standard request handler -->
   <requestHandler name="standard" class="solr.SearchHandler">
      <lst name="defaults">
        <str name="echoParams">all</str>
      </lst>
   </requestHandler>
-
+  
   <!-- Searching ("All Fields") -->
   <requestHandler name="search" class="solr.SearchHandler" default="true" >
-    <lst name="defaults">
+	<lst name="defaults">
      <str name="defType">dismax</str>
      <str name="echoParams">explicit</str>
      
@@ -132,12 +134,18 @@
    </lst>
    <arr name="last-components">
      <str>spellcheck</str>
+     <str>query</str>
+	 <str>facet</str>
+	 <str>collapse</str>
+	 <str>mlt</str>
+     <str>highlight</str>
+     <str>debug</str>
    </arr>
   </requestHandler>
   
   <!--  Searches Authors only  -->
   <requestHandler name="author_search" class="solr.SearchHandler" >
-    <lst name="defaults">
+	<lst name="defaults">
      <str name="defType">dismax</str>
      <str name="echoParams">explicit</str>
 
@@ -162,15 +170,22 @@
      <str name="spellcheck.collate">true</str>
      <str name="spellcheck.count">1</str>
    </lst>
+   
    <arr name="last-components">
      <str>spellcheck</str>
+     <str>query</str>
+	 <str>facet</str>
+	 <str>collapse</str>
+	 <str>mlt</str>
+     <str>highlight</str>
+     <str>debug</str>
    </arr>
 
   </requestHandler>
   
   <!--  Searches Titles only  -->
   <requestHandler name="title_search" class="solr.SearchHandler" >
-    <lst name="defaults">
+   	<lst name="defaults">
      <str name="defType">dismax</str>
      <str name="echoParams">explicit</str>
 
@@ -195,8 +210,15 @@
      <str name="spellcheck.collate">true</str>
      <str name="spellcheck.count">1</str>
     </lst>
+    
     <arr name="last-components">
-      <str>spellcheck</str>
+	  <str>spellcheck</str>
+	  <str>query</str>
+      <str>facet</str>
+      <str>collapse</str>
+      <str>mlt</str>
+      <str>highlight</str>
+      <str>debug</str>
     </arr>
   </requestHandler>
   

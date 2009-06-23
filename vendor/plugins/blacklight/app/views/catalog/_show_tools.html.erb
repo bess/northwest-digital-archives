@@ -3,5 +3,8 @@
     <li>
        <%= link_to "Cite This", citation_catalog_path(@document), {:id => 'citeLink', :name => 'citation', :class => 'lightboxLink'} %>
     </li>
+    <li>
+      <%= link_to "Export to RefWorks", "http://www.refworks.com/express/expressimport.asp?vendor=#{application_name}&filter=MARC%20Format&encoding=65001&url=#{export_catalog_path(@document.id, :format => 'txt', :style => 'refworks', :only_path => false)}" %>
+    </li>
   </ul>
 <% end %>
