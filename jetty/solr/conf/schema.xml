@@ -75,6 +75,8 @@
     <field name="title_added_entry_t" type="text" indexed="true" stored="true" multiValued="true" />
     <field name="author_t" type="text" indexed="true" stored="true" multiValued="true" />
     <field name="subject_t" type="text" indexed="true" stored="true" multiValued="true" />
+    <field name="creation_date" type="date" indexed="true" stored="true" multiValued="false"/>
+
 
     <field name="subject_era_facet" type="string" indexed="true" stored="true" multiValued="true" />
     <field name="geographic_subject_facet" type="string" indexed="true" stored="true" multiValued="true" />
@@ -114,7 +116,7 @@
   <defaultSearchField>text</defaultSearchField>
   <solrQueryParser defaultOperator="OR"/>
 
-  <copyField source="format_facet" dest="format_sort"/>
+  <!--copyField source="format_facet" dest="format_sort"/ -->
   <!-- text is catch-all field -->
   <copyField source="*_t" dest="text"/>
   <copyField source="*_facet" dest="text"/>
