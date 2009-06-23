@@ -15,6 +15,7 @@ class NWDA::Mappers::Theses
         @xml = record
         @doc = {}
         @doc[:id] = self.getID
+        @doc[:collection_id] = @doc[:id]
         @doc[:text] = []
         self.getFormatFacet
         self.getTitle
