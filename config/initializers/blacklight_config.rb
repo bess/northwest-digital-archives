@@ -65,13 +65,15 @@ Blacklight.configure(:shared) do |config|
       "language_facet",
       "subject_era_facet",
       "geographic_subject_facet",
-      "format_facet"
+      "format_facet",
+      "collection_facet"
     ],
     :labels => {
       "language_facet"           => "Language",
       "subject_era_facet"        => "Subject - Era",
       "geographic_subject_facet" => "Subject - Geographic",
-      "format_facet"             => "Format"
+      "format_facet"             => "Format",
+      "collection_facet"         => "Collection"
     }
   }
 
