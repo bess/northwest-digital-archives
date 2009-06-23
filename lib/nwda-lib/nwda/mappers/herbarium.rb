@@ -16,6 +16,7 @@ class NWDA::Mappers::Herbarium
       @xml = record
       @doc = {}
       self.getID
+      @doc[:collection_id] = @doc[:id]
       @doc[:text] = []
       self.getFormatFacet
       self.getTitle
