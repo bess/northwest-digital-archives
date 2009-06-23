@@ -56,7 +56,8 @@ class EADSolrMapper
       :institution_t => @xml.at('//publicationstmt/publisher').text,
       :language_facet => @xml.at('//profiledesc/langusage/language').text.gsub(/\.$/, ''),
       :hierarchy_scope => self.collection_id,
-      :collection_id => self.collection_id
+      :collection_id => self.collection_id,
+      :collection_facet => "Northwest Digital Archives EAD Guides"
     }
   end
   

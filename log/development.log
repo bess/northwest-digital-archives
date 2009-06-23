@@ -15309,3 +15309,2078 @@ Rendered catalog/_solr_request (0.4ms)
 Rendered _user_util_links (6.4ms)
 Rendered _flash_msg (0.3ms)
 Completed in 68ms (View: 50, DB: 2) | 200 OK [http://localhost/catalog/akms010-ms-10-1]
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x25d0e24 @adapter=#<RSolr::Adapter::HTTP:0x25d1dd8 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x25d0474 @adapter_name=:curb>>, @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}>
+BLACKLIGHT: initialized with Blacklight.config: {:index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :raw_storage_type=>"marcxml", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet"], :labels=>{"subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :raw_storage_field=>"marc_display", :default_qt=>"search", :show=>{:display_type=>"format_code_t", :heading=>"title_t", :html_title=>"title_t"}, :spell_max=>5, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :index=>{:record_display_type=>"format_code_t", :show_link=>"title_t", :num_per_page=>10}}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x25d0e24 @adapter=#<RSolr::Adapter::HTTP:0x25d1dd8 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x25d0474 @adapter_name=:curb>>, @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}>
+BLACKLIGHT: initialized with Blacklight.config: {:index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :raw_storage_type=>"marcxml", :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet"], :labels=>{"subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :raw_storage_field=>"marc_display", :default_qt=>"search", :show=>{:display_type=>"format_code_t", :heading=>"title_t", :html_title=>"title_t"}, :spell_max=>5, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :index=>{:record_display_type=>"format_code_t", :show_link=>"title_t", :num_per_page=>10}}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x25d0e24 @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}, @adapter=#<RSolr::Adapter::HTTP:0x25d1dd8 @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}, @connector=#<RSolr::HTTPClient::Connector:0x25d0474 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:index_fields=>{:labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}, :field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"]}, :show_fields=>{:labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}, :field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"]}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :raw_storage_type=>"marcxml", :facet=>{:labels=>{"subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}, :field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet"]}, :raw_storage_field=>"marc_display", :default_qt=>"search", :show=>{:html_title=>"title_t", :display_type=>"format_code_t", :heading=>"title_t"}, :spell_max=>5, :index=>{:num_per_page=>10, :record_display_type=>"format_code_t", :show_link=>"title_t"}, :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]]}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x25d5974 @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}, @adapter=#<RSolr::Adapter::HTTP:0x25d6928 @connector=#<RSolr::HTTPClient::Connector:0x25d4fc4 @adapter_name=:curb>, @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}>>
+BLACKLIGHT: initialized with Blacklight.config: {:search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :spell_max=>5, :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet"], :labels=>{"subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :raw_storage_type=>"marcxml", :default_qt=>"search", :show=>{:html_title=>"title_t", :display_type=>"format_code_t", :heading=>"title_t"}, :index=>{:num_per_page=>10, :record_display_type=>"format_code_t", :show_link=>"title_t"}, :raw_storage_field=>"marc_display"}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x234d328 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x23506e0 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x2349264 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :index_fields=>{:labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}, :field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"]}, :raw_storage_type=>"marcxml", :show_fields=>{:labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}, :field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"]}, :show=>{:display_type=>"format_code_t", :heading=>"title_t", :html_title=>"title_t"}, :facet=>{:labels=>{"subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}, :field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet"]}, :raw_storage_field=>"marc_display", :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :spell_max=>5, :index=>{:num_per_page=>10, :record_display_type=>"format_code_t", :show_link=>"title_t"}, :default_qt=>"search"}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-22 21:22:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_hidden_filters (0.6ms)
+Rendered catalog/_search_form (4.9ms)
+Rendered home/_home_text (0.6ms)
+Rendered catalog/_facets (2.0ms)
+Rendered _user_util_links (14.1ms)
+Rendered _flash_msg (0.7ms)
+Completed in 88ms (View: 48, DB: 0) | 200 OK [http://nwda.local/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-22 21:22:46) [GET]
+  Parameters: {"action"=>"index", "f"=>{"format_facet"=>["EAD"]}, "controller"=>"home"}
+Redirected to http://nwda.local/catalog?f%5Bformat_facet%5D%5B%5D=EAD
+Completed in 23ms (DB: 0) | 302 Found [http://nwda.local/?f%5Bformat_facet%5D%5B%5D=EAD]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-22 21:22:46) [GET]
+  Parameters: {"action"=>"index", "f"=>{"format_facet"=>["EAD"]}, "controller"=>"catalog"}
+  [4;36;1mSearch Load (0.2ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" = 9) [0m
+  [4;35;1mSearch Create (0.6ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2009-06-23 01:22:46', '2009-06-23 01:22:46', NULL, '--- 
+:counter: "15"
+:f: !map:HashWithIndifferentAccess 
+ format_facet: 
+ - EAD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (0.9ms)
+Rendered catalog/_did_you_mean (0.8ms)
+Rendered catalog/_search_constraints (1.6ms)
+Rendered catalog/_bookmark_control (2.4ms)
+Rendered catalog/_index_partials/_default (0.8ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (80.2ms)
+Rendered catalog/_facets (0.8ms)
+Rendered catalog/_solr_request (0.6ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 187ms (View: 110, DB: 1) | 200 OK [http://nwda.local/catalog?f%5Bformat_facet%5D%5B%5D=EAD]
+
+
+Processing CatalogController#update (for 127.0.0.1 at 2009-06-22 21:22:53) [PUT]
+  Parameters: {"action"=>"update", "_method"=>"put", "authenticity_token"=>"z2AYI7UUPCvuWQ7CO79bieqcf7NpUQrqTRG3bvMYat4=", "id"=>"owsmss001xml-summary", "controller"=>"catalog", "counter"=>"1"}
+  [4;36;1mSearch Load (0.7ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" = 9) [0m
+Redirected to http://nwda.local/catalog/owsmss001xml-summary
+Completed in 2ms (DB: 1) | 302 Found [http://nwda.local/catalog/owsmss001xml-summary]
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-22 21:22:53) [GET]
+  Parameters: {"action"=>"show", "id"=>"owsmss001xml-summary", "controller"=>"catalog"}
+  [4;35;1mSearch Load (0.7ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" = 9) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (172.0ms)
+Rendered catalog/_solr_request (0.4ms)
+Rendered _user_util_links (1.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 202ms (View: 186, DB: 1) | 200 OK [http://nwda.local/catalog/owsmss001xml-summary]
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-22 21:23:00) [GET]
+  Parameters: {"action"=>"show", "id"=>"owsmss001xml-series-i", "controller"=>"catalog"}
+  [4;36;1mSearch Load (0.7ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" = 9) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (8.1ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.1ms)
+Completed in 32ms (View: 15, DB: 1) | 200 OK [http://nwda.local/catalog/owsmss001xml-series-i]
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-22 21:23:03) [GET]
+  Parameters: {"action"=>"show", "id"=>"owsmss001xml-series-ii", "controller"=>"catalog"}
+  [4;35;1mSearch Load (0.7ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" = 9) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (6.1ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 30ms (View: 13, DB: 1) | 200 OK [http://nwda.local/catalog/owsmss001xml-series-ii]
+BLACKLIGHT: initialized with Blacklight.solr_config: {:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x25d5960 @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}, @adapter=#<RSolr::Adapter::HTTP:0x25d6914 @connector=#<RSolr::HTTPClient::Connector:0x25d4fb0 @adapter_name=:curb>, @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}>>
+BLACKLIGHT: initialized with Blacklight.config: {:search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :spell_max=>5, :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet"], :labels=>{"subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :raw_storage_type=>"marcxml", :default_qt=>"search", :show=>{:html_title=>"title_t", :display_type=>"format_code_t", :heading=>"title_t"}, :index=>{:num_per_page=>10, :record_display_type=>"format_code_t", :show_link=>"title_t"}, :raw_storage_field=>"marc_display"}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x25d5960 @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}, @adapter=#<RSolr::Adapter::HTTP:0x25d6914 @connector=#<RSolr::HTTPClient::Connector:0x25d4fb0 @adapter_name=:curb>, @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}>>
+BLACKLIGHT: initialized with Blacklight.config: {:search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :spell_max=>5, :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet"], :labels=>{"subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :raw_storage_type=>"marcxml", :default_qt=>"search", :show=>{:html_title=>"title_t", :display_type=>"format_code_t", :heading=>"title_t"}, :index=>{:num_per_page=>10, :record_display_type=>"format_code_t", :show_link=>"title_t"}, :raw_storage_field=>"marc_display"}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x25d5960 @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}, @adapter=#<RSolr::Adapter::HTTP:0x25d6914 @connector=#<RSolr::HTTPClient::Connector:0x25d4fb0 @adapter_name=:curb>, @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}>>
+BLACKLIGHT: initialized with Blacklight.config: {:search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :spell_max=>5, :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet"], :labels=>{"subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :raw_storage_type=>"marcxml", :default_qt=>"search", :show=>{:html_title=>"title_t", :display_type=>"format_code_t", :heading=>"title_t"}, :index=>{:num_per_page=>10, :record_display_type=>"format_code_t", :show_link=>"title_t"}, :raw_storage_field=>"marc_display"}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-22 21:30:14) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_hidden_filters (0.5ms)
+Rendered catalog/_search_form (4.0ms)
+Rendered home/_home_text (0.5ms)
+Rendered catalog/_facets (5.6ms)
+Rendered _user_util_links (13.8ms)
+Rendered _flash_msg (0.6ms)
+Completed in 100ms (View: 49, DB: 0) | 200 OK [http://nwda.local/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-22 21:30:20) [GET]
+  Parameters: {"action"=>"index", "f"=>{"format_facet"=>["Film negatives"]}, "controller"=>"home"}
+Redirected to http://nwda.local/catalog?f%5Bformat_facet%5D%5B%5D=Film+negatives
+Completed in 91ms (DB: 0) | 302 Found [http://nwda.local/?f%5Bformat_facet%5D%5B%5D=Film+negatives]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-22 21:30:20) [GET]
+  Parameters: {"action"=>"index", "f"=>{"format_facet"=>["Film negatives"]}, "controller"=>"catalog"}
+  [4;36;1mSearch Load (0.3ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" = 9) [0m
+  [4;35;1mSearch Create (0.6ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2009-06-23 01:30:20', '2009-06-23 01:30:20', NULL, '--- 
+:counter: "1"
+:f: !map:HashWithIndifferentAccess 
+ format_facet: 
+ - Film negatives
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (1.1ms)
+Rendered catalog/_did_you_mean (0.8ms)
+Rendered catalog/_search_constraints (1.3ms)
+Rendered catalog/_bookmark_control (1.6ms)
+Rendered catalog/_index_partials/_baseball (1.3ms)
+Rendered catalog/_document_list (12.5ms)
+Rendered catalog/_facets (1.7ms)
+Rendered catalog/_solr_request (0.6ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 138ms (View: 100, DB: 1) | 200 OK [http://nwda.local/catalog?f%5Bformat_facet%5D%5B%5D=Film+negatives]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-22 21:30:25) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;36;1mSearch Load (0.8ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (10,9)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (0.9ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_search_constraints (0.1ms)
+Rendered catalog/_bookmark_control (0.8ms)
+Rendered catalog/_index_partials/_default (1.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (16.5ms)
+Rendered catalog/_facets (4.0ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 53ms (View: 32, DB: 1) | 200 OK [http://nwda.local/catalog?]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-22 21:30:28) [GET]
+  Parameters: {"action"=>"index", "f"=>{"format_facet"=>["Gelatin silver prints"]}, "controller"=>"catalog"}
+  [4;35;1mSearch Load (0.8ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (10,9)) [0m
+  [4;36;1mSearch Create (0.5ms)[0m   [0;1mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2009-06-23 01:30:28', '2009-06-23 01:30:28', NULL, '--- 
+:counter: "1"
+:f: !map:HashWithIndifferentAccess 
+ format_facet: 
+ - Gelatin silver prints
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (0.9ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_search_constraints (0.3ms)
+Rendered catalog/_bookmark_control (0.8ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_document_list (5.1ms)
+Rendered catalog/_facets (3.1ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 41ms (View: 18, DB: 1) | 200 OK [http://nwda.local/catalog?f%5Bformat_facet%5D%5B%5D=Gelatin+silver+prints]
+
+
+Processing CatalogController#update (for 127.0.0.1 at 2009-06-22 21:30:39) [PUT]
+  Parameters: {"action"=>"update", "_method"=>"put", "authenticity_token"=>"z2AYI7UUPCvuWQ7CO79bieqcf7NpUQrqTRG3bvMYat4=", "id"=>"baseball_0", "controller"=>"catalog", "counter"=>"1"}
+  [4;35;1mSearch Load (0.9ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (11,10,9)) [0m
+Redirected to http://nwda.local/catalog/baseball_0
+Completed in 2ms (DB: 1) | 302 Found [http://nwda.local/catalog/baseball_0]
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-22 21:30:39) [GET]
+  Parameters: {"action"=>"show", "id"=>"baseball_0", "controller"=>"catalog"}
+  [4;36;1mSearch Load (0.8ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (11,10,9)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_baseball (2.3ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.1ms)
+Completed in 40ms (View: 15, DB: 1) | 200 OK [http://nwda.local/catalog/baseball_0]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-22 21:32:12) [GET]
+  Parameters: {"action"=>"index", "f"=>{"format_facet"=>["Gelatin silver prints"]}, "controller"=>"catalog"}
+  [4;35;1mSearch Load (0.9ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (11,10,9)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (0.8ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_search_constraints (0.3ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_document_list (4.5ms)
+Rendered catalog/_facets (3.0ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 141ms (View: 17, DB: 1) | 200 OK [http://nwda.local/catalog?f%5Bformat_facet%5D%5B%5D=Gelatin+silver+prints]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-22 21:32:16) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.1ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (11,10,9)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (0.8ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_search_constraints (0.1ms)
+Rendered catalog/_bookmark_control (0.9ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (14.1ms)
+Rendered catalog/_facets (4.0ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.4ms)
+Rendered _flash_msg (0.1ms)
+Completed in 125ms (View: 100, DB: 1) | 200 OK [http://nwda.local/catalog?]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-22 21:32:19) [GET]
+  Parameters: {"action"=>"index", "f"=>{"format_facet"=>["Film negatives"]}, "controller"=>"catalog"}
+  [4;35;1mSearch Load (0.9ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (11,10,9)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (0.9ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_search_constraints (0.3ms)
+Rendered catalog/_bookmark_control (0.8ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_document_list (4.8ms)
+Rendered catalog/_facets (1.6ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 40ms (View: 16, DB: 1) | 200 OK [http://nwda.local/catalog?f%5Bformat_facet%5D%5B%5D=Film+negatives]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-22 21:32:23) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;36;1mSearch Load (2.2ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (11,10,9)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (0.8ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_search_constraints (0.1ms)
+Rendered catalog/_bookmark_control (0.8ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (13.3ms)
+Rendered catalog/_facets (3.9ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.2ms)
+Rendered _flash_msg (0.1ms)
+Completed in 49ms (View: 31, DB: 2) | 200 OK [http://nwda.local/catalog?]
+BLACKLIGHT: initialized with Blacklight.solr_config: {:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x25d5960 @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}, @adapter=#<RSolr::Adapter::HTTP:0x25d6914 @connector=#<RSolr::HTTPClient::Connector:0x25d4fb0 @adapter_name=:curb>, @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}>>
+BLACKLIGHT: initialized with Blacklight.config: {:search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :spell_max=>5, :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet"], :labels=>{"subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :raw_storage_type=>"marcxml", :default_qt=>"search", :show=>{:html_title=>"title_t", :display_type=>"format_code_t", :heading=>"title_t"}, :index=>{:num_per_page=>10, :record_display_type=>"format_code_t", :show_link=>"title_t"}, :raw_storage_field=>"marc_display"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-22 21:38:12) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.0ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (11,10,9)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (0.9ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_search_constraints (0.1ms)
+Rendered catalog/_bookmark_control (0.8ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (13.1ms)
+Rendered catalog/_facets (3.9ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 75ms (View: 29, DB: 1) | 200 OK [http://nwda.local/catalog?]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-22 21:38:16) [GET]
+  Parameters: {"action"=>"index", "f"=>{"format_facet"=>["Film negatives"]}, "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.1ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (11,10,9)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (0.9ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_search_constraints (0.3ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_document_list (4.6ms)
+Rendered catalog/_facets (1.4ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 32ms (View: 15, DB: 1) | 200 OK [http://nwda.local/catalog?f%5Bformat_facet%5D%5B%5D=Film+negatives]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-22 21:45:23) [GET]
+  Parameters: {"action"=>"index", "f"=>{"format_facet"=>["Film negatives"]}, "controller"=>"catalog"}
+  [4;36;1mSearch Load (0.6ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (11,10,9)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.6ms)
+Rendered catalog/_search_form (4.0ms)
+Rendered catalog/_did_you_mean (0.7ms)
+Rendered catalog/_search_constraints (1.5ms)
+Rendered catalog/_bookmark_control (13.4ms)
+Rendered catalog/_index_partials/_baseball (1.7ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_document_list (32.2ms)
+Rendered catalog/_facets (2.8ms)
+Rendered catalog/_solr_request (0.6ms)
+Rendered _user_util_links (1.1ms)
+Rendered _flash_msg (0.5ms)
+Completed in 332ms (View: 155, DB: 1) | 200 OK [http://nwda.local/catalog?f%5Bformat_facet%5D%5B%5D=Film+negatives]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-22 21:45:30) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;35;1mSearch Load (0.9ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (11,10,9)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (0.9ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_search_constraints (0.1ms)
+Rendered catalog/_bookmark_control (0.8ms)
+Rendered catalog/_index_partials/_default (0.8ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (16.9ms)
+Rendered catalog/_facets (4.0ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 131ms (View: 35, DB: 1) | 200 OK [http://nwda.local/catalog?]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-22 21:45:33) [GET]
+  Parameters: {"action"=>"index", "f"=>{"format_facet"=>["EAD"]}, "controller"=>"catalog"}
+  [4;36;1mSearch Load (0.9ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (11,10,9)) [0m
+  [4;35;1mSearch Create (0.6ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2009-06-23 01:45:33', '2009-06-23 01:45:33', NULL, '--- 
+:counter: "1"
+:f: !map:HashWithIndifferentAccess 
+ format_facet: 
+ - EAD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (1.2ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_search_constraints (0.5ms)
+Rendered catalog/_bookmark_control (1.4ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (16.0ms)
+Rendered catalog/_facets (0.7ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 87ms (View: 42, DB: 2) | 200 OK [http://nwda.local/catalog?f%5Bformat_facet%5D%5B%5D=EAD]
+BLACKLIGHT: initialized with Blacklight.solr_config: {:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x24d5970 @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}, @adapter=#<RSolr::Adapter::HTTP:0x24d6924 @connector=#<RSolr::HTTPClient::Connector:0x24d4fc0 @adapter_name=:curb>, @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}>>
+BLACKLIGHT: initialized with Blacklight.config: {:search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :spell_max=>5, :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet"], :labels=>{"subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :raw_storage_type=>"marcxml", :default_qt=>"search", :show=>{:html_title=>"title_t", :display_type=>"format_code_t", :heading=>"title_t"}, :index=>{:num_per_page=>10, :record_display_type=>"format_code_t", :show_link=>"title_t"}, :raw_storage_field=>"marc_display"}
+  [4;36;1mSQL (1.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090127164730)
+Migrating to CreateBookmarks (20090127164740)
+Migrating to ActsAsTaggableMigration (20090127164750)
+Migrating to CreateSearches (20090428182620)
+Migrating to AddAuthlogicFieldsToUsers (20090529161304)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("bookmarks")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("searches")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('index_searches_on_user_id')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("taggings")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_info('index_taggings_on_taggable_id_and_taggable_type')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_info('index_taggings_on_tag_id')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("tags")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-22 21:50:16) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (0.8ms)
+Rendered home/_home_text (0.5ms)
+Rendered catalog/_facets (4.4ms)
+Rendered _user_util_links (1.0ms)
+Rendered _flash_msg (0.1ms)
+Completed in 41ms (View: 17, DB: 0) | 200 OK [http://nwda.local/]
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x234d364 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x2350370 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x2349a48 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :index_fields=>{:labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}, :field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"]}, :raw_storage_type=>"marcxml", :show_fields=>{:labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}, :field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"]}, :show=>{:display_type=>"format_code_t", :heading=>"title_t", :html_title=>"title_t"}, :facet=>{:labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}, :field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"]}, :raw_storage_field=>"marc_display", :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :spell_max=>5, :index=>{:num_per_page=>10, :record_display_type=>"format_code_t", :show_link=>"title_t"}, :default_qt=>"search"}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-22 21:51:58) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_hidden_filters (0.6ms)
+Rendered catalog/_search_form (4.0ms)
+Rendered home/_home_text (0.5ms)
+Rendered catalog/_facets (6.0ms)
+Rendered _user_util_links (13.4ms)
+Rendered _flash_msg (0.6ms)
+Completed in 88ms (View: 48, DB: 0) | 200 OK [http://nwda.local/]
+BLACKLIGHT: initialized with Blacklight.solr_config: {:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x25d5848 @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}, @adapter=#<RSolr::Adapter::HTTP:0x25d67fc @connector=#<RSolr::HTTPClient::Connector:0x25d4e98 @adapter_name=:curb>, @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}>>
+BLACKLIGHT: initialized with Blacklight.config: {:search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :spell_max=>5, :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :raw_storage_type=>"marcxml", :default_qt=>"search", :show=>{:html_title=>"title_t", :display_type=>"format_code_t", :heading=>"title_t"}, :index=>{:num_per_page=>10, :record_display_type=>"format_code_t", :show_link=>"title_t"}, :raw_storage_field=>"marc_display"}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x25d5848 @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}, @adapter=#<RSolr::Adapter::HTTP:0x25d67fc @connector=#<RSolr::HTTPClient::Connector:0x25d4e98 @adapter_name=:curb>, @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}>>
+BLACKLIGHT: initialized with Blacklight.config: {:search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :spell_max=>5, :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :raw_storage_type=>"marcxml", :default_qt=>"search", :show=>{:html_title=>"title_t", :display_type=>"format_code_t", :heading=>"title_t"}, :index=>{:num_per_page=>10, :record_display_type=>"format_code_t", :show_link=>"title_t"}, :raw_storage_field=>"marc_display"}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-22 21:54:47) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (1.0ms)
+Rendered home/_home_text (0.1ms)
+Rendered catalog/_facets (9.2ms)
+Rendered _user_util_links (1.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 47ms (View: 19, DB: 0) | 200 OK [http://nwda.local/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-06-22 21:55:21) [GET]
+  Parameters: {"action"=>"index", "f"=>{"collection_facet"=>["Oregon State University Herbarium"]}, "controller"=>"home"}
+Redirected to http://nwda.local/catalog?f%5Bcollection_facet%5D%5B%5D=Oregon+State+University+Herbarium
+Completed in 22ms (DB: 0) | 302 Found [http://nwda.local/?f%5Bcollection_facet%5D%5B%5D=Oregon+State+University+Herbarium]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-22 21:55:21) [GET]
+  Parameters: {"action"=>"index", "f"=>{"collection_facet"=>["Oregon State University Herbarium"]}, "controller"=>"catalog"}
+  [4;36;1mSearch Load (0.6ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (12,11,10,9)) [0m
+  [4;35;1mSearch Create (0.6ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2009-06-23 01:55:21', '2009-06-23 01:55:21', NULL, '--- 
+:counter: "1"
+:f: !map:HashWithIndifferentAccess 
+ collection_facet: 
+ - Oregon State University Herbarium
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (0.9ms)
+Rendered catalog/_did_you_mean (0.7ms)
+Rendered catalog/_search_constraints (1.5ms)
+Rendered catalog/_bookmark_control (1.5ms)
+Rendered catalog/_index_partials/_herbarium (1.0ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_herbarium (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_herbarium (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_herbarium (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_herbarium (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_herbarium (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_herbarium (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_herbarium (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_herbarium (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_herbarium (0.1ms)
+Rendered catalog/_document_list (17.0ms)
+Rendered catalog/_facets (3.9ms)
+Rendered catalog/_solr_request (0.5ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 147ms (View: 48, DB: 1) | 200 OK [http://nwda.local/catalog?f%5Bcollection_facet%5D%5B%5D=Oregon+State+University+Herbarium]
+
+
+Processing CatalogController#update (for 127.0.0.1 at 2009-06-22 21:55:24) [PUT]
+  Parameters: {"action"=>"update", "_method"=>"put", "authenticity_token"=>"z2AYI7UUPCvuWQ7CO79bieqcf7NpUQrqTRG3bvMYat4=", "id"=>"ore18036", "controller"=>"catalog", "counter"=>"1"}
+  [4;36;1mSearch Load (2.2ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (13,12,11,10,9)) [0m
+Redirected to http://nwda.local/catalog/ore18036
+Completed in 4ms (DB: 2) | 302 Found [http://nwda.local/catalog/ore18036]
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-22 21:55:24) [GET]
+  Parameters: {"action"=>"show", "id"=>"ore18036", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.1ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (13,12,11,10,9)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_herbarium (3.8ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 36ms (View: 17, DB: 1) | 200 OK [http://nwda.local/catalog/ore18036]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-22 21:55:29) [GET]
+  Parameters: {"action"=>"index", "id"=>"ore18036", "q"=>"Cyperaceae", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.2ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (13,12,11,10,9)) [0m
+  [4;35;1mSearch Create (0.5ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2009-06-23 01:55:29', '2009-06-23 01:55:29', NULL, '--- 
+:counter: "1"
+:q: Cyperaceae
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (0.8ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_search_constraints (0.1ms)
+Rendered catalog/_bookmark_control (1.0ms)
+Rendered catalog/_index_partials/_herbarium (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_herbarium (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_herbarium (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_herbarium (0.4ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_herbarium (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_herbarium (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_herbarium (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_herbarium (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_herbarium (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_herbarium (0.1ms)
+Rendered catalog/_document_list (13.0ms)
+Rendered catalog/_facets (4.0ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 70ms (View: 30, DB: 2) | 200 OK [http://nwda.local/catalog?id=ore18036&q=Cyperaceae]
+
+
+Processing CatalogController#update (for 127.0.0.1 at 2009-06-22 21:55:31) [PUT]
+  Parameters: {"action"=>"update", "_method"=>"put", "authenticity_token"=>"z2AYI7UUPCvuWQ7CO79bieqcf7NpUQrqTRG3bvMYat4=", "id"=>"ore18036", "controller"=>"catalog", "counter"=>"1"}
+  [4;36;1mSearch Load (1.2ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (14,13,12,11,10,9)) [0m
+Redirected to http://nwda.local/catalog/ore18036
+Completed in 3ms (DB: 1) | 302 Found [http://nwda.local/catalog/ore18036]
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-22 21:55:31) [GET]
+  Parameters: {"action"=>"show", "id"=>"ore18036", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.1ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (14,13,12,11,10,9)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_herbarium (1.6ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.1ms)
+Completed in 36ms (View: 9, DB: 1) | 200 OK [http://nwda.local/catalog/ore18036]
+
+
+Processing CatalogController#update (for 127.0.0.1 at 2009-06-22 21:55:33) [PUT]
+  Parameters: {"action"=>"update", "_method"=>"put", "authenticity_token"=>"z2AYI7UUPCvuWQ7CO79bieqcf7NpUQrqTRG3bvMYat4=", "id"=>"ore95855", "controller"=>"catalog", "counter"=>"2"}
+  [4;36;1mSearch Load (3.5ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (14,13,12,11,10,9)) [0m
+Redirected to http://nwda.local/catalog/ore95855
+Completed in 5ms (DB: 4) | 302 Found [http://nwda.local/catalog/ore95855]
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-22 21:55:33) [GET]
+  Parameters: {"action"=>"show", "id"=>"ore95855", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.1ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (14,13,12,11,10,9)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_herbarium (0.7ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 118ms (View: 74, DB: 1) | 200 OK [http://nwda.local/catalog/ore95855]
+
+
+Processing CatalogController#update (for 127.0.0.1 at 2009-06-22 21:55:35) [PUT]
+  Parameters: {"action"=>"update", "_method"=>"put", "authenticity_token"=>"z2AYI7UUPCvuWQ7CO79bieqcf7NpUQrqTRG3bvMYat4=", "id"=>"osc186275", "controller"=>"catalog", "counter"=>"3"}
+  [4;36;1mSearch Load (1.2ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (14,13,12,11,10,9)) [0m
+Redirected to http://nwda.local/catalog/osc186275
+Completed in 4ms (DB: 1) | 302 Found [http://nwda.local/catalog/osc186275]
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-22 21:55:36) [GET]
+  Parameters: {"action"=>"show", "id"=>"osc186275", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.0ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (14,13,12,11,10,9)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_herbarium (0.8ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.1ms)
+Completed in 53ms (View: 8, DB: 1) | 200 OK [http://nwda.local/catalog/osc186275]
+
+
+Processing CatalogController#update (for 127.0.0.1 at 2009-06-22 21:55:37) [PUT]
+  Parameters: {"action"=>"update", "_method"=>"put", "authenticity_token"=>"z2AYI7UUPCvuWQ7CO79bieqcf7NpUQrqTRG3bvMYat4=", "id"=>"osc80136", "controller"=>"catalog", "counter"=>"4"}
+  [4;36;1mSearch Load (1.2ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (14,13,12,11,10,9)) [0m
+Redirected to http://nwda.local/catalog/osc80136
+Completed in 2ms (DB: 1) | 302 Found [http://nwda.local/catalog/osc80136]
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-22 21:55:37) [GET]
+  Parameters: {"action"=>"show", "id"=>"osc80136", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.1ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (14,13,12,11,10,9)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_herbarium (0.7ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.1ms)
+Completed in 55ms (View: 8, DB: 1) | 200 OK [http://nwda.local/catalog/osc80136]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-22 21:56:01) [GET]
+  Parameters: {"action"=>"index", "q"=>"Cyperaceae", "controller"=>"catalog", "counter"=>"4"}
+  [4;36;1mSearch Load (1.4ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (14,13,12,11,10,9)) [0m
+  [4;35;1mSearch Create (0.7ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2009-06-23 01:56:01', '2009-06-23 01:56:01', NULL, '--- 
+:counter: "4"
+:q: Cyperaceae
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (0.9ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_search_constraints (0.1ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_herbarium (0.2ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_herbarium (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_herbarium (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_herbarium (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_herbarium (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_herbarium (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_herbarium (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_herbarium (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_herbarium (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_herbarium (0.1ms)
+Rendered catalog/_document_list (10.8ms)
+Rendered catalog/_facets (3.8ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 63ms (View: 28, DB: 2) | 200 OK [http://nwda.local/catalog?counter=4&q=Cyperaceae]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-22 21:56:07) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.2ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (15,14,13,12,11,10,9)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (0.8ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_search_constraints (0.1ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_default (0.8ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (16.4ms)
+Rendered catalog/_facets (6.8ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 57ms (View: 36, DB: 1) | 200 OK [http://nwda.local/catalog]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-22 21:56:14) [GET]
+  Parameters: {"action"=>"index", "f"=>{"format_facet"=>["EAD"]}, "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.1ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (15,14,13,12,11,10,9)) [0m
+  [4;36;1mSearch Create (0.5ms)[0m   [0;1mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2009-06-23 01:56:14', '2009-06-23 01:56:14', NULL, '--- 
+:counter: "4"
+:f: !map:HashWithIndifferentAccess 
+ format_facet: 
+ - EAD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (1.0ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_search_constraints (0.4ms)
+Rendered catalog/_bookmark_control (0.9ms)
+Rendered catalog/_index_partials/_default (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (15.1ms)
+Rendered catalog/_facets (0.8ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 114ms (View: 30, DB: 2) | 200 OK [http://nwda.local/catalog?f%5Bformat_facet%5D%5B%5D=EAD]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-22 21:56:17) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.3ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (16,15,14,13,12,11,10,9)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (0.8ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_search_constraints (0.1ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_default (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (12.6ms)
+Rendered catalog/_facets (6.7ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 53ms (View: 33, DB: 1) | 200 OK [http://nwda.local/catalog]
+BLACKLIGHT: initialized with Blacklight.solr_config: {:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x25d5848 @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}, @adapter=#<RSolr::Adapter::HTTP:0x25d67fc @connector=#<RSolr::HTTPClient::Connector:0x25d4e98 @adapter_name=:curb>, @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}>>
+BLACKLIGHT: initialized with Blacklight.config: {:search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :spell_max=>5, :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :raw_storage_type=>"marcxml", :default_qt=>"search", :show=>{:html_title=>"title_t", :display_type=>"format_code_t", :heading=>"title_t"}, :index=>{:num_per_page=>10, :record_display_type=>"format_code_t", :show_link=>"title_t"}, :raw_storage_field=>"marc_display"}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x25d585c @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}, @adapter=#<RSolr::Adapter::HTTP:0x25d6810 @connector=#<RSolr::HTTPClient::Connector:0x25d4eac @adapter_name=:curb>, @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}>>
+BLACKLIGHT: initialized with Blacklight.config: {:search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :spell_max=>5, :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :raw_storage_type=>"marcxml", :default_qt=>"search", :show=>{:html_title=>"title_t", :display_type=>"format_code_t", :heading=>"title_t"}, :index=>{:num_per_page=>10, :record_display_type=>"format_code_t", :show_link=>"title_t"}, :raw_storage_field=>"marc_display"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-22 22:01:15) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.5ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (16,15,14,13,12,11,10,9)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (0.8ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_search_constraints (0.1ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (12.6ms)
+Rendered catalog/_facets (7.4ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 55ms (View: 34, DB: 1) | 200 OK [http://nwda.local/catalog]
+
+
+Processing CatalogController#update (for 127.0.0.1 at 2009-06-22 22:03:51) [PUT]
+  Parameters: {"action"=>"update", "_method"=>"put", "authenticity_token"=>"z2AYI7UUPCvuWQ7CO79bieqcf7NpUQrqTRG3bvMYat4=", "id"=>"owsmss001xml-summary", "controller"=>"catalog", "counter"=>"1"}
+  [4;35;1mSearch Load (1.2ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (16,15,14,13,12,11,10,9)) [0m
+Redirected to http://nwda.local/catalog/owsmss001xml-summary
+Completed in 3ms (DB: 1) | 302 Found [http://nwda.local/catalog/owsmss001xml-summary]
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-22 22:03:51) [GET]
+  Parameters: {"action"=>"show", "id"=>"owsmss001xml-summary", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.2ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (16,15,14,13,12,11,10,9)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (232.1ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.1ms)
+Completed in 259ms (View: 241, DB: 1) | 200 OK [http://nwda.local/catalog/owsmss001xml-summary]
+BLACKLIGHT: initialized with Blacklight.solr_config: {:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x25d585c @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}, @adapter=#<RSolr::Adapter::HTTP:0x25d6810 @connector=#<RSolr::HTTPClient::Connector:0x25d4eac @adapter_name=:curb>, @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}>>
+BLACKLIGHT: initialized with Blacklight.config: {:search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :spell_max=>5, :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :raw_storage_type=>"marcxml", :default_qt=>"search", :show=>{:html_title=>"title_t", :display_type=>"format_code_t", :heading=>"title_t"}, :index=>{:num_per_page=>10, :record_display_type=>"format_code_t", :show_link=>"title_t"}, :raw_storage_field=>"marc_display"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-22 22:08:02) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog", "counter"=>"1"}
+  [4;35;1mSearch Load (1.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (16,15,14,13,12,11,10,9)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (0.8ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_search_constraints (0.1ms)
+Rendered catalog/_bookmark_control (0.8ms)
+Rendered catalog/_index_partials/_baseball (1.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_document_list (14.0ms)
+Rendered catalog/_facets (8.2ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 128ms (View: 37, DB: 1) | 200 OK [http://nwda.local/catalog?counter=1]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-22 22:08:05) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog", "counter"=>"1"}
+  [4;36;1mSearch Load (2.9ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (16,15,14,13,12,11,10,9)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (0.8ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_search_constraints (0.1ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_document_list (11.3ms)
+Rendered catalog/_facets (8.2ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 56ms (View: 33, DB: 3) | 200 OK [http://nwda.local/catalog?counter=1]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-22 22:08:17) [GET]
+  Parameters: {"action"=>"index", "f"=>{"collection_facet"=>["Northwest Digital Archives EAD Guides"]}, "controller"=>"catalog", "counter"=>"1"}
+  [4;35;1mSearch Load (1.3ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (16,15,14,13,12,11,10,9)) [0m
+  [4;36;1mSearch Create (0.5ms)[0m   [0;1mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2009-06-23 02:08:17', '2009-06-23 02:08:17', NULL, '--- 
+:counter: "1"
+:f: !map:HashWithIndifferentAccess 
+ collection_facet: 
+ - Northwest Digital Archives EAD Guides
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (0.9ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_search_constraints (0.4ms)
+Rendered catalog/_bookmark_control (0.8ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (14.0ms)
+Rendered catalog/_facets (1.1ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 117ms (View: 30, DB: 2) | 200 OK [http://nwda.local/catalog?counter=1&f%5Bcollection_facet%5D%5B%5D=Northwest+Digital+Archives+EAD+Guides]
+
+
+Processing CatalogController#update (for 127.0.0.1 at 2009-06-22 22:08:18) [PUT]
+  Parameters: {"action"=>"update", "_method"=>"put", "authenticity_token"=>"z2AYI7UUPCvuWQ7CO79bieqcf7NpUQrqTRG3bvMYat4=", "id"=>"owsmss001xml-summary", "controller"=>"catalog", "counter"=>"1"}
+  [4;35;1mSearch Load (1.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (17,16,15,14,13,12,11,10,9)) [0m
+Redirected to http://nwda.local/catalog/owsmss001xml-summary
+Completed in 3ms (DB: 1) | 302 Found [http://nwda.local/catalog/owsmss001xml-summary]
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-22 22:08:18) [GET]
+  Parameters: {"action"=>"show", "id"=>"owsmss001xml-summary", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.2ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (17,16,15,14,13,12,11,10,9)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (5.9ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.1ms)
+Completed in 27ms (View: 13, DB: 1) | 200 OK [http://nwda.local/catalog/owsmss001xml-summary]
+BLACKLIGHT: initialized with Blacklight.solr_config: {:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x25d585c @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}, @adapter=#<RSolr::Adapter::HTTP:0x25d6810 @connector=#<RSolr::HTTPClient::Connector:0x25d4eac @adapter_name=:curb>, @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}>>
+BLACKLIGHT: initialized with Blacklight.config: {:search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :spell_max=>5, :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :raw_storage_type=>"marcxml", :default_qt=>"search", :show=>{:html_title=>"title_t", :display_type=>"format_code_t", :heading=>"title_t"}, :index=>{:num_per_page=>10, :record_display_type=>"format_code_t", :show_link=>"title_t"}, :raw_storage_field=>"marc_display"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-22 22:08:40) [GET]
+  Parameters: {"action"=>"index", "f"=>{"collection_facet"=>["Northwest Digital Archives EAD Guides"]}, "controller"=>"catalog", "counter"=>"1"}
+  [4;35;1mSearch Load (1.3ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (17,16,15,14,13,12,11,10,9)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (0.9ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_search_constraints (0.3ms)
+Rendered catalog/_bookmark_control (1.2ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (13.4ms)
+Rendered catalog/_facets (1.0ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 43ms (View: 27, DB: 1) | 200 OK [http://nwda.local/catalog?counter=1&f%5Bcollection_facet%5D%5B%5D=Northwest+Digital+Archives+EAD+Guides]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-22 22:08:44) [GET]
+  Parameters: {"action"=>"index", "f"=>{"collection_facet"=>["Northwest Digital Archives EAD Guides"]}, "controller"=>"catalog", "counter"=>"1"}
+  [4;36;1mSearch Load (1.4ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (17,16,15,14,13,12,11,10,9)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (0.9ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_search_constraints (0.3ms)
+Rendered catalog/_bookmark_control (0.8ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (74.8ms)
+Rendered catalog/_facets (1.0ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.2ms)
+Rendered _flash_msg (0.1ms)
+Completed in 109ms (View: 89, DB: 1) | 200 OK [http://nwda.local/catalog?counter=1&f%5Bcollection_facet%5D%5B%5D=Northwest+Digital+Archives+EAD+Guides]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-22 22:08:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog", "counter"=>"1"}
+  [4;35;1mSearch Load (2.2ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (17,16,15,14,13,12,11,10,9)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (0.8ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_search_constraints (0.1ms)
+Rendered catalog/_bookmark_control (0.8ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_document_list (11.3ms)
+Rendered catalog/_facets (8.6ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 56ms (View: 34, DB: 2) | 200 OK [http://nwda.local/catalog?&counter=1]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-22 22:08:47) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog", "counter"=>"1"}
+  [4;36;1mSearch Load (2.2ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (17,16,15,14,13,12,11,10,9)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (0.8ms)
+Rendered catalog/_did_you_mean (0.3ms)
+Rendered catalog/_search_constraints (0.1ms)
+Rendered catalog/_bookmark_control (0.9ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_document_list (11.6ms)
+Rendered catalog/_facets (8.1ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 56ms (View: 34, DB: 2) | 200 OK [http://nwda.local/catalog?&counter=1]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-22 22:08:52) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog", "counter"=>"1"}
+  [4;35;1mSearch Load (5.3ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (17,16,15,14,13,12,11,10,9)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (0.9ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_search_constraints (0.1ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_document_list (10.9ms)
+Rendered catalog/_facets (8.3ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 59ms (View: 34, DB: 5) | 200 OK [http://nwda.local/catalog?&counter=1]
+
+
+Processing CatalogController#update (for 127.0.0.1 at 2009-06-22 22:09:37) [PUT]
+  Parameters: {"action"=>"update", "_method"=>"put", "authenticity_token"=>"z2AYI7UUPCvuWQ7CO79bieqcf7NpUQrqTRG3bvMYat4=", "id"=>"baseball_0", "controller"=>"catalog", "counter"=>"1"}
+  [4;36;1mSearch Load (1.5ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (17,16,15,14,13,12,11,10,9)) [0m
+Redirected to http://nwda.local/catalog/baseball_0
+Completed in 5ms (DB: 2) | 302 Found [http://nwda.local/catalog/baseball_0]
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-22 22:09:37) [GET]
+  Parameters: {"action"=>"show", "id"=>"baseball_0", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.3ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (17,16,15,14,13,12,11,10,9)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_baseball (2.4ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.1ms)
+Completed in 97ms (View: 78, DB: 1) | 200 OK [http://nwda.local/catalog/baseball_0]
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-22 22:09:40) [GET]
+  Parameters: {"action"=>"show", "id"=>"WTV38", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.7ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (17,16,15,14,13,12,11,10,9)) [0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.to_mash):
+  vendor/plugins/blacklight/vendor/gems/mwmitchell-rsolr-ext-0.7.35/lib/rsolr-ext/doc.rb:79:in `initialize'
+  vendor/plugins/blacklight/app/controllers/catalog_controller.rb:27:in `new'
+  vendor/plugins/blacklight/app/controllers/catalog_controller.rb:27:in `show'
+  passenger (2.2.2) lib/phusion_passenger/rack/request_handler.rb:81:in `process_request'
+  passenger (2.2.2) lib/phusion_passenger/abstract_request_handler.rb:203:in `main_loop'
+  passenger (2.2.2) lib/phusion_passenger/railz/application_spawner.rb:340:in `start_request_handler'
+  passenger (2.2.2) lib/phusion_passenger/railz/application_spawner.rb:298:in `handle_spawn_application'
+  passenger (2.2.2) lib/phusion_passenger/utils.rb:181:in `safe_fork'
+  passenger (2.2.2) lib/phusion_passenger/railz/application_spawner.rb:296:in `handle_spawn_application'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:337:in `__send__'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:337:in `main_loop'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:187:in `start_synchronously'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:154:in `start'
+  passenger (2.2.2) lib/phusion_passenger/railz/application_spawner.rb:192:in `start'
+  passenger (2.2.2) lib/phusion_passenger/spawn_manager.rb:257:in `spawn_rails_application'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  passenger (2.2.2) lib/phusion_passenger/spawn_manager.rb:251:in `spawn_rails_application'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  passenger (2.2.2) lib/phusion_passenger/spawn_manager.rb:250:in `spawn_rails_application'
+  passenger (2.2.2) lib/phusion_passenger/spawn_manager.rb:153:in `spawn_application'
+  passenger (2.2.2) lib/phusion_passenger/spawn_manager.rb:282:in `handle_spawn_application'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:337:in `__send__'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:337:in `main_loop'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:187:in `start_synchronously'
+
+Rendered rescues/_trace (33.9ms)
+Rendered rescues/_request_and_response (1.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-22 22:09:56) [GET]
+  Parameters: {"action"=>"show", "id"=>"80444xv35228", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.5ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (17,16,15,14,13,12,11,10,9)) [0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.to_mash):
+  vendor/plugins/blacklight/vendor/gems/mwmitchell-rsolr-ext-0.7.35/lib/rsolr-ext/doc.rb:79:in `initialize'
+  vendor/plugins/blacklight/app/controllers/catalog_controller.rb:27:in `new'
+  vendor/plugins/blacklight/app/controllers/catalog_controller.rb:27:in `show'
+  passenger (2.2.2) lib/phusion_passenger/rack/request_handler.rb:81:in `process_request'
+  passenger (2.2.2) lib/phusion_passenger/abstract_request_handler.rb:203:in `main_loop'
+  passenger (2.2.2) lib/phusion_passenger/railz/application_spawner.rb:340:in `start_request_handler'
+  passenger (2.2.2) lib/phusion_passenger/railz/application_spawner.rb:298:in `handle_spawn_application'
+  passenger (2.2.2) lib/phusion_passenger/utils.rb:181:in `safe_fork'
+  passenger (2.2.2) lib/phusion_passenger/railz/application_spawner.rb:296:in `handle_spawn_application'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:337:in `__send__'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:337:in `main_loop'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:187:in `start_synchronously'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:154:in `start'
+  passenger (2.2.2) lib/phusion_passenger/railz/application_spawner.rb:192:in `start'
+  passenger (2.2.2) lib/phusion_passenger/spawn_manager.rb:257:in `spawn_rails_application'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  passenger (2.2.2) lib/phusion_passenger/spawn_manager.rb:251:in `spawn_rails_application'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  passenger (2.2.2) lib/phusion_passenger/spawn_manager.rb:250:in `spawn_rails_application'
+  passenger (2.2.2) lib/phusion_passenger/spawn_manager.rb:153:in `spawn_application'
+  passenger (2.2.2) lib/phusion_passenger/spawn_manager.rb:282:in `handle_spawn_application'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:337:in `__send__'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:337:in `main_loop'
+  passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:187:in `start_synchronously'
+
+Rendered rescues/_trace (32.4ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-22 22:09:57) [GET]
+  Parameters: {"action"=>"show", "id"=>"baseball_0", "controller"=>"catalog"}
+  [4;36;1mSearch Load (2.1ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (17,16,15,14,13,12,11,10,9)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_baseball (0.8ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.9ms)
+Rendered _flash_msg (0.1ms)
+Completed in 29ms (View: 8, DB: 2) | 200 OK [http://nwda.local/catalog/baseball_0]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-22 22:10:02) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog", "counter"=>"1"}
+  [4;35;1mSearch Load (2.2ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (17,16,15,14,13,12,11,10,9)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (0.9ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_search_constraints (0.1ms)
+Rendered catalog/_bookmark_control (0.9ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_baseball (68.5ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_document_list (80.3ms)
+Rendered catalog/_facets (8.2ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 123ms (View: 103, DB: 2) | 200 OK [http://nwda.local/catalog?&counter=1]
+BLACKLIGHT: initialized with Blacklight.solr_config: {:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x25d585c @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}, @adapter=#<RSolr::Adapter::HTTP:0x25d6810 @connector=#<RSolr::HTTPClient::Connector:0x25d4eac @adapter_name=:curb>, @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}>>
+BLACKLIGHT: initialized with Blacklight.config: {:search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :spell_max=>5, :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :raw_storage_type=>"marcxml", :default_qt=>"search", :show=>{:html_title=>"title_t", :display_type=>"format_code_t", :heading=>"title_t"}, :index=>{:num_per_page=>10, :record_display_type=>"format_code_t", :show_link=>"title_t"}, :raw_storage_field=>"marc_display"}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x25d585c @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}, @adapter=#<RSolr::Adapter::HTTP:0x25d6810 @connector=#<RSolr::HTTPClient::Connector:0x25d4eac @adapter_name=:curb>, @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}>>
+BLACKLIGHT: initialized with Blacklight.config: {:search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :spell_max=>5, :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :raw_storage_type=>"marcxml", :default_qt=>"search", :show=>{:html_title=>"title_t", :display_type=>"format_code_t", :heading=>"title_t"}, :index=>{:num_per_page=>10, :record_display_type=>"format_code_t", :show_link=>"title_t"}, :raw_storage_field=>"marc_display"}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x25d585c @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}, @adapter=#<RSolr::Adapter::HTTP:0x25d6810 @connector=#<RSolr::HTTPClient::Connector:0x25d4eac @adapter_name=:curb>, @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}>>
+BLACKLIGHT: initialized with Blacklight.config: {:search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :spell_max=>5, :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :raw_storage_type=>"marcxml", :default_qt=>"search", :show=>{:html_title=>"title_t", :display_type=>"format_code_t", :heading=>"title_t"}, :index=>{:num_per_page=>10, :record_display_type=>"format_code_t", :show_link=>"title_t"}, :raw_storage_field=>"marc_display"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-22 22:11:31) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog", "counter"=>"1"}
+  [4;36;1mSearch Load (1.4ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (17,16,15,14,13,12,11,10,9)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (0.8ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_search_constraints (0.1ms)
+Rendered catalog/_bookmark_control (1.0ms)
+Rendered catalog/_index_partials/_baseball (0.3ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.2ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_document_list (15.2ms)
+Rendered catalog/_facets (8.4ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 65ms (View: 38, DB: 1) | 200 OK [http://nwda.local/catalog?&counter=1]
+BLACKLIGHT: initialized with Blacklight.solr_config: {:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x25d585c @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}, @adapter=#<RSolr::Adapter::HTTP:0x25d6810 @connector=#<RSolr::HTTPClient::Connector:0x25d4eac @adapter_name=:curb>, @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}>>
+BLACKLIGHT: initialized with Blacklight.config: {:search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :spell_max=>5, :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :raw_storage_type=>"marcxml", :default_qt=>"search", :show=>{:html_title=>"title_t", :display_type=>"format_code_t", :heading=>"title_t"}, :index=>{:num_per_page=>10, :record_display_type=>"format_code_t", :show_link=>"title_t"}, :raw_storage_field=>"marc_display"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-22 22:12:04) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog", "counter"=>"1"}
+  [4;35;1mSearch Load (1.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (17,16,15,14,13,12,11,10,9)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (1.0ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_search_constraints (0.1ms)
+Rendered catalog/_bookmark_control (0.8ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.3ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.6ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_document_list (13.7ms)
+Rendered catalog/_facets (17.8ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 148ms (View: 51, DB: 1) | 200 OK [http://nwda.local/catalog?&counter=1]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-22 22:12:10) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog", "counter"=>"1"}
+  [4;36;1mSearch Load (1.4ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (17,16,15,14,13,12,11,10,9)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (0.9ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_search_constraints (0.1ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_baseball (1.3ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.3ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_document_list (14.1ms)
+Rendered catalog/_facets (8.8ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 62ms (View: 37, DB: 1) | 200 OK [http://nwda.local/catalog?&counter=1]
+BLACKLIGHT: initialized with Blacklight.solr_config: {:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x25d5848 @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}, @adapter=#<RSolr::Adapter::HTTP:0x25d67fc @connector=#<RSolr::HTTPClient::Connector:0x25d4e98 @adapter_name=:curb>, @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}>>
+BLACKLIGHT: initialized with Blacklight.config: {:search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :spell_max=>5, :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :raw_storage_type=>"marcxml", :default_qt=>"search", :show=>{:html_title=>"title_t", :display_type=>"format_code_t", :heading=>"title_t"}, :index=>{:num_per_page=>10, :record_display_type=>"format_code_t", :show_link=>"title_t"}, :raw_storage_field=>"marc_display"}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x25d585c @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}, @adapter=#<RSolr::Adapter::HTTP:0x25d6810 @connector=#<RSolr::HTTPClient::Connector:0x25d4eac @adapter_name=:curb>, @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}>>
+BLACKLIGHT: initialized with Blacklight.config: {:search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :spell_max=>5, :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :raw_storage_type=>"marcxml", :default_qt=>"search", :show=>{:html_title=>"title_t", :display_type=>"format_code_t", :heading=>"title_t"}, :index=>{:num_per_page=>10, :record_display_type=>"format_code_t", :show_link=>"title_t"}, :raw_storage_field=>"marc_display"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-22 22:13:05) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog", "counter"=>"1"}
+  [4;35;1mSearch Load (1.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (17,16,15,14,13,12,11,10,9)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (1.6ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_search_constraints (0.1ms)
+Rendered catalog/_bookmark_control (0.8ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_document_list (11.6ms)
+Rendered catalog/_facets (8.6ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 122ms (View: 36, DB: 1) | 200 OK [http://nwda.local/catalog?&counter=1]
+BLACKLIGHT: initialized with Blacklight.solr_config: {:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x25d585c @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}, @adapter=#<RSolr::Adapter::HTTP:0x25d6810 @connector=#<RSolr::HTTPClient::Connector:0x25d4eac @adapter_name=:curb>, @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}>>
+BLACKLIGHT: initialized with Blacklight.config: {:search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :spell_max=>5, :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :raw_storage_type=>"marcxml", :default_qt=>"search", :show=>{:html_title=>"title_t", :display_type=>"format_code_t", :heading=>"title_t"}, :index=>{:num_per_page=>10, :record_display_type=>"format_code_t", :show_link=>"title_t"}, :raw_storage_field=>"marc_display"}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x25d585c @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}, @adapter=#<RSolr::Adapter::HTTP:0x25d6810 @connector=#<RSolr::HTTPClient::Connector:0x25d4eac @adapter_name=:curb>, @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}>>
+BLACKLIGHT: initialized with Blacklight.config: {:search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :spell_max=>5, :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :raw_storage_type=>"marcxml", :default_qt=>"search", :show=>{:html_title=>"title_t", :display_type=>"format_code_t", :heading=>"title_t"}, :index=>{:num_per_page=>10, :record_display_type=>"format_code_t", :show_link=>"title_t"}, :raw_storage_field=>"marc_display"}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x25d5848 @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}, @adapter=#<RSolr::Adapter::HTTP:0x25d67fc @connector=#<RSolr::HTTPClient::Connector:0x25d4e98 @adapter_name=:curb>, @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}>>
+BLACKLIGHT: initialized with Blacklight.config: {:search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :spell_max=>5, :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :facet=>{:field_names=>["language_facet", "subject_era_facet", "geographic_subject_facet", "format_facet", "collection_facet"], :labels=>{"collection_facet"=>"Collection", "subject_era_facet"=>"Subject - Era", "language_facet"=>"Language", "format_facet"=>"Format", "geographic_subject_facet"=>"Subject - Geographic"}}, :raw_storage_type=>"marcxml", :default_qt=>"search", :show=>{:html_title=>"title_t", :display_type=>"format_code_t", :heading=>"title_t"}, :index=>{:num_per_page=>10, :record_display_type=>"format_code_t", :show_link=>"title_t"}, :raw_storage_field=>"marc_display"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-22 22:23:13) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.2ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (17,16,15,14,13,12,11,10,9)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.5ms)
+Rendered catalog/_search_form (4.0ms)
+Rendered catalog/_did_you_mean (0.6ms)
+Rendered catalog/_search_constraints (1.4ms)
+Rendered catalog/_bookmark_control (13.3ms)
+Rendered catalog/_index_partials/_baseball (1.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_document_list (30.6ms)
+Rendered catalog/_facets (10.4ms)
+Rendered catalog/_solr_request (0.6ms)
+Rendered _user_util_links (0.9ms)
+Rendered _flash_msg (0.5ms)
+Completed in 143ms (View: 87, DB: 1) | 200 OK [http://nwda.local/catalog]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-22 22:23:20) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;35;1mSearch Load (2.6ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (17,16,15,14,13,12,11,10,9)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (1.3ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_search_constraints (0.1ms)
+Rendered catalog/_bookmark_control (1.0ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_baseball (0.2ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_baseball (0.1ms)
+Rendered catalog/_document_list (12.8ms)
+Rendered catalog/_facets (8.1ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 117ms (View: 37, DB: 3) | 200 OK [http://nwda.local/catalog]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-22 22:23:23) [GET]
+  Parameters: {"action"=>"index", "f"=>{"collection_facet"=>["Northwest Digital Archives EAD Guides"]}, "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.5ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (17,16,15,14,13,12,11,10,9)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (0.9ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_search_constraints (0.3ms)
+Rendered catalog/_bookmark_control (0.8ms)
+Rendered catalog/_index_partials/_default (0.7ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (15.6ms)
+Rendered catalog/_facets (1.3ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 60ms (View: 32, DB: 2) | 200 OK [http://nwda.local/catalog?f%5Bcollection_facet%5D%5B%5D=Northwest+Digital+Archives+EAD+Guides]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-22 22:23:42) [GET]
+  Parameters: {"action"=>"index", "f"=>{"collection_facet"=>["Northwest Digital Archives EAD Guides"]}, "page"=>"6", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.3ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (17,16,15,14,13,12,11,10,9)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (0.9ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_search_constraints (0.3ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (12.8ms)
+Rendered catalog/_facets (1.3ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 57ms (View: 29, DB: 1) | 200 OK [http://nwda.local/catalog?f%5Bcollection_facet%5D%5B%5D=Northwest+Digital+Archives+EAD+Guides&page=6]
+
+
+Processing CatalogController#update (for 127.0.0.1 at 2009-06-22 22:23:54) [PUT]
+  Parameters: {"action"=>"update", "_method"=>"put", "authenticity_token"=>"z2AYI7UUPCvuWQ7CO79bieqcf7NpUQrqTRG3bvMYat4=", "id"=>"80444xv10619-summary", "controller"=>"catalog", "counter"=>"54"}
+  [4;36;1mSearch Load (1.3ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (17,16,15,14,13,12,11,10,9)) [0m
+Redirected to http://nwda.local/catalog/80444xv10619-summary
+Completed in 4ms (DB: 1) | 302 Found [http://nwda.local/catalog/80444xv10619-summary]
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-22 22:23:54) [GET]
+  Parameters: {"action"=>"show", "id"=>"80444xv10619-summary", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.3ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (17,16,15,14,13,12,11,10,9)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (173.6ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.1ms)
+Completed in 286ms (View: 251, DB: 1) | 200 OK [http://nwda.local/catalog/80444xv10619-summary]
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-22 22:24:01) [GET]
+  Parameters: {"action"=>"show", "id"=>"80444xv10619-biography_history", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.5ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (17,16,15,14,13,12,11,10,9)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (4.8ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.1ms)
+Completed in 48ms (View: 13, DB: 2) | 200 OK [http://nwda.local/catalog/80444xv10619-biography_history]
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-22 22:24:05) [GET]
+  Parameters: {"action"=>"show", "id"=>"80444xv10619-scope-and-content", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.3ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (17,16,15,14,13,12,11,10,9)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (4.5ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 47ms (View: 12, DB: 1) | 200 OK [http://nwda.local/catalog/80444xv10619-scope-and-content]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2009-06-22 22:24:08) [GET]
+  Parameters: {"action"=>"index", "f"=>{"collection_facet"=>["Northwest Digital Archives EAD Guides"]}, "page"=>"6", "controller"=>"catalog", "counter"=>"54"}
+  [4;36;1mSearch Load (2.8ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (17,16,15,14,13,12,11,10,9)) [0m
+  [4;35;1mSearch Create (0.6ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2009-06-23 02:24:08', '2009-06-23 02:24:08', NULL, '--- 
+:counter: "54"
+:f: !map:HashWithIndifferentAccess 
+ collection_facet: 
+ - Northwest Digital Archives EAD Guides
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (0.9ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_search_constraints (0.7ms)
+Rendered catalog/_bookmark_control (0.8ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.2ms)
+Rendered catalog/_document_list (13.8ms)
+Rendered catalog/_facets (1.4ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 62ms (View: 32, DB: 3) | 200 OK [http://nwda.local/catalog?counter=54&f%5Bcollection_facet%5D%5B%5D=Northwest+Digital+Archives+EAD+Guides&page=6]
+
+
+Processing CatalogController#update (for 127.0.0.1 at 2009-06-22 22:24:15) [PUT]
+  Parameters: {"action"=>"update", "_method"=>"put", "authenticity_token"=>"z2AYI7UUPCvuWQ7CO79bieqcf7NpUQrqTRG3bvMYat4=", "id"=>"alkpca469-summary", "controller"=>"catalog", "counter"=>"53"}
+  [4;36;1mSearch Load (1.6ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (18,17,16,15,14,13,12,11,10,9)) [0m
+Redirected to http://nwda.local/catalog/alkpca469-summary
+Completed in 3ms (DB: 2) | 302 Found [http://nwda.local/catalog/alkpca469-summary]
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-22 22:24:15) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca469-summary", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.3ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (18,17,16,15,14,13,12,11,10,9)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (6.9ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.9ms)
+Rendered _flash_msg (0.1ms)
+Completed in 115ms (View: 15, DB: 1) | 200 OK [http://nwda.local/catalog/alkpca469-summary]
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-22 22:24:19) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca469-biography_history", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.5ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (18,17,16,15,14,13,12,11,10,9)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (5.6ms)
+Rendered catalog/_solr_request (0.3ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.1ms)
+Completed in 50ms (View: 15, DB: 1) | 200 OK [http://nwda.local/catalog/alkpca469-biography_history]
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-22 22:24:24) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca469-scope-and-content", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.5ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (18,17,16,15,14,13,12,11,10,9)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (5.5ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.1ms)
+Completed in 48ms (View: 13, DB: 1) | 200 OK [http://nwda.local/catalog/alkpca469-scope-and-content]
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-22 22:24:27) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca469-arrangement", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.5ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (18,17,16,15,14,13,12,11,10,9)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (6.9ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.1ms)
+Completed in 51ms (View: 15, DB: 2) | 200 OK [http://nwda.local/catalog/alkpca469-arrangement]
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-22 22:24:29) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca469-file-plan", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.7ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (18,17,16,15,14,13,12,11,10,9)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (5.6ms)
+Rendered catalog/_solr_request (0.3ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 48ms (View: 13, DB: 2) | 200 OK [http://nwda.local/catalog/alkpca469-file-plan]
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-22 22:24:31) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca469-series-1", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.4ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (18,17,16,15,14,13,12,11,10,9)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (5.7ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.1ms)
+Completed in 49ms (View: 13, DB: 1) | 200 OK [http://nwda.local/catalog/alkpca469-series-1]
+
+
+Processing CatalogController#update (for 127.0.0.1 at 2009-06-22 22:24:35) [PUT]
+  Parameters: {"action"=>"update", "_method"=>"put", "authenticity_token"=>"z2AYI7UUPCvuWQ7CO79bieqcf7NpUQrqTRG3bvMYat4=", "id"=>"80444xv10619-summary", "controller"=>"catalog", "counter"=>"54"}
+  [4;35;1mSearch Load (5.0ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (18,17,16,15,14,13,12,11,10,9)) [0m
+Redirected to http://nwda.local/catalog/80444xv10619-summary
+Completed in 7ms (DB: 5) | 302 Found [http://nwda.local/catalog/80444xv10619-summary]
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-22 22:24:35) [GET]
+  Parameters: {"action"=>"show", "id"=>"80444xv10619-summary", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.4ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (18,17,16,15,14,13,12,11,10,9)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (5.3ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (1.0ms)
+Rendered _flash_msg (0.1ms)
+Completed in 52ms (View: 13, DB: 1) | 200 OK [http://nwda.local/catalog/80444xv10619-summary]
+
+
+Processing CatalogController#update (for 127.0.0.1 at 2009-06-22 22:24:38) [PUT]
+  Parameters: {"action"=>"update", "_method"=>"put", "authenticity_token"=>"z2AYI7UUPCvuWQ7CO79bieqcf7NpUQrqTRG3bvMYat4=", "id"=>"80444xv34899-summary", "controller"=>"catalog", "counter"=>"55"}
+  [4;35;1mSearch Load (1.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (18,17,16,15,14,13,12,11,10,9)) [0m
+Redirected to http://nwda.local/catalog/80444xv34899-summary
+Completed in 3ms (DB: 1) | 302 Found [http://nwda.local/catalog/80444xv34899-summary]
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-22 22:24:38) [GET]
+  Parameters: {"action"=>"show", "id"=>"80444xv34899-summary", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.4ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (18,17,16,15,14,13,12,11,10,9)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (8.6ms)
+Rendered catalog/_solr_request (0.3ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.1ms)
+Completed in 61ms (View: 17, DB: 1) | 200 OK [http://nwda.local/catalog/80444xv34899-summary]
+
+
+Processing CatalogController#update (for 127.0.0.1 at 2009-06-22 22:24:42) [PUT]
+  Parameters: {"action"=>"update", "_method"=>"put", "authenticity_token"=>"z2AYI7UUPCvuWQ7CO79bieqcf7NpUQrqTRG3bvMYat4=", "id"=>"80444xv76628-summary", "controller"=>"catalog", "counter"=>"56"}
+  [4;35;1mSearch Load (1.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (18,17,16,15,14,13,12,11,10,9)) [0m
+Redirected to http://nwda.local/catalog/80444xv76628-summary
+Completed in 3ms (DB: 1) | 302 Found [http://nwda.local/catalog/80444xv76628-summary]
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2009-06-22 22:24:43) [GET]
+  Parameters: {"action"=>"show", "id"=>"80444xv76628-summary", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.6ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (18,17,16,15,14,13,12,11,10,9)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.text) on line #21 of app/views/catalog/_show_partials/_ead.html.erb:
+18:     </div>
+19:     <div>
+20:       <dt>Origination</dt>
+21:       <dd><%= d.at('origination').text %></dd>
+22:     </div>
+23:     <div>
+24:       <dt>Date(s)</dt>
+
+    app/views/catalog/_show_partials/_ead.html.erb:21
+    /vendor/plugins/blacklight/app/helpers/application_helper.rb:86:in `render_document_partial'
+    app/views/catalog/show.html.erb:21
+    passenger (2.2.2) lib/phusion_passenger/rack/request_handler.rb:81:in `process_request'
+    passenger (2.2.2) lib/phusion_passenger/abstract_request_handler.rb:203:in `main_loop'
+    passenger (2.2.2) lib/phusion_passenger/railz/application_spawner.rb:340:in `start_request_handler'
+    passenger (2.2.2) lib/phusion_passenger/railz/application_spawner.rb:298:in `handle_spawn_application'
+    passenger (2.2.2) lib/phusion_passenger/utils.rb:181:in `safe_fork'
+    passenger (2.2.2) lib/phusion_passenger/railz/application_spawner.rb:296:in `handle_spawn_application'
+    passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:337:in `__send__'
+    passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:337:in `main_loop'
+    passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:187:in `start_synchronously'
+    passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:154:in `start'
+    passenger (2.2.2) lib/phusion_passenger/railz/application_spawner.rb:192:in `start'
+    passenger (2.2.2) lib/phusion_passenger/spawn_manager.rb:257:in `spawn_rails_application'
+    passenger (2.2.2) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+    passenger (2.2.2) lib/phusion_passenger/spawn_manager.rb:251:in `spawn_rails_application'
+    passenger (2.2.2) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+    passenger (2.2.2) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+    passenger (2.2.2) lib/phusion_passenger/spawn_manager.rb:250:in `spawn_rails_application'
+    passenger (2.2.2) lib/phusion_passenger/spawn_manager.rb:153:in `spawn_application'
+    passenger (2.2.2) lib/phusion_passenger/spawn_manager.rb:282:in `handle_spawn_application'
+    passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:337:in `__send__'
+    passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:337:in `main_loop'
+    passenger (2.2.2) lib/phusion_passenger/abstract_server.rb:187:in `start_synchronously'
+
+Rendered rescues/_trace (48.9ms)
+Rendered rescues/_request_and_response (1.1ms)
+Rendering rescues/layout (internal_server_error)
