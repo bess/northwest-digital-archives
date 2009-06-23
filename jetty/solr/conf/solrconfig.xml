@@ -124,6 +124,7 @@
      <str name="facet">true</str>
      <str name="facet.mincount">1</str>
      <str name="facet.limit">10</str>
+     <str name="collapse.field">collection_id</str>
      
      <str name="spellcheck">true</str>
      <str name="spellcheck.dictionary">default</str>
@@ -162,6 +163,7 @@
      <str name="facet">true</str>
      <str name="facet.mincount">1</str>
      <str name="facet.limit">10</str>
+     <str name="collapse.field">collection_id</str>
      
      <str name="spellcheck">true</str>
      <str name="spellcheck.dictionary">author</str>
@@ -202,6 +204,7 @@
      <str name="facet">true</str>
      <str name="facet.mincount">1</str>
      <str name="facet.limit">10</str>
+     <str name="collapse.field">collection_id</str>
      
      <str name="spellcheck">true</str>
      <str name="spellcheck.dictionary">title</str>
