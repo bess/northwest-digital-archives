@@ -2,9 +2,14 @@ require 'rubygems'
 require 'find'
 require 'rsolr'
 require 'nokogiri'
-
+ 
 require 'nwda-lib/nwda'
-
+ 
+def require_env_file
+  raise("The FILE environment variable is required!") if ENV['FILE'].to_s.empty?
+  ENV['FILE']
+end
+ 
 namespace :app do
   
   namespace :index do
@@ -12,131 +17,59 @@ namespace :app do
     # *************************************************************** #
     # Index marc files
     # Note: solrmarc is probably better for production use, but this
-    # is a good place to start 
+    # is a good place to start
     # *************************************************************** #
     
-    # desc 'Index a marc file at FILE=<location-of-file> using the lib/marc_mapper class.'
-    # task :marc => :environment do
-    #   
-    #   t = Time.now
-    #   
-    #   marc_file = ENV['FILE']
-    #   raise "Invalid file. Set the by using the FILE argument." unless File.exists?(marc_file.to_s)
-    #   
-    #   solr = Blacklight.solr
-    #   
-    #   mapper = MARCMapper.new
-    #   mapper.from_marc_file(marc_file) do |doc,index|
-    #     puts "#{index} -- adding doc w/id : #{doc[:id]} to Solr"
-    #     solr.add(doc)
-    #   end
-    #   
-    #   puts "Sending commit to Solr..."
-    #   solr.commit
-    #   puts "Complete."
-    #   
-    #   puts "Total Time: #{Time.now - t}"
-    #   
-    # end
+    desc 'Index a marc file at FILE=<location-of-file> using the lib/marc_mapper class.'
+    task :marc => :environment do
+      
+      t = Time.now
+      
+      marc_file = ENV['FILE']
+      raise "Invalid file. Set the by using the FILE argument." unless File.exists?(marc_file.to_s)
+      
+      solr = Blacklight.solr
+      
+      mapper = MARCMapper.new
+      mapper.from_marc_file(marc_file) do |doc,index|
+        puts "#{index} -- adding doc w/id : #{doc[:id]} to Solr"
+        solr.add(doc)
+      end
+      
+      puts "Sending commit to Solr..."
+      solr.commit
+      puts "Complete."
+      
+      puts "Total Time: #{Time.now - t}"
+      
+    end
     
-    # *************************************************************** #
-    # Index EAD files 
-    # *************************************************************** #
-    
-        #######################
-
-        desc "Index an EAD file at FILE=<location-of-file> using the lib/ead_mapper class."
-        task :ead=>:environment do
-
-          require 'nokogiri'
-
-          t = Time.now
-
-          raw = File.read(fetch_env_file)
-          # remove the default namespace,
-          # otherwise every query needs a "default:" prefix,
-          # and a namespace option
-          raw.gsub!(/xmlns=".*"/, '')
-
-          xml = Nokogiri::XML(raw)
-          BASE_ID = xml.at('/ead/eadheader/eadid').text.gsub(/\.xml/, '')
-
-          Blacklight.solr.delete_by_query "base_id_s:\"#{BASE_ID}\""
-          Blacklight.solr.commit
-
-          def id(v)
-            BASE_ID + '-' + v.downcase.gsub(/\/+/, '_').gsub(/;+|\.+/, '')
-          end
-
-          base_doc = {
-            :format_code_t => 'ead',
-            :format_facet => 'EAD',
-            :title_t => xml.at('//archdesc[@level="collection"]/did/unittitle').text,
-            :institution_t => xml.at('//publicationstmt/publisher').text,
-            :language_facet => xml.at('//profiledesc/langusage/language').text.gsub(/\.$/, ''),
-            :ead_filename_s => xml.at('//eadheader/eadid').text,
-            :base_id_s => BASE_ID
-          }
-
-          # all solr docs
-          solr_docs = []
-
-          # the table of contents container
-          toc = []
-
-          # SUMMARY
-          summary_doc = base_doc.dup
-          summary_doc[:xml_display] = xml.at("/ead/archdesc/did").to_xml
-          summary_doc[:id] = id('summary')
-          summary_doc[:title_t] = "#{summary_doc[:title_t]}: Summary Information"
-          solr_docs << summary_doc
-          toc << {:label=>'Summary Information', :id=>summary_doc[:id], :children=>[]}
-
-          create_desc_item = lambda{|node_name, id_suffix|
-            doc = base_doc.dup
-            node = xml.at('/ead/archdesc/' + node_name)
-            break unless node
-            doc[:xml_display] = node.to_xml
-            doc[:id] = id(id_suffix)
-            label = node.at('head').text rescue node_name
-            doc[:title_t] = "#{doc[:title_t]}: #{label}"
-            solr_docs << doc
-            toc << {:label=>label, :id=>doc[:id], :children=>[]}
-          }
-
-          create_desc_item.call('bioghist', 'Biography/History')
-          create_desc_item.call('scopecontent', 'Scope and Content')
-          create_desc_item.call('arrangement', 'Arrangement')
-          create_desc_item.call('fileplan', 'File Plan')
-
-          toc << {:label => 'Collection Inventory', :id=>nil, :children=>[]}
-
-          xml.search('ead/archdesc/dsc').each do |n|
-            n.search('c[@level="series"]').each_with_index do |s,index|
-              sdoc = base_doc.dup
-              sdoc[:id] = id(s['id'])
-              sdoc[:xml_display] = s.to_xml
-              sdoc[:title_t] = "#{sdoc[:title_t]}: #{s.at('did/unittitle').text}"
-              solr_docs << sdoc
-              toc.last[:id] ||= sdoc[:id]
-              toc.last[:children] << {:label=>s.at('did/unittitle').text, :id=>sdoc[:id], :children=>[]}
-            end
-          end
-
-          json_file = File.join(RAILS_ROOT, 'tmp', 'cache', 'json-toc', "#{BASE_ID}.json")
-          FileUtils.mkdir_p File.dirname(json_file)
-
-          File.open(json_file, File::CREAT|File::TRUNC|File::WRONLY) do |f|
-            f.puts toc.to_json
-          end
-
-          Blacklight.solr.add solr_docs
-          Blacklight.solr.commit
-
-        end
-
-
-    
+    desc "Index an EAD file at FILE=<location-of-file> using the lib/ead_mapper class."
+    task :ead=>:environment do
+      require 'ead_solr_mapper'
+      t = Time.now
+      input_file = require_env_file
+      if input_file =~ /\*/
+        files = Dir[input_file].collect
+      else
+        files = [input_file]
+      end
+      solr_docs = []
+      files.each do |f|
+        puts "FILE == #{f}"
+        mapper = EADSolrMapper.new f
+        puts "Using #{mapper.collection_id} as the collection_id"
+        # delete the previous set of docs in this collection...
+        Blacklight.solr.delete_by_query "collection_id_s:\"#{mapper.collection_id}\""
+        solr_docs += mapper.map
+        puts "Mapping #{solr_docs.size} docs..."
+        puts "Total Time: #{Time.now - t}"
+      end
+      puts "Indexing #{solr_docs.size} docs..."
+      Blacklight.solr.add solr_docs
+      Blacklight.solr.commit
+      puts "Total Time: #{Time.now - t}"
+    end
   
   
     # *************************************************************** #
@@ -154,7 +87,7 @@ namespace :app do
       
       if File.file? herbarium_export_file and herbarium_export_file.to_s =~ /^.*\.xml$/
           xml = Nokogiri::XML(open(herbarium_export_file))
-          xml.xpath('/metadata/record').each do |record| 
+          xml.xpath('/metadata/record').each do |record|
             doc = NWDA::Mappers::Herbarium.new(record)
             #puts doc.inspect
             solr.add(doc.doc)
@@ -165,121 +98,121 @@ namespace :app do
       puts "Complete."
       puts "Total Time: #{Time.now - t}"
     end
-
+ 
   
-    # *************************************************************** #
-    # Index City of Pullman Collection
-    # *************************************************************** #
-    
-    desc 'Index City of Pullman Collection located at FILE=<location-of-file>'
-    task :pullman => :environment do
-      t = Time.now
-      
-      pullman_export_file = ENV['FILE']
-      raise "Invalid file. Set the file by using the FILE argument." unless File.exists?(pullman_export_file.to_s) and File.file?(pullman_export_file.to_s)
-      
-      solr = Blacklight.solr
-      
-      if File.file? pullman_export_file and pullman_export_file.to_s =~ /^.*\.xml$/
-          xml = Nokogiri::XML(open(pullman_export_file))
-          xml.xpath('/rdf:RDF/rdf:Description').each do |record| 
-            doc = NWDA::Mappers::Pullman.new(record)
-            #puts doc.inspect
-            solr.add(doc.doc)
-          end
-      end
-      puts "Sending commit to Solr..."
-      solr.commit
-      puts "Complete."
-      puts "Total Time: #{Time.now - t}"
-    end
+  # *************************************************************** #
+  # Index City of Pullman Collection
+  # *************************************************************** #
   
-    # *************************************************************** #
-    # Index UW Special Collections
-    # *************************************************************** #
+  desc 'Index City of Pullman Collection located at FILE=<location-of-file>'
+  task :pullman => :environment do
+    t = Time.now
     
-    desc 'Index UW-CDM located at FILE=<location-of-file>'
-    task :uwcdm => :environment do
-      t = Time.now
-      
-      export_file = ENV['FILE']
-      raise "Invalid file. Set the file by using the FILE argument." unless File.exists?(export_file.to_s) and File.file?(export_file.to_s)
-      
-      solr = Blacklight.solr
-      
-      if File.file? export_file and export_file.to_s =~ /^.*\.xml$/
-          xml = Nokogiri::XML(open(export_file))
-          xml.xpath('/OAI-PMH/ListRecords/record[1]').each do |record| 
-            doc = NWDA::Mappers::UW.new(record)
-            #puts doc.inspect
-            solr.add(doc.doc)
-          end
-      end
-      puts "Sending commit to Solr..."
-      solr.commit
-      puts "Complete."
-      puts "Total Time: #{Time.now - t}"
+    pullman_export_file = ENV['FILE']
+    raise "Invalid file. Set the file by using the FILE argument." unless File.exists?(pullman_export_file.to_s) and File.file?(pullman_export_file.to_s)
+    
+    solr = Blacklight.solr
+    
+    if File.file? pullman_export_file and pullman_export_file.to_s =~ /^.*\.xml$/
+        xml = Nokogiri::XML(open(pullman_export_file))
+        xml.xpath('/rdf:RDF/rdf:Description').each do |record|
+          doc = NWDA::Mappers::Pullman.new(record)
+          #puts doc.inspect
+          solr.add(doc.doc)
+        end
     end
+    puts "Sending commit to Solr..."
+    solr.commit
+    puts "Complete."
+    puts "Total Time: #{Time.now - t}"
+  end
   
-    # *************************************************************** #
-    # Index Baseball
-    # *************************************************************** #
-    
-    desc 'Index baseball records located at FILE=<location-of-file>'
-    task :baseball => :environment do
-      t = Time.now
-      
-      export_file = ENV['FILE']
-      raise "Invalid file. Set the file by using the FILE argument." unless File.exists?(export_file.to_s) and File.file?(export_file.to_s)
-      
-      solr = Blacklight.solr
-      
-      if File.file? export_file and export_file.to_s =~ /^.*\.xml$/
-          xml = Nokogiri::XML(open(export_file))
-          xml.xpath('/metadata/record').each do |record| 
-            doc = NWDA::Mappers::Baseball.new(record)
-            #puts doc.inspect
-            solr.add(doc.doc)
-          end
-      end
-      puts "Sending commit to Solr..."
-      solr.commit
-      puts "Complete."
-      puts "Total Time: #{Time.now - t}"
-    end
+  # *************************************************************** #
+  # Index UW Special Collections
+  # *************************************************************** #
   
-    # *************************************************************** #
-    # Index WSU Theses
-    # *************************************************************** #
-      
-    desc 'Index WSU theses located at FILE=<location-of-file>'
-    task :theses => :environment do
-      t = Time.now
+  desc 'Index UW-CDM located at FILE=<location-of-file>'
+  task :uwcdm => :environment do
+    t = Time.now
     
-      export_file = ENV['FILE']
-      raise "Invalid file. Set the file by using the FILE argument." unless File.exists?(export_file.to_s) and File.file?(export_file.to_s)
+    export_file = ENV['FILE']
+    raise "Invalid file. Set the file by using the FILE argument." unless File.exists?(export_file.to_s) and File.file?(export_file.to_s)
     
-      solr = Blacklight.solr
+    solr = Blacklight.solr
     
-      if File.file? export_file and export_file.to_s =~ /^.*\.xml$/
-          raw = File.read(export_file)
-          # remove the default namespace,
-          # otherwise every query needs a "default:" prefix,
-          # and a namespace option
-          raw.gsub!(/xmlns=".*"/, '')
-      
-          xml = Nokogiri::XML(raw)
-          xml.xpath('/OAI-PMH/ListRecords/record').each do |record| 
-            doc = NWDA::Mappers::Theses.new(record)
-            #puts doc.inspect
-            solr.add(doc.doc)
-          end
-      end
-      puts "Sending commit to Solr..."
-      solr.commit
-      puts "Complete."
-      puts "Total Time: #{Time.now - t}"
+    if File.file? export_file and export_file.to_s =~ /^.*\.xml$/
+        xml = Nokogiri::XML(open(export_file))
+        xml.xpath('/OAI-PMH/ListRecords/record[1]').each do |record|
+          doc = NWDA::Mappers::UW.new(record)
+          #puts doc.inspect
+          solr.add(doc.doc)
+        end
     end
+    puts "Sending commit to Solr..."
+    solr.commit
+    puts "Complete."
+    puts "Total Time: #{Time.now - t}"
+  end
+  
+  # *************************************************************** #
+  # Index Baseball
+  # *************************************************************** #
+  
+  desc 'Index baseball records located at FILE=<location-of-file>'
+  task :baseball => :environment do
+    t = Time.now
+    
+    export_file = ENV['FILE']
+    raise "Invalid file. Set the file by using the FILE argument." unless File.exists?(export_file.to_s) and File.file?(export_file.to_s)
+    
+    solr = Blacklight.solr
+    
+    if File.file? export_file and export_file.to_s =~ /^.*\.xml$/
+        xml = Nokogiri::XML(open(export_file))
+        xml.xpath('/metadata/record').each do |record|
+          doc = NWDA::Mappers::Baseball.new(record)
+          #puts doc.inspect
+          solr.add(doc.doc)
+        end
+    end
+    puts "Sending commit to Solr..."
+    solr.commit
+    puts "Complete."
+    puts "Total Time: #{Time.now - t}"
+  end
+  
+  # *************************************************************** #
+  # Index WSU Theses
+  # *************************************************************** #
+  
+  desc 'Index WSU theses located at FILE=<location-of-file>'
+  task :theses => :environment do
+    t = Time.now
+    
+    export_file = ENV['FILE']
+    raise "Invalid file. Set the file by using the FILE argument." unless File.exists?(export_file.to_s) and File.file?(export_file.to_s)
+    
+    solr = Blacklight.solr
+    
+    if File.file? export_file and export_file.to_s =~ /^.*\.xml$/
+        raw = File.read(export_file)
+        # remove the default namespace,
+        # otherwise every query needs a "default:" prefix,
+        # and a namespace option
+        raw.gsub!(/xmlns=".*"/, '')
+      
+        xml = Nokogiri::XML(raw)
+        xml.xpath('/OAI-PMH/ListRecords/record').each do |record|
+          doc = NWDA::Mappers::Theses.new(record)
+          #puts doc.inspect
+          solr.add(doc.doc)
+        end
+    end
+    puts "Sending commit to Solr..."
+    solr.commit
+    puts "Complete."
+    puts "Total Time: #{Time.now - t}"
+  end
   # *************************************************************** #
     end # end the index namespace
 end
