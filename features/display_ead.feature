@@ -17,6 +17,17 @@ Feature: Display EAD files correctly
 	  And I should see a search result heading for "Guide to the Robert C. Notson papers"
 	  And I should see a search results value "Institution" of "Willamette University Archives and Special Collections"
 	
+	Scenario: formatting for a guide
+	  Given I am on the document page for id owsmss001xml-summary
+	  Then I should see a title of "Guide to the Robert C. Notson papers: Summary Information"
+	  And I should see "Biography/History"
+	
+	
+	
+	
+	#Scenario: Pearl Harbor game collection
+	  #Given I am on the document page for id owsmss9xml-summary
+	
 	
 	
 	

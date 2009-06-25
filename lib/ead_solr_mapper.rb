@@ -55,7 +55,7 @@ class EADSolrMapper
       :format_facet => 'EAD',
       :title_t => @xml.at('/ead/eadheader[1]/filedesc[1]/titlestmt[1]/titleproper[1]/text()').text.strip,
       :unittitle_t => (@xml.at('//archdesc[@level="collection"]/did/unittitle').text rescue 'N/A'),
-      :institution_t => @xml.at('//publicationstmt/publisher').text,
+      :institution_t => @xml.at('//publicationstmt/publisher/text()[1]').text.strip,
       :language_facet => @xml.at('//profiledesc/langusage/language').text.gsub(/\.$/, ''),
       :hierarchy_scope => self.collection_id,
       :collection_id => self.collection_id,
@@ -75,20 +75,24 @@ class EADSolrMapper
     self.base_doc.merge({
       :xml_display => @xml.at("/ead/archdesc/did").to_xml,
       :id => generate_id('summary'),
-      :unittitle_t => base_doc[:unittitle_t] + ': ' + label,
+      :unittitle_t => label,
       :hierarchy => label
     })
   end
   
   # creates a /ead/archdesc based doc
   def create_desc_item(node_name, id_suffix)
+    
+    puts "node_name = #{node_name}"
+    puts "id_suffix = #{id_suffix}"
+    
     node = @xml.at('/ead/archdesc/' + node_name)
     return unless node
-    label = node.at('head').text rescue node_name
+    label = node.at('head').text rescue id_suffix.to_s
     self.base_doc.merge({
       :xml_display => node.to_xml,
       :id => generate_id(id_suffix),
-      :unittitle_t => (base_doc[:unittitle_t] + ': ' + label),
+      :unittitle_t => label,
       :hierarchy => label
     })
   end
@@ -104,7 +108,7 @@ class EADSolrMapper
       acc << self.base_doc.merge({
         :id => generate_id(rel_id),
         :xml_display => s.to_xml,
-        :title_t => base_doc[:title_t] + ': '  + label,
+        :unittitle_t => label,
         :hierarchy => "Collection Inventory::#{label}"
       })
     end

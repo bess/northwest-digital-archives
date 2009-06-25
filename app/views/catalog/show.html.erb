@@ -3,7 +3,7 @@
 <div id="document">
   <div id="doc_<%= @document[:id] %>">
     
-    <h1><%= @document[Blacklight.config[:show][:heading]] %></h1>
+    <h1><%= @document[Blacklight.config[:show][:heading]] %><% if @document[:unittitle_t]%><%= ": " + @document[:unittitle_t][0]%><% end %></h1>
     <h3 class="byline"><%#= @document[Blacklight.config[:show][:byline]] %></h3>
     <div class="tools"><%#= render :partial => 'show_tools' %></div>
     <div class="document">
