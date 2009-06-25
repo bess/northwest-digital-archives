@@ -1,16 +1,17 @@
 <% sidebar_items << capture do %>
   <%= contextual_navigation_tree(@document.id, @document.ead.navigation) %>
+ <%#= @document.id %>
+ <%#= @document.ead.class %>
+ <%#= @document.ead.navigation %>
 <% end %>
 
 <% require 'nokogiri' %>
 <% d = Nokogiri::XML(@document[:xml_display].to_s) %>
 
 <%#= h d.to_xml %>
+<%#= h @document.inspect %>
 
-<% if d.root.name == 'did' %>
-  
-  <h3><%= d.at('unittitle').text %></h3>
-  
+<% if d.root.name == 'did' %>  
   <dl class="defList">
     <div>
       <dt>Repository</dt>
