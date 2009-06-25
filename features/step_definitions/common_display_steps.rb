@@ -24,3 +24,8 @@ end
 Then /^I should see a search result heading for "([^\"]*)"$/ do |title|
   response.should have_tag("h3.index_title", :text => /^\d(.*)#{title}$/)
 end
+
+Then /^I should see a search results value "([^\"]*)" of "([^\"]*)"$/ do |key, value|
+  response.should have_tag("dl.indexDefList dt", :text => key)
+  response.should have_tag("dl.indexDefList dd", :text => value)
+end
