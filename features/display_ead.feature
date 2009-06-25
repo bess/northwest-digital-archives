@@ -14,7 +14,7 @@ Feature: Display EAD files correctly
 	  When I fill in "q" with "'Robert C. Notson'"
 	  And I press "search"
 	  Then I should see 1 results
-	  And I should see "Guide to the Robert C. Notson papers"
+	  And I should see a search result heading for "Guide to the Robert C. Notson papers"
 	
 	
 	
