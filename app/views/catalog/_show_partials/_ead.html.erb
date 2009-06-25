@@ -44,6 +44,24 @@
     <p><%= p.text %></p>
   <% end %>
 <% elsif d.root.name == 'c01' %>
+	<dl class="defList">
+		
+		<% if d.at('unitdate') %>
+		<dt>Date(s)</dt>
+  		<dd><%= d.at('unitdate').text %></dd>
+		<% end %>
+		
+		<% if d.at('arrangement') %>
+		<dt>Arrangement</dt>
+		<dd><%= d.at('arrangement').text %></dd>
+		<% end %>
+ 
+		<% if d.at('scopecontent') %>
+		<dt>Scope / Content</dt>
+		<dd><%= d.at('scopecontent').text %></dd>
+		<% end %>
+	</dl>
+<%#= d.to_xml %>
   <% d.search('c02').each do |c02| %>
     <p><%= c02.text %></p>
   <% end %>
