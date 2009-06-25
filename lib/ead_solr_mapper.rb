@@ -88,7 +88,7 @@ class EADSolrMapper
     
     node = @xml.at('/ead/archdesc/' + node_name)
     return unless node
-    label = node.at('head').text rescue id_suffix.to_s
+    label = node.at('head').text.capitalize rescue id_suffix.to_s
     self.base_doc.merge({
       :xml_display => node.to_xml,
       :id => generate_id(id_suffix),
@@ -102,7 +102,7 @@ class EADSolrMapper
     i=0
     @xml.search('ead/archdesc/dsc/c01[@level="series"]').inject([]) do |acc,s|
       puts "mapping c01 ##{i}"
-      label = s.at('did/unittitle').text
+      label = s.at('did/unittitle').text.capitalize
       rel_id = s.at('did/unitid').text rescue ("item-#{i}")
       i += 1
       acc << self.base_doc.merge({
