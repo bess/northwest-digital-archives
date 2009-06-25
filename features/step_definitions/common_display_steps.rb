@@ -20,3 +20,7 @@ end
 Then /^I should not see a "([^\"]*)" field$/ do |key|
   response.should_not have_tag("dl.defList dt", :text => key)
 end
+
+Then /^I should see a search result heading for "([^\"]*)"$/ do |title|
+  response.should have_tag("h3.index_title", :text => /^\d(.*)#{title}$/)
+end
