@@ -1,0 +1,28 @@
+<div class="yui-g">
+	<div class="yui-u">
+<%# default partial to display solr document fields in catalog index view -%>
+&nbsp;
+
+</div>
+<div class="yui-u">
+<dl class="indexDefList">
+	
+	<%#= document.inspect %>
+		 
+    <dt>Collection</dt><dd><%= document[:collection_facet] %></dd>
+
+	<% if document[:date_display] %>
+	<dt>Date</dt><dd><%= document[:date_display] %></dd>
+	<% end %>
+	
+	<% if document[:team_t] %>
+	<dt>Team</dt><dd><%= document[:team_t] %></dd>
+	<% end %>
+	
+	<% if document[:format_facet] %>
+		<dt>Format</dt><dd><%= document[:format_facet].join(", ") %></dd>
+	<% end %>
+	
+</dl>
+</div>
+</div>
