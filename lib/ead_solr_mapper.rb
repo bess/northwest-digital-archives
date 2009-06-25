@@ -48,16 +48,18 @@ class EADSolrMapper
   #########
   
   # creates a base hash doc for each solr document
+    
   def base_doc
     {
       :format_code_t => 'ead',
       :format_facet => 'EAD',
-      :title_t => (@xml.at('//archdesc[@level="collection"]/did/unittitle').text rescue 'N/A'),
+      :title_t => @xml.at('/ead/eadheader[1]/filedesc[1]/titlestmt[1]/titleproper[1]/text()').text.strip,
+      :unittitle_t => (@xml.at('//archdesc[@level="collection"]/did/unittitle').text rescue 'N/A'),
       :institution_t => @xml.at('//publicationstmt/publisher').text,
       :language_facet => @xml.at('//profiledesc/langusage/language').text.gsub(/\.$/, ''),
       :hierarchy_scope => self.collection_id,
       :collection_id => self.collection_id,
-      :collection_facet => "Northwest Digital Archives EAD Guides"
+      :collection_facet => "Northwest Digital Archives EAD Guides"    
     }
   end
   
@@ -73,7 +75,7 @@ class EADSolrMapper
     self.base_doc.merge({
       :xml_display => @xml.at("/ead/archdesc/did").to_xml,
       :id => generate_id('summary'),
-      :title_t => base_doc[:title_t] + ': ' + label,
+      :unittitle_t => base_doc[:unittitle_t] + ': ' + label,
       :hierarchy => label
     })
   end
@@ -86,7 +88,7 @@ class EADSolrMapper
     self.base_doc.merge({
       :xml_display => node.to_xml,
       :id => generate_id(id_suffix),
-      :title_t => (base_doc[:title_t] + ': ' + label),
+      :unittitle_t => (base_doc[:unittitle_t] + ': ' + label),
       :hierarchy => label
     })
   end
