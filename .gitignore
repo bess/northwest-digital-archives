@@ -1,10 +1,8 @@
-jetty/logs/*
 raw_data/
 **/.svn
 **/.svn/**
 **~
 config/database.yml
-jetty/*
 .DS_Store
 log/*
 db/test.sqlite3
