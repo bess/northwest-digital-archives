@@ -62,20 +62,20 @@ Blacklight.configure(:shared) do |config|
   #   The ordering of the field names is the order of the display 
   config[:facet] = {
     :field_names => [
-      "language_facet",
-      "subject_era_facet",
-      "geographic_subject_facet",
       "format_facet",
+      "subject_era_facet",
+      "language_facet",
+      "institution_facet",
       "collection_facet",
-      "institution_facet"
+      "geographic_subject_facet",
     ],
     :labels => {
-      "language_facet"           => "Language",
-      "subject_era_facet"        => "Subject - Era",
-      "geographic_subject_facet" => "Subject - Geographic",
       "format_facet"             => "Format",
+      "subject_era_facet"        => "Time Period",
+      "language_facet"           => "Language",
+      "institution_facet"        => "Institution",
       "collection_facet"         => "Collection",
-      "institution_facet"        => "Institution"
+      "geographic_subject_facet" => "Geographic coverage"
     }
   }
 
