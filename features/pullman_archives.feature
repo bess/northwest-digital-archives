@@ -1,17 +1,22 @@
 Feature: Display Pullman Archives files correctly
 
 	Scenario: Check to see that all of the Pullman Archives are loaded
-	Given I am on the homepage
-	When I follow "City of Pullman Collection"
-	Then I should see 1275 results
-	When I follow "Less than 10 years old"
-	Then I should see 365 results
+		Given I am on the homepage
+		When I follow "City of Pullman Collection"
+		Then I should see 1275 results
+		When I follow "Less than 10 years old"
+		Then I should see 365 results
+	
+	Scenario: Check for presence of correct facets
+		Given I am on the homepage
+		Then I should see a facet category "Collection" with a link "City of Pullman Collection"
+		Then I should see a facet category "Institution" with a link "Washington State University"
 	
 	Scenario: Search for Palouse
-	  Given I am on the homepage
-	  When I fill in "q" with "Palouse"
-	  And I press "search"
-	  Then I should see 393 results
+		Given I am on the homepage
+		When I fill in "q" with "Palouse"
+		And I press "search"
+		Then I should see 393 results
 	
 	Scenario: Search for Paul Henning Collection
 	  Given I am on the homepage
