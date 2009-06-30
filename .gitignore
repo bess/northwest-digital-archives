@@ -4,7 +4,7 @@ raw_data/
 **/.svn/**
 **~
 config/database.yml
-jetty/work/*
+jetty/*
 .DS_Store
 log/*
 db/test.sqlite3

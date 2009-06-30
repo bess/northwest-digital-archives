@@ -17,10 +17,14 @@
       <dt>Repository</dt>
       <dd><%= d.at('repository').text %></dd>
     </div>
+
+	<% if d.at('origination') %>
     <div>
       <dt>Origination</dt>
       <dd><%= d.at('origination').text %></dd>
     </div>
+	<% end %>
+
     <div>
       <dt>Date(s)</dt>
       <dd><%= d.at('unitdate').text %></dd>
