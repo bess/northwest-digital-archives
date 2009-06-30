@@ -22,6 +22,7 @@ class NWDA::Mappers::Baseball
       self.getDescription
       # 
       @doc[:collection_facet] = "Oregon State Baseball"
+      @doc[:institution_facet] = "Oregon State University"
       #       
       self.getImages
       self.getSubjects
@@ -31,6 +32,7 @@ class NWDA::Mappers::Baseball
       self.getSource
       self.getRights
       self.getContributors
+      
       @doc
     end
     
