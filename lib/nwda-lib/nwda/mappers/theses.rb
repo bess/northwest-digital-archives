@@ -24,6 +24,7 @@ class NWDA::Mappers::Theses
         self.getURI
 
         @doc[:collection_facet] = "Washington State University Theses"
+        @doc[:institution_facet] = "Washington State University"
       
         #self.getPDF
         self.getSubjects
