@@ -56,11 +56,23 @@ class EADSolrMapper
       :title_t => @xml.at('/ead/eadheader[1]/filedesc[1]/titlestmt[1]/titleproper[1]/text()').text.strip,
       :unittitle_t => (@xml.at('//archdesc[@level="collection"]/did/unittitle').text rescue 'N/A'),
       :institution_t => @xml.at('//publicationstmt/publisher/text()[1]').text.strip,
-      :language_facet => @xml.at('//profiledesc/langusage/language').text.gsub(/\.$/, ''),
+      :institution_facet => @xml.at('//repository//corpname/text()[1]').text.gsub(/\s+/," ").strip,
+      :language_facet => getLanguages,
       :hierarchy_scope => self.collection_id,
       :collection_id => self.collection_id,
       :collection_facet => "Northwest Digital Archives EAD Guides"    
     }
+  end
+  
+  # get all of the languages used in the EAD guide, not only the language in which the guide itself is encoded
+  # normalize the language values, and only keep the unique ones
+  def getLanguages
+    a = []
+    @xml.xpath('//language/text()').each do |lang|
+      a << lang
+    end
+    a.collect! {|lang| lang.to_s.gsub('.','').gsub(',','').strip.capitalize}
+    a.uniq
   end
   
   # generates an "id" based on the collection_id
