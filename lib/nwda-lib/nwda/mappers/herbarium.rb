@@ -30,6 +30,7 @@ class NWDA::Mappers::Herbarium
       
       #self.storeRecord
       @doc[:collection_facet] = "Oregon State University Herbarium"
+      @doc[:institution_facet] = "Oregon State University"
       @doc
     end
     
