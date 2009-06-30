@@ -29,3 +29,12 @@ Then /^I should see a search results value "([^\"]*)" of "([^\"]*)"$/ do |key, v
   response.should have_tag("dl.indexDefList dt", :text => key)
   response.should have_tag("dl.indexDefList dd", :text => value)
 end
+
+# This checks for the presence of an h3 element with a value of facet_category, and then 
+# separately checks for the presence of a link with value facet_value
+# It does not actually check to see that facet_value actually occurs underneath a specific
+# facet_category -- I couldn't figure out how to do that. 
+Then /^I should see a facet category "([^\"]*)" with a link "([^\"]*)"$/ do |facet_category, facet_value|
+  response.should have_tag("div#facets h3", :text => facet_category)
+  response.should have_tag("div#facets h3 + ul li a[href]", :text => facet_value)
+end
