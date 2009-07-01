@@ -112,12 +112,12 @@ class EADSolrMapper
   # creates an array of ead/archdesc/dsc/c docs
   def create_item_docs
     i=0
-    @xml.search('ead/archdesc/dsc/c01[@level="series"]').inject([]) do |acc,s|
+    @xml.search('ead/archdesc/dsc/c01[@level="series"]').inject([]) do |docs,s|
       puts "mapping c01 ##{i}"
       label = s.at('did/unittitle').text.capitalize
       rel_id = s.at('did/unitid').text rescue ("item-#{i}")
       i += 1
-      acc << self.base_doc.merge({
+      docs << self.base_doc.merge({
         :id => generate_id(rel_id),
         :xml_display => s.to_xml,
         :unittitle_t => label,
