@@ -100,7 +100,13 @@ class EADSolrMapper
     
     node = @xml.at('/ead/archdesc/' + node_name)
     return unless node
-    label = node.at('head').text.capitalize rescue id_suffix.to_s
+    
+    if head = node.at('head')
+      label = head.text.empty? ? id_suffix : head.text.capitalize
+    else
+      label = id_suffix.to_s
+    end
+    
     self.base_doc.merge({
       :xml_display => node.to_xml,
       :id => generate_id(id_suffix),
