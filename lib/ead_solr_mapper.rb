@@ -50,7 +50,7 @@ class EADSolrMapper
   # creates a base hash doc for each solr document
     
   def base_doc
-    {
+    @base_doc ||= {
       :format_code_t => 'ead',
       :format_facet => 'EAD',
       :title_t => @xml.at('/ead/eadheader[1]/filedesc[1]/titlestmt[1]/titleproper[1]/text()').text.strip,
