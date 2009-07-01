@@ -86,13 +86,16 @@
     
     <!--
 	    "hierarchy" - A materialized path which describes a hierarchy; Colors::Blue::Navy::Dark
-	    "hierarchy_scope" - Links together documents that should be in the same "tree"
+	    "hierarchy_scope" - Links documents together that should be in the same "tree".
 	    Hint: use hierarchy_scope in the fq param for maintaining the tree scope.
     -->
     <field name="hierarchy"  type="string"  indexed="true"  stored="true" multiValued="false"/>
     <field name="hierarchy_scope"  type="string"  indexed="true"  stored="true" multiValued="false"/>
     
-    <!-- used to link related documents together -->
+    <!-- used for linking to parent-like objects that may be part of *any* collection -->
+    <field name="part_of"  type="string"  indexed="true"  stored="true" multiValued="true"/>
+    
+    <!-- used to link related (EAD collection etc.) documents together -->
     <field name="collection_id"  type="string"  indexed="true"  stored="true" multiValued="false"/>
     
     <dynamicField name="*_i"  type="sint"    indexed="true"  stored="true"/>
