@@ -15,7 +15,7 @@ module ApplicationHelper
   end
   
   # id is a solr document id
-  # composite is usually the result of solr_doc.ead.navigation (or somet other instance of MaterialGirl::Composite)
+  # composite is usually the result of solr_doc.ead.navigation (or some other instance of MaterialGirl::Composite)
   def render_navigation_level(id, composite, &block)
     html = "<ul>"
     composite.children.each do |node|
