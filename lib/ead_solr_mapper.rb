@@ -104,7 +104,7 @@ class EADSolrMapper
     if head = node.at('head')
       label = head.text.empty? ? id_suffix : head.text.capitalize
     else
-      label = id_suffix.to_s
+      label = id_suffix
     end
     
     self.base_doc.merge({
@@ -118,14 +118,14 @@ class EADSolrMapper
   # creates an array of ead/archdesc/dsc/c docs
   def create_item_docs
     i=0
-    @xml.search('ead/archdesc/dsc/c01[@level="series"]').inject([]) do |docs,s|
+    @xml.search('ead/archdesc/dsc/c01[@level="series"]').inject([]) do |docs,c01|
       puts "mapping c01 ##{i}"
-      label = s.at('did/unittitle').text.capitalize
-      rel_id = s.at('did/unitid').text rescue ("item-#{i}")
+      label = c01.at('did/unittitle').text.capitalize
+      rel_id = c01.at('did/unitid').text rescue ("item-#{i}")
       i += 1
       docs << self.base_doc.merge({
         :id => generate_id(rel_id),
-        :xml_display => s.to_xml,
+        :xml_display => c01.to_xml,
         :unittitle_t => label,
         :hierarchy => "Collection Inventory::#{label}"
       })
