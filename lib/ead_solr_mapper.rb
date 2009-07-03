@@ -6,9 +6,14 @@ class EADSolrMapper
   
   # file_id is used as a collection_id field backup, in case the eadid is missing...
   attr :file_id
+  attr :filename
+  attr :base_filename
   
   def initialize(doc_path)
+    @filename = doc_path
     @file_id = val_to_id File.basename(doc_path, '.xml')
+    @base_filename = @filename.split('/').slice(-2..-1).join('/')
+    
     raw = File.read doc_path
     # remove the default namespace,
     # otherwise every query needs a "default:" prefix,
@@ -48,16 +53,21 @@ class EADSolrMapper
   #########
   
   # creates a base hash doc for each solr document
-    
+  # this is created only *once*
   def base_doc
     @base_doc ||= {
       :format_code_t => 'ead',
       :format_facet => 'EAD',
+      :filename_t => @base_filename,
       :title_t => @xml.at('/ead/eadheader[1]/filedesc[1]/titlestmt[1]/titleproper[1]/text()').text.strip,
-      :unittitle_t => (@xml.at('//archdesc[@level="collection"]/did/unittitle').text rescue 'N/A'),
+      :unittitle_t => (
+        @xml.at('//archdesc[@level="collection"]/did/unittitle').text rescue
+          @xml.at('//archdesc/did/unittitle').text rescue
+            'N/A'
+      ),
       :institution_t => @xml.at('//publicationstmt/publisher/text()[1]').text.strip,
-      :institution_facet => @xml.at('//repository//corpname/text()[1]').text.gsub(/\s+/," ").strip,
-      :language_facet => getLanguages,
+      :institution_facet => @xml.at('//repository//corpname').children.first.text.gsub(/\s+/," ").strip,
+      :language_facet => self.languages,
       :hierarchy_scope => self.collection_id,
       :collection_id => self.collection_id,
       :collection_facet => "Northwest Digital Archives EAD Guides"    
@@ -66,13 +76,10 @@ class EADSolrMapper
   
   # get all of the languages used in the EAD guide, not only the language in which the guide itself is encoded
   # normalize the language values, and only keep the unique ones
-  def getLanguages
-    a = []
-    @xml.xpath('//language/text()').each do |lang|
-      a << lang
-    end
-    a.collect! {|lang| lang.to_s.gsub('.','').gsub(',','').strip.capitalize}
-    a.uniq
+  def languages
+    @xml.xpath('//language').map do |lang|
+      lang.text.to_s.gsub(/\.|\,/,'').strip.capitalize
+    end.uniq
   end
   
   # generates an "id" based on the collection_id
@@ -95,8 +102,8 @@ class EADSolrMapper
   # creates a /ead/archdesc based doc
   def create_desc_item(node_name, id_suffix)
     
-    puts "node_name = #{node_name}"
-    puts "id_suffix = #{id_suffix}"
+    #puts "node_name = #{node_name}"
+    #puts "id_suffix = #{id_suffix}"
     
     node = @xml.at('/ead/archdesc/' + node_name)
     return unless node
@@ -119,16 +126,35 @@ class EADSolrMapper
   def create_item_docs
     i=0
     @xml.search('ead/archdesc/dsc/c01[@level="series"]').inject([]) do |docs,c01|
-      puts "mapping c01 ##{i}"
-      label = c01.at('did/unittitle').text.capitalize
-      rel_id = c01.at('did/unitid').text rescue ("item-#{i}")
+      #puts "mapping c01 ##{i}"
+      label = c01.at('did/unittitle').text.capitalize rescue "item-#{i}"
+      rel_id = c01.at('did/unitid').text rescue "c01-#{i}"
       i += 1
+      id = generate_id(rel_id)
       docs << self.base_doc.merge({
-        :id => generate_id(rel_id),
+        :id => id,
         :xml_display => c01.to_xml,
         :unittitle_t => label,
         :hierarchy => "Collection Inventory::#{label}"
       })
+      
+      c01.css('c02').each_with_index do |cnode,ii|
+        #puts '-'
+        #puts cnode
+        #puts '-'
+        llabel = cnode.at('did/unittitle').text rescue "#{i}-#{ii}"
+        format = cnode.at('did/container')['type'] || 'Unknown' rescue 'Unknown'
+        docs << self.base_doc.merge({
+          :id => "#{id}-#{ii}",
+          :xml_display => cnode.to_xml,
+          :unittitle_t => llabel,
+          :hierarchy => "Collection Inventory::#{label}::#{llabel}",
+          :part_of => [id],
+          :format_code_t => format.downcase.gsub(' ', '_').gsub(/\W+/, ''),
+          :format_facet => format.capitalize
+        })
+      end
+      docs
     end
   end
   

@@ -32,11 +32,9 @@ module Blacklight
     # set the SolrDocument.connection to Blacklight.solr
     SolrDocument.connection = Blacklight.solr
     
-    begin
+    if Gem.available?('curb')
       require 'curb'
       Blacklight.solr.adapter.connector.adapter_name = :curb
-    rescue
-      # sticking with Net::HTTP
     end
     
     logger.info("BLACKLIGHT: initialized with Blacklight.solr_config: #{Blacklight.solr_config.inspect}")

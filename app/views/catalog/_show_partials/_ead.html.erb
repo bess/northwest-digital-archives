@@ -1,5 +1,5 @@
 <% sidebar_items << capture do %>
-  <%= contextual_navigation_tree(@document.id, @document.ead.navigation) %>
+  <%= contextual_navigation_tree(@document.id, @document.ead.navigation, :max_depth=>2) %>
  <%#= @document.id %>
  <%#= @document.ead.class %>
  <%#= @document.ead.navigation %>
@@ -11,7 +11,7 @@
 <%#= h d.to_xml %>
 <%#= h @document.inspect %>
 
-<% if d.root.name == 'did' %>  
+<% if d.root.name == 'did' %>
   <dl class="defList">
     <div>
       <dt>Repository</dt>
@@ -59,16 +59,20 @@
 		<dt>Arrangement</dt>
 		<dd><%= d.at('arrangement').text %></dd>
 		<% end %>
- 
+ 		
 		<% if d.at('scopecontent') %>
 		<dt>Scope / Content</dt>
 		<dd><%= d.at('scopecontent').text %></dd>
 		<% end %>
 	</dl>
-<%#= d.to_xml %>
-  <% d.search('c02').each do |c02| %>
-    <p><%= c02.text %></p>
-  <% end %>
+	
+	<% sub_items = [] %>
+	<% d.search('c02').each_with_index do |c02, index| %>
+		<% sub_items << capture do %>
+			<div style="float:left; width:230px; margin:.5em; padding:.5em; border:solid 1px gray;"><%= link_to c02.at('unittitle'), catalog_path("#{@document[:id]}-#{index}") %></div>
+		<% end %>
+	<% end %>
+	<%= sub_items.join('') %>
 <% end %>
 
 <% # xslt 'catalog/_show_partials/_ead/show.xsl', @document[:xml_display] %>

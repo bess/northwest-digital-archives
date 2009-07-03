@@ -54,24 +54,24 @@ namespace :app do
       else
         files = [input_file]
       end
-      solr_docs = []
-      files.each do |f|
+      
+      Blacklight.solr.delete_by_query('*:*')
+      Blacklight.solr.commit
+      
+      files.each_with_index do |f,index|
         puts "FILE == #{f}"
         mapper = EADSolrMapper.new f
         puts "Using #{mapper.collection_id} as the collection_id"
         # delete the previous set of docs in this collection...
         Blacklight.solr.delete_by_query "collection_id_s:\"#{mapper.collection_id}\""
-        solr_docs += mapper.map
-        puts "Mapping #{solr_docs.size} docs..."
+        Blacklight.solr.add mapper.map
+        #puts "Mapping #{solr_docs.size} docs..."
         puts "Total Time: #{Time.now - t}"
       end
-      puts "Indexing #{solr_docs.size} docs..."
-      Blacklight.solr.add solr_docs
       Blacklight.solr.commit
       puts "Total Time: #{Time.now - t}"
     end
-  
-  
+    
     # *************************************************************** #
     # Index Herbarium export
     # *************************************************************** #
