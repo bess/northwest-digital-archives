@@ -15,8 +15,12 @@ module ApplicationHelper
   end
   
   # id is a solr document id
-  # composite is usually the result of solr_doc.ead.navigation (or some other instance of MaterialGirl::Composite)
-  def render_navigation_level(id, composite, &block)
+  # composite is usually the result of solr_doc.ead.navigation
+  # (or some other instance of MaterialGirl::Composite)
+  # opts is a hash -- :max_depth is the only valid option
+  # current_depth should not be used by you!
+  def render_navigation_level(id, composite, opts={}, current_depth=0, &block)
+    return '' if opts[:max_depth] == current_depth
     html = "<ul>"
     composite.children.each do |node|
       node_id = node.object.nil? ? node.children.first.object[:id] : node.object[:id]
@@ -24,7 +28,7 @@ module ApplicationHelper
       html << "<li>#{v}"
       descendant_ids = node.descendants.map{|d|d.object ? d.object[:id] : nil}
       if node_id == id or descendant_ids.include?(id) and node.children.size > 0
-        html << render_navigation_level(id, node, &block)
+        html << render_navigation_level(id, node, opts, current_depth+1, &block)
       end
       html << "</li>"
     end
@@ -34,8 +38,8 @@ module ApplicationHelper
   # renders the complete navigation tree
   # id is a solr_doc id
   # navigation is the result of solr_doc.ead.navigation
-  def contextual_navigation_tree(id, navigation)
-    render_navigation_level(id, navigation) do |node|
+  def contextual_navigation_tree(id, navigation, opts={})
+    render_navigation_level(id, navigation, opts) do |node|
       if node.object
         link_to_unless_current node.value, catalog_path(node.object[:id])
       else

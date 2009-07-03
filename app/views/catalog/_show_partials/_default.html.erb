@@ -7,5 +7,15 @@
         <dd><%= document[solr_fname] %></dd>
     <% end -%>
   <% end -%>
-
+	
+	
+	<% if @document[:part_of] %>
+		<dt>Part of:</dt>
+		<% @document[:part_of].each do |po| %>
+			<dd><%= link_to po, catalog_path(po) %></dd>
+		<% end %>
+	<% end %>
+	
+	<%= h @document[:hierarchy].inspect %>
+	
 </dl>
