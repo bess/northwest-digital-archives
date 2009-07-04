@@ -30813,3 +30813,27 @@ Rendered catalog/_solr_request (0.1ms)
 Rendered _user_util_links (48.5ms)
 Rendered _flash_msg (0.1ms)
 Completed in 113ms (View: 58, DB: 1) | 200 OK [http://localhost/catalog/akms010-ms-10-6-1]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:39:02) [GET]
+  Parameters: {"action"=>"show", "id"=>"akms010-ms-10-6-1", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.9ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_default (0.9ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 119ms (View: 10, DB: 2) | 200 OK [http://localhost/catalog/akms010-ms-10-6-1]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:39:04) [GET]
+  Parameters: {"action"=>"show", "id"=>"akms010-ms-10-6", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.2ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (11.0ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 75ms (View: 19, DB: 1) | 200 OK [http://localhost/catalog/akms010-ms-10-6]
