@@ -143,11 +143,13 @@ class EADSolrMapper
         #puts cnode
         #puts '-'
         llabel = cnode.at('did/unittitle').text rescue "#{i}-#{ii}"
-        format = cnode.at('did/container')['type'] || 'Unknown' rescue 'Unknown'
+        #container_type = cnode.at('did/container')['type'] || 'Unknown' rescue 'Unknown'
+        format = c01.at('did/unittitle').text.capitalize rescue 'Unknown'
         docs << self.base_doc.merge({
           :id => "#{id}-#{ii}",
           :xml_display => cnode.to_xml,
           :unittitle_t => llabel,
+          #:container_type_t => container_type,
           :hierarchy => "Collection Inventory::#{label}::#{llabel}",
           :part_of => [id],
           :format_code_t => format.downcase.gsub(' ', '_').gsub(/\W+/, ''),
