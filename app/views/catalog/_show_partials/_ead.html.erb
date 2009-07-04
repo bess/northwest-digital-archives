@@ -1,6 +1,11 @@
-<% sidebar_items << capture do %>
-  <%= contextual_navigation_tree(@document.id, @document.ead.navigation, :max_depth=>2) %>
-<% end %>
+<% sidebar_items << capture do -%>
+	<% # this helper builds a nice ul tree out of the ead.navigation object -%>
+	<%= contextual_navigation_tree(
+		@document.id,
+		@document.ead.navigation,
+		:max_depth=>2
+	) -%>
+<% end -%>
 
 <% d = Nokogiri::XML(@document[:xml_display].to_s) %>
 
