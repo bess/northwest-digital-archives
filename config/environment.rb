@@ -13,6 +13,7 @@ Rails::Initializer.run do |config|
   config.plugin_paths += ["#{RAILS_ROOT}/vendor/plugins/blacklight/vendor/plugins"]
   config.plugins = %W(engines blacklight acts_as_taggable_on_steroids resource_controller)
   
+  config.gem 'nokogiri', :version=>'>=1.3.1'
   config.gem 'mwmitchell-material_girl', :lib=>'material_girl', :source=>'http://gems.github.com', :version=>'0.0.2'
   
   # Settings in config/environments/* take precedence over those specified here.

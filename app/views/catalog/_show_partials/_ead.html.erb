@@ -2,7 +2,6 @@
   <%= contextual_navigation_tree(@document.id, @document.ead.navigation, :max_depth=>2) %>
 <% end %>
 
-<% require 'nokogiri' %>
 <% d = Nokogiri::XML(@document[:xml_display].to_s) %>
 
 <% if d.root.name == 'did' %>
