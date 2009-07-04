@@ -55,9 +55,6 @@ namespace :app do
         files = [input_file]
       end
       
-      Blacklight.solr.delete_by_query('format_code_t:"ead"')
-      Blacklight.solr.commit
-      
       files.each_with_index do |f,index|
         puts "FILE == #{f}"
         mapper = EADSolrMapper.new f
