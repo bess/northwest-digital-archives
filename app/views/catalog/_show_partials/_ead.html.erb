@@ -69,10 +69,11 @@
 	<% sub_items = [] %>
 	<% d.search('c02').each_with_index do |c02, index| %>
 		<% sub_items << capture do %>
-			<div style="float:left; width:230px; margin:.5em; padding:.5em; border:solid 1px gray;"><%= link_to c02.at('unittitle'), catalog_path("#{@document[:id]}-#{index}") %></div>
+			<span><%= link_to c02.at('unittitle'), catalog_path("#{@document[:id]}-#{index}") %></span>
 		<% end %>
 	<% end %>
-	<%= sub_items.join('') %>
+	<%= sub_items.join(' | ') %>
+	
 <% end %>
 
 <% # xslt 'catalog/_show_partials/_ead/show.xsl', @document[:xml_display] %>
