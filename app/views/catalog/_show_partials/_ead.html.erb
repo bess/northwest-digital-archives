@@ -1,15 +1,9 @@
 <% sidebar_items << capture do %>
   <%= contextual_navigation_tree(@document.id, @document.ead.navigation, :max_depth=>2) %>
- <%#= @document.id %>
- <%#= @document.ead.class %>
- <%#= @document.ead.navigation %>
 <% end %>
 
 <% require 'nokogiri' %>
 <% d = Nokogiri::XML(@document[:xml_display].to_s) %>
-
-<%#= h d.to_xml %>
-<%#= h @document.inspect %>
 
 <% if d.root.name == 'did' %>
   <dl class="defList">
