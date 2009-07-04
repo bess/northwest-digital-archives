@@ -1,19 +1,21 @@
 <%# default partial to display solr document fields in catalog show view -%>
 <dl class="defList">
 
-  <% document_show_fields.each do |solr_fname| -%>
-    <% if document[solr_fname] %>
-        <dt><%= document_show_field_labels[solr_fname]%></dt>
-        <dd><%= document[solr_fname] %></dd>
-    <% end -%>
-  <% end -%>
-	
-	
+	<% document_show_fields.each do |solr_fname| -%>
+		<% if document[solr_fname] %>
+			<dt><%= document_show_field_labels[solr_fname]%></dt>
+			<dd><%= document[solr_fname] %></dd>
+		<% end -%>
+	<% end -%>
+
+
 	<% if @document[:part_of] %>
-		<dt>Part of:</dt>
-		<% @document[:part_of].each do |po| %>
+		<div>
+			<dt>Part of:</dt>
+			<% @document[:part_of].each do |po| %>
 			<dd><%= link_to po, catalog_path(po) %></dd>
-		<% end %>
+			<% end %>
+		</div>
 	<% end %>
-	
+
 </dl>
