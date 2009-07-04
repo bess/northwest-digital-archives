@@ -22,6 +22,10 @@ class EADSolrMapper
     @xml = Nokogiri::XML(raw)
   end
   
+  def to_one_line(v)
+    v.is_a?(String) ? v.to_s.gsub(/\n+|\t+| +$/, ' ') : v.map{|vv|to_one_line(vv)}
+  end
+  
   # returns an array of hashes, suitable for solr consumption...
   def map
     solr_docs = []
@@ -55,23 +59,28 @@ class EADSolrMapper
   # creates a base hash doc for each solr document
   # this is created only *once*
   def base_doc
-    @base_doc ||= {
-      :format_code_t => 'ead',
-      :format_facet => 'EAD',
-      :filename_t => @base_filename,
-      :title_t => @xml.at('/ead/eadheader[1]/filedesc[1]/titlestmt[1]/titleproper[1]/text()').text.strip,
-      :unittitle_t => (
-        @xml.at('//archdesc[@level="collection"]/did/unittitle').text rescue
-          @xml.at('//archdesc/did/unittitle').text rescue
-            'N/A'
-      ),
-      :institution_t => @xml.at('//publicationstmt/publisher/text()[1]').text.strip,
-      :institution_facet => @xml.at('//repository//corpname').children.first.text.gsub(/\s+/," ").strip,
-      :language_facet => self.languages,
-      :hierarchy_scope => self.collection_id,
-      :collection_id => self.collection_id,
-      :collection_facet => "Northwest Digital Archives EAD Guides"    
-    }
+    @base_doc ||= (
+      doc = {
+        :format_code_t => 'ead',
+        :format_facet => 'EAD',
+        :filename_t => @base_filename,
+        :title_t => @xml.at('/ead/eadheader[1]/filedesc[1]/titlestmt[1]/titleproper[1]/text()').text,
+        :unittitle_t => (
+          @xml.at('//archdesc[@level="collection"]/did/unittitle').text rescue
+            @xml.at('//archdesc/did/unittitle').text rescue
+              'N/A'
+        ),
+        :institution_t => @xml.at('//publicationstmt/publisher/text()[1]').text,
+        :institution_facet => @xml.at('//repository//corpname').children.first.text,
+        :language_facet => self.languages,
+        :hierarchy_scope => self.collection_id,
+        :collection_id => self.collection_id,
+        :collection_facet => "Northwest Digital Archives EAD Guides"
+      }
+      # clean all values...
+      doc.each_pair {|k,v| doc[k] = to_one_line(v)}
+      doc
+    )
   end
   
   # get all of the languages used in the EAD guide, not only the language in which the guide itself is encoded
@@ -127,8 +136,12 @@ class EADSolrMapper
     i=0
     @xml.search('ead/archdesc/dsc/c01[@level="series"]').inject([]) do |docs,c01|
       #puts "mapping c01 ##{i}"
-      label = c01.at('did/unittitle').text.capitalize rescue "item-#{i}"
-      rel_id = c01.at('did/unitid').text rescue "c01-#{i}"
+      label = c01.at('did/unittitle').text.capitalize rescue "Unknown-#{i}"
+      
+      # remove leading/trailing : values (messes up the hierarchy calculations)
+      label = to_one_line(label).gsub(/^\:+|\:+$/, '')
+      
+      rel_id = to_one_line(c01.at('did/unitid').text) rescue "Unknown ID-#{i}"
       i += 1
       id = generate_id(rel_id)
       docs << self.base_doc.merge({
@@ -139,18 +152,20 @@ class EADSolrMapper
       })
       
       c01.css('c02').each_with_index do |cnode,ii|
-        #puts '-'
-        #puts cnode
-        #puts '-'
-        llabel = cnode.at('did/unittitle').text rescue "#{i}-#{ii}"
-        #container_type = cnode.at('did/container')['type'] || 'Unknown' rescue 'Unknown'
-        format = c01.at('did/unittitle').text.capitalize rescue 'Unknown'
+        
+        llabel = cnode.at('did/unittitle').text rescue nil
+        llabel = "Unknown-#{i}-#{ii}" if llabel.blank?
+        # remove line endings, tabs and trailing spaces
+        llabel = to_one_line(llabel).gsub(/^\:+|\:+$/, '')
+        
+        format = to_one_line(c01.at('did/unittitle').text) rescue 'Unknown'
         docs << self.base_doc.merge({
           :id => "#{id}-#{ii}",
           :xml_display => cnode.to_xml,
           :unittitle_t => llabel,
-          #:container_type_t => container_type,
-          :hierarchy => "Collection Inventory::#{label}::#{llabel}",
+          # make sure that the : separator occurs no more than twice in a row
+          # "::" is the hierarchy separator...
+          :hierarchy => "Collection Inventory::#{label}::#{llabel}".gsub(/:{3,}/, '::'),
           :part_of => [id],
           :format_code_t => format.downcase.gsub(' ', '_').gsub(/\W+/, ''),
           :format_facet => format.capitalize
