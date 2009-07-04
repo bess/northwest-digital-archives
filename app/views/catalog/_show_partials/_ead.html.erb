@@ -7,70 +7,81 @@
 	) -%>
 <% end -%>
 
-<% d = Nokogiri::XML(@document[:xml_display].to_s) %>
+<% d = Nokogiri::XML(@document[:xml_display].to_s) -%>
 
 <% if d.root.name == 'did' %>
-  <dl class="defList">
-    <div>
-      <dt>Repository</dt>
-      <dd><%= d.at('repository').text %></dd>
-    </div>
+	<dl class="defList">
+		<div>
+			<dt>Repository</dt>
+			<dd><%= d.at('repository').text %></dd>
+		</div>
 
-	<% if d.at('origination') %>
-    <div>
-      <dt>Origination</dt>
-      <dd><%= d.at('origination').text %></dd>
-    </div>
-	<% end %>
+		<% if d.at('origination') %>
+			<div>
+				<dt>Origination</dt>
+				<dd><%= d.at('origination').text %></dd>
+			</div>
+		<% end %>
 
-    <div>
-      <dt>Date(s)</dt>
-      <dd><%= d.at('unitdate').text %></dd>
-    </div>
-    <div>
-      <dt>Physical Description</dt>
-      <dd><%= d.at('physdesc').text %></dd>
-    </div>
-    <div>
-      <dt>Abstract</dt>
-      <dd><%= d.at('abstract').text %></dd>
-    </div>
-    <div>
-      <dt>Language</dt>
-      <dd><%= d.at('langmaterial').text %></dd>
-    </div>
-  </dl>
+		<div>
+			<dt>Date(s)</dt>
+			<dd><%= d.at('unitdate').text %></dd>
+		</div>
+		<div>
+			<dt>Physical Description</dt>
+			<dd><%= d.at('physdesc').text %></dd>
+		</div>
+		<div>
+			<dt>Abstract</dt>
+			<dd><%= d.at('abstract').text %></dd>
+		</div>
+		<div>
+			<dt>Language</dt>
+			<dd><%= d.at('langmaterial').text %></dd>
+		</div>
+	</dl>
 
 <% elsif ['bioghist', 'scopecontent', 'arrangement'].include? d.root.name %>
-  <% d.search('p').each do |p| %>
-    <p><%= p.text %></p>
-  <% end %>
+  
+	<% d.search('p').each do |p| %>
+		<p><%= p.text %></p>
+	<% end %>
+
 <% elsif d.root.name == 'c01' %>
 	<dl class="defList">
 		
 		<% if d.at('unitdate') %>
-		<dt>Date(s)</dt>
-  		<dd><%= d.at('unitdate').text %></dd>
+		<div>
+			<dt>Date(s)</dt>
+  			<dd><%= d.at('unitdate').text %></dd>
+		</div>
 		<% end %>
 		
 		<% if d.at('arrangement') %>
-		<dt>Arrangement</dt>
-		<dd><%= d.at('arrangement').text %></dd>
+		<div>
+			<dt>Arrangement</dt>
+			<dd><%= d.at('arrangement').text %></dd>
+		</div>
 		<% end %>
  		
 		<% if d.at('scopecontent') %>
-		<dt>Scope / Content</dt>
-		<dd><%= d.at('scopecontent').text %></dd>
+		<div>
+			<dt>Scope / Content</dt>
+			<dd><%= d.at('scopecontent').text %></dd>
+		</div>
 		<% end %>
 	</dl>
 	
-	<% sub_items = [] %>
-	<% d.search('c02').each_with_index do |c02, index| %>
-		<% sub_items << capture do %>
-			<span><%= link_to c02.at('unittitle'), catalog_path("#{@document[:id]}-#{index}") %></span>
+	<% if d.search('c02') %>
+		<h4>Items in this Collection</h4>
+		<% sub_items = [] %>
+		<% d.search('c02').each_with_index do |c02, index| %>
+			<% sub_items << capture do %>
+				<span><%= link_to c02.at('unittitle'), catalog_path("#{@document[:id]}-#{index}") %></span>
+			<% end %>
 		<% end %>
+		<%= sub_items.join(' | ') %>
 	<% end %>
-	<%= sub_items.join(' | ') %>
 	
 <% end %>
 
