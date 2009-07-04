@@ -30837,3 +30837,2474 @@ Rendered catalog/_solr_request (0.1ms)
 Rendered _user_util_links (0.7ms)
 Rendered _flash_msg (0.1ms)
 Completed in 75ms (View: 19, DB: 1) | 200 OK [http://localhost/catalog/akms010-ms-10-6]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:41:41) [GET]
+  Parameters: {"action"=>"show", "id"=>"akms010-ms-10-6", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.2ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (9.3ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 70ms (View: 18, DB: 1) | 200 OK [http://localhost/catalog/akms010-ms-10-6]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:41:43) [GET]
+  Parameters: {"action"=>"show", "id"=>"akms010-ms-10-5", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.2ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (7.9ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.1ms)
+Completed in 65ms (View: 15, DB: 1) | 200 OK [http://localhost/catalog/akms010-ms-10-5]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:41:44) [GET]
+  Parameters: {"action"=>"show", "id"=>"akms010-ms-10-4", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.3ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (5.9ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 64ms (View: 13, DB: 1) | 200 OK [http://localhost/catalog/akms010-ms-10-4]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:41:46) [GET]
+  Parameters: {"action"=>"show", "id"=>"akms010-ms-10-3", "controller"=>"catalog"}
+  [4;35;1mSearch Load (2.0ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (6.3ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 66ms (View: 13, DB: 2) | 200 OK [http://localhost/catalog/akms010-ms-10-3]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:41:51) [GET]
+  Parameters: {"action"=>"show", "id"=>"akms010-ms-10-2", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.2ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (5.8ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 64ms (View: 13, DB: 1) | 200 OK [http://localhost/catalog/akms010-ms-10-2]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:42:21) [GET]
+  Parameters: {"action"=>"show", "id"=>"akms010-ms-10-2", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.3ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (7.4ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (1.0ms)
+Rendered _flash_msg (0.1ms)
+Completed in 69ms (View: 16, DB: 1) | 200 OK [http://localhost/catalog/akms010-ms-10-2]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:42:22) [GET]
+  Parameters: {"action"=>"show", "id"=>"akms010-ms-10-2", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.2ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (7.4ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.1ms)
+Completed in 67ms (View: 14, DB: 1) | 200 OK [http://localhost/catalog/akms010-ms-10-2]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:42:29) [GET]
+  Parameters: {"action"=>"show", "id"=>"akms010-ms-10-2", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.2ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (7.8ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 68ms (View: 16, DB: 1) | 200 OK [http://localhost/catalog/akms010-ms-10-2]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:42:33) [GET]
+  Parameters: {"action"=>"show", "id"=>"akms010-ms-10-2", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.3ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (9.2ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 74ms (View: 18, DB: 1) | 200 OK [http://localhost/catalog/akms010-ms-10-2]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:43:06) [GET]
+  Parameters: {"action"=>"show", "id"=>"akms010-ms-10-2", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.2ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (8.1ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 68ms (View: 17, DB: 1) | 200 OK [http://localhost/catalog/akms010-ms-10-2]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:43:19) [GET]
+  Parameters: {"action"=>"show", "id"=>"akms010-ms-10-2", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.4ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (7.7ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.1ms)
+Completed in 68ms (View: 16, DB: 1) | 200 OK [http://localhost/catalog/akms010-ms-10-2]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:43:22) [GET]
+  Parameters: {"action"=>"show", "id"=>"akms010-ms-10-2-0", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.2ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_default (0.3ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 59ms (View: 7, DB: 1) | 200 OK [http://localhost/catalog/akms010-ms-10-2-0]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:43:26) [GET]
+  Parameters: {"action"=>"show", "id"=>"akms010-ms-10-2", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.2ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (5.8ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 65ms (View: 12, DB: 1) | 200 OK [http://localhost/catalog/akms010-ms-10-2]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:43:27) [GET]
+  Parameters: {"action"=>"show", "id"=>"akms010-ms-10-3", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.3ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (6.9ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 140ms (View: 68, DB: 1) | 200 OK [http://localhost/catalog/akms010-ms-10-3]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:43:28) [GET]
+  Parameters: {"action"=>"show", "id"=>"akms010-ms-10-5", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.2ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (6.0ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 106ms (View: 13, DB: 1) | 200 OK [http://localhost/catalog/akms010-ms-10-5]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:43:57) [GET]
+  Parameters: {"action"=>"show", "id"=>"akms010-summary", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.3ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (7.0ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 67ms (View: 15, DB: 1) | 200 OK [http://localhost/catalog/akms010-summary]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:44:18) [GET]
+  Parameters: {"action"=>"show", "id"=>"akms010-ms-10-5", "controller"=>"catalog"}
+  [4;36;1mSearch Load (2.1ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (5.9ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 63ms (View: 12, DB: 2) | 200 OK [http://localhost/catalog/akms010-ms-10-5]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:44:56) [GET]
+  Parameters: {"action"=>"show", "id"=>"akms010-ms-10-6", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.2ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (10.3ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 69ms (View: 17, DB: 1) | 200 OK [http://localhost/catalog/akms010-ms-10-6]
+
+
+Processing CatalogController#index (for ::1 at 2009-07-04 12:45:11) [GET]
+  Parameters: {"action"=>"index", "f"=>{"format_facet"=>["EAD"]}, "controller"=>"catalog", "counter"=>"1"}
+  [4;36;1mSearch Load (1.2ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+  [4;35;1mSearch Create (0.7ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2009-07-04 16:45:12', '2009-07-04 16:45:12', NULL, '--- 
+:counter: "1"
+:f: !map:HashWithIndifferentAccess 
+ format_facet: 
+ - EAD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.8ms)
+Rendered catalog/_search_form (4.2ms)
+Rendered catalog/_did_you_mean (0.9ms)
+Rendered catalog/_search_constraints (1.7ms)
+Rendered catalog/_bookmark_control (1.6ms)
+Rendered catalog/_index_partials/_ead (9.4ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_ead (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_ead (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_ead (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_ead (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_ead (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_ead (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_ead (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_ead (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_ead (0.1ms)
+Rendered catalog/_document_list (78.8ms)
+Rendered catalog/_facets (7.1ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 195ms (View: 127, DB: 2) | 200 OK [http://localhost/catalog?counter=1&f%5Bformat_facet%5D%5B%5D=EAD]
+
+
+Processing CatalogController#index (for ::1 at 2009-07-04 12:45:14) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog", "counter"=>"1"}
+  [4;36;1mSearch Load (1.3ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.0ms)
+Rendered catalog/_search_form (0.7ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_search_constraints (0.1ms)
+Rendered catalog/_bookmark_control (0.8ms)
+Rendered catalog/_index_partials/_ead (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_ead (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_ead (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_ead (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_ead (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_ead (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_ead (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_ead (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_ead (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_ead (0.1ms)
+Rendered catalog/_document_list (9.8ms)
+Rendered catalog/_facets (7.0ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 116ms (View: 30, DB: 1) | 200 OK [http://localhost/catalog?&counter=1]
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x27c35c4 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x27c4578 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x27c2d7c @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :spell_max=>5, :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :facet=>{:field_names=>["format_facet", "subject_era_facet", "language_facet", "institution_facet", "collection_facet", "geographic_subject_facet"], :labels=>{"collection_facet"=>"Collection", "institution_facet"=>"Institution", "subject_era_facet"=>"Time Period", "language_facet"=>"Language", "geographic_subject_facet"=>"Geographic coverage", "format_facet"=>"Format"}}, :show=>{:display_type=>"format_code_t", :heading=>"title_t", :html_title=>"title_t"}, :index=>{:num_per_page=>10, :record_display_type=>"format_code_t", :show_link=>"title_t"}, :raw_storage_type=>"marcxml", :default_qt=>"search"}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x27be13c @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x27bf0f0 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x27bd8f4 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :spell_max=>5, :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :facet=>{:field_names=>["format_facet", "subject_era_facet", "language_facet", "institution_facet", "collection_facet", "geographic_subject_facet"], :labels=>{"collection_facet"=>"Collection", "institution_facet"=>"Institution", "subject_era_facet"=>"Time Period", "language_facet"=>"Language", "geographic_subject_facet"=>"Geographic coverage", "format_facet"=>"Format"}}, :show=>{:display_type=>"format_code_t", :heading=>"title_t", :html_title=>"title_t"}, :index=>{:num_per_page=>10, :record_display_type=>"format_code_t", :show_link=>"title_t"}, :raw_storage_type=>"marcxml", :default_qt=>"search"}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x27429b0 @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}, @adapter=#<RSolr::Adapter::HTTP:0x2743964 @connector=#<RSolr::HTTPClient::Connector:0x2741f38 @adapter_name=:curb>, @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}>>
+BLACKLIGHT: initialized with Blacklight.config: {:search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :spell_max=>5, :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :facet=>{:field_names=>["format_facet", "subject_era_facet", "language_facet", "institution_facet", "collection_facet", "geographic_subject_facet"], :labels=>{"collection_facet"=>"Collection", "institution_facet"=>"Institution", "subject_era_facet"=>"Time Period", "language_facet"=>"Language", "geographic_subject_facet"=>"Geographic coverage", "format_facet"=>"Format"}}, :show=>{:html_title=>"title_t", :display_type=>"format_code_t", :heading=>"title_t"}, :raw_storage_type=>"marcxml", :default_qt=>"search", :index=>{:num_per_page=>10, :record_display_type=>"format_code_t", :show_link=>"title_t"}, :raw_storage_field=>"marc_display"}
+
+
+Processing CatalogController#index (for ::1 at 2009-07-04 12:47:55) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog", "counter"=>"1"}
+  [4;36;1mSearch Load (2.1ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.5ms)
+Rendered catalog/_search_form (3.8ms)
+Rendered catalog/_did_you_mean (0.7ms)
+Rendered catalog/_search_constraints (0.9ms)
+Rendered catalog/_bookmark_control (71.1ms)
+Rendered catalog/_index_partials/_ead (0.7ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_ead (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_ead (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_ead (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_ead (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_ead (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_ead (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_ead (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_ead (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_ead (0.1ms)
+Rendered catalog/_document_list (87.1ms)
+Rendered catalog/_facets (4.9ms)
+Rendered catalog/_solr_request (0.5ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.4ms)
+Completed in 191ms (View: 135, DB: 2) | 200 OK [http://localhost/catalog?&counter=1]
+
+
+Processing CatalogController#index (for ::1 at 2009-07-04 12:47:59) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.3ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.0ms)
+Rendered catalog/_search_form (0.8ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_search_constraints (0.1ms)
+Rendered catalog/_bookmark_control (0.8ms)
+Rendered catalog/_index_partials/_ead (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_ead (0.1ms)
+Rendered catalog/_bookmark_control (1.5ms)
+Rendered catalog/_index_partials/_ead (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_ead (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_ead (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_ead (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_ead (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_ead (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_ead (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_ead (0.1ms)
+Rendered catalog/_document_list (12.1ms)
+Rendered catalog/_facets (3.5ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 44ms (View: 28, DB: 1) | 200 OK [http://localhost/catalog]
+
+
+Processing CatalogController#index (for ::1 at 2009-07-04 12:48:15) [GET]
+  Parameters: {"action"=>"index", "f"=>{"format_facet"=>["Folder 4: [views 296-395 are color\n\t\t\t\ttransparencies made from lantern slides – see slide boxes]"]}, "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.3ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+  [4;35;1mSearch Create (0.5ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2009-07-04 16:48:15', '2009-07-04 16:48:15', NULL, '--- 
+:counter: "1"
+:f: !map:HashWithIndifferentAccess 
+ format_facet: 
+ - "Folder 4: [views 296-395 are color\n\
+ \t\t\t\ttransparencies made from lantern slides \xE2\x80\x93 see slide boxes]"
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (0.9ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_search_constraints (0.3ms)
+Rendered catalog/_bookmark_control (0.8ms)
+Rendered catalog/_index_partials/_default (17.5ms)
+Rendered catalog/_document_list (24.1ms)
+Rendered catalog/_facets (1.8ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 58ms (View: 37, DB: 2) | 200 OK [http://localhost/catalog?f%5Bformat_facet%5D%5B%5D=Folder+4%3A+%5Bviews+296-395+are+color%0A%09%09%09%09transparencies+made+from+lantern+slides+%E2%80%93+see+slide+boxes%5D]
+
+
+Processing CatalogController#update (for ::1 at 2009-07-04 12:48:17) [PUT]
+  Parameters: {"action"=>"update", "_method"=>"put", "authenticity_token"=>"HdWGxToCeR5Sx9JTOiJRJxUBxochpddxPPnqhXy25bg=", "id"=>"alkpca071-296-0", "controller"=>"catalog", "counter"=>"1"}
+  [4;36;1mSearch Load (2.2ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Redirected to http://localhost:3000/catalog/alkpca071-296-0
+Completed in 4ms (DB: 2) | 302 Found [http://localhost/catalog/alkpca071-296-0]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:48:17) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-296-0", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_default (1.0ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 23ms (View: 13, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-296-0]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:48:19) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-296", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.4ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (108.0ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 127ms (View: 116, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-296]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:49:17) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-296", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.3ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (161.9ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 180ms (View: 170, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-296]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:49:56) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-296", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.3ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (173.6ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 194ms (View: 183, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-296]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:51:45) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-296", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.3ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (166.2ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.1ms)
+Completed in 185ms (View: 175, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-296]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:51:51) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-539", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.3ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (148.0ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 164ms (View: 155, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-539]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:52:06) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-539", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (94.8ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 113ms (View: 103, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-539]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:52:17) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-539", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.3ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (153.5ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 172ms (View: 162, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-539]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:52:24) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-539", "controller"=>"catalog"}
+  [4;35;1mSearch Load (2.1ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (93.1ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.1ms)
+Completed in 172ms (View: 161, DB: 2) | 200 OK [http://localhost/catalog/alkpca071-539]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:52:34) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-539-19", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.4ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_default (0.3ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 16ms (View: 7, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-539-19]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:53:37) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-539", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (93.2ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 112ms (View: 101, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-539]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:54:26) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-scope-and-content", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.3ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (77.1ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 160ms (View: 86, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-scope-and-content]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:54:27) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-arrangement", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.3ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (72.3ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 88ms (View: 79, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-arrangement]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:54:28) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-1-5", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.3ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (87.7ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.1ms)
+Completed in 106ms (View: 95, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-1-5]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:55:27) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-1-5-0", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.3ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_default (0.3ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 19ms (View: 7, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-1-5-0]
+
+
+Processing CatalogController#index (for ::1 at 2009-07-04 12:55:36) [GET]
+  Parameters: {"action"=>"index", "f"=>{"format_facet"=>["Folder 4: [views 296-395 are color\n\t\t\t\ttransparencies made from lantern slides – see slide boxes]"]}, "controller"=>"catalog", "counter"=>"1"}
+  [4;36;1mSearch Load (1.3ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (0.8ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_search_constraints (0.3ms)
+Rendered catalog/_bookmark_control (0.8ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (5.1ms)
+Rendered catalog/_facets (1.3ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 96ms (View: 16, DB: 1) | 200 OK [http://localhost/catalog?counter=1&f%5Bformat_facet%5D%5B%5D=Folder+4%3A+%5Bviews+296-395+are+color%0A%09%09%09%09transparencies+made+from+lantern+slides+%E2%80%93+see+slide+boxes%5D]
+
+
+Processing CatalogController#index (for ::1 at 2009-07-04 12:55:39) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog", "counter"=>"1"}
+  [4;35;1mSearch Load (1.3ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.0ms)
+Rendered catalog/_search_form (0.8ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_search_constraints (0.1ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_ead (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_ead (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_ead (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_ead (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_ead (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_ead (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_ead (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_ead (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_ead (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_ead (0.1ms)
+Rendered catalog/_document_list (9.5ms)
+Rendered catalog/_facets (3.8ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 40ms (View: 24, DB: 1) | 200 OK [http://localhost/catalog?&counter=1]
+
+
+Processing CatalogController#index (for ::1 at 2009-07-04 12:55:42) [GET]
+  Parameters: {"action"=>"index", "f"=>{"format_facet"=>["Album 2"]}, "controller"=>"catalog", "counter"=>"1"}
+  [4;36;1mSearch Load (1.3ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+  [4;35;1mSearch Create (0.4ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2009-07-04 16:55:42', '2009-07-04 16:55:42', NULL, '--- 
+:counter: "1"
+:f: !map:HashWithIndifferentAccess 
+ format_facet: 
+ - Album 2
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_hidden_filters (0.1ms)
+Rendered catalog/_search_form (0.8ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_search_constraints (0.3ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (4.6ms)
+Rendered catalog/_facets (1.1ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 30ms (View: 14, DB: 2) | 200 OK [http://localhost/catalog?counter=1&f%5Bformat_facet%5D%5B%5D=Album+2]
+
+
+Processing CatalogController#update (for ::1 at 2009-07-04 12:55:46) [PUT]
+  Parameters: {"action"=>"update", "_method"=>"put", "authenticity_token"=>"HdWGxToCeR5Sx9JTOiJRJxUBxochpddxPPnqhXy25bg=", "id"=>"alkpca071-92-0", "controller"=>"catalog", "counter"=>"1"}
+  [4;36;1mSearch Load (1.4ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Redirected to http://localhost:3000/catalog/alkpca071-92-0
+Completed in 3ms (DB: 1) | 302 Found [http://localhost/catalog/alkpca071-92-0]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:55:46) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-92-0", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_default (0.3ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 15ms (View: 7, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-92-0]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:55:47) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-92", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.4ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (160.7ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 179ms (View: 169, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-92]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:56:14) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-92-0", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_default (0.3ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 17ms (View: 7, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-92-0]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:56:29) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-92-0", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.3ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_default (1.4ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 19ms (View: 9, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-92-0]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:57:16) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-92", "controller"=>"catalog"}
+  [4;35;1mSearch Load (2.2ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (160.6ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 180ms (View: 167, DB: 2) | 200 OK [http://localhost/catalog/alkpca071-92]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:57:19) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-428", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.4ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (88.0ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 104ms (View: 94, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-428]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:57:29) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-1-5", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (91.2ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 164ms (View: 154, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-1-5]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:57:30) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-92", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.4ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (102.2ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.1ms)
+Completed in 177ms (View: 165, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-92]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:57:31) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-229-295-9", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.6ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_default (0.7ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 16ms (View: 7, DB: 2) | 200 OK [http://localhost/catalog/alkpca071-229-295-9]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:57:45) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-1-5", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.4ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (89.3ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 105ms (View: 96, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-1-5]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:57:47) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-92", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.3ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (189.1ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 207ms (View: 196, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-92]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:58:01) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-296", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.6ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (103.5ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.1ms)
+Completed in 122ms (View: 110, DB: 2) | 200 OK [http://localhost/catalog/alkpca071-296]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:58:04) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-229-295-9", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_default (1.7ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.1ms)
+Completed in 78ms (View: 69, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-229-295-9]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:58:14) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-229-295-9", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.3ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_default (1.3ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 18ms (View: 10, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-229-295-9]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:58:16) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-296", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.3ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (104.8ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 122ms (View: 112, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-296]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:58:17) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-92", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.4ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (161.9ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 179ms (View: 168, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-92]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:58:25) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-92", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.3ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (240.1ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.1ms)
+Completed in 260ms (View: 249, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-92]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:58:51) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-92", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.3ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (108.7ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 129ms (View: 117, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-92]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 12:59:05) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-92", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (163.7ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 183ms (View: 172, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-92]
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x27be13c @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x27bf0f0 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x27bd8f4 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :spell_max=>5, :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :facet=>{:field_names=>["format_facet", "subject_era_facet", "language_facet", "institution_facet", "collection_facet", "geographic_subject_facet"], :labels=>{"collection_facet"=>"Collection", "institution_facet"=>"Institution", "subject_era_facet"=>"Time Period", "language_facet"=>"Language", "geographic_subject_facet"=>"Geographic coverage", "format_facet"=>"Format"}}, :show=>{:display_type=>"format_code_t", :heading=>"title_t", :html_title=>"title_t"}, :index=>{:num_per_page=>10, :record_display_type=>"format_code_t", :show_link=>"title_t"}, :raw_storage_type=>"marcxml", :default_qt=>"search"}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x27429b0 @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}, @adapter=#<RSolr::Adapter::HTTP:0x2743964 @connector=#<RSolr::HTTPClient::Connector:0x2741f38 @adapter_name=:curb>, @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}>>
+BLACKLIGHT: initialized with Blacklight.config: {:search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :spell_max=>5, :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :facet=>{:field_names=>["format_facet", "subject_era_facet", "language_facet", "institution_facet", "collection_facet", "geographic_subject_facet"], :labels=>{"collection_facet"=>"Collection", "institution_facet"=>"Institution", "subject_era_facet"=>"Time Period", "language_facet"=>"Language", "geographic_subject_facet"=>"Geographic coverage", "format_facet"=>"Format"}}, :show=>{:html_title=>"title_t", :display_type=>"format_code_t", :heading=>"title_t"}, :raw_storage_type=>"marcxml", :default_qt=>"search", :index=>{:num_per_page=>10, :record_display_type=>"format_code_t", :show_link=>"title_t"}, :raw_storage_field=>"marc_display"}
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:01:07) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-92", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.2ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (154.1ms)
+Rendered catalog/_solr_request (0.5ms)
+Rendered _user_util_links (11.0ms)
+Rendered _flash_msg (0.6ms)
+Completed in 224ms (View: 187, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-92]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:01:10) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-92", "controller"=>"catalog"}
+  [4;35;1mSearch Load (2.2ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (154.6ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 173ms (View: 161, DB: 2) | 200 OK [http://localhost/catalog/alkpca071-92]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:01:12) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-229-295-9", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.7ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_default (1.4ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.1ms)
+Completed in 18ms (View: 10, DB: 2) | 200 OK [http://localhost/catalog/alkpca071-229-295-9]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:01:13) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-92", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (162.4ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.1ms)
+Completed in 179ms (View: 169, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-92]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:01:14) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-1-5", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.4ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (87.4ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 104ms (View: 94, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-1-5]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:01:16) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-296", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.3ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (159.9ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 178ms (View: 167, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-296]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:01:17) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-396", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.4ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (85.9ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 102ms (View: 93, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-396]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:01:18) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-396-0", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_default (0.8ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 16ms (View: 8, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-396-0]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:01:24) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-summary", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.3ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (74.1ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 89ms (View: 81, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-summary]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:01:26) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-biography_history", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.5ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (74.6ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 91ms (View: 81, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-biography_history]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:01:27) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-scope-and-content", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.5ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (71.4ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 86ms (View: 78, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-scope-and-content]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:01:28) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-arrangement", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.5ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (72.4ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 88ms (View: 79, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-arrangement]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:01:29) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-1-5", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.4ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (89.5ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.1ms)
+Completed in 178ms (View: 169, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-1-5]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:01:30) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-92", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.3ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (160.1ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 177ms (View: 167, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-92]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:01:33) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-229-295-9", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.4ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_default (0.7ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 17ms (View: 7, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-229-295-9]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:01:50) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-229-295-9", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_default (0.6ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 17ms (View: 8, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-229-295-9]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:01:53) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-92", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.4ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (249.6ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 267ms (View: 257, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-92]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:01:53) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-92", "controller"=>"catalog"}
+  [4;35;1mSearch Load (2.3ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (107.2ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 131ms (View: 116, DB: 2) | 200 OK [http://localhost/catalog/alkpca071-92]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:01:55) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-1-5", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.4ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (89.4ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 106ms (View: 96, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-1-5]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:01:59) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-1-5", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (89.7ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 107ms (View: 98, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-1-5]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:02:04) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-1-5", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.4ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (175.7ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 195ms (View: 185, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-1-5]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:02:53) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-92", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (240.0ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 263ms (View: 248, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-92]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:02:55) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-229-295-9", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.4ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_default (0.7ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.1ms)
+Completed in 16ms (View: 8, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-229-295-9]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:03:56) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-229-295-9", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.3ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_default (0.7ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 18ms (View: 7, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-229-295-9]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:04:41) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-92", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.4ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (237.6ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 255ms (View: 245, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-92]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:05:19) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-92", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (227.4ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.1ms)
+Completed in 245ms (View: 235, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-92]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:05:25) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-489", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.9ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (198.4ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 217ms (View: 206, DB: 2) | 200 OK [http://localhost/catalog/alkpca071-489]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:05:36) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-1-5", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (171.1ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 189ms (View: 179, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-1-5]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:05:40) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-92", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.4ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (197.8ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.1ms)
+Completed in 261ms (View: 251, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-92]
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x27be13c @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x27bf0f0 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x27bd8f4 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :spell_max=>5, :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :facet=>{:field_names=>["format_facet", "subject_era_facet", "language_facet", "institution_facet", "collection_facet", "geographic_subject_facet"], :labels=>{"collection_facet"=>"Collection", "institution_facet"=>"Institution", "subject_era_facet"=>"Time Period", "language_facet"=>"Language", "geographic_subject_facet"=>"Geographic coverage", "format_facet"=>"Format"}}, :show=>{:display_type=>"format_code_t", :heading=>"title_t", :html_title=>"title_t"}, :index=>{:num_per_page=>10, :record_display_type=>"format_code_t", :show_link=>"title_t"}, :raw_storage_type=>"marcxml", :default_qt=>"search"}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x27429b0 @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}, @adapter=#<RSolr::Adapter::HTTP:0x2743964 @connector=#<RSolr::HTTPClient::Connector:0x2741f38 @adapter_name=:curb>, @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}>>
+BLACKLIGHT: initialized with Blacklight.config: {:search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :spell_max=>5, :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :facet=>{:field_names=>["format_facet", "subject_era_facet", "language_facet", "institution_facet", "collection_facet", "geographic_subject_facet"], :labels=>{"collection_facet"=>"Collection", "institution_facet"=>"Institution", "subject_era_facet"=>"Time Period", "language_facet"=>"Language", "geographic_subject_facet"=>"Geographic coverage", "format_facet"=>"Format"}}, :show=>{:html_title=>"title_t", :display_type=>"format_code_t", :heading=>"title_t"}, :raw_storage_type=>"marcxml", :default_qt=>"search", :index=>{:num_per_page=>10, :record_display_type=>"format_code_t", :show_link=>"title_t"}, :raw_storage_field=>"marc_display"}
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:08:11) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-92", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.3ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (229.1ms)
+Rendered catalog/_solr_request (0.5ms)
+Rendered _user_util_links (10.0ms)
+Rendered _flash_msg (0.7ms)
+Completed in 300ms (View: 263, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-92]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:08:13) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-229-295-9", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.6ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_default (1.4ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 19ms (View: 10, DB: 2) | 200 OK [http://localhost/catalog/alkpca071-229-295-9]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:08:15) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-229-295-9", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.5ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_default (0.6ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 16ms (View: 7, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-229-295-9]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:08:16) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-229-295-9", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_default (0.6ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 17ms (View: 7, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-229-295-9]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:08:18) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-229-295-9", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.5ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_default (0.7ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 16ms (View: 8, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-229-295-9]
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x27be13c @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x27bf0f0 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x27bd8f4 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :spell_max=>5, :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :facet=>{:field_names=>["format_facet", "subject_era_facet", "language_facet", "institution_facet", "collection_facet", "geographic_subject_facet"], :labels=>{"collection_facet"=>"Collection", "institution_facet"=>"Institution", "subject_era_facet"=>"Time Period", "language_facet"=>"Language", "geographic_subject_facet"=>"Geographic coverage", "format_facet"=>"Format"}}, :show=>{:display_type=>"format_code_t", :heading=>"title_t", :html_title=>"title_t"}, :index=>{:num_per_page=>10, :record_display_type=>"format_code_t", :show_link=>"title_t"}, :raw_storage_type=>"marcxml", :default_qt=>"search"}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x27429b0 @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}, @adapter=#<RSolr::Adapter::HTTP:0x2743964 @connector=#<RSolr::HTTPClient::Connector:0x2741f38 @adapter_name=:curb>, @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}>>
+BLACKLIGHT: initialized with Blacklight.config: {:search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :spell_max=>5, :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :facet=>{:field_names=>["format_facet", "subject_era_facet", "language_facet", "institution_facet", "collection_facet", "geographic_subject_facet"], :labels=>{"collection_facet"=>"Collection", "institution_facet"=>"Institution", "subject_era_facet"=>"Time Period", "language_facet"=>"Language", "geographic_subject_facet"=>"Geographic coverage", "format_facet"=>"Format"}}, :show=>{:html_title=>"title_t", :display_type=>"format_code_t", :heading=>"title_t"}, :raw_storage_type=>"marcxml", :default_qt=>"search", :index=>{:num_per_page=>10, :record_display_type=>"format_code_t", :show_link=>"title_t"}, :raw_storage_field=>"marc_display"}
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:10:40) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-229-295-9", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.1ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_default (1.4ms)
+Rendered catalog/_solr_request (0.4ms)
+Rendered _user_util_links (10.7ms)
+Rendered _flash_msg (0.5ms)
+Completed in 70ms (View: 35, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-229-295-9]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:10:41) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-229-295-9", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_default (0.7ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 16ms (View: 8, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-229-295-9]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:10:42) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-92", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.3ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (228.0ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 248ms (View: 237, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-92]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:10:44) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-229-295", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (212.5ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 230ms (View: 220, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-229-295]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:10:46) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-92", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.3ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (232.2ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 250ms (View: 240, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-92]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:10:48) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-229-295", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (174.2ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 235ms (View: 182, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-229-295]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:10:49) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-296", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.6ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (234.2ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 254ms (View: 242, DB: 2) | 200 OK [http://localhost/catalog/alkpca071-296]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:10:51) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-396", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (172.0ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 191ms (View: 181, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-396]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:10:53) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-1-5", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.4ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (217.7ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (1.0ms)
+Rendered _flash_msg (0.1ms)
+Completed in 236ms (View: 226, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-1-5]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:10:55) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-arrangement", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (153.7ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.9ms)
+Rendered _flash_msg (0.1ms)
+Completed in 171ms (View: 162, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-arrangement]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:10:56) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-scope-and-content", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.4ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (151.9ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.1ms)
+Completed in 168ms (View: 159, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-scope-and-content]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:10:57) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-biography_history", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (188.4ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 205ms (View: 196, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-biography_history]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:10:59) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-summary", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.4ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (150.6ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (1.0ms)
+Rendered _flash_msg (0.1ms)
+Completed in 168ms (View: 158, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-summary]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:11:09) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-summary", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (77.4ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 96ms (View: 86, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-summary]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:11:11) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-biography_history", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.5ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (75.7ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.3ms)
+Completed in 92ms (View: 83, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-biography_history]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:11:11) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-scope-and-content", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (72.0ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 87ms (View: 79, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-scope-and-content]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:11:12) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-arrangement", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.3ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (72.2ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.1ms)
+Completed in 87ms (View: 79, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-arrangement]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:11:13) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-1-5", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.5ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (88.9ms)
+Rendered catalog/_solr_request (0.3ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.1ms)
+Completed in 183ms (View: 174, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-1-5]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:11:15) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-92", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.5ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (104.6ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 122ms (View: 111, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-92]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:11:16) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-229-295", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.6ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (157.2ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 173ms (View: 164, DB: 2) | 200 OK [http://localhost/catalog/alkpca071-229-295]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:11:18) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-296", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.3ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (102.2ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 119ms (View: 109, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-296]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:11:20) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-396", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.3ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (150.4ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.1ms)
+Completed in 166ms (View: 157, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-396]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:11:22) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-396-0", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.4ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_default (0.9ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 18ms (View: 9, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-396-0]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:11:31) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-396-0", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.8ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_default (1.5ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 20ms (View: 10, DB: 2) | 200 OK [http://localhost/catalog/alkpca071-396-0]
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x27be13c @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x27bf0f0 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x27bd8f4 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :spell_max=>5, :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :facet=>{:field_names=>["format_facet", "subject_era_facet", "language_facet", "institution_facet", "collection_facet", "geographic_subject_facet"], :labels=>{"collection_facet"=>"Collection", "institution_facet"=>"Institution", "subject_era_facet"=>"Time Period", "language_facet"=>"Language", "geographic_subject_facet"=>"Geographic coverage", "format_facet"=>"Format"}}, :show=>{:display_type=>"format_code_t", :heading=>"title_t", :html_title=>"title_t"}, :index=>{:num_per_page=>10, :record_display_type=>"format_code_t", :show_link=>"title_t"}, :raw_storage_type=>"marcxml", :default_qt=>"search"}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x27be13c @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x27bf0f0 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x27bd8f4 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :spell_max=>5, :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :facet=>{:field_names=>["format_facet", "subject_era_facet", "language_facet", "institution_facet", "collection_facet", "geographic_subject_facet"], :labels=>{"collection_facet"=>"Collection", "institution_facet"=>"Institution", "subject_era_facet"=>"Time Period", "language_facet"=>"Language", "geographic_subject_facet"=>"Geographic coverage", "format_facet"=>"Format"}}, :show=>{:display_type=>"format_code_t", :heading=>"title_t", :html_title=>"title_t"}, :index=>{:num_per_page=>10, :record_display_type=>"format_code_t", :show_link=>"title_t"}, :raw_storage_type=>"marcxml", :default_qt=>"search"}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x27be13c @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x27bf0f0 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x27bd8f4 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :spell_max=>5, :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :facet=>{:field_names=>["format_facet", "subject_era_facet", "language_facet", "institution_facet", "collection_facet", "geographic_subject_facet"], :labels=>{"collection_facet"=>"Collection", "institution_facet"=>"Institution", "subject_era_facet"=>"Time Period", "language_facet"=>"Language", "geographic_subject_facet"=>"Geographic coverage", "format_facet"=>"Format"}}, :show=>{:display_type=>"format_code_t", :heading=>"title_t", :html_title=>"title_t"}, :index=>{:num_per_page=>10, :record_display_type=>"format_code_t", :show_link=>"title_t"}, :raw_storage_type=>"marcxml", :default_qt=>"search"}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x27429b0 @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}, @adapter=#<RSolr::Adapter::HTTP:0x2743964 @connector=#<RSolr::HTTPClient::Connector:0x2741f38 @adapter_name=:curb>, @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}>>
+BLACKLIGHT: initialized with Blacklight.config: {:search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :spell_max=>5, :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :facet=>{:field_names=>["format_facet", "subject_era_facet", "language_facet", "institution_facet", "collection_facet", "geographic_subject_facet"], :labels=>{"collection_facet"=>"Collection", "institution_facet"=>"Institution", "subject_era_facet"=>"Time Period", "language_facet"=>"Language", "geographic_subject_facet"=>"Geographic coverage", "format_facet"=>"Format"}}, :show=>{:html_title=>"title_t", :display_type=>"format_code_t", :heading=>"title_t"}, :raw_storage_type=>"marcxml", :default_qt=>"search", :index=>{:num_per_page=>10, :record_display_type=>"format_code_t", :show_link=>"title_t"}, :raw_storage_field=>"marc_display"}
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:15:23) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-396", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.1ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (88.9ms)
+Rendered catalog/_solr_request (0.6ms)
+Rendered _user_util_links (10.5ms)
+Rendered _flash_msg (0.5ms)
+Completed in 205ms (View: 170, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-396]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:15:24) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-396", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.3ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (88.3ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 103ms (View: 95, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-396]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:15:25) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-296", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.3ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (106.4ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 124ms (View: 113, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-296]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:15:27) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-396", "controller"=>"catalog"}
+  [4;35;1mSearch Load (4.9ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (142.5ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 162ms (View: 149, DB: 5) | 200 OK [http://localhost/catalog/alkpca071-396]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:15:28) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-396-0", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.5ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_default (1.5ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.1ms)
+Completed in 22ms (View: 10, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-396-0]
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x27be128 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x27bf0dc @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x27bd8e0 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :spell_max=>5, :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :facet=>{:field_names=>["format_facet", "subject_era_facet", "language_facet", "institution_facet", "collection_facet", "geographic_subject_facet"], :labels=>{"collection_facet"=>"Collection", "institution_facet"=>"Institution", "subject_era_facet"=>"Time Period", "language_facet"=>"Language", "geographic_subject_facet"=>"Geographic coverage", "format_facet"=>"Format"}}, :show=>{:display_type=>"format_code_t", :heading=>"title_t", :html_title=>"title_t"}, :index=>{:num_per_page=>10, :record_display_type=>"format_code_t", :show_link=>"title_t"}, :raw_storage_type=>"marcxml", :default_qt=>"search"}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x27be128 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x27bf0dc @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x27bd8e0 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :spell_max=>5, :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :facet=>{:field_names=>["format_facet", "subject_era_facet", "language_facet", "institution_facet", "collection_facet", "geographic_subject_facet"], :labels=>{"collection_facet"=>"Collection", "institution_facet"=>"Institution", "subject_era_facet"=>"Time Period", "language_facet"=>"Language", "geographic_subject_facet"=>"Geographic coverage", "format_facet"=>"Format"}}, :show=>{:display_type=>"format_code_t", :heading=>"title_t", :html_title=>"title_t"}, :index=>{:num_per_page=>10, :record_display_type=>"format_code_t", :show_link=>"title_t"}, :raw_storage_type=>"marcxml", :default_qt=>"search"}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x27be128 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x27bf0dc @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x27bd8e0 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :spell_max=>5, :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :facet=>{:field_names=>["format_facet", "subject_era_facet", "language_facet", "institution_facet", "collection_facet", "geographic_subject_facet"], :labels=>{"collection_facet"=>"Collection", "institution_facet"=>"Institution", "subject_era_facet"=>"Time Period", "language_facet"=>"Language", "geographic_subject_facet"=>"Geographic coverage", "format_facet"=>"Format"}}, :show=>{:display_type=>"format_code_t", :heading=>"title_t", :html_title=>"title_t"}, :index=>{:num_per_page=>10, :record_display_type=>"format_code_t", :show_link=>"title_t"}, :raw_storage_type=>"marcxml", :default_qt=>"search"}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x27429b0 @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}, @adapter=#<RSolr::Adapter::HTTP:0x2743964 @connector=#<RSolr::HTTPClient::Connector:0x2741f38 @adapter_name=:curb>, @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}>>
+BLACKLIGHT: initialized with Blacklight.config: {:search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :spell_max=>5, :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :facet=>{:field_names=>["format_facet", "subject_era_facet", "language_facet", "institution_facet", "collection_facet", "geographic_subject_facet"], :labels=>{"collection_facet"=>"Collection", "institution_facet"=>"Institution", "subject_era_facet"=>"Time Period", "language_facet"=>"Language", "geographic_subject_facet"=>"Geographic coverage", "format_facet"=>"Format"}}, :show=>{:html_title=>"title_t", :display_type=>"format_code_t", :heading=>"title_t"}, :raw_storage_type=>"marcxml", :default_qt=>"search", :index=>{:num_per_page=>10, :record_display_type=>"format_code_t", :show_link=>"title_t"}, :raw_storage_field=>"marc_display"}
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:19:14) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-396", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.0ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (93.4ms)
+Rendered catalog/_solr_request (0.6ms)
+Rendered _user_util_links (10.8ms)
+Rendered _flash_msg (0.6ms)
+Completed in 219ms (View: 180, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-396]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:19:15) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-396", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.5ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (90.9ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 109ms (View: 98, DB: 2) | 200 OK [http://localhost/catalog/alkpca071-396]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:19:17) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-296", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.3ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (152.6ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.1ms)
+Completed in 173ms (View: 159, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-296]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:19:18) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-229-295", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (94.8ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.1ms)
+Completed in 113ms (View: 102, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-229-295]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:19:19) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-92", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.4ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (105.2ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 124ms (View: 112, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-92]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:19:20) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-1-5", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.3ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (176.4ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.1ms)
+Completed in 195ms (View: 184, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-1-5]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:19:21) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-396", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.5ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (101.4ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (1.6ms)
+Rendered _flash_msg (0.1ms)
+Completed in 120ms (View: 109, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-396]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:19:22) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-396-0", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.3ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_default (1.4ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 20ms (View: 10, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-396-0]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:19:25) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-396-0", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.3ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_default (0.7ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 17ms (View: 8, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-396-0]
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x27be128 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x27bf0dc @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x27bd8e0 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :spell_max=>5, :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :facet=>{:field_names=>["format_facet", "subject_era_facet", "language_facet", "institution_facet", "collection_facet", "geographic_subject_facet"], :labels=>{"collection_facet"=>"Collection", "institution_facet"=>"Institution", "subject_era_facet"=>"Time Period", "language_facet"=>"Language", "geographic_subject_facet"=>"Geographic coverage", "format_facet"=>"Format"}}, :show=>{:display_type=>"format_code_t", :heading=>"title_t", :html_title=>"title_t"}, :index=>{:num_per_page=>10, :record_display_type=>"format_code_t", :show_link=>"title_t"}, :raw_storage_type=>"marcxml", :default_qt=>"search"}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x27be128 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x27bf0dc @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x27bd8e0 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :spell_max=>5, :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :facet=>{:field_names=>["format_facet", "subject_era_facet", "language_facet", "institution_facet", "collection_facet", "geographic_subject_facet"], :labels=>{"collection_facet"=>"Collection", "institution_facet"=>"Institution", "subject_era_facet"=>"Time Period", "language_facet"=>"Language", "geographic_subject_facet"=>"Geographic coverage", "format_facet"=>"Format"}}, :show=>{:display_type=>"format_code_t", :heading=>"title_t", :html_title=>"title_t"}, :index=>{:num_per_page=>10, :record_display_type=>"format_code_t", :show_link=>"title_t"}, :raw_storage_type=>"marcxml", :default_qt=>"search"}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x27be128 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x27bf0dc @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x27bd8e0 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :spell_max=>5, :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :facet=>{:field_names=>["format_facet", "subject_era_facet", "language_facet", "institution_facet", "collection_facet", "geographic_subject_facet"], :labels=>{"collection_facet"=>"Collection", "institution_facet"=>"Institution", "subject_era_facet"=>"Time Period", "language_facet"=>"Language", "geographic_subject_facet"=>"Geographic coverage", "format_facet"=>"Format"}}, :show=>{:display_type=>"format_code_t", :heading=>"title_t", :html_title=>"title_t"}, :index=>{:num_per_page=>10, :record_display_type=>"format_code_t", :show_link=>"title_t"}, :raw_storage_type=>"marcxml", :default_qt=>"search"}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x27be128 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x27bf0dc @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x27bd8e0 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :spell_max=>5, :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :facet=>{:field_names=>["format_facet", "subject_era_facet", "language_facet", "institution_facet", "collection_facet", "geographic_subject_facet"], :labels=>{"collection_facet"=>"Collection", "institution_facet"=>"Institution", "subject_era_facet"=>"Time Period", "language_facet"=>"Language", "geographic_subject_facet"=>"Geographic coverage", "format_facet"=>"Format"}}, :show=>{:display_type=>"format_code_t", :heading=>"title_t", :html_title=>"title_t"}, :index=>{:num_per_page=>10, :record_display_type=>"format_code_t", :show_link=>"title_t"}, :raw_storage_type=>"marcxml", :default_qt=>"search"}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x27429b0 @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}, @adapter=#<RSolr::Adapter::HTTP:0x2743964 @connector=#<RSolr::HTTPClient::Connector:0x2741f38 @adapter_name=:curb>, @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}>>
+BLACKLIGHT: initialized with Blacklight.config: {:search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :spell_max=>5, :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :facet=>{:field_names=>["format_facet", "subject_era_facet", "language_facet", "institution_facet", "collection_facet", "geographic_subject_facet"], :labels=>{"collection_facet"=>"Collection", "institution_facet"=>"Institution", "subject_era_facet"=>"Time Period", "language_facet"=>"Language", "geographic_subject_facet"=>"Geographic coverage", "format_facet"=>"Format"}}, :show=>{:html_title=>"title_t", :display_type=>"format_code_t", :heading=>"title_t"}, :raw_storage_type=>"marcxml", :default_qt=>"search", :index=>{:num_per_page=>10, :record_display_type=>"format_code_t", :show_link=>"title_t"}, :raw_storage_field=>"marc_display"}
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:26:06) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-396", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.2ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (89.8ms)
+Rendered catalog/_solr_request (0.5ms)
+Rendered _user_util_links (11.0ms)
+Rendered _flash_msg (0.5ms)
+Completed in 218ms (View: 172, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-396]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:26:07) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-396", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (87.4ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 109ms (View: 94, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-396]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:26:09) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-396", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.5ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (139.2ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 161ms (View: 146, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-396]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:26:11) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-396-0", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.5ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_default (1.5ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.1ms)
+Completed in 24ms (View: 10, DB: 2) | 200 OK [http://localhost/catalog/alkpca071-396-0]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:26:50) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-396", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.4ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (87.5ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 109ms (View: 94, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-396]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:27:06) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-396", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (90.4ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 116ms (View: 99, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-396]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:27:18) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-396", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.4ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (139.3ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 159ms (View: 146, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-396]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:27:28) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-396-0", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_default (0.7ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 20ms (View: 8, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-396-0]
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x27be128 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x27bf0dc @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x27bd8e0 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :spell_max=>5, :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :facet=>{:field_names=>["format_facet", "subject_era_facet", "language_facet", "institution_facet", "collection_facet", "geographic_subject_facet"], :labels=>{"collection_facet"=>"Collection", "institution_facet"=>"Institution", "subject_era_facet"=>"Time Period", "language_facet"=>"Language", "geographic_subject_facet"=>"Geographic coverage", "format_facet"=>"Format"}}, :show=>{:display_type=>"format_code_t", :heading=>"title_t", :html_title=>"title_t"}, :index=>{:num_per_page=>10, :record_display_type=>"format_code_t", :show_link=>"title_t"}, :raw_storage_type=>"marcxml", :default_qt=>"search"}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x27429b0 @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}, @adapter=#<RSolr::Adapter::HTTP:0x2743964 @connector=#<RSolr::HTTPClient::Connector:0x2741f38 @adapter_name=:curb>, @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}>>
+BLACKLIGHT: initialized with Blacklight.config: {:search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :spell_max=>5, :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :facet=>{:field_names=>["format_facet", "subject_era_facet", "language_facet", "institution_facet", "collection_facet", "geographic_subject_facet"], :labels=>{"collection_facet"=>"Collection", "institution_facet"=>"Institution", "subject_era_facet"=>"Time Period", "language_facet"=>"Language", "geographic_subject_facet"=>"Geographic coverage", "format_facet"=>"Format"}}, :show=>{:html_title=>"title_t", :display_type=>"format_code_t", :heading=>"title_t"}, :raw_storage_type=>"marcxml", :default_qt=>"search", :index=>{:num_per_page=>10, :record_display_type=>"format_code_t", :show_link=>"title_t"}, :raw_storage_field=>"marc_display"}
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:33:28) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-396", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.1ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (89.9ms)
+Rendered catalog/_solr_request (0.6ms)
+Rendered _user_util_links (11.8ms)
+Rendered _flash_msg (0.6ms)
+Completed in 244ms (View: 173, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-396]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:33:30) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-396-0", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_default (1.5ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 23ms (View: 10, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-396-0]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:40:35) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-396-0", "controller"=>"catalog"}
+  [4;36;1mSearch Load (2.3ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_default (0.8ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.1ms)
+Completed in 27ms (View: 9, DB: 2) | 200 OK [http://localhost/catalog/alkpca071-396-0]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:40:36) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-396-0", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_default (0.7ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 21ms (View: 7, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-396-0]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:40:42) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-396", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.6ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (88.3ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 108ms (View: 95, DB: 2) | 200 OK [http://localhost/catalog/alkpca071-396]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:40:48) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-428", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.3ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (142.3ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 163ms (View: 149, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-428]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:40:49) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-489", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.4ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (83.6ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 104ms (View: 90, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-489]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:40:51) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-503", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.3ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (83.6ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 105ms (View: 90, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-503]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:40:52) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-514", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.4ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (145.8ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 167ms (View: 153, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-514]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:40:52) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-521-523", "controller"=>"catalog"}
+  [4;35;1mSearch Load (2.3ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (86.6ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 108ms (View: 93, DB: 2) | 200 OK [http://localhost/catalog/alkpca071-521-523]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:40:53) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-539", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.3ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (89.9ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 110ms (View: 97, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-539]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:40:54) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-539-0", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_default (0.7ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 21ms (View: 7, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-539-0]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:41:00) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-587-598", "controller"=>"catalog"}
+  [4;36;1mSearch Load (2.2ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (155.4ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.1ms)
+Completed in 176ms (View: 162, DB: 2) | 200 OK [http://localhost/catalog/alkpca071-587-598]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:41:02) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-539", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (88.4ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 114ms (View: 95, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-539]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:41:09) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-1-5", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.4ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (149.2ms)
+Rendered catalog/_solr_request (0.3ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 172ms (View: 156, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-1-5]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:41:10) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-92", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.3ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (105.4ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 127ms (View: 112, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-92]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:41:11) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-229-295", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.4ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (157.8ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.1ms)
+Completed in 179ms (View: 165, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-229-295]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:41:12) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-296", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (105.0ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 127ms (View: 112, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-296]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:41:13) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-396", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.5ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (155.3ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 175ms (View: 162, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-396]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:41:14) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-396-0", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_default (0.7ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 20ms (View: 7, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-396-0]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:41:24) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-396", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.4ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (85.6ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 106ms (View: 92, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-396]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:41:32) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-396-0", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_default (0.7ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 21ms (View: 8, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-396-0]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:41:46) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-396", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.4ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (163.4ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 183ms (View: 170, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-396]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:42:20) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-396", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (88.7ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.9ms)
+Rendered _flash_msg (0.1ms)
+Completed in 111ms (View: 97, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-396]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:42:31) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-396", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.3ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (154.0ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 175ms (View: 162, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-396]
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x27be128 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x27bf0dc @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x27bd8e0 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :spell_max=>5, :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :facet=>{:field_names=>["format_facet", "subject_era_facet", "language_facet", "institution_facet", "collection_facet", "geographic_subject_facet"], :labels=>{"collection_facet"=>"Collection", "institution_facet"=>"Institution", "subject_era_facet"=>"Time Period", "language_facet"=>"Language", "geographic_subject_facet"=>"Geographic coverage", "format_facet"=>"Format"}}, :show=>{:display_type=>"format_code_t", :heading=>"title_t", :html_title=>"title_t"}, :index=>{:num_per_page=>10, :record_display_type=>"format_code_t", :show_link=>"title_t"}, :raw_storage_type=>"marcxml", :default_qt=>"search"}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x27429b0 @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}, @adapter=#<RSolr::Adapter::HTTP:0x2743964 @connector=#<RSolr::HTTPClient::Connector:0x2741f38 @adapter_name=:curb>, @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}>>
+BLACKLIGHT: initialized with Blacklight.config: {:search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :spell_max=>5, :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :facet=>{:field_names=>["format_facet", "subject_era_facet", "language_facet", "institution_facet", "collection_facet", "geographic_subject_facet"], :labels=>{"collection_facet"=>"Collection", "institution_facet"=>"Institution", "subject_era_facet"=>"Time Period", "language_facet"=>"Language", "geographic_subject_facet"=>"Geographic coverage", "format_facet"=>"Format"}}, :show=>{:html_title=>"title_t", :display_type=>"format_code_t", :heading=>"title_t"}, :raw_storage_type=>"marcxml", :default_qt=>"search", :index=>{:num_per_page=>10, :record_display_type=>"format_code_t", :show_link=>"title_t"}, :raw_storage_field=>"marc_display"}
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:44:27) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-396", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.0ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (134.1ms)
+Rendered catalog/_solr_request (0.5ms)
+Rendered _user_util_links (12.3ms)
+Rendered _flash_msg (0.5ms)
+Completed in 207ms (View: 172, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-396]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:44:27) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-396", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.6ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (92.9ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.1ms)
+Completed in 113ms (View: 101, DB: 2) | 200 OK [http://localhost/catalog/alkpca071-396]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:44:30) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-296", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.4ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (159.2ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 177ms (View: 166, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-296]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:44:31) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-428", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (142.9ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 159ms (View: 150, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-428]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:44:32) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-489", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.3ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (81.1ms)
+Rendered catalog/_solr_request (0.6ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 98ms (View: 88, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-489]
+BLACKLIGHT: initialized with Blacklight.solr_config: {:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x27be128 @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @adapter=#<RSolr::Adapter::HTTP:0x27bf0dc @opts={:url=>"http://127.0.0.1:8983/solr", :adapter=>:http}, @connector=#<RSolr::HTTPClient::Connector:0x27bd8e0 @adapter_name=:curb>>>
+BLACKLIGHT: initialized with Blacklight.config: {:raw_storage_field=>"marc_display", :search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :spell_max=>5, :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :facet=>{:field_names=>["format_facet", "subject_era_facet", "language_facet", "institution_facet", "collection_facet", "geographic_subject_facet"], :labels=>{"collection_facet"=>"Collection", "institution_facet"=>"Institution", "subject_era_facet"=>"Time Period", "language_facet"=>"Language", "geographic_subject_facet"=>"Geographic coverage", "format_facet"=>"Format"}}, :show=>{:display_type=>"format_code_t", :heading=>"title_t", :html_title=>"title_t"}, :index=>{:num_per_page=>10, :record_display_type=>"format_code_t", :show_link=>"title_t"}, :raw_storage_type=>"marcxml", :default_qt=>"search"}
+BLACKLIGHT: initialized with Blacklight.solr_config: {:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Connection:0x27429b0 @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}, @adapter=#<RSolr::Adapter::HTTP:0x2743964 @connector=#<RSolr::HTTPClient::Connector:0x2741f38 @adapter_name=:curb>, @opts={:adapter=>:http, :url=>"http://127.0.0.1:8983/solr"}>>
+BLACKLIGHT: initialized with Blacklight.config: {:search_fields=>[["All Fields", "search"], ["Author", "author_search"], ["Title", "title_search"]], :spell_max=>5, :index_fields=>{:field_names=>["title_t", "author_t", "format_facet", "language_facet", "published_t"], :labels=>{"published_t"=>"Published:", "author_t"=>"Author:", "title_t"=>"Title:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :show_fields=>{:field_names=>["title_t", "sub_title_t", "author_t", "format_facet", "material_type_t", "language_facet", "published_t", "isbn_t"], :labels=>{"published_t"=>"Published:", "isbn_t"=>"ISBN:", "author_t"=>"Author:", "sub_title_t"=>"Subtitle:", "title_t"=>"Title:", "material_type_t"=>"Physical description:", "language_facet"=>"Language:", "format_facet"=>"Format:"}}, :sort_fields=>[["relevance", ""], ["title", "title_sort asc"], ["format", "format_sort asc"]], :facet=>{:field_names=>["format_facet", "subject_era_facet", "language_facet", "institution_facet", "collection_facet", "geographic_subject_facet"], :labels=>{"collection_facet"=>"Collection", "institution_facet"=>"Institution", "subject_era_facet"=>"Time Period", "language_facet"=>"Language", "geographic_subject_facet"=>"Geographic coverage", "format_facet"=>"Format"}}, :show=>{:html_title=>"title_t", :display_type=>"format_code_t", :heading=>"title_t"}, :raw_storage_type=>"marcxml", :default_qt=>"search", :index=>{:num_per_page=>10, :record_display_type=>"format_code_t", :show_link=>"title_t"}, :raw_storage_field=>"marc_display"}
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:45:57) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-489", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.3ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (85.5ms)
+Rendered catalog/_solr_request (0.6ms)
+Rendered _user_util_links (62.1ms)
+Rendered _flash_msg (0.5ms)
+Completed in 210ms (View: 174, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-489]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:46:00) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-503", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (87.9ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 106ms (View: 94, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-503]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:46:01) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-521-523", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.4ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (83.3ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.1ms)
+Completed in 100ms (View: 90, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-521-523]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:46:01) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-514", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (82.0ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 149ms (View: 139, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-514]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:46:03) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-605", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.4ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (87.1ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 104ms (View: 94, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-605]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:46:04) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-636", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (86.4ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (63.2ms)
+Rendered _flash_msg (0.1ms)
+Completed in 166ms (View: 156, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-636]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:46:06) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-296", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.5ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (102.8ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 121ms (View: 110, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-296]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:46:07) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-229-295", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.3ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (155.1ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 172ms (View: 162, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-229-295]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:46:07) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-92", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.4ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (105.7ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 124ms (View: 112, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-92]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:46:08) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-1-5", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (153.0ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 169ms (View: 160, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-1-5]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:46:09) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-scope-and-content", "controller"=>"catalog"}
+  [4;36;1mSearch Load (2.5ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (71.3ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 88ms (View: 78, DB: 2) | 200 OK [http://localhost/catalog/alkpca071-scope-and-content]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:46:09) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-arrangement", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.3ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (70.8ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 86ms (View: 77, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-arrangement]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:46:10) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-biography_history", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.3ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (71.6ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 157ms (View: 148, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-biography_history]
+
+
+Processing CatalogController#show (for ::1 at 2009-07-04 13:46:11) [GET]
+  Parameters: {"action"=>"show", "id"=>"alkpca071-summary", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.3ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_partials/_ead (75.9ms)
+Rendered catalog/_solr_request (0.2ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 92ms (View: 83, DB: 1) | 200 OK [http://localhost/catalog/alkpca071-summary]
