@@ -80,7 +80,7 @@
 				<span><%= link_to c02.at('unittitle'), catalog_path("#{@document[:id]}-#{index}") %></span>
 			<% end %>
 		<% end %>
-		<%= sub_items.join(' | ') %>
+		<%= sub_items.join(' &mdash; ') %>
 	<% end %>
 	
 <% end %>
