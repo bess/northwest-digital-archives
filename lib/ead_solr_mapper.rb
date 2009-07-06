@@ -70,8 +70,8 @@ class EADSolrMapper
             @xml.at('//archdesc/did/unittitle').text rescue
               'N/A'
         ),
-        :institution_t => @xml.at('//publicationstmt/publisher/text()[1]').text,
-        :institution_facet => @xml.at('//repository//corpname').children.first.text,
+        :institution_t => @xml.at('//publicationstmt/publisher/text()[1]').text.gsub(/\s+/," ").strip,
+        :institution_facet => @xml.at('//repository//corpname').children.first.text.gsub(/\s+/," ").strip,
         :language_facet => self.languages,
         :hierarchy_scope => self.collection_id,
         :collection_id => self.collection_id,
