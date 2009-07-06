@@ -62,7 +62,7 @@ class EADSolrMapper
     @base_doc ||= (
       doc = {
         :format_code_t => 'ead',
-        :format_facet => 'EAD',
+        :format_facet => 'Archival Documents',
         :filename_t => @base_filename,
         :title_t => @xml.at('/ead/eadheader[1]/filedesc[1]/titlestmt[1]/titleproper[1]/text()').text,
         :unittitle_t => (
@@ -167,8 +167,8 @@ class EADSolrMapper
           # "::" is the hierarchy separator...
           :hierarchy => "Collection Inventory::#{label}::#{llabel}".gsub(/:{3,}/, '::'),
           :part_of => [id],
-          :format_code_t => format.downcase.gsub(' ', '_').gsub(/\W+/, ''),
-          :format_facet => format.capitalize
+          :format_code_t => format.downcase.gsub(' ', '_').gsub(/\W+/, '')
+          #:format_facet => format.capitalize
         })
       end
       docs
