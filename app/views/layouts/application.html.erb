@@ -24,7 +24,10 @@
 	    <div id="hd">
         <div class="yui-g">
           <div class="yui-u first">
-            <h1 class="site_title"><%= link_to application_name, root_path %><%= (params[:controller] == "catalog" and !params[:id]) ? "<span id='results_text'>Search Results</span>" : "" %></h1>
+			<% site_title = capture do %>
+            	<h1 class="site_title"><%= (params[:controller] == "catalog" and !params[:id]) ? "<span id='results_text'>Search Results</span>" : "" %></h1>
+			<% end %>
+			<%= link_to site_title, root_path %>
           </div>
           <div class="yui-u">
             <%= render :partial=>'/user_util_links' %>
