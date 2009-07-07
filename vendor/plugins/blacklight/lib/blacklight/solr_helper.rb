@@ -52,9 +52,7 @@ module Blacklight::SolrHelper
       :per_page => per_page,
       :q => input[:q],
       :phrase_filters => input[:f],
-      :qt => input[:qt],
       :facets => {:fields=>facet_fields},
-      :per_page => per_page,
       :page => input[:page],
       :sort => input[:sort],
       "spellcheck.q" => input[:q]
