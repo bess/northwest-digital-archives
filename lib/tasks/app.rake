@@ -14,38 +14,29 @@ namespace :app do
   
   namespace :index do
     
-    # *************************************************************** #
-    # Index marc files
-    # Note: solrmarc is probably better for production use, but this
-    # is a good place to start
-    # *************************************************************** #
-    
-    desc 'Index a marc file at FILE=<location-of-file> using the lib/marc_mapper class.'
-    task :marc => :environment do
+    desc 'Index all of the sample data for the NWDA demo'
+    task :all => :environment do
+      require 'ead_solr_mapper'
+      ENV['FILE'] = '../raw_data/herbarium_export.xml'
+      Rake::Task["app:index:herbarium"].invoke
       
-      t = Time.now
+      ENV['FILE'] = '../raw_data/baseball_export.xml'
+      Rake::Task["app:index:baseball"].invoke
       
-      marc_file = ENV['FILE']
-      raise "Invalid file. Set the by using the FILE argument." unless File.exists?(marc_file.to_s)
+      ENV['FILE'] = '../raw_data/wsu-theses.xml'
+      Rake::Task["app:index:theses"].invoke
       
-      solr = Blacklight.solr
+      ENV['FILE'] = '../raw_data/cityofpullmancollection.xml'
+      Rake::Task["app:index:pullman"].invoke
       
-      mapper = MARCMapper.new
-      mapper.from_marc_file(marc_file) do |doc,index|
-        puts "#{index} -- adding doc w/id : #{doc[:id]} to Solr"
-        solr.add(doc)
-      end
-      
-      puts "Sending commit to Solr..."
-      solr.commit
-      puts "Complete."
-      
-      puts "Total Time: #{Time.now - t}"
-      
+      ENV['FILE']='../raw_data/ead/*/*.xml'
+      Rake::Task["app:index:ead"].reenable
+      Rake::Task["app:index:ead"].invoke
+
     end
-    
+      
     desc "Index an EAD file at FILE=<location-of-file> using the lib/ead_mapper class."
-    task :ead=>:environment do
+    task :ead => :environment do
       require 'ead_solr_mapper'
       t = Time.now
       input_file = require_env_file
