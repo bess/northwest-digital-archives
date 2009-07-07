@@ -137,7 +137,7 @@ module Blacklight::Marc::Citation
   end
 
   def mla_citation_title(text)
-    no_upcase = ["a","an","but","by","for","it","of","the","to"]
+    no_upcase = ["a","an","and","but","by","for","it","of","the","to","with"]
     new_text = []
     word_parts = text.split(" ")
     word_parts.each do |w|

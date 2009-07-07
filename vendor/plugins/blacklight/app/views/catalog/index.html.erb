@@ -1,24 +1,32 @@
-<% @page_title = application_name + " Search Results" %>
-<%= render :partial => 'search_form' %>
+<% if params[:q].to_s.empty? and params[:f].to_s.empty? %>
+	<%# if there are no input/search related params, display the "home" partial -%>
+	<%= render 'home' %>
+<% else %>
 
-<%= render :partial => 'did_you_mean' %>
+	<% @page_title = application_name + " Search Results" %>
 
-<%= render :partial => 'search_constraints' %>
+	<%= render :partial => 'search_form' %>
 
-<div class="pagination">
-  <h2>Results navigation</h2>
-  <%= will_paginate @response.docs, :page_links => false, :class => 'prev_next_links' %>
-  <%= will_paginate @response.docs, :container => false %>
-</div>
-<%= render :partial=>'document_list' %>
+	<%= render :partial => 'did_you_mean' %>
 
-<% sidebar_items << capture do %>
-  <%= render :partial=>'facets' %>
+	<%= render :partial => 'search_constraints' %>
+
+	<div class="pagination">
+	  <h2>Results navigation</h2>
+	  <%= will_paginate @response.docs, :page_links => false, :class => 'prev_next_links' %>
+	  <%= will_paginate @response.docs, :container => false %>
+	</div>
+	<%= render :partial=>'document_list' %>
+
+	<% sidebar_items << capture do %>
+	  <%= render :partial=>'facets' %>
+	<% end %>
+
+	<div class="pagination">
+	  <%= will_paginate @response.docs, :page_links => false, :class => 'prev_next_links' %>
+	  <%= will_paginate @response.docs, :container => false %>
+	</div>
+
+	<%= render :partial=>'solr_request' %>
+
 <% end %>
-
-<div class="pagination">
-  <%= will_paginate @response.docs, :page_links => false, :class => 'prev_next_links' %>
-  <%= will_paginate @response.docs, :container => false %>
-</div>
-
-<%= render :partial=>'solr_request' %>

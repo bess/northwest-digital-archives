@@ -218,7 +218,7 @@ describe Blacklight::Marc::Citation do
   
   describe "to_mla" do
     it "should format a standard citation correctly" do
-      @record_with_standard_citation_data.to_mla.should == "Ferree, David C, and I. J Warrington. <u>Apples : Botany, Production, And Uses.</u> Oxon, U.K.: CABI Pub., 2003."
+      @record_with_standard_citation_data.to_mla.should == "Ferree, David C, and I. J Warrington. <u>Apples : Botany, Production, and Uses.</u> Oxon, U.K.: CABI Pub., 2003."
     end
     
     it "should format a citation without a 245b field correctly" do

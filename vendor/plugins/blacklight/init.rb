@@ -1,3 +1,4 @@
+
 config.gem "authlogic"
 #config.gem 'mwmitchell-rsolr-ext', :version=>'0.7.35', :lib=>'rsolr-ext', :source=>'http://github.com'
 
@@ -18,4 +19,5 @@ config.after_initialize do
   require 'will_paginate_link_renderer'   # in local ./lib
   require 'taggable_pagination'           # in local ./lib
   Blacklight.init
+  Mime::Type.register_alias "text/plain", :refworks
 end

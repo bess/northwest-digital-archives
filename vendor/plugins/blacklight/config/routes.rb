@@ -6,7 +6,7 @@ ActionController::Routing::Routes.draw do |map|
   map.logout "logout", :controller => "user_sessions", :action => "destroy"
   
   # Set the default controller:
-  map.root :controller => 'home'
+  map.root :controller => 'catalog', :action=>'index'
   map.resources :bookmarks, :collection => {:clear => :delete}
   map.resource :user
   
@@ -14,12 +14,13 @@ ActionController::Routing::Routes.draw do |map|
   
   map.resources :search_history, :collection => {:clear => :delete}
   map.resources :saved_searches, :collection => {:clear => :delete}, :member => {:save => :put}
+  
   map.resources(:catalog,
     :only => [:index, :show, :update],
     # /catalog/:id/image <- for ajax cover requests
     # /catalog/:id/status
     # /catalog/:id/availability
-    :member=>{:image=>:get, :status=>:get, :availability=>:get, :citation=>:get, :export=>:get},
+    :member=>{:image=>:get, :status=>:get, :availability=>:get, :citation=>:get, :send_email_record=>:post, :email=>:get, :sms=>:get},
     # /catalog/map
     :collection => {:map => :get, :opensearch=>:get}
   )

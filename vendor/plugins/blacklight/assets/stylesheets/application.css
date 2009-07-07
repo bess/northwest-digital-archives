@@ -183,12 +183,12 @@ ul.tools li {
 
 /* Lightbox */
 
-.citeTitle {
+.lightboxTitle {
   background-color: #cccccc;
   width: 100%;
   color:black;
 }
-#citeBack {
+.lightboxBack {
   float:right;
 }
 #lightboxContainer {

@@ -28,6 +28,7 @@ class CatalogController < ApplicationController
     respond_to do |format|
       format.html {setup_next_and_previous_documents}
       format.xml  {render :xml => @document.marc.to_xml}
+      format.refworks
     end
   end
   
@@ -52,7 +53,7 @@ class CatalogController < ApplicationController
   def map
   end
   
-  # 
+  # method to serve up XML OpenSearch description and JSON autocomplete response
   def opensearch
     respond_to do |format|
       format.xml do
@@ -69,16 +70,49 @@ class CatalogController < ApplicationController
     @response = get_solr_response_for_doc_id
     @document = SolrDocument.new(@response.docs.first)
   end
-  
-  def export
+  # Email Action (this will only be accessed when the Email link is clicked by a non javascript browser)
+  def email
     @response = get_solr_response_for_doc_id
     @document = SolrDocument.new(@response.docs.first)
-    case params[:style]
-      when 'refworks'
-        render :partial => 'catalog/refworks_export', :layout => false
-    end
+  end
+  # SMS action (this will only be accessed when the SMS link is clicked by a non javascript browser)
+  def sms 
+    @response = get_solr_response_for_doc_id
+    @document = SolrDocument.new(@response.docs.first)
   end
   
+  # action for sending email.  This is meant to post from the form and to do processing
+  def send_email_record
+    @response = get_solr_response_for_doc_id
+    @document = SolrDocument.new(@response.docs.first)
+    if params[:to]
+      from = request.host # host w/o port for From address (from address cannot have port#)
+      host = request.host
+      host << ":#{request.port}" unless request.port.nil? # host w/ port for linking
+      case params[:style]
+        when 'sms'
+          if !params[:carrier].blank?
+            if params[:to].length != 10
+              flash[:error] = "You must enter a valid 10 digit phone number"
+            else
+              email = RecordMailer.create_sms_record(@document, {:to => params[:to], :carrier => params[:carrier]}, from, host)
+            end
+          else
+            flash[:error] = "You must select a carrier"
+          end
+        when 'email'
+          if params[:to].match(/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/)
+            email = RecordMailer.create_email_record(@document, {:to => params[:to], :message => params[:message]}, from, host)
+          else
+            flash[:error] = "You must enter a valid email address"
+          end
+      end
+      RecordMailer.deliver(email) unless flash[:error]
+      redirect_to catalog_path(@document.id)
+    else
+      flash[:error] = "You must enter a recipient in order to send this message"
+    end
+  end
   protected
   
   #

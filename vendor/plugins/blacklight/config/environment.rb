@@ -17,7 +17,7 @@ Rails::Initializer.run do |config|
   # Application configuration should go into files in config/initializers
   # -- all .rb files in that directory are automatically loaded.
   # See Rails::Configuration for more options.
-  
+  config.action_mailer.delivery_method = :sendmail
   config.gem 'authlogic'
 
   # Skip frameworks you're not going to use (only works if using vendor/rails).
