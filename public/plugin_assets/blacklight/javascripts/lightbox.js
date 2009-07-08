@@ -5,7 +5,6 @@
 // .lightboxLink and name it the same thing as your lightboxContent ID
 // Note: The Open and close links are pretty much identical.
 $(document).ready(function() {
-  var closeLink = $('.closeLightBox');
   var lightboxContainer = $('#lightboxContainer');
     $(".lightboxLink").each(function(){
         $(this).click(function(){
