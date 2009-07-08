@@ -351,3 +351,13 @@ div#previousNextDocument {
 div.yui-u h3 {
 	font-size: 1.3em;
 }
+
+ul.navigation{
+	margin:1em 1em;
+	margin-top:0;
+}
+ul.navigation li{
+	list-style:none;
+	margin:.5em 0;
+	line-height:1em;
+}

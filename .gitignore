@@ -4,5 +4,4 @@ raw_data/
 **~
 config/database.yml
 .DS_Store
-log/*
 db/test.sqlite3
