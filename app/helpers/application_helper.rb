@@ -21,7 +21,7 @@ module ApplicationHelper
   # current_depth should not be used by you!
   def render_navigation_level(id, composite, opts={}, current_depth=0, &block)
     return '' if opts[:max_depth] == current_depth
-    html = "<ul>"
+    html = %(<ul class="navigation">)
     composite.children.each do |node|
       node_id = node.object.nil? ? node.children.first.object[:id] : node.object[:id]
       v = yield(node)
