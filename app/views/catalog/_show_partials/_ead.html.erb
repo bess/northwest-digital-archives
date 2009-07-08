@@ -72,15 +72,24 @@
 		<% end %>
 	</dl>
 	
+	<%# TODO: put this in a helper -%>
 	<% if d.search('c02') %>
 		<h4>Items in this Collection</h4>
-		<% sub_items = [] %>
-		<% d.search('c02').each_with_index do |c02, index| %>
-			<% sub_items << capture do %>
-				<span><%= link_to c02.at('unittitle'), catalog_path("#{@document[:id]}-#{index}") %></span>
+		<% c02items = d.search('c02') %>
+		<% middle = c02items.size/2 %>
+		<div class="yui-g">
+			<% c02items.each_with_index do |c02, index| %>
+				<% if index == 0 %>
+					<div class="yui-u">
+				<% elsif index == middle %>
+					</div><div class="yui-u">
+				<% end %>
+				<span>
+					<%= link_to c02.at('unittitle'), catalog_path("#{@document[:id]}-#{index}") %>
+				</span>
 			<% end %>
-		<% end %>
-		<%= sub_items.join(' &mdash; ') %>
+		</div>
+		
 	<% end %>
 	
 <% end %>
