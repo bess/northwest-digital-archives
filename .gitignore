@@ -5,3 +5,5 @@ raw_data/
 config/database.yml
 .DS_Store
 db/test.sqlite3
+jetty/solr/data/*
+log/*
