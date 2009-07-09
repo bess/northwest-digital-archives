@@ -39,11 +39,46 @@ set :rails_env, "production"
 task :after_update_code do
   run "ln -nfs #{deploy_to}/shared/config/database.yml #{release_path}/config/database.yml"
   run "ln -nfs #{deploy_to}/shared/config/solr.yml #{release_path}/config/solr.yml"
+  run "cp #{deploy_to}/current/jetty/solr/conf/schema.xml #{deploy_to}/shared/solr/conf/schema.xml"
+  run "sudo /sbin/service tomcat6 restart"
+end
+
+
+# ========================
+# Reindex the Orbis Cascade data
+# ========================
+
+namespace :reindex do
+
+  task :baseball do   
+    run "cd #{deploy_to}/current; rake app:index:baseball FILE=#{deploy_to}/../raw_data/baseball_export.xml"
+  end
+  
+  task :pullman do   
+    run "cd #{deploy_to}/current; rake app:index:pullman FILE=#{deploy_to}/../raw_data/cityofpullmancollection.xml"
+  end
+  
+  task :herbarium do   
+    run "cd #{deploy_to}/current; rake app:index:herbarium FILE=#{deploy_to}/../raw_data/herbarium_export.xml"
+  end
+  
+  task :theses do   
+    run "cd #{deploy_to}/current; rake app:index:theses FILE=#{deploy_to}/../raw_data/wsu-theses.xml"
+  end
+
+  task :ead do   
+    run "cd #{deploy_to}/current; rake app:index:ead FILE=#{deploy_to}/../raw_data/ead/*/*.xml"
+  end
+  
+  task :all do
+  end
+
 end
 
 # ========================
 # For mod_rails apps
 # ========================
+
 
 namespace :deploy do
   task :start, :roles => :app do
