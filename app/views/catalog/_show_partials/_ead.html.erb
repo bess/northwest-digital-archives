@@ -73,29 +73,17 @@
 	</dl>
 	
 	<%# TODO: put this in a helper -%>
-	<% if d.search('c02') %>
+	<% if c02items = d.search('c02') and c02_html_items=[] %>
 		<h4>Items in this Collection</h4>
-		<% c02items = d.search('c02') %>
-		<% middle = c02items.size/2 %>
-		<div class="yui-g">
-			<% c02items.each_with_index do |c02, index| %>
-				<%# if there is more than 1 item... %>
-				<% if c02items.size > 1 %>
-					<%# create a yui-u div if we're at the first item %>
-					<% if index == 0 %>
-						<div class="yui-u">
-					<% elsif index == middle %>
-						<%# if we're in the middle, close the last div and create another %>
-						</div><div class="yui-u">
-					<% end %>
-				<% end %>
-				<%# render each item %>
+		<% c02items.each_with_index do |c02,index| %>
+			<% c02_html_items << capture do %>
 				<span>
+					<%# c02 items use a predictable id; incremental (see lib/ead_solr_mapper.rb)-%>
 					<%= link_to c02.at('unittitle'), catalog_path("#{@document[:id]}-#{index}") %>
 				</span>
 			<% end %>
-		</div><%# closing the items list container %>
-		
+		<% end %>
+		<%= c02_html_items.join(' &mdash; ')%>
 	<% end %>
 	
 <% end %>
