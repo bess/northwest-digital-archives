@@ -19,12 +19,12 @@ Feature: Display EAD files correctly
 	
 	Scenario: formatting for a guide
 	  Given I am on the document page for id owsmss001xml-summary
-	  Then I should see a title of "Guide to the Robert C. Notson papers: Summary Information"
+	  Then I should see a title of "Guide to the Robert C. Notson papers   : Summary Information"
 	  And I should see "Biography/History"
 	
 	Scenario: correct capitalization for sections
 	  Given I am on the document page for id owsmss007-biography_history
-	  Then I should see a title of "Guide to the Freshmen Glee records: Historical note"
+	  Then I should see a title of "Guide to the Freshmen Glee records     : Historical note"
 	
 	
 	

@@ -9,7 +9,7 @@ Feature: Display baseball files correctly
 	
 	Scenario: Search for Harriet's Collection
 		Given I am on the homepage
-		When I fill in "q" with "Harriet's Collection"
+		When I fill in "q" with '"Harriet's Collection"'
 		And I press "search"
 		Then I should see 136 results
 	
@@ -30,6 +30,7 @@ Feature: Display baseball files correctly
 	Scenario: Check for presence of correct facets
 		Given I am on the homepage
 		Then I should see a facet category "Collection" with a link "Oregon State Baseball"
+		When I follow "Oregon State Baseball"
 		Then I should see a facet category "Institution" with a link "Oregon State University"
 		
 

@@ -10,13 +10,13 @@ Feature: Display Pullman Archives files correctly
 	Scenario: Check for presence of correct facets
 		Given I am on the homepage
 		Then I should see a facet category "Collection" with a link "City of Pullman Collection"
-		Then I should see a facet category "Institution" with a link "Washington State University"
+		Then I should see a facet category "Institution" with a link "Washington State University Libraries"
 	
 	Scenario: Search for Palouse
 		Given I am on the homepage
 		When I fill in "q" with "Palouse"
 		And I press "search"
-		Then I should see 393 results
+		Then I should see 430 results
 	
 	Scenario: Search for Paul Henning Collection
 	  Given I am on the homepage
