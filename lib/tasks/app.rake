@@ -37,6 +37,8 @@ namespace :app do
       
     desc "Index an EAD file at FILE=<location-of-file> using the lib/ead_mapper class."
     task :ead => :environment do
+      solr = Blacklight.solr
+      
       require 'ead_solr_mapper'
       t = Time.now
       input_file = require_env_file
@@ -51,12 +53,10 @@ namespace :app do
         mapper = EADSolrMapper.new f
         puts "Using #{mapper.collection_id} as the collection_id"
         # delete the previous set of docs in this collection...
-        Blacklight.solr.delete_by_query "collection_id_s:\"#{mapper.collection_id}\""
-        Blacklight.solr.add mapper.map
-        #puts "Mapping #{solr_docs.size} docs..."
-        puts "Total Time: #{Time.now - t}"
+        solr.delete_by_query "collection_id:\"#{mapper.collection_id}\""
+        solr.add mapper.map
       end
-      Blacklight.solr.commit
+      solr.commit
       puts "Total Time: #{Time.now - t}"
     end
     
