@@ -20,6 +20,6 @@ class SearchHistoryController < ApplicationController
     else
       flash[:error] = "There was a problem clearing your search history."
     end
-    redirect_to :back
+    redirect_to catalog_index_path
   end
 end
