@@ -9,3 +9,4 @@ jetty/solr/data/*
 jetty/logs/*
 log/*
 db/*
+public/tmp

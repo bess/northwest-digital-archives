@@ -16,6 +16,8 @@
 	<%# Load css specific to this hostname %>
 	<% if request.host =~ /osu/ %>
     	<%= stylesheet_link_tag 'osu' %>
+	<% elsif request.host =~ /uoregon/ %>
+	    	<%= stylesheet_link_tag 'uoregon' %>
 	<% else %>
     	<%= stylesheet_link_tag 'nwda' %>
 	<% end %>
