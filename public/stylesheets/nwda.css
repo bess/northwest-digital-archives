@@ -343,11 +343,6 @@ div#document div.document {
 	border: none;
 }
 
-div#previousNextDocument {
-	float: left;
-	padding: 10px 0px 0px 0px;
-}
-
 div.yui-u h3 {
 	font-size: 1.3em;
 }

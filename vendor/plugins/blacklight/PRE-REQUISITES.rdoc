@@ -2,7 +2,7 @@
 
 ===Ruby
 
-Version 1.8.6 or higher is required. You can find out which version you are running by executing:
+Ruby version 1.8.7 (or 1.8.6 enterprise) is required. You can find out which version you are running by executing:
 	ruby -v
 Information on installing Ruby can be found here:
 http://www.ruby-lang.org/en/downloads
@@ -38,11 +38,11 @@ should show
 If you're missing those gem sources, add them like this:
 	gem sources -a http://gems.rubyforge.org
 	gem sources -a http://gems.rubyonrails.org
-	
+	gem sources -a http://gems.github.com
 
-	==Git Client
+===Git Client
 
-	Information on getting the git client installed can be found here:
+	Some of the rubygems required by blacklight are hosted in git repositories. Information on getting the git client installed can be found here:
 
 	http://git-scm.com/
 	http://book.git-scm.com/2_installing_git.html
@@ -50,18 +50,12 @@ If you're missing those gem sources, add them like this:
 	If you are behind a firewall, you may need to open port 9418 for Git.
 
 
-===Install Blacklight's Ruby Gem TEST dependencies by running:
+===Install Blacklight's Ruby Gem dependencies:
 
-(Please see vendor/plugins/blacklight/init.rb for the Blacklight plugin dependencies' versions.
+	rake gems
+will give you a list of the required gems and their version numbers, and will tell you which ones are installed already. 
+You can also see vendor/plugins/blacklight/init.rb for the Blacklight plugin dependencies' versions.
 An example of a versioned install: sudo gem install rails --version '2.3.2')
-
-	sudo gem install cucumber     <-- for testing, must be version 0.3.5 or higher
-	sudo gem install curb         <-- used by rsolr
-	sudo gem install rails
-	sudo gem install rspec        <-- for testing
-	sudo gem install rspec-rails  <-- for testing
-	sudo gem install webrat       <-- for testing, must be version 0.4.4 or higher
-	sudo gem install authlogic    <-- for authentication
 
 You can confirm your gem installations and their release numbers with
 

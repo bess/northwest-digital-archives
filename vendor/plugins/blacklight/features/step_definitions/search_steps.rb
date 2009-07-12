@@ -15,8 +15,12 @@ Then /^I should see a "([^\"]*)" button$/ do |label|
   response.should have_tag("input[type=?][value=?]", 'submit', label)
 end
 
-Then /^I should see link "([^\"]*)"$/ do |label|
-  response.should have_tag("a[href]", label)
+Then /^I should not see the "([^\"]*)" element$/ do |id|
+  response.should_not have_tag("##{id}")
+end
+
+Then /^I should see the "([^\"]*)" element$/ do |id|
+  response.should have_tag("##{id}")
 end
 
 Given /^the application is configured to have searchable fields "([^\"]*)" with values "([^\"]*)"$/ do |fields, values|

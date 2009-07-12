@@ -2,6 +2,7 @@ require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
 describe SavedSearchesController do
   before(:each) do
+    # you must activate authlogic in order to test any authentication methods
     activate_authlogic
     @user = User.create!(:password => "password", :password_confirmation => "password", :login => "foo", :email => "foo@bar.com")
     @user_session = UserSession.create!(:password => "password", :login => "foo")
@@ -9,6 +10,8 @@ describe SavedSearchesController do
   end
   describe "destroy" do
     before(:each) do
+      # you must activate authlogic in order to test any authentication methods
+      activate_authlogic
       @user.searches.create!
       @user.searches.size.should == 1
       @search_id = @user.search_ids.first

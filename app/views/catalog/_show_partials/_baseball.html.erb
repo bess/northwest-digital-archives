@@ -2,15 +2,17 @@
 
 <% sidebar_items << capture do %>
 	<p><%= link_back_to_catalog :label=>'&lt;&lt; SEARCH' %></p>
-    <dt>Subjects</dt>
-	<% @document[:subject_facet].each do |subject| %>
-		<dd>
-			<% subject_array = subject.split(" -- ") %>
-			<% subject_array.each_with_index do |s,i| %>
-				<% unless i == 0 %> -- <% end %>
-				<%= link_to_query(s.strip) %>
-			<% end %>
-		</dd>
+    <% if @document[:subject_facet] %>
+		<dt>Subjects</dt>
+		<% @document[:subject_facet].each do |subject| %>
+			<dd>
+				<% subject_array = subject.split(" -- ") %>
+				<% subject_array.each_with_index do |s,i| %>
+					<% unless i == 0 %> -- <% end %>
+					<%= link_to_query(s.strip) %>
+				<% end %>
+			</dd>
+		<% end %>
 	<% end %>
 <% end %>
 

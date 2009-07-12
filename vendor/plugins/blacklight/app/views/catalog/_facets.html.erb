@@ -11,7 +11,7 @@
             <% if facet_in_params? solr_fname, item.value %>
               <li>
                 <span class="selected"><%= h(item.value) %> (<%= format_num item.hits %>)</span>
-                [<%= link_to 'remove', remove_facet_params(solr_fname, item.value), :class=>'remove' %>]
+                [<%= link_to 'remove', remove_facet_params(solr_fname, item.value, params), :class=>'remove' %>]
               </li>
               <% else %>
               <li>
