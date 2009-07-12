@@ -10,10 +10,14 @@
 	<% end -%>
 
 	<% if @document[:part_of] %>
+		<%# if there is a hierarchy field, use it for the "partof" label -%>
+		<% if @document[:hierarchy] %>
+			<% hier_label = @document[:hierarchy].to_s.split('::')[-2] %>
+		<% end %>
 		<div>
 			<dt>Part of:</dt>
 			<% @document[:part_of].each do |po| %>
-			<dd><%= link_to po, catalog_path(po) %></dd>
+				<dd><%= link_to((hier_label.nil? ? po : hier_label), catalog_path(po)) %></dd>
 			<% end %>
 		</div>
 	<% end %>
