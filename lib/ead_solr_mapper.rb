@@ -87,7 +87,7 @@ class EADSolrMapper
   # normalize the language values, and only keep the unique ones
   def languages
     @xml.xpath('//language').map do |lang|
-      lang.text.to_s.gsub(/\.|\,/,'').strip.capitalize
+      lang.text.to_s.gsub(/\.|\,/,'').strip.capitalize.gsub("Finding aid written in english", "English")
     end.uniq
   end
   
