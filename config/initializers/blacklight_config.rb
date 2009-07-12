@@ -30,7 +30,6 @@ Blacklight.configure(:shared) do |config|
       ["language_facet",
       "subject_era_facet",
       "geographic_subject_facet",
-      "availability_facet",
       "format_facet"]
     }
   }
@@ -64,7 +63,6 @@ Blacklight.configure(:shared) do |config|
   config[:facet] = {
     :field_names => [
       "format_facet",
-      "availability_facet",
       "subject_era_facet",
       "language_facet",
       "institution_facet",
@@ -73,7 +71,6 @@ Blacklight.configure(:shared) do |config|
     ],
     :labels => {
       "format_facet"             => "Format",
-      "availability_facet"       => "Availability",
       "subject_era_facet"        => "Time Period",
       "language_facet"           => "Language",
       "institution_facet"        => "Institution",

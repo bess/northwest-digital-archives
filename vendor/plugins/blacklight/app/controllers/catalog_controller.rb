@@ -4,6 +4,7 @@ class CatalogController < ApplicationController
   
   before_filter :search_session, :history_session
   before_filter :delete_or_assign_search_session_params,  :only=>:index
+  after_filter :set_additional_search_session_values, :only=>:index
   
   # get search results from the solr index
   def index
@@ -150,7 +151,7 @@ class CatalogController < ApplicationController
   # assigns all Search objects (that match the searches in session[:history]) to a variable @searches.
   def history_session
     session[:history] ||= []
-    @searches = searches_from_history
+    @searches = searches_from_history # <- in ApplicationController
   end
   
   # This method will remove certain params from the session[:search] hash
@@ -172,6 +173,11 @@ class CatalogController < ApplicationController
       new_search = Search.create(:query_params => params_copy)
       session[:history].unshift(new_search.id)
     end
+  end
+  
+  # sets some additional search metadata so that the show view can display it.
+  def set_additional_search_session_values
+    search_session[:total] = @response.total
   end
   
 end

@@ -5,6 +5,8 @@ describe "/catalog/_document_list.html.erb" do
   include Blacklight::SolrHelper
   
   before(:each) do
+    # you must activate authlogic in order to test any authentication methods
+    activate_authlogic
     # get actual solr response
     all_docs_query = {}
     @solr_resp = get_search_results(all_docs_query)

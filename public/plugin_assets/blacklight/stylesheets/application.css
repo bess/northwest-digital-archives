@@ -119,13 +119,17 @@ th, td {
 
 .pagination{
 	text-align:center;
-	margin-bottom:.5em;
+	margin:1em 0;
+}
+
+#documents{
+	margin-top:1em;
 }
 
 .solrQuery{
 	padding:.5em;
 	margin:.5em 0;
-	background-color:lightgray;
+	background-color:#CCC;
 	font-size:90%;
 }
 
@@ -291,4 +295,38 @@ dl.defList dd {
 }
 .notice {
   color: #060;
+}
+
+/* search constraints/filter block */
+/* ========================
+Search Parameters
+======================== */
+#appliedParams{margin-bottom:0 !important;}
+#appliedQueries,
+#appliedFilters{}
+#appliedParams h3 {position:relative;padding:5px 5px 5px 23px; margin:0 0 3px 0;background:#fff7e5; border:1px solid #e0d9ca; overflow:visible; font:normal normal normal 15px/15px helvetica, arial, sans-serif; background:#fff7e5;}
+#appliedParams img {position:absolute; left:5px; bottom:-8px; z-index:5;}
+ul#appliedFiltersList,
+	ul#appliedQueriesList,
+	ul#appliedFiltersList li,
+	ul#appliedQueriesList li{list-style:none;margin:0;padding:0;display:inline;}
+.appliedFilter {display:block; position:relative; overflow:visible; position:relative; background:#e2edfe; padding:5px 5px 5px 25px; margin-bottom:3px; border:1px solid #c4dafe;}
+#appliedParams div {position:relative; padding:10px; background:#c9d484;}
+.appliedFilter .btnRemove{display:block;position:absolute; z-index:5; right:0px; top:0; width:32px;height:100%; background:url(../images/remove.gif) no-repeat center center; border-left:1px solid #d0daea;}
+.appliedFilter span {}
+.appliedFilter span.first{}
+.appliedFilter span.first span{position:relative; }
+.appliedFilter span.first span.filterName{display:inline;border:0;}
+.appliedFilter span.first span.filterValue{border:0;}
+#appliedParams a:link{text-decoration:underline;}
+#appliedParams a:hover{}
+#appliedParams a#startOverLink{display:block; position:absolute; top:50%; right:0px; margin-top:-12px; padding:0 10px 3px 15px; line-height:22px; text-decoration:none; color:#fff; background:url(../images/start_over.gif) no-repeat center center;}
+#appliedParams a#startOverLink:hover{background-color:none;}
+#appliedParams a#startOverLink span{display:none;}
+.queryName, .filterName {padding-right:14px; background:url(../images/separator.gif) no-repeat right center;}
+
+.imgReplace {text-indent:-3000em;overflow:hidden;}
+
+#previousNextDocument{
+	text-align:right;
 }

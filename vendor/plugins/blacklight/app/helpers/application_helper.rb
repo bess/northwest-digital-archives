@@ -144,13 +144,21 @@ module ApplicationHelper
     p
   end
   
-  # copies the current params
+  # copies the current params (or whatever is passed in as the 3rd arg)
   # removes the field value from params[:f]
   # removes the field if there are no more values in params[:f][field]
-  # removes the :page param
-  def remove_facet_params(field, value)
-    p=params.dup
+  # removes additional params (page, id, etc..)
+  def remove_facet_params(field, value, source_params=params)
+    p = source_params.dup.symbolize_keys!
+    # need to dup the facet values too,
+    # if the values aren't dup'd, then the values
+    # from the session will get remove in the show view...
+    p[:f] = p[:f].dup.symbolize_keys!
     p.delete :page
+    p.delete :id
+    p.delete :counter
+    p.delete :commit
+    #return p unless p[field]
     p[:f][field] = p[:f][field] - [value]
     p[:f].delete(field) if p[:f][field].size == 0
     p
@@ -208,7 +216,8 @@ module ApplicationHelper
   # link_back_to_catalog(:label=>'Back to Search')
   # Create a link back to the index screen, keeping the user's facet, query and paging choices intact by using session.
   def link_back_to_catalog(opts={:label=>'Back to Search'})
-    query_params = session[:search] || {}
+    query_params = session[:search].dup || {}
+    query_params.delete :counter
     link_url = catalog_index_path(query_params)
     link_to opts[:label], link_url
   end

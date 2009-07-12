@@ -6,6 +6,7 @@
 require 'fileutils'
 
 namespace :solr do
+  
   namespace :marc do
     desc "Index marc data using SolrMarc. Available environment variables: SOLR_WAR_PATH, MARC_RECORDS_PATH, SOLR_MARC_MEM_ARGS"
     task :index => "index:work"
