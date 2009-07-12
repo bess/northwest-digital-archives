@@ -13,31 +13,31 @@
 	<dl class="defList">
 		<div>
 			<dt>Repository</dt>
-			<dd><%= d.at('repository').text %></dd>
+			<dd><%= d.at('repository').text rescue 'N/A' %></dd>
 		</div>
 
 		<% if d.at('origination') %>
 			<div>
 				<dt>Origination</dt>
-				<dd><%= d.at('origination').text %></dd>
+				<dd><%= d.at('origination').text rescue 'N/A' %></dd>
 			</div>
 		<% end %>
 		
 		<div>
 			<dt>Date(s)</dt>
-			<dd><%= d.at('unitdate').text %></dd>
+			<dd><%= d.at('unitdate').text rescue 'N/A' %></dd>
 		</div>
 		<div>
 			<dt>Physical Description</dt>
-			<dd><%= d.at('physdesc').text %></dd>
+			<dd><%= d.at('physdesc').text rescue 'N/A'%></dd>
 		</div>
 		<div>
 			<dt>Abstract</dt>
-			<dd><%= d.at('abstract').text %></dd>
+			<dd><%= d.at('abstract').text rescue 'N/A'%></dd>
 		</div>
 		<div>
 			<dt>Language</dt>
-			<dd><%= d.at('langmaterial').text %></dd>
+			<dd><%= d.at('langmaterial').text rescue 'N/A'%></dd>
 		</div>
 	</dl>
 
