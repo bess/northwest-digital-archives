@@ -11,14 +11,18 @@
     <%= javascript_include_tag 'jquery-1.3.1.min.js', 'blacklight', 'application', 'accordion', 'lightbox', :plugin=>:blacklight %>
     <%= stylesheet_link_tag 'yui', 'application', :plugin=>:blacklight %>
 	<%= javascript_include_tag 'slimbox2'%>
-        <%= stylesheet_link_tag 'nwda' %>
-        <%= stylesheet_link_tag 'slimbox2' %>
+    <%= stylesheet_link_tag 'slimbox2' %>
 
+	<%# Load css specific to this hostname %>
+	<% if request.host =~ /osu/ %>
+    	<%= stylesheet_link_tag 'osu' %>
+	<% else %>
+    	<%= stylesheet_link_tag 'nwda' %>
+	<% end %>
     
   </head>
   
   <body>
-	  
 	  <div id="doc4" class="yui-t2">
 	    
 	    <div id="hd">
@@ -49,7 +53,7 @@
 			</div> <!-- /yui-t2 -->
 	    </div> <!-- /bd -->
         
-	    <div id="ft"><%= @footer %></div>
+	    <div id="ft"><%#= @footer %></div>
 	    
 	  </div>
     <div id="lightboxContainer" style="display:none;">
