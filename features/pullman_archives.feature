@@ -4,6 +4,7 @@ Feature: Display Pullman Archives files correctly
 		Given I am on the homepage
 		When I follow "City of Pullman Collection"
 		Then I should see 1275 results
+		And I should see a facet category "Availability" with a link "Available online"
 		When I follow "Less than 10 years old"
 		Then I should see 365 results
 	

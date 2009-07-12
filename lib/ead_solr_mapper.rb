@@ -75,7 +75,8 @@ class EADSolrMapper
         :language_facet => self.languages,
         :hierarchy_scope => self.collection_id,
         :collection_id => self.collection_id,
-        :collection_facet => "Northwest Digital Archives EAD Guides"
+        :collection_facet => "Northwest Digital Archives EAD Guides",
+        :availability_facet => "Not available online"
       }
       # clean all values...
       doc.each_pair {|k,v| doc[k] = to_one_line(v)}

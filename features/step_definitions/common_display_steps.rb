@@ -35,6 +35,7 @@ end
 # It does not actually check to see that facet_value actually occurs underneath a specific
 # facet_category -- I couldn't figure out how to do that. 
 Then /^I should see a facet category "([^\"]*)" with a link "([^\"]*)"$/ do |facet_category, facet_value|
+  #puts response.body
   response.should have_tag("div#facets h3", :text => facet_category)
   response.should have_tag("div#facets h3 + ul li a[href]", :text => facet_value)
 end

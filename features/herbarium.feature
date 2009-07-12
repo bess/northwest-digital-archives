@@ -4,9 +4,6 @@ Feature: Display Herbarium files correctly
 		Given I am on the homepage
 		Then I should see a facet category "Collection" with a link "Oregon State University Herbarium"
 		When I follow "Oregon State University Herbarium"
-		Then I should see a facet category "Institution" with a link "Oregon State University"
-
+		Then I should see a facet category "Institution" with a link "Oregon State University"	
+		And I should see a facet category "Availability" with a link "Available online"
 		
-		
-
-	

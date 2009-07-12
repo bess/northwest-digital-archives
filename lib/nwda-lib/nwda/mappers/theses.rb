@@ -25,6 +25,7 @@ class NWDA::Mappers::Theses
 
         @doc[:collection_facet] = "Washington State University Theses"
         @doc[:institution_facet] = "Washington State University"
+        @doc[:availability_facet] = "Available online"
       
         #self.getPDF
         self.getSubjects

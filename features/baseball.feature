@@ -32,6 +32,8 @@ Feature: Display baseball files correctly
 		Then I should see a facet category "Collection" with a link "Oregon State Baseball"
 		When I follow "Oregon State Baseball"
 		Then I should see a facet category "Institution" with a link "Oregon State University"
+		And I should see a facet category "Availability" with a link "Available online"
+		
 		
 
 

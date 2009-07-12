@@ -5,6 +5,7 @@ Feature: Display WSU theses files correctly
 		Then I should see a facet category "Collection" with a link "Washington State University Theses"
 		When I follow "Washington State University Theses"
 		Then I should see a facet category "Institution" with a link "Washington State University"
+		And I should see a facet category "Availability" with a link "Available online"
 		When I follow "Washington State University"
 		Then I should see a facet category "Format" with a link "Thesis"
 		And I should see a facet category "Format" with a link "Article"

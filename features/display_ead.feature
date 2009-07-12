@@ -26,6 +26,12 @@ Feature: Display EAD files correctly
 	  Given I am on the document page for id owsmss007-biography_history
 	  Then I should see a title of "Guide to the Freshmen Glee records     : Historical note"
 	
+	Scenario: correct facets
+	  Given I am on the homepage
+	  When I follow "Montana Historical Society Archives"
+      Then I should see a facet category "Availability" with a link "Not available online"
+	
+	
 	
 	
 	
