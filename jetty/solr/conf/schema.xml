@@ -70,6 +70,7 @@
     <field name="author_spell" type="textSpell" indexed="true" stored="false" multiValued="true"/>
 
     <field name="title_t" type="text" indexed="true" stored="true" />
+
     <field name="sub_title_t" type="text" indexed="true" stored="true" />
     <field name="alt_titles_t" type="text" indexed="true" stored="true" multiValued="true" />
     <field name="title_added_entry_t" type="text" indexed="true" stored="true" multiValued="true" />
@@ -83,6 +84,10 @@
 
     <field name="title_sort" type="alphaOnlySort" indexed="true" stored="false"/>
     <field name="format_sort" type="alphaOnlySort" indexed="true" stored="false"/>
+
+	<!-- institution_facet is special. It's a facet, but it isn't multi-valued -->
+    <field name="institution_facet" type="string" indexed="true" stored="true" />
+    <field name="institution_sort" type="alphaOnlySort" indexed="true" stored="true"/>
     
     <!--
 	    "hierarchy" - A materialized path which describes a hierarchy; Colors::Blue::Navy::Dark
@@ -133,5 +138,11 @@
   <copyField source="alt_titles_t" dest="title_spell"/>
   <!-- author spell check; should match fields for author request handler -->
   <copyField source="author_t" dest="author_spell"/>
+
+  <!-- sort fields -->
+  <copyField source="title_t" dest="title_sort"/>
+  <copyField source="institution_facet" dest="institution_sort"/>
+
+  
   
 </schema>
