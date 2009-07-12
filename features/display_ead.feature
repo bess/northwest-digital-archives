@@ -29,7 +29,7 @@ Feature: Display EAD files correctly
 	Scenario: correct facets
 	  Given I am on the homepage
 	  When I follow "Montana Historical Society Archives"
-      Then I should see a facet category "Availability" with a link "Not available online"
+      Then I should see a facet category "Availability" with a link "Not online. Must visit contributing institution."
 	
 	
 	
