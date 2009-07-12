@@ -63,6 +63,7 @@ Blacklight.configure(:shared) do |config|
   config[:facet] = {
     :field_names => [
       "format_facet",
+      "availability_facet",
       "subject_era_facet",
       "language_facet",
       "institution_facet",
@@ -71,6 +72,7 @@ Blacklight.configure(:shared) do |config|
     ],
     :labels => {
       "format_facet"             => "Format",
+      "availability_facet"       => "Availability",
       "subject_era_facet"        => "Time Period",
       "language_facet"           => "Language",
       "institution_facet"        => "Institution",
@@ -144,7 +146,7 @@ Blacklight.configure(:shared) do |config|
   config[:sort_fields] ||= []
   config[:sort_fields] << ['relevance', '']
   config[:sort_fields] << ['title', 'title_sort asc']
-  config[:sort_fields] << ['format', 'format_sort asc']
+  #config[:sort_fields] << ['institution', 'institution_sort asc']
   
   # the maximum number of search results to allow display of a spelling 
   #  ("did you mean") suggestion, if one is available.
