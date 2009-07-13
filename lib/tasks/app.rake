@@ -17,6 +17,7 @@ namespace :app do
     desc 'Index all of the sample data for the NWDA demo'
     task :all => :environment do
       require 'ead_solr_mapper'
+      
       ENV['FILE'] = '../raw_data/herbarium_export.xml'
       Rake::Task["app:index:herbarium"].invoke
       
@@ -39,6 +40,10 @@ namespace :app do
     task :ead => :environment do
       solr = Blacklight.solr
       
+      if ENV['FILE'].nil?
+        ENV['FILE']='../raw_data/ead/*/*.xml'
+      end
+      
       require 'ead_solr_mapper'
       t = Time.now
       input_file = require_env_file
@@ -49,9 +54,7 @@ namespace :app do
       end
       
       files.each_with_index do |f,index|
-        puts "FILE == #{f}"
         mapper = EADSolrMapper.new f
-        puts "Using #{mapper.collection_id} as the collection_id"
         # delete the previous set of docs in this collection...
         solr.delete_by_query "collection_id:\"#{mapper.collection_id}\""
         solr.add mapper.map
@@ -68,10 +71,15 @@ namespace :app do
     task :herbarium => :environment do
       t = Time.now
       
+      if ENV['FILE'].nil?
+        ENV['FILE'] = '../raw_data/herbarium_export.xml'
+      end
       herbarium_export_file = ENV['FILE']
       raise "Invalid file. Set the file by using the FILE argument." unless File.exists?(herbarium_export_file.to_s) and File.file?(herbarium_export_file.to_s)
       
       solr = Blacklight.solr
+      
+      puts "indexing #{herbarium_export_file}"
       
       if File.file? herbarium_export_file and herbarium_export_file.to_s =~ /^.*\.xml$/
           xml = Nokogiri::XML(open(herbarium_export_file))
@@ -96,10 +104,15 @@ namespace :app do
   task :pullman => :environment do
     t = Time.now
     
+    if ENV['FILE'].nil?
+      ENV['FILE'] = '../raw_data/cityofpullmancollection.xml'
+    end
     pullman_export_file = ENV['FILE']
     raise "Invalid file. Set the file by using the FILE argument." unless File.exists?(pullman_export_file.to_s) and File.file?(pullman_export_file.to_s)
     
     solr = Blacklight.solr
+    
+    puts "indexing #{pullman_export_file}"
     
     if File.file? pullman_export_file and pullman_export_file.to_s =~ /^.*\.xml$/
         xml = Nokogiri::XML(open(pullman_export_file))
@@ -122,6 +135,7 @@ namespace :app do
   desc 'Index UW-CDM located at FILE=<location-of-file>'
   task :uwcdm => :environment do
     t = Time.now
+    
     
     export_file = ENV['FILE']
     raise "Invalid file. Set the file by using the FILE argument." unless File.exists?(export_file.to_s) and File.file?(export_file.to_s)
@@ -150,7 +164,13 @@ namespace :app do
   task :baseball => :environment do
     t = Time.now
     
+    if ENV['FILE'].nil?
+      ENV['FILE'] = '../raw_data/baseball_export.xml'
+    end
     export_file = ENV['FILE']
+    
+    puts "indexing #{export_file}"
+    
     raise "Invalid file. Set the file by using the FILE argument." unless File.exists?(export_file.to_s) and File.file?(export_file.to_s)
     
     solr = Blacklight.solr
@@ -177,10 +197,15 @@ namespace :app do
   task :theses => :environment do
     t = Time.now
     
+    if ENV['FILE'].nil?
+      ENV['FILE'] = '../raw_data/wsu-theses.xml'
+    end
     export_file = ENV['FILE']
     raise "Invalid file. Set the file by using the FILE argument." unless File.exists?(export_file.to_s) and File.file?(export_file.to_s)
     
     solr = Blacklight.solr
+    
+    puts "Indexing #{export_file}"
     
     if File.file? export_file and export_file.to_s =~ /^.*\.xml$/
         raw = File.read(export_file)

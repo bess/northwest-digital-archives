@@ -42,7 +42,7 @@ class NWDA::Mappers::Theses
       # ##################
       def getURI
         @doc[:uri_display] = @xml.xpath('./metadata/oai_dc:dc/dc:identifier/text()').first.to_s
-        puts "uri = #{@doc[:uri_display]}"
+        #puts "uri = #{@doc[:uri_display]}"
         @doc[:text] << @doc[:uri_display]
       end
       

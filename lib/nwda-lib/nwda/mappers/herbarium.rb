@@ -43,7 +43,7 @@ class NWDA::Mappers::Herbarium
       thumbnail_url = @xml.xpath('./thumbnailURL[1]/text()').first.to_s
       @doc[:preview_display] = thumbnail_url
       img_id = thumbnail_url[/CISOPTR=\d+/]
-      puts "img_id = #{img_id}"
+      #puts "img_id = #{img_id}"
       @doc[:fullimage_display] = "http://digitalcollections.library.oregonstate.edu/cgi-bin/getimage.exe?CISOROOT=/herbarium&#{img_id}&DMSCALE=25.00000&DMWIDTH=1200&DMHEIGHT=1200&DMX=0&DMY=0&DMTEXT=&REC=1&DMTHUMB=0&DMROTATE=0"
     end
     
