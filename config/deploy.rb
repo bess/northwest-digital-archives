@@ -48,8 +48,15 @@ end
 # Reindex the Orbis Cascade data
 # ========================
 
-namespace :reindex do
 
+namespace :reindex do
+  
+  before "reindex:all", "reindex:baseball"
+  before "reindex:all", "reindex:herbarium"
+  before "reindex:all", "reindex:pullman"
+  before "reindex:all", "reindex:theses"
+  before "reindex:all", "reindex:ead"
+  
   task :baseball do   
     run "cd #{deploy_to}/current; rake app:index:baseball FILE=#{deploy_to}/../raw_data/baseball_export.xml"
   end
@@ -71,6 +78,7 @@ namespace :reindex do
   end
   
   task :all do
+    puts "Reindexing everything ... "
   end
 
 end
