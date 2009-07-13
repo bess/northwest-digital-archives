@@ -49,7 +49,7 @@
 		<% if params[:action] == 'index' %>
 			<%= page_entries_info @response.docs, :entry_name=>'item' %>
 		<% else %>
-			Showing 1 of <%= format_num(session[:search][:total]) %> items from your search.
+			Showing <%= session[:search][:counter] %> of <%= format_num(session[:search][:total]) %> items from your search.
 		<% end %>
 		<%=link_to "Start&nbsp;over&thinsp;", catalog_index_path, :id=>"startOverLink" %>
 	</div>
