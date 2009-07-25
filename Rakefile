@@ -8,6 +8,15 @@ require 'rake/testtask'
 require 'rake/rdoctask'
 require 'tasks/rails'
 
+# the default rake task
+desc "run migrations and call solr:spec and solr:features"
+task :default => "test"
+
+# run migrations and call solr:spec and solr:features
+desc 'run migrations and call rake:features'
+  task "test" => ["db:migrate", "rake:features"] do
+end
+
 desc "Generate rdoc for the demo app and the blacklight plugin." 
 task "rdoc"
     require 'hanna/rdoctask'
