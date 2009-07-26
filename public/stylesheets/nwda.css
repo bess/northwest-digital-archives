@@ -348,6 +348,11 @@ div#document div.document {
 	border: none;
 }
 
+div#document div.document p {
+	font-size: 1.1em;
+	padding: 0 0 0 0;
+}
+
 div.yui-u h3 {
 	font-size: 1.3em;
 }
