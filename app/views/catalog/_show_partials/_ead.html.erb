@@ -1,10 +1,13 @@
 <% sidebar_items << capture do -%>
+	<div class="below_appliedParams">
+		<h3>Navigation for this Collection Guide</h3>
 	<% # this helper builds a nice ul tree out of the ead.navigation object -%>
 	<%= contextual_navigation_tree(
 		@document.id,
 		@document.ead.navigation,
 		:max_depth=>2
 	) -%>
+	</div>
 <% end -%>
 
 <% d = Nokogiri::XML(@document[:xml_display].to_s) -%>
