@@ -13,7 +13,7 @@ Feature: Display EAD files correctly
 	  Given I am on the homepage
 	  When I fill in "q" with "'Robert C. Notson'"
 	  And I press "search"
-	  Then I should see 1 results
+	  Then I should get 1 results
 	  And I should see a search result heading for "Guide to the Robert C. Notson papers"
 	  And I should see a search results value "Institution" of "Willamette University Archives and Special Collections"
 	
