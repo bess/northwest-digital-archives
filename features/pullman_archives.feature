@@ -3,10 +3,10 @@ Feature: Display Pullman Archives files correctly
 	Scenario: Check to see that all of the Pullman Archives are loaded
 		Given I am on the homepage
 		When I follow "City of Pullman Collection"
-		Then I should see 1275 results
+		Then I should get 1,275 results
 		And I should see a facet category "Availability" with a link "Available online"
 		When I follow "Less than 10 years old"
-		Then I should see 365 results
+		Then I should get 365 results
 	
 	Scenario: Check for presence of correct facets
 		Given I am on the homepage
@@ -17,25 +17,25 @@ Feature: Display Pullman Archives files correctly
 		Given I am on the homepage
 		When I fill in "q" with "Palouse"
 		And I press "search"
-		Then I should see 430 results
+		Then I should get 430 results
 	
 	Scenario: Search for Paul Henning Collection
 	  Given I am on the homepage
 	  When I fill in "q" with the phrase "Paul Henning Collection"
 	  And I press "search"
-	  Then I should see 365 results
+	  Then I should get 365 results
 	
 	Scenario: Search for string Theater in Pullman (no quotes)
 	  Given I am on the homepage
 	  When I fill in "q" with "Theater in Pullman"
 	  And I press "search"
-	  Then I should see 8 results
+	  Then I should get 9 results
 	
 	Scenario: Search for phrase "Theater in Pullman"
 	  Given I am on the homepage
 	  When I fill in "q" with the phrase "Theater in Pullman"
 	  And I press "search"
-	  Then I should see 2 results
+	  Then I should get 2 results
 	
 	Scenario: Check to see that a record has all its fields
       Given I am on the document page for id pullman_7
