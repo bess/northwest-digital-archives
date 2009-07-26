@@ -6,7 +6,7 @@ end
 
 # a test for the number of hits returned by a search
 Then /^I should get ([^\"]*) results$/ do |number|
-  response.should have_tag("div#appliedParams div", :text => /^Displaying items(.*)#{number}(.*)$/)
+  response.should have_tag("div#appliedParams div", :text => /^Displaying(.*)#{number}(.*)$/)
 end
 
 Then /^I should see a byline of "([^\"]*)"$/ do |byline|
