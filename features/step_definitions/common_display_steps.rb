@@ -4,6 +4,11 @@ Then /^I should see a title of "([^\"]*)"$/ do |title|
   response.should have_tag("h1", :text => title)
 end
 
+# a test for the number of hits returned by a search
+Then /^I should get ([^\"]*) results$/ do |number|
+  response.should have_tag("div#appliedParams div", :text => /^Displaying items(.*)#{number}(.*)$/)
+end
+
 Then /^I should see a byline of "([^\"]*)"$/ do |byline|
   response.should have_tag("h3.byline", :text => byline)
 end

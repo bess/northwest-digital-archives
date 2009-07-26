@@ -3,15 +3,15 @@ Feature: Display baseball files correctly
 	Scenario: Check to see that all of the baseball records are loaded
 		Given I am on the homepage
 		When I follow "Oregon State Baseball"
-		Then I should see 1634 results
+		Then I should get 1,634 results
 		When I follow "More than 100 years old"
-		Then I should see 38 results
+		Then I should get 38 results
 	
 	Scenario: Search for Harriet's Collection
 		Given I am on the homepage
 		When I fill in "q" with the phrase "Harriet's Collection"
 		And I press "search"
-		Then I should see 136 results
+		Then I should get 136 results
 	
 	Scenario: Check to see that a record has all its fields
 		Given I am on the homepage
