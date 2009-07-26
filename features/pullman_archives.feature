@@ -21,7 +21,7 @@ Feature: Display Pullman Archives files correctly
 	
 	Scenario: Search for Paul Henning Collection
 	  Given I am on the homepage
-	  When I fill in "q" with '"Paul Henning Collection"'
+	  When I fill in "q" with the phrase "Paul Henning Collection"
 	  And I press "search"
 	  Then I should see 365 results
 	
@@ -33,7 +33,7 @@ Feature: Display Pullman Archives files correctly
 	
 	Scenario: Search for phrase "Theater in Pullman"
 	  Given I am on the homepage
-	  When I fill in "q" with '"Theater in Pullman"'
+	  When I fill in "q" with the phrase "Theater in Pullman"
 	  And I press "search"
 	  Then I should see 2 results
 	
