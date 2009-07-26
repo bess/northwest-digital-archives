@@ -9,7 +9,7 @@ Feature: Display baseball files correctly
 	
 	Scenario: Search for Harriet's Collection
 		Given I am on the homepage
-		When I fill in "q" with '"Harriet's Collection"'
+		When I fill in "q" with the phrase "Harriet's Collection"
 		And I press "search"
 		Then I should see 136 results
 	
