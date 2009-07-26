@@ -9,9 +9,10 @@
 					<span class="queryName">Keyword</span>
 					<span><%= h(localized_params[:q]) %></span>
 				</span>
-				<%= link_to('x',
+				<%= link_to('',
 					catalog_index_path(localized_params.merge(:q=>nil, :action=>'index')),
-					:class=>'btnRemove imgReplace'
+					:class=>'btnRemove imgReplace',
+          :alt=>'x'
 				) %>
 				<%= image_tag "checkmark.gif", :alt=>"checkmark", :plugin=>'blacklight' %>
 			</span>
@@ -33,9 +34,10 @@
 								</span>
 							</span>
 							<%= link_to(
-								'x',
+								'',
 								catalog_index_path(remove_facet_params(facet, v, localized_params)),
-								:class=>'btnRemove imgReplace'
+								:class=>'btnRemove imgReplace',
+                :alot=>'x'
 							) %>
 							<%= image_tag "checkmark.gif", :alt=>"checkmark", :plugin=>'blacklight' %>
 						</span>
@@ -49,7 +51,7 @@
 		<% if params[:action] == 'index' %>
 			<%= page_entries_info @response.docs, :entry_name=>'item' %>
 		<% else %>
-			Showing <%= session[:search][:counter] %> of <%= format_num(session[:search][:total]) %> items from your search.
+			Showing <%= session[:search][:counter].to_i %> of <%= format_num(session[:search][:total]) %> items from your search.
 		<% end %>
 		<%=link_to "Start&nbsp;over&thinsp;", catalog_index_path, :id=>"startOverLink" %>
 	</div>

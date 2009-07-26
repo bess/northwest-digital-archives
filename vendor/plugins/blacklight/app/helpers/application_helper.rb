@@ -129,6 +129,51 @@ module ApplicationHelper
       text
     end 
   end
+  def render_endnote_text(record)
+    end_note_format = {
+      "%A" => "100.a",
+      "%C" => "260.b",
+      "%D" => "260.c",
+      "%E" => "700.a",
+      "%I" => "260.a",
+      "%J" => "440.a",
+      "%@" => "020.a",
+      "%_@" => "022.a",
+      "%T" => "245.a,245.b",
+      "%U" => "856.u",
+      "%7" => "250.a"
+    }
+    marc = record.marc.marc
+    text = ''
+    text << "%0 #{document_partial_name(record)}\n"
+    # If there is some reliable way of getting the language of a record we can add it here
+    #text << "%G #{record['language'].first}\n"
+    end_note_format.each do |key,value|
+      values = value.split(",")
+      first_value = values[0].split('.')
+      if values.length > 1
+        second_value = values[1].split('.')
+      else
+        second_value = []
+      end
+      
+      if marc[first_value[0].to_s]
+        marc.find_all{|f| (first_value[0].to_s) === f.tag}.each do |field|
+          if field[first_value[1]].to_s or field[second_value[1]].to_s
+            text << "#{key.gsub('_','')}"
+            if field[first_value[1]].to_s
+              text << " #{field[first_value[1]].to_s}"
+            end
+            if field[second_value[1]].to_s
+              text << " #{field[second_value[1]].to_s}"
+            end
+            text << "\n"
+          end
+        end
+      end
+    end
+    text
+  end
   
   #
   # facet param helpers ->
@@ -218,6 +263,7 @@ module ApplicationHelper
   def link_back_to_catalog(opts={:label=>'Back to Search'})
     query_params = session[:search].dup || {}
     query_params.delete :counter
+    query_params.delete :total
     link_url = catalog_index_path(query_params)
     link_to opts[:label], link_url
   end

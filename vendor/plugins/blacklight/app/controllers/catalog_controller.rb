@@ -8,12 +8,20 @@ class CatalogController < ApplicationController
   
   # get search results from the solr index
   def index
-    @response = get_search_results
-    @filters = params[:f] || []
+      @response = get_search_results
+      @filters = params[:f] || []
     respond_to do |format|
       format.html { save_current_search_params }
       format.rss  { render :layout => false }
     end
+    rescue RSolr::RequestError
+      logger.error("Unparseable search error: #{params.inspect}" ) 
+      flash[:notice] = "Sorry, I don't understand your search." 
+      redirect_to :action => 'index', :q => nil , :f => nil
+    rescue 
+      logger.error("Unknown error: #{params.inspect}" ) 
+      flash[:notice] = "Sorry, you've encountered an error. Try a different search." 
+      redirect_to :action => 'index', :q => nil , :f => nil
   end
   
   # updates the search counter (allows the show view to paginate)
@@ -30,9 +38,18 @@ class CatalogController < ApplicationController
       format.html {setup_next_and_previous_documents}
       format.xml  {render :xml => @document.marc.to_xml}
       format.refworks
+      format.endnote
     end
+  rescue ActiveRecord::RecordNotFound 
+     logger.error("Attempt to access invalid id: #{params[:id]}") 
+     flash[:notice] = "Sorry, I can't find the item you requested." 
+     redirect_to :action => 'index' 
+  rescue 
+       logger.error("Error encountered when trying to access: #{params[:id]}") 
+       flash[:notice] = "Sorry, you seem to have encountered an error." 
+       redirect_to :action => 'index', :q => nil , :f => nil
   end
-  
+
   # displays values and pagination links for a single facet field
   def facet
     @pagination = get_facet_pagination
@@ -177,7 +194,9 @@ class CatalogController < ApplicationController
   
   # sets some additional search metadata so that the show view can display it.
   def set_additional_search_session_values
-    search_session[:total] = @response.total
+    unless @response.nil?
+      search_session[:total] = @response.total
+    end
   end
   
 end

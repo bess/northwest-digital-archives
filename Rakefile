@@ -10,12 +10,13 @@ require 'tasks/rails'
 
 # the default rake task
 # desc "run migrations and call solr:spec and solr:features"
-task :default => "rake:features"
+task :default => :test
 
 # run migrations and call solr:spec and solr:features
-# desc 'run migrations and call rake:features'
-#   task "test" => ["db:test:prepare", "rake:features"] do
-# end
+desc 'run migrations and call rake:features'
+task "test" => :environment do
+  Rake::Task["rake:features"].invoke 
+end
 
 desc "Generate rdoc for the demo app and the blacklight plugin." 
 task "rdoc"

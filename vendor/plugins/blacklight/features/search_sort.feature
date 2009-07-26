@@ -7,10 +7,10 @@ Feature: Search Sort
   Scenario: Sort on facet results with no search terms
     Given I am on the home page
     When I follow "English"
-    Then I should see "results sorted by"
+    Then I should see "Sort by"
     And I should see select list "select#sort" with "relevance" selected
     When I select "title" from "sort"
     And I press "sort results" 
-    Then I should see "results sorted by"
+    Then I should see "Sort by"
     And I should see select list "select#sort" with "title" selected
     

@@ -114,12 +114,18 @@ describe ApplicationHelper do
       reader = MARC::XMLReader.new(StringIO.new(exportable_record)).to_a
       doc = reader[0] 
       @export_record = stub('export_mock')
+      @export_record.stub!("[]").and_return('Format')
       @export_record.stub!('marc').and_return('marc_attr')
       @export_record.marc.stub!('marc').and_return(doc)
     end
     describe "RefWorks" do
       it "should display RefWorks export text correctly" do
         render_refworks_text(@export_record).should == "LEADER 01828cjm a2200409 a 4500001    a4768316\n003    SIRSI\n007    sd fungnnmmned\n008    020117p20011990xxuzz    h              d\n245 00 Music for horn |h[sound recording] / |cBrahms, Beethoven, von Krufft.\n260    [United States] : |bHarmonia Mundi USA, |cp2001.\n700 1  Greer, Lowell.\n700 1  Lubin, Steven.\n700 1  Chase, Stephanie, |d1957-\n700 12 Brahms, Johannes, |d1833-1897. |tTrios, |mpiano, violin, horn, |nop. 40, |rE? major.\n700 12 Beethoven, Ludwig van, |d1770-1827. |tSonatas, |mhorn, piano, |nop. 17, |rF major.\n700 12 Krufft, Nikolaus von, |d1779-1818. |tSonata, |mhorn, piano, |rF major.\n"
+      end
+    end
+    describe "EndNote" do
+      it "should render the correct EndNote text file" do
+        render_endnote_text(@export_record).should == "%0 Format\n%E Greer, Lowell. \n%E Lubin, Steven. \n%E Chase, Stephanie, \n%E Brahms, Johannes, \n%E Beethoven, Ludwig van, \n%E Krufft, Nikolaus von, \n%T Music for horn \n%I [United States] : \n%C Harmonia Mundi USA, \n%D p2001. \n"
       end
     end
   end

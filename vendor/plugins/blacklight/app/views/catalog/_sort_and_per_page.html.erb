@@ -9,7 +9,7 @@
 		<noscript><%= submit_tag 'update' %></noscript>
 	<% end %>
 
-	<h2 id="results_label"><%= pluralize(@response.response['numFound'], "result", "results sorted by ") %></h2>
+	<h2 id="results_label">Sort by </h2>
 
 	<% unless @response.response['numFound'] < 2 %>
 		<% form_tag catalog_index_path, :method=>:get, :class=>'sort', :id => "sort_form" do %>

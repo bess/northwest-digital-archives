@@ -5,13 +5,15 @@
 <%# this should be in a partial -%>
 <div class="yui-g">
 	<div class="yui-u first">
-		<%= link_back_to_catalog %>
-	</div>
+	  <%= render 'previous_next_doc' %>
+  </div>
 	<div class="yui-u">
-		<%= render 'previous_next_doc' %>
+		
 	</div>
 </div>
-
+<% sidebar_items << capture do %>
+  <p><%= link_back_to_catalog %></p>
+<% end %>
 <%# this should be in a partial -%>
 <div id="document">
   <div id="doc_<%= @document[:id] %>">

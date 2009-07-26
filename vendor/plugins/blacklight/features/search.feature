@@ -31,7 +31,7 @@ Feature: Search
     And I should see "1."
     And I should see "2."
     And I should see "3."
-    And I should see "results sorted by"
+    And I should see "Sort by"
 
   Scenario: Submitting a Search with specific field selected
     When I am on the home page
@@ -44,7 +44,7 @@ Feature: Search
     And I should see "inmul"
     And I should see select list "select#qt" with "Title" selected
     And I should see "1."
-    And I should see "1 result"
+    And I should see "Displaying 1 item"
 
   Scenario: Results Page Has Sorting Available
     Given I am on the home page

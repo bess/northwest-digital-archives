@@ -1,10 +1,10 @@
 # Rake tasks for Blacklight plugin
 
 desc "Runs db:migrate then spec for Cruise Control."
-task :ccspec => ["db:migrate", "solr:spec"]
+task :ccspec => ["db:migrate:reset", "solr:spec"]
 
 desc "Runs db:migrate then features for Cruise Control."
-task :ccfeatures => ["db:migrate", "solr:features"]
+task :ccfeatures => ["db:migrate:reset", "solr:features"]
 
 
 # if you would like to see solr startup messages on STDERR
