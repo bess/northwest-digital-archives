@@ -328,6 +328,8 @@ div.yui-b div.document a.indexImage img{
 }
 
 div.yui-b div#document dl.defList dt {
+	float:left;
+	display: block;
 	font-size: 1.2em;
 	font-weight: bold;
 	padding: 0px 10px 10px 0px;	
@@ -335,8 +337,11 @@ div.yui-b div#document dl.defList dt {
 
 div.yui-b div#document dl.defList dd {
 	font-size: 1.2em;
+	float:left;
 	font-weight: light;
 	padding: 0px 0px 10px 0px;	
+	display: block;
+	width: 75%;
 }
 
 div#document div.document {
