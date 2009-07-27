@@ -63,29 +63,17 @@ namespace :app do
       puts "Total Time: #{Time.now - t}"
     end
     
-    # *************************************************************** #
-    # Index Herbarium export
-    # *************************************************************** #
-    
-    desc 'Index herbarium export file located at FILE=<location-of-file>'
-    task :herbarium => :environment do
+  # *************************************************************** #
+  # generalized indexing method to keep things DRY
+  def index_collection(xpath, mapper, datafile=ENV['FILE'])
       t = Time.now
-      
-      if ENV['FILE'].nil?
-        ENV['FILE'] = '../raw_data/herbarium_export.xml'
-      end
-      herbarium_export_file = ENV['FILE']
-      raise "Invalid file. Set the file by using the FILE argument." unless File.exists?(herbarium_export_file.to_s) and File.file?(herbarium_export_file.to_s)
-      
+      raise "Invalid file. Set the file by using the FILE argument." unless File.exists?(datafile.to_s) and File.file?(datafile.to_s)
       solr = Blacklight.solr
-      
-      puts "indexing #{herbarium_export_file}"
-      
-      if File.file? herbarium_export_file and herbarium_export_file.to_s =~ /^.*\.xml$/
-          xml = Nokogiri::XML(open(herbarium_export_file))
-          xml.xpath('/metadata/record').each do |record|
-            doc = NWDA::Mappers::Herbarium.new(record)
-            #puts doc.inspect
+      puts "\nindexing #{datafile}"
+      if File.file? datafile and datafile.to_s =~ /^.*\.xml$/
+          xml = Nokogiri::XML(open(datafile))
+          xml.xpath(xpath).each do |record|
+            doc = mapper.new(record)
             solr.add(doc.doc)
           end
       end
@@ -93,8 +81,16 @@ namespace :app do
       solr.commit
       puts "Complete."
       puts "Total Time: #{Time.now - t}"
-    end
- 
+  end
+   
+   # *************************************************************** #
+   # Index Herbarium export
+   # *************************************************************** #
+   desc 'Index herbarium export file located at FILE=<location-of-file>'
+   task :herbarium => :environment do
+     index_collection('/metadata/record',NWDA::Mappers::Herbarium,'../raw_data/herbarium_export.xml')
+   end
+   
   
   # *************************************************************** #
   # Index City of Pullman Collection
