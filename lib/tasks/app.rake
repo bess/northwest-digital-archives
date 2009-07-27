@@ -101,32 +101,6 @@ namespace :app do
   task :pullman => :environment do
     index_collection('/rdf:RDF/rdf:Description',NWDA::Mappers::Pullman,'../raw_data/cityofpullmancollection.xml')
   end
-    
-  # *************************************************************** #
-  # Index UW Special Collections  
-  desc 'Index UW-CDM located at FILE=<location-of-file>'
-  task :uwcdm => :environment do
-    t = Time.now
-    
-    
-    export_file = ENV['FILE']
-    raise "Invalid file. Set the file by using the FILE argument." unless File.exists?(export_file.to_s) and File.file?(export_file.to_s)
-    
-    solr = Blacklight.solr
-    
-    if File.file? export_file and export_file.to_s =~ /^.*\.xml$/
-        xml = Nokogiri::XML(open(export_file))
-        xml.xpath('/OAI-PMH/ListRecords/record[1]').each do |record|
-          doc = NWDA::Mappers::UW.new(record)
-          #puts doc.inspect
-          solr.add(doc.doc)
-        end
-    end
-    puts "Sending commit to Solr..."
-    solr.commit
-    puts "Complete."
-    puts "Total Time: #{Time.now - t}"
-  end
   
   # *************************************************************** #
   # Index Baseball
@@ -141,6 +115,33 @@ namespace :app do
   task :theses => :environment do
     index_collection('/OAI-PMH/ListRecords/record', NWDA::Mappers::Theses,'../raw_data/wsu-theses.xml')
   end
+  
+   
+  # *************************************************************** #
+  # Index UW Special Collections  
+  # desc 'Index UW-CDM located at FILE=<location-of-file>'
+  # task :uwcdm => :environment do
+  #   t = Time.now
+  #   
+  #   
+  #   export_file = ENV['FILE']
+  #   raise "Invalid file. Set the file by using the FILE argument." unless File.exists?(export_file.to_s) and File.file?(export_file.to_s)
+  #   
+  #   solr = Blacklight.solr
+  #   
+  #   if File.file? export_file and export_file.to_s =~ /^.*\.xml$/
+  #       xml = Nokogiri::XML(open(export_file))
+  #       xml.xpath('/OAI-PMH/ListRecords/record[1]').each do |record|
+  #         doc = NWDA::Mappers::UW.new(record)
+  #         #puts doc.inspect
+  #         solr.add(doc.doc)
+  #       end
+  #   end
+  #   puts "Sending commit to Solr..."
+  #   solr.commit
+  #   puts "Complete."
+  #   puts "Total Time: #{Time.now - t}"
+  # end
   
   
   end # end the index namespace
