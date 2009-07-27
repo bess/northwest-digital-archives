@@ -2,6 +2,11 @@ require_dependency 'vendor/plugins/blacklight/app/helpers/application_helper.rb'
 
 module ApplicationHelper
   
+  # overloaded from blacklight plugin... define your local application name
+  def application_name
+    'NWDA Discovery Interface'
+  end
+  
   # given a doc, an action_name, and the name of a specific partial, 
   # this method attempts to render the named partial template
   # if this value is blank (nil/empty) the "default" is used
