@@ -87,13 +87,20 @@ namespace :app do
       puts "Complete."
       puts "Total Time: #{Time.now - t}"
   end
+  
+  # *************************************************************** #
+  # Index JASR (Japanese American student relocation)
+  desc 'Index JASR export file located at FILE=<location-of-file>'
+  task :jasr => :environment do
+    index_collection('/metadata/record',NWDA::Mappers::JASR,'../raw_data/jasr_export_07-22-09.xml')
+  end
    
-   # *************************************************************** #
-   # Index Herbarium export
-   desc 'Index herbarium export file located at FILE=<location-of-file>'
-   task :herbarium => :environment do
-     index_collection('/metadata/record',NWDA::Mappers::Herbarium,'../raw_data/herbarium_export.xml')
-   end
+  # *************************************************************** #
+  # Index Herbarium export
+  desc 'Index herbarium export file located at FILE=<location-of-file>'
+  task :herbarium => :environment do
+   index_collection('/metadata/record',NWDA::Mappers::Herbarium,'../raw_data/herbarium_export.xml')
+  end
    
   # *************************************************************** #
   # Index City of Pullman Collection

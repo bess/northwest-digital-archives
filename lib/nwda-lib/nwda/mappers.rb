@@ -6,5 +6,7 @@ module NWDA::Mappers
   autoload :Baseball, 'nwda/mappers/baseball.rb'
   autoload :EAD, 'nwda/mappers/ead.rb'
   autoload :Theses, 'nwda/mappers/theses.rb'
+  autoload :JASR, 'nwda/mappers/jasr.rb'
+  
   
 end
