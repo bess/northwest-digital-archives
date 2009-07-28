@@ -11,7 +11,7 @@ Feature: Display Pullman Archives files correctly
 	
 	Scenario: Check for presence of correct facets
 		Given I am on the homepage
-		Then I should see a facet category "Collection" with a link "City of Pullman Collection"
+		When I follow "City of Pullman Collection"
 		Then I should see a facet category "Institution" with a link "Washington State University"
 	
 	Scenario: Search for Palouse
