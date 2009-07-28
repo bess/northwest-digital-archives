@@ -66,6 +66,7 @@ Blacklight.configure(:shared) do |config|
       "availability_facet",
       "subject_era_facet",
       "language_facet",
+      "rights_facet",
       "institution_facet",
       "collection_facet",
       "geographic_subject_facet",
@@ -75,6 +76,7 @@ Blacklight.configure(:shared) do |config|
       "availability_facet"       => "Availability",
       "subject_era_facet"        => "Time Period",
       "language_facet"           => "Language",
+      "rights_facet"            => "License",
       "institution_facet"        => "Institution",
       "collection_facet"         => "Collection",
       "geographic_subject_facet" => "Geographic coverage"
@@ -85,18 +87,19 @@ Blacklight.configure(:shared) do |config|
   #   The ordering of the field names is the order of the display 
   config[:index_fields] = {
     :field_names => [
-      "title_t",
       "author_t",
       "format_facet",
       "language_facet",
-      "published_t"
+      "published_t",
+      "collection_facet"
     ],
     :labels => {
-      "title_t"        => "Title:",
       "author_t"       => "Author:",
       "format_facet"   => "Format:",
       "language_facet" => "Language:",
-      "published_t"    => "Published:"
+      "published_t"    => "Published:",
+      "collection_facet"    => "Collection:"
+      
     }
   }
 
