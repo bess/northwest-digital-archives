@@ -56,12 +56,12 @@ module ApplicationHelper
   # Used in the show view for displaying the main solr document heading
   # overloaded from blacklight plugin
   # TODO: This should go back into the plugin for the EAD guides there
-  def document_heading
-    heading = @document[Blacklight.config[:show][:heading]]
-    if @document[:unittitle_t]
-      heading = heading.concat(': ' + @document[:unittitle_t][0])
-    end
-    heading
-  end
+  #def document_heading
+    #heading = @document[Blacklight.config[:show][:heading]]
+    #if @document[:unittitle_t]
+    #  heading = heading.concat(': ' + @document[:unittitle_t][0])
+    #end
+    #heading
+  #end
   
 end

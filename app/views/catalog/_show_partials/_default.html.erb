@@ -17,7 +17,7 @@
 		<div>
 			<dt>Part of:</dt>
 			<% @document[:part_of].each do |po| %>
-				<dd><%= link_to((hier_label.nil? ? po : hier_label), catalog_path(po)) %></dd>
+				<dd><%= @document[:title_t] %>: <%= link_to((hier_label.nil? ? po : hier_label), catalog_path(po)) %></dd>
 			<% end %>
 		</div>
 	<% end %>

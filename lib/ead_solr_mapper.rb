@@ -76,7 +76,8 @@ class EADSolrMapper
         :hierarchy_scope => self.collection_id,
         :collection_id => self.collection_id,
         :collection_facet => "Northwest Digital Archives EAD Guides",
-        :availability_facet => "Not online. Must visit contributing institution."
+        :availability_facet => "Not online. Must visit contributing institution.",
+        :abstract_t => (@xml.at('//archdesc/did/abstract').text rescue nil)
       }
       # clean all values...
       doc.each_pair {|k,v| doc[k] = to_one_line(v)}
