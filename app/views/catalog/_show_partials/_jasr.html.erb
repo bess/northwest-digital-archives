@@ -1,0 +1,50 @@
+<%# default partial to display solr document fields in catalog show view -%>
+
+<% sidebar_items << capture do %>
+	<p><%= link_back_to_catalog :label=>'&lt;&lt; SEARCH' %></p>
+    <dt>Subjects</dt>
+	<% @document[:subject_facet].each do |subject| %>
+		<dd>
+			<% subject_array = subject.split(" -- ") %>
+			<% subject_array.each_with_index do |s,i| %>
+				<% unless i == 0 %> -- <% end %>
+				<%= link_to_query(s.strip) %>
+			<% end %>
+		</dd>
+	<% end %>
+<% end %>
+
+<a href="<%#=@document[:fullimage_display]%>" rel="lightbox" title="<%= @document[:title_t]%>">
+<%#= image_tag(@document[:preview_display], :class => "preview", :alt => @document[:title_t]) %>
+</a>
+
+<dl class="defList">
+	
+	
+	<% if @document[:author_t] %>
+	<dt>Contributor(s)</dt><dd><%= @document[:author_t] %></dd>
+	<% end %>
+	
+	<% if @document[:description_t] %>
+    <dt>Description</dt><dd><%= @document[:description_t] %></dd>
+	<% end %>
+	
+	<% if @document[:date_display] %>
+	<dt>Date</dt><dd><%= @document[:date_display] %></dd>
+	<% end %>
+	
+	<% if @document[:source_t] %>
+	<dt>Source</dt><dd><%= @document[:source_t] %></dd>
+	<% end %>
+	
+	<dt>Collection</dt><dd><%= @document[:collection_facet] %></dd>
+	
+	<% if @document[:rights_t] %>
+	<dt>Rights</dt><dd><%= @document[:rights_t] %></dd>
+	<% end %>
+
+
+	<%#= @document[:fullimage_display] %>
+	
+
+</dl>

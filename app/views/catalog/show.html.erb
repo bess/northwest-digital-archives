@@ -28,6 +28,8 @@
 			<%= render_specified_document_partial @document, :show, :baseball %>
 		<% elsif @document['collection_facet'].to_s == 'Washington State University Theses'%>
 			<%= render_specified_document_partial @document, :show, :uwtheses %>
+		<% elsif @document['collection_facet'].to_s == 'National Japanese American Student Relocation Council Records'%>
+			<%= render_specified_document_partial @document, :show, :jasr %>
 		<% else %>
 	     	<%= render_document_partial @document, :show %>
 		<% end%>    
