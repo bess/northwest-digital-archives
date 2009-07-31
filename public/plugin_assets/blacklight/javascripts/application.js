@@ -7,5 +7,3 @@ $(document).ready(function() {
   $('table.zebra tr:even').addClass('zebra_stripe');
   $('ul.zebra li:even').addClass('zebra_stripe');
 });
-
-

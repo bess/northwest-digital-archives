@@ -1,22 +1,27 @@
 <div class="yui-g">
 	
-<dl class="indexDefList">
+	<dl class="indexDefList">
 	
-	<%#= document.inspect %>
+		<%#= document.inspect %>
 		 
-    <dt>Collection</dt><dd><%= document[:collection_facet] %></dd>
-
-	<% if document[:date_display] %>
-	<dt>Date</dt><dd><%= document[:date_display] %></dd>
-	<% end %>
+	    <dt>Collection</dt><dd><%= h document[:collection_facet] %></dd>
+		
+		<% if document[:date_display] %>
+		<dt>Date</dt><dd><%= h document[:date_display] %></dd>
+		<% end %>
+		
+		<% if document[:institution_t] %>
+		<dt>Institution</dt><dd><%= h document[:institution_t] %></dd>
+		<% end %>
+		
+		<% if document[:format_facet] %>
+			<dt>Format</dt><dd><%= h document[:format_facet].join(", ") %></dd>
+		<% end %>
+		
+		<% if document[:abstract_t] %>
+			<dt>Abstract</dt><dd><%= h truncate(document[:abstract_t].join('; '), :length=>180) %></dd>
+		<% end %>
+		
+	</dl>
 	
-	<% if document[:institution_t] %>
-	<dt>Institution</dt><dd><%= document[:institution_t] %></dd>
-	<% end %>
-	
-	<% if document[:format_facet] %>
-		<dt>Format</dt><dd><%= document[:format_facet].join(", ") %></dd>
-	<% end %>
-	
-</dl>
 </div>
