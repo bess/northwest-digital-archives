@@ -68,7 +68,7 @@ class EADSolrMapper
         :unittitle_t => (
           @xml.at('//archdesc[@level="collection"]/did/unittitle').text rescue
             @xml.at('//archdesc/did/unittitle').text rescue
-              'N/A'
+              'Untitled'
         ),
         :institution_t => @xml.at('//publicationstmt/publisher/text()[1]').text.gsub(/\s+/," ").strip,
         :institution_facet => @xml.at('//repository//corpname').children.first.text.gsub(/\s+/," ").strip,
