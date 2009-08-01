@@ -104,6 +104,16 @@
        <str name="echoParams">all</str>
      </lst>
   </requestHandler>
+
+<!-- requestHandler for tika -->
+<requestHandler name="/update/extract" class="org.apache.solr.handler.extraction.ExtractingRequestHandler">
+    <lst name="defaults">
+    	<str name="ext.map.Last-Modified">last_modified</str>
+
+    	<bool name="ext.ignore.und.fl">true</bool>
+    </lst>
+</requestHandler>
+
   
   <!-- Searching ("All Fields") -->
   <requestHandler name="search" class="solr.SearchHandler" default="true" >
