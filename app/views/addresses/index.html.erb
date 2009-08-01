@@ -5,6 +5,7 @@
   </tr>
 
 <% @addresses.each do |address| %>
+<p><%= address.name %></p>
   <tr>
     <td><%= link_to 'Show', address %></td>
     <td><%= link_to 'Edit', edit_address_path(address) %></td>

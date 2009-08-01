@@ -3,8 +3,38 @@
 <% form_for(@address) do |f| %>
   <%= f.error_messages %>
 
+ <%= f.error_messages %>
+
   <p>
-    <%= f.submit 'Create' %>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :institution %><br />
+    <%= f.text_field :institution %>
+  </p>
+  <p>
+    <%= f.label :state %><br />
+    <%= f.text_field :state %>
+  </p>
+  <p>
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </p>
+  <p>
+    <%= f.label :postal_code %><br />
+    <%= f.text_field :postal_code %>
+  </p>
+  <p>
+    <%= f.label :phone_number %><br />
+    <%= f.text_field :phone_number %>
+  </p>
+  <p>
+    <%= f.label :url %><br />
+    <%= f.text_field :url %>
+  </p>
+  <p>
+    <%= f.submit "Create" %>
   </p>
 <% end %>
 
