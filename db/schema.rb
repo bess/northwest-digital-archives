@@ -14,6 +14,11 @@ ActiveRecord::Schema.define(:version => 20090801174742) do
   create_table "addresses", :force => true do |t|
     t.string   "name"
     t.string   "url"
+    t.string   "institution"
+    t.string   "city"
+    t.string   "state"
+    t.string   "postal_code"
+    t.string   "phone_number"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
