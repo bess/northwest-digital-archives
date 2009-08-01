@@ -25,7 +25,7 @@ class AddressesController < ApplicationController
   # GET /addresses/new.xml
   def new
     @address = Address.new
-
+    create if request.post? 
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @address }
@@ -35,6 +35,11 @@ class AddressesController < ApplicationController
   # GET /addresses/1/edit
   def edit
     @address = Address.find(params[:id])
+    if request.post?
+        @item.update_attributes(params[:item])
+        redirect_to :action => 'edit', :id => @item.id and return
+    end
+    render :action => 'new'
   end
 
   # POST /addresses

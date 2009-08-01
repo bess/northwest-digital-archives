@@ -1,3 +1,8 @@
+<h2><%= @address.name %></h2>
+<h3><%= @address.institution %></h3>
+<h3><%= "#{@address.city}, #{@address.state} #{@address.postal_code}" %></h3>
+<h3><%= @address.phone_number %></h3>
+<h3><%= @address.url %></h3>
 
 <%= link_to 'Edit', edit_address_path(@address) %> |
 <%= link_to 'Back', addresses_path %>

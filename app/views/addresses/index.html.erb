@@ -5,13 +5,15 @@
   </tr>
 
 <% @addresses.each do |address| %>
-<p><%= address.name %></p>
-  <tr>
-    <td><%= link_to 'Show', address %></td>
-    <td><%= link_to 'Edit', edit_address_path(address) %></td>
-    <td><%= link_to 'Destroy', address, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+	<div class="address">
+		<p><%= address.name %> 
+				[<%= link_to 'Show', address %> | 
+				<%= link_to 'Edit', edit_address_path(address) %> | 
+				<%= link_to 'Destroy', address, :confirm => 'Are you sure?', :method => :delete %>] 
+		</p>
+	</div>
 <% end %>
+
 </table>
 
 <br />
