@@ -13,6 +13,16 @@ body {
 	color:#000000;
 }
 
+a:link, a:visited, a:active {
+	border-bottom: none;
+	color:#2E4F81;
+	text-decoration:none;
+}
+
+dl.indexDefList {
+	padding: 10px;
+}
+
 .document {
 	background-color:#FFEECC;
 
