@@ -2,7 +2,7 @@ class AddressesController < ApplicationController
   # GET /addresses
   # GET /addresses.xml
   def index
-    @addresses = Address.all
+    @addresses = Address.all.sort_by{ |i| i[:name] }
 
     respond_to do |format|
       format.html # index.html.erb
