@@ -8,7 +8,6 @@ db/test.sqlite3
 jetty/solr/data/*
 jetty/logs/*
 log/*
-db/*
 public/tmp
 app/views/catalog/show.html.erb-nwda
 db/schema.rb
