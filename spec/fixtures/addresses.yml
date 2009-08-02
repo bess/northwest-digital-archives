@@ -1,6 +1,7 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
+  id: 1
   name: Foley Center Library Special Collections
   institution: Gonzaga University
   city: Spokane
@@ -10,6 +11,7 @@ one:
   url: http://www.foley.gonzaga.edu/spcoll/jopa.html
 
 two:
+  id: 2
   name: 'Washington State University Libraries Manuscripts, Archives, and Special Collections'
   institution: New Holland Library
   city: Pullman
@@ -19,6 +21,7 @@ two:
   url: http://www.wsulibs.wsu.edu/holland/masc/masc.htm
   
 three:
+  id: 3
   name: 'Museum of History & Industry'
   institution: Sophie Frye Bass Library
   street: 2700 24th Avenue East
