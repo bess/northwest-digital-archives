@@ -1,6 +1,8 @@
 <% @page_title = "#{document_show_html_title} - #{application_name}" %>
 
-<%= render 'constraints', :localized_params=>session[:search] %>
+<%#= render 'constraints', :localized_params=>session[:search] %>
+<%= render :partial=>'constraints', :locals => { :localized_params=>session[:search] }%>
+
 
 <%# this should be in a partial -%>
 <div class="yui-g">
@@ -42,15 +44,3 @@
 </div>
 
 <%= render :partial=>'solr_request' %>
-
-<% if @document.marc %>
-  <div class="lightboxContent" id="citation" style="display:none;">
-    <%= render :partial => 'citation' %>
-  </div>
-  <div class="lightboxContent" id="email" style="display:none;">
-    <%= render :partial => 'email_form' %>
-  </div>
-  <div class="lightboxContent" id="sms" style="display:none;">
-    <%= render :partial => 'sms_form' %>
-  </div>
-<% end %>
