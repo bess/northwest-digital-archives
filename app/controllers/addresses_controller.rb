@@ -13,7 +13,11 @@ class AddressesController < ApplicationController
   # GET /addresses/1
   # GET /addresses/1.xml
   def show
-    @address = Address.find(params[:id])
+    if(params[:id])
+      @address = Address.find(params[:id])
+    elsif(params[:name])
+      @address = Address.find_by_name(params[:name])
+    end
 
     respond_to do |format|
       format.html # show.html.erb
