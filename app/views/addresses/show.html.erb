@@ -1,5 +1,6 @@
 <h2><%= @address.name %></h2>
 <h3><%= @address.institution %></h3>
+<% if @address.street %><h3><%= @address.street %></h3><% end %>
 <h3><%= "#{@address.city}, #{@address.state} #{@address.postal_code}" %></h3>
 <h3><%= @address.phone_number %></h3>
 <h3><%= @address.url %></h3>
