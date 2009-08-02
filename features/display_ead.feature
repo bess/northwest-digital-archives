@@ -44,6 +44,7 @@ Feature: Display EAD files correctly
 		Given I am on the homepage
 		When I fill in "q" with the phrase "gonzaga"
 		And I press "search"
+		And I follow "Foley Center Library Special Collections"
 		Then I should get 20 results
 
 
