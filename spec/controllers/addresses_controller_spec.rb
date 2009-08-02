@@ -46,7 +46,7 @@ describe AddressesController do
     end
     
     it "should find all three addresses" do
-      @addresses.length.should == 3
+      @addresses.length.should == 4
     end
     
     # show action
