@@ -39,6 +39,7 @@ set :rails_env, "production"
 task :after_update_code do
   run "ln -nfs #{deploy_to}/shared/config/database.yml #{release_path}/config/database.yml"
   run "ln -nfs #{deploy_to}/shared/config/solr.yml #{release_path}/config/solr.yml"
+  run "cd #{deploy_to}/current; rake db:migrate"
   run "cp #{deploy_to}/current/jetty/solr/conf/schema.xml #{deploy_to}/shared/solr/conf/schema.xml"
   run "sudo /sbin/service tomcat6 restart"
 end
