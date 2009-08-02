@@ -1,0 +1,13 @@
+<%# hopefully we've been passed an Address object %>
+<% unless address.nil? or address.name.nil? %>
+	<%= address.name %><br/>
+	<%= address.institution %><br/>
+	<% if address.street %><%= address.street %><br/><% end %>
+	<%= "#{address.city}, #{address.state} #{address.postal_code}"%><br/>
+	<%= "Phone: #{address.phone_number}"%><br/>
+	URL: <%= "<a href='#{address.url}'>#{address.url}</a>"%>
+	<br/>
+	<%= link_to 'Edit', edit_address_path(address) %> 
+<% else %>	
+	<%= text %>
+<% end %>

@@ -16,7 +16,9 @@
 	<dl class="defList">
 		<div>
 			<dt>Repository</dt>
-			<dd><%= d.at('repository').text rescue 'N/A' %></dd>
+			<dd>
+				<%= render :partial => "address", :locals => { :address => @address, :text => d.at('repository') } %>
+			</dd>
 		</div>
 
 		<% if d.at('origination') %>
