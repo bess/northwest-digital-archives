@@ -1,5 +1,5 @@
 class CatalogController < ApplicationController
-  
+  unloadable
   include Blacklight::SolrHelper
   
   before_filter :search_session, :history_session
