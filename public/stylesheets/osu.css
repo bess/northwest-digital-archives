@@ -341,6 +341,14 @@ div.yui-b dd {
 	padding: 5px 0px 10px 0px;	
 }
 
+div.yui-b div#document dl.defList dd {nwda.css...248637913 (line 338)
+	display:block;
+	float:left;
+	font-size:1.2em;
+	padding:0 0 10px;
+	width:75%;
+}
+
 /*
 div.yui-b a {
 	color: #a57d41;

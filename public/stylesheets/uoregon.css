@@ -13,6 +13,14 @@ font-size:76%;
 margin:0;
 }
 
+div.yui-b div#document dl.defList dd {
+	display:block;
+	float:left;
+	font-size:1.2em;
+	padding:0 0 10px;
+	width:75%;
+}
+
 #hd .yui-g {
 	padding:0px;
 	border:none;
