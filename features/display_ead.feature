@@ -32,8 +32,22 @@ Feature: Display EAD files correctly
 	  Given I am on the homepage
 	  When I follow "Montana Historical Society Archives"
       Then I should see a facet category "Availability" with a link "Not online. Must visit contributing institution."
+
+	# KNOWN BUG: Searching with the ampersand in the query will break
+	# Scenario: be able to search by institution name
+	# 	Given I am on the homepage
+	# 	When I fill in "q" with the phrase "Museum of History & Industry"
+	# 	And I press "search"
+	# 	Then I should get 171 results
 	
-	
+	Scenario: be able to search by institution name
+		Given I am on the homepage
+		When I fill in "q" with the phrase "gonzaga"
+		And I press "search"
+		Then I should get 20 results
+
+
+
 	
 	
 	
