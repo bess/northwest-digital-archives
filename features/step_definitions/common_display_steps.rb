@@ -12,6 +12,11 @@ Then /^I should see a title of "([^\"]*)"$/ do |title|
   response.should have_tag("h1", :text => title)
 end
 
+Then /^I should see a subtitle of "([^\"]*)"$/ do |subtitle|
+  response.should have_tag("h2", :text => /.*#{subtitle}.*/)
+end
+
+
 # a test for the number of hits returned by a search
 Then /^I should get ([^\"]*) results$/ do |number|
   response.should have_tag("div#appliedParams div", :text => /^Displaying(.*)#{number}(.*)$/)

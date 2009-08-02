@@ -18,6 +18,10 @@
 <div id="document">
   <div id="doc_<%= @document[:id] %>">
     <h1><%= @document[:title_t] %></h1>
+		<% if @document[:unittitle_t] %>
+		<h2><%= @document[:unittitle_t]%></h2>
+		<% end %>
+	
     <div class="tools"><%= render :partial => 'show_tools' %></div>
     <div class="document">
 		<% if @document['format_facet'].to_s == 'Herbarium Specimen'%>
