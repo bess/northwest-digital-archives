@@ -13,12 +13,18 @@ body {
 	color:#000000;
 }
 
+.document {
+	background-color:#FFEECC;
+
+}
+
 #doc4 {
 	padding: 20px;
 }
 
 #documents .documentHeader {
 	background-color:#EE9944;
+	padding: 5px;
 }
 
 #hd {
