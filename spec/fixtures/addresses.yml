@@ -30,3 +30,15 @@ three:
   postal_code: 98112
   phone_number: 206-324-1126
   url: http://www.seattlehistory.org  
+
+four: 
+  id: 4
+  name: 'University of Oregon Libraries'
+  institution: 'Special Collections & University Archives'
+  street: '1299 University of Oregon'
+  city: 'Eugene'
+  state: 'OR'
+  postal_code: '97403-1299'
+  url: http://libweb.uoregon.edu/speccoll/index.html
+  phone_number: ''
+  
