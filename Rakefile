@@ -15,6 +15,7 @@ task :default => :test
 # run migrations and call solr:spec and solr:features
 desc 'run migrations and call rake:features'
 task "test" => :environment do
+  Rake::Task["rake:db:test:prepare"].invoke
   Rake::Task["rake:spec"].invoke
   Rake::Task["rake:features"].invoke 
 end
