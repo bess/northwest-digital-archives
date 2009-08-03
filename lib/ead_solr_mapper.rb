@@ -117,7 +117,7 @@ class EADSolrMapper
   
   # record the information in the userestrict field 
   def rights_text
-    raw = @xml.xpath('//userestrict').to_s.gsub(/\s+/," ").strip
+    raw = @xml.xpath('//userestrict[1]/p/text()').first.to_s.gsub(/\s+/," ").strip
   end
   
   # generates an "id" based on the collection_id
