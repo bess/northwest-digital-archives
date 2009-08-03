@@ -27,6 +27,7 @@ class NWDA::Mappers::BestOf
       self.getLanguageFacet
       self.getRights
       self.getDescription
+      self.isPartOf
       
       
       #self.storeRecord
@@ -34,6 +35,11 @@ class NWDA::Mappers::BestOf
       @doc[:institution_facet] = "University of Oregon"
       @doc[:availability_facet] = "Available online"
       @doc
+    end
+    
+    def isPartOf
+      @doc[:isPartOfAddress_t] = @xml.xpath('./isPartOf[2]/text()').to_s.strip
+      @doc[:isPartOfText_t] = @xml.xpath('./isPartOf[4]/text()').to_s.gsub(/\s+/," ").strip
     end
     
     def getDescription
