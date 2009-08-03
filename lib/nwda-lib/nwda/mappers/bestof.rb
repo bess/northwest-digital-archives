@@ -38,8 +38,8 @@ class NWDA::Mappers::BestOf
     end
     
     def isPartOf
-      @doc[:isPartOfAddress_t] = @xml.xpath('./isPartOf[2]/text()').to_s.strip
-      @doc[:isPartOfText_t] = @xml.xpath('./isPartOf[4]/text()').to_s.gsub(/\s+/," ").strip
+      @doc[:isPartOfText_t] = @xml.xpath('./isPartOf[2]/text()').to_s.gsub(/\s+/," ").strip
+      @doc[:isPartOfAddress_t] = @xml.xpath('./isPartOf[4]/text()').to_s.strip
     end
     
     def getDescription
