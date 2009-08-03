@@ -40,7 +40,7 @@ describe "catalog/show.html.erb" do
   it "should display the title" do 
     render "catalog/show.html.erb" 
     response.should contain(@document[:title_t]) 
-    puts response.body    
+    # puts response.body    
   end 
   
   # it "should display the language_facet" do 
