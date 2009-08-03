@@ -79,6 +79,7 @@ namespace :app do
           xml = Nokogiri::XML(raw)
           xml.xpath(xpath).each do |record|
             doc = mapper.new(record)
+            puts doc
             solr.add(doc.doc)
           end
       end
@@ -86,6 +87,13 @@ namespace :app do
       solr.commit
       puts "Complete."
       puts "Total Time: #{Time.now - t}"
+  end
+  
+  # *************************************************************** #
+  # Index BestOf Collection
+  desc 'Index BestOf export file located at FILE=<location-of-file>'
+  task :bestof => :environment do
+    index_collection('/metadata/record',NWDA::Mappers::BestOf,'../raw_data/Bestof_export_07-22-09.xml')
   end
   
   # *************************************************************** #

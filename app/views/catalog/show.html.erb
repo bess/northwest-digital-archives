@@ -32,6 +32,8 @@
 			<%= render_specified_document_partial @document, :show, :pullman %>
 		<% elsif @document['collection_facet'].to_s == 'Oregon State Baseball'%>
 			<%= render_specified_document_partial @document, :show, :baseball %>
+		<% elsif @document['collection_facet'].to_s == 'University of Oregon Photograph Collection'%>
+			<%= render_specified_document_partial @document, :show, :bestof %>
 		<% elsif @document['collection_facet'].to_s == 'Washington State University Theses'%>
 			<%= render_specified_document_partial @document, :show, :uwtheses %>
 		<% elsif @document['collection_facet'].to_s == 'National Japanese American Student Relocation Council Records'%>

@@ -29,6 +29,8 @@
 		  		<%= render_specified_document_partial document, :index, :herbarium %>
 			<% elsif document[:collection_facet] && document[:collection_facet][0] == 'Oregon State Baseball'%>
 		  		<%= render_specified_document_partial document, :index, :baseball %>
+			<% elsif document[:collection_facet] && document[:collection_facet][0] == 'University of Oregon Photograph Collection'%>
+		  		<%= render_specified_document_partial document, :index, :bestof %>
 			<% elsif document[:collection_facet] && document[:collection_facet][0] == 'Northwest Digital Archives EAD Guides'%>
 		  		<%= render_specified_document_partial document, :index, :ead %>
 			<% else %>
