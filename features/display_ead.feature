@@ -18,20 +18,20 @@ Feature: Display EAD files correctly
 	  And I should see a search results value "Institution" of "Willamette University Archives and Special Collections"
 	
 	Scenario: formatting for a guide
-	  Given I am on the document page for id owsmss001xml-summary
-	  Then I should see a title of "Guide to the Robert C. Notson papers"
-	  And I should see a subtitle of "Summary Information"
-	  And I should see "Biography/History"
+		Given I am on the document page for id owsmss001xml-summary
+		Then I should see a title of "Guide to the Robert C. Notson papers"
+		And I should see a subtitle of "Summary Information"
+		And I should see "Biography/History"
 	
 	Scenario: correct capitalization for sections
-	  Given I am on the document page for id owsmss007-biography_history
-	  Then I should see a title of "Guide to the Freshmen Glee records"
-	  And I should see a subtitle of "Historical note"
+		Given I am on the document page for id owsmss007-biography_history
+		Then I should see a title of "Guide to the Freshmen Glee records"
+		And I should see a subtitle of "Historical note"
 	
 	Scenario: correct facets
-	  Given I am on the homepage
-	  When I follow "Montana Historical Society Archives"
-      Then I should see a facet category "Availability" with a link "Not online. Must visit contributing institution."
+		Given I am on the homepage
+		When I follow "Montana Historical Society Archives"
+		Then I should see a facet category "Availability" with a link "Not online. Must visit contributing institution."
 
 	# KNOWN BUG: Searching with the ampersand in the query will break
 	# Scenario: be able to search by institution name
@@ -47,16 +47,16 @@ Feature: Display EAD files correctly
 		And I follow "Foley Center Library Special Collections"
 		Then I should get 20 results
 
+	Scenario: display rights
+		Given I am on the document page for id stevensisaaci111xml-summary
+		Then I should see "The creator's literary rights are in the public domain."
+		
+	Scenario: display right again
+		Given I am on the document page for id washingtonterritory4284xml-summary
+		Then I should see "Public Records (use unrestricted when access is granted)"
 
-
-	
-	
-	
-	
-	
-	
 	#Scenario: Pearl Harbor game collection
-	  #Given I am on the document page for id owsmss9xml-summary
+		#Given I am on the document page for id owsmss9xml-summary
 	
 	
 	
