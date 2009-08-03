@@ -73,6 +73,8 @@ class EADSolrMapper
         :institution_t => @xml.at('//publicationstmt/publisher/text()[1]').text.gsub(/\s+/," ").strip,
         :institution_facet => @xml.at('//repository//corpname').children.first.text.gsub(/\s+/," ").strip,
         :language_facet => self.languages,
+        :rights_facet => self.rights_facet, 
+        :rights_t => self.rights_text,
         :hierarchy_scope => self.collection_id,
         :collection_id => self.collection_id,
         :collection_facet => "Northwest Digital Archives EAD Guides",
@@ -96,6 +98,26 @@ class EADSolrMapper
     @xml.xpath('//language').map do |lang|
       lang.text.to_s.gsub(/\.|\,/,'').strip.capitalize.gsub("Finding aid written in english", "English")
     end.uniq
+  end
+  
+  # interpret the text from //userestrict and turn it into a facet value
+  def rights_facet
+    raw = @xml.at('//userestrict[1]').to_s
+    open('/tmp/output', 'a') { |f| f << "!! #{raw}\n" }    
+    if raw=~/[Pp]ublic [Dd]omain/ 
+      return "Public Domain"
+    elsif raw=~/[Pp]ublic [Rr]ecord/ 
+      return "Public Records"
+    elsif raw=~/Creator retains literary rights/
+      return "Creator retains literary rights."
+    else
+      return "Other"
+    end
+  end
+  
+  # record the information in the userestrict field 
+  def rights_text
+    raw = @xml.xpath('//userestrict').to_s.gsub(/\s+/," ").strip
   end
   
   # generates an "id" based on the collection_id
