@@ -44,6 +44,12 @@
 			<dt>Language</dt>
 			<dd><%= d.at('langmaterial').text rescue 'N/A'%></dd>
 		</div>
+		<% if @document[:rights_t] %>
+		<div>
+			<dt>Rights</dt>
+			<dd><%= @document[:rights_t] %></dd>
+		</div>
+		<% end %>
 	</dl>
 
 <% elsif ['bioghist', 'scopecontent', 'arrangement'].include? d.root.name %>
