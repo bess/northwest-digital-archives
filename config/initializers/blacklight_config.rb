@@ -76,7 +76,7 @@ Blacklight.configure(:shared) do |config|
       "availability_facet"       => "Availability",
       "subject_era_facet"        => "Time Period",
       "language_facet"           => "Language",
-      "rights_facet"            => "License",
+      "rights_facet"             => "Rights",
       "institution_facet"        => "Institution",
       "collection_facet"         => "Collection",
       "geographic_subject_facet" => "Geographic coverage"
@@ -114,7 +114,8 @@ Blacklight.configure(:shared) do |config|
       "material_type_t",
       "language_facet",
       "published_t",
-      "isbn_t"
+      "isbn_t",
+      "rights_t"
     ],
     :labels => {
       "title_t"         => "Title:",
@@ -124,7 +125,8 @@ Blacklight.configure(:shared) do |config|
       "material_type_t" => "Physical description:",
       "language_facet"  => "Language:",
       "published_t"     => "Published:",
-      "isbn_t"          => "ISBN:"      
+      "isbn_t"          => "ISBN:",
+      "rights_t"        => "Rights:" 
     }
   }
 
