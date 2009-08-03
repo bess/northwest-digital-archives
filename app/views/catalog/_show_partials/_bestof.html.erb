@@ -43,6 +43,10 @@
 	<% if @document[:rights_t] %>
 	<dt>Rights</dt><dd><%= @document[:rights_t] %></dd>
 	<% end %>
+	
+	<% if @document[:isPartOfAddress_t] %>
+	<dt>This is part of</dt><dd><a href='<%= @document[:isPartOfAddress_t] %>'><%= @document[:isPartOfText_t] %></a></dd>
+	<% end %>
 
 
 	<%#= @document[:fullimage_display] %>
