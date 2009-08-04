@@ -221,12 +221,12 @@ class EADSolrMapper
         image_data = c03.xpath('.//did/daogrp/daoloc').first
         
         if image_data and image_data['href']
-          puts "FOUND IMAGE DATA..."
+          #puts "FOUND IMAGE DATA..."
           path, num = image_data['href'].split('?').last.split(',')
           base = "https://content-dev.lib.washington.edu/cgi-bin/getimage.exe"
           docs.last[:preview_display] = "#{base}?CISOROOT=#{path}&CISOPTR=#{num}&DMSCALE=25.00000"
           docs.last[:fullimage_display] = "#{base}?CISOROOT=#{path}&CISOPTR=#{num}&DMSCALE=100.00000"
-          puts docs.last.inspect
+          #puts docs.last.inspect
         end
         
         #puts docs.last.inspect
