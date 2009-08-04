@@ -88,7 +88,9 @@ class EADSolrMapper
         :text => []
         
       }
+      
       # write values to :text to make them searchable
+      # NOTE: isn't this already happening via copyField in the solr schema?
       doc[:text] << doc[:title_t] << doc[:institution_t] << doc[:collection_facet]
       
       # clean all values...
