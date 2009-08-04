@@ -1,14 +1,26 @@
 <% sidebar_items << capture do -%>
 	<div class="below_appliedParams">
 		<h3>Navigation for this Collection Guide</h3>
-	<% # this helper builds a nice ul tree out of the ead.navigation object -%>
-	<%= contextual_navigation_tree(
-		@document.id,
-		@document.ead.navigation,
-		:max_depth=>2
-	) -%>
+		<% # this helper builds a nice ul tree out of the ead.navigation object -%>
+		<%= contextual_navigation_tree(
+			@document.id,
+			# don't start at the root...
+			@document.ead.navigation.children.first,
+			# only go down to the "Collection Items" node
+			:max_depth=>2
+		) -%>
 	</div>
 <% end -%>
+
+<% target = @document.ead.navigation.descendants.detect{|n| n.object and n.object[:id]==@document[:id] } %>
+
+
+<% if @document[:fullimage_display] and @document[:preview_display] %>
+	<a href="<%=@document[:fullimage_display]%>" rel="lightbox" title="<%= @document[:title_t]%>">
+	<%= image_tag(@document[:preview_display], :class => "preview", :alt => @document[:title_t]) %>
+	</a>
+<% end %>
+
 
 <% d = Nokogiri::XML(@document[:xml_display].to_s) -%>
 
@@ -83,18 +95,13 @@
 		<% end %>
 	</dl>
 	
-	<%# TODO: put this in a helper -%>
-	<% if c02items = d.search('c02') and c02_html_items=[] %>
+	<% if target.children.size > 0 %>
 		<h4>Items in this Collection</h4>
-		<% c02items.each_with_index do |c02,index| %>
-			<% c02_html_items << capture do %>
-				<span>
-					<%# c02 items use a predictable id; incremental (see lib/ead_solr_mapper.rb)-%>
-					<%= link_to c02.at('unittitle'), catalog_path("#{@document[:id]}-#{index}") %>
-				</span>
-			<% end %>
+		<ul>
+		<% target.children.each do |item| %>
+			<li><%= link_to item.value, item.object[:id] %></li>
 		<% end %>
-		<%= c02_html_items.join(' &mdash; ')%>
+		</ul>
 	<% end %>
 	
 <% end %>

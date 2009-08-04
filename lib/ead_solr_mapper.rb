@@ -22,10 +22,24 @@ class EADSolrMapper
     @xml = Nokogiri::XML(raw)
   end
   
+  def title
+    #@title ||= @xml.at('/ead/eadheader[1]/filedesc[1]/titlestmt[1]/titleproper[1]/text()').text
+    @title ||= (@xml.xpath('//archdesc[@level="collection"]/did/unittitle').first.text rescue
+      @xml.xpath('//archdesc/did/unittitle').first.text rescue
+        'Untitled')
+  end
+  
   # removes newlines, tabs, multiple spaces and beginning/trailing spaces.
   # if the argument is an Array, each item in the array is processed recursively.
   def to_one_line(v)
-    v.is_a?(Array) ? v.map{|vv|to_one_line(vv)} : v.to_s.gsub(/\n+|\t+/, '').gsub(/ +/, ' ').strip
+    if v.is_a?(Array)
+      v.each_with_index do |vv,i|
+        v[i] = to_one_line(vv)
+      end
+      v
+    else
+      v.to_s.gsub(/\n+|\t+/, '').gsub(/ +/, ' ').strip
+    end
   end
   
   # returns an array of hashes, suitable for solr consumption...
@@ -37,7 +51,17 @@ class EADSolrMapper
     solr_docs << create_desc_item('arrangement', 'Arrangement')
     solr_docs << create_desc_item('fileplan', 'File Plan')
     solr_docs += create_item_docs
-    solr_docs.compact
+    solr_docs.compact!
+    solr_docs.collect do |doc|
+      # clean all values...
+      doc.each_pair do |k,v|
+        doc[k] = to_one_line(v)
+        if k == :hierarchy
+          # elminate sequences of >= 3 :
+          doc[k] = v.join('::').gsub(/:{3,}/, '::')
+        end
+      end
+    end
   end
   
   def val_to_id(v)
@@ -67,8 +91,6 @@ class EADSolrMapper
         :format_facet => 'Archival Documents',
         :filename_t => @base_filename,
         
-        #:title_t => @xml.at('/ead/eadheader[1]/filedesc[1]/titlestmt[1]/titleproper[1]/text()').text,
-        
         #:unittitle_t => (
         #  @xml.at('//archdesc[@level="collection"]/did/unittitle').text rescue
         #    @xml.at('//archdesc/did/unittitle').text rescue
@@ -93,10 +115,6 @@ class EADSolrMapper
       # NOTE: isn't this already happening via copyField in the solr schema?
       doc[:text] << doc[:title_t] << doc[:institution_t] << doc[:collection_facet]
       
-      # clean all values...
-      doc.each_pair do |k,v|
-        doc[k] = to_one_line(v)
-      end
       doc
     )
   end
@@ -138,12 +156,13 @@ class EADSolrMapper
   # create the summary doc
   def create_summary_doc
     label = 'Summary Information'
-    self.base_doc.merge({
+    doc = self.base_doc.merge({
       :xml_display => @xml.at("/ead/archdesc/did").to_xml,
       :id => generate_id('summary'),
       :title_t => label,
-      :hierarchy => label
+      :hierarchy => [self.title, label]
     })
+    doc
   end
   
   # creates a /ead/archdesc based doc
@@ -154,22 +173,62 @@ class EADSolrMapper
     
     node = @xml.at('/ead/archdesc/' + node_name)
     return unless node
-    
     if head = node.at('head')
       label = head.text.empty? ? id_suffix : head.text.capitalize
     else
       label = id_suffix
     end
     
-    self.base_doc.merge({
+    doc = self.base_doc.merge({
       :xml_display => node.to_xml,
       :id => generate_id(id_suffix),
       :title_t => label,
-      :hierarchy => label
+      :hierarchy => [self.title, label]
     })
+    doc
+  end
+  
+  def create_item_docs
+    docs = []
+    @xml.xpath('ead/archdesc/dsc/c01[@level="series"]').each_with_index do |c01,i|
+      # remove leading/trailing : values (messes up the hierarchy calculations)
+      label = c01.at('did/unittitle').text.capitalize.gsub(/^\:+|\:+$/, '') rescue "Unknown-#{i}"
+      rel_id = to_one_line(c01.at('did/unitid').text) rescue "Unknown ID-#{i}"
+      id = generate_id(rel_id)
+      docs << self.base_doc.merge({
+        :id => id,
+        :xml_display => c01.to_xml,
+        :title_t => label,
+        :hierarchy => [self.title, "Collection Inventory", label]
+      })
+      
+      item_format = c01.at('did/unittitle').text.downcase.gsub(' ', '_').gsub(/\W+/, '') rescue 'Unknown'
+      # loop through all c03 items
+      c01.xpath('.//c03[@level="item"]').each_with_index do |c03,ii|
+        
+        #image_data = c03.xpath('did/daogrp/daoloc').first
+        
+        # remove line endings, tabs and trailing spaces
+        llabel = c03.at('did/unittitle').text.gsub(/^\:+|\:+$/, '') rescue "Unknown-#{i}-#{ii}"
+        docs << self.base_doc.merge({
+          :id => "#{id}-#{ii}",
+          :xml_display => c03.to_xml,
+          :title_t => llabel,
+          # make sure that the : separator occurs no more than twice in a row
+          # "::" is the hierarchy separator...
+          :format_code_t => item_format,
+          :hierarchy => [self.title, "Collection Inventory", label, llabel]
+        })
+        
+        puts docs.last.inspect
+        
+      end
+    end
+    docs
   end
   
   # creates an array of ead/archdesc/dsc/c docs
+=begin
   def create_item_docs
     i=0
     @xml.search('ead/archdesc/dsc/c01[@level="series"]').inject([]) do |docs,c01|
@@ -212,5 +271,5 @@ class EADSolrMapper
       docs
     end
   end
-  
+=end
 end

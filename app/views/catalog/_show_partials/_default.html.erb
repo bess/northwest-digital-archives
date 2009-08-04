@@ -1,4 +1,12 @@
 <%# default partial to display solr document fields in catalog show view -%>
+<% if @document.respond_to?(:ead)
+	target_nav = @document.ead.navigation.descendants.detect do |n|
+		n.object and n.object[:id]==@document[:id]
+	end
+	root = @document.ead.navigation.children.first
+	first_top_level_node = root.children.first
+end
+%>
 
 <dl class="defList">
 
@@ -8,18 +16,18 @@
 			<dd><%= document[solr_fname] %></dd>
 		<% end -%>
 	<% end -%>
-
-	<% if @document[:part_of] %>
-		<%# if there is a hierarchy field, use it for the "partof" label -%>
-		<% if @document[:hierarchy] %>
-			<% hier_label = @document[:hierarchy].to_s.split('::')[-2] %>
-		<% end %>
-		<div>
-			<dt>Part of:</dt>
-			<% @document[:part_of].each do |po| %>
-				<dd><%= @document[:title_t] %>: <%= link_to((hier_label.nil? ? po : hier_label), catalog_path(po)) %></dd>
-			<% end %>
-		</div>
+	
+	<% if @document.respond_to?(:ead) %>
+		<dt>Part of:</dt>
+		<dd>
+			<%= link_to root.value, first_top_level_node.object[:id] %> / <%= link_to target_nav.parent.value, target_nav.parent.object[:id] %>
+		</dd>
 	<% end %>
-
+	
+	<% if @document[:fullimage_display] and @document[:preview_display] %>
+		<a href="<%=@document[:fullimage_display]%>" rel="lightbox" title="<%= @document[:title_t]%>">
+		<%= image_tag(@document[:preview_display], :class => "preview", :alt => @document[:title_t]) %>
+		</a>
+	<% end %>
+	
 </dl>
