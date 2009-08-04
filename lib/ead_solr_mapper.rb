@@ -66,12 +66,15 @@ class EADSolrMapper
         :format_code_t => 'ead',
         :format_facet => 'Archival Documents',
         :filename_t => @base_filename,
-        :title_t => @xml.at('/ead/eadheader[1]/filedesc[1]/titlestmt[1]/titleproper[1]/text()').text,
-        :unittitle_t => (
-          @xml.at('//archdesc[@level="collection"]/did/unittitle').text rescue
-            @xml.at('//archdesc/did/unittitle').text rescue
-              'Untitled'
-        ),
+        
+        #:title_t => @xml.at('/ead/eadheader[1]/filedesc[1]/titlestmt[1]/titleproper[1]/text()').text,
+        
+        #:unittitle_t => (
+        #  @xml.at('//archdesc[@level="collection"]/did/unittitle').text rescue
+        #    @xml.at('//archdesc/did/unittitle').text rescue
+        #      'Untitled'
+        #),
+        
         :institution_t => @xml.at('//publicationstmt/publisher/text()[1]').text.gsub(/\s+/," ").strip,
         :institution_facet => @xml.at('//repository//corpname').children.first.text.gsub(/\s+/," ").strip,
         :language_facet => self.languages,
@@ -136,7 +139,7 @@ class EADSolrMapper
     self.base_doc.merge({
       :xml_display => @xml.at("/ead/archdesc/did").to_xml,
       :id => generate_id('summary'),
-      :unittitle_t => label,
+      :title_t => label,
       :hierarchy => label
     })
   end
@@ -159,7 +162,7 @@ class EADSolrMapper
     self.base_doc.merge({
       :xml_display => node.to_xml,
       :id => generate_id(id_suffix),
-      :unittitle_t => label,
+      :title_t => label,
       :hierarchy => label
     })
   end
@@ -180,7 +183,7 @@ class EADSolrMapper
       docs << self.base_doc.merge({
         :id => id,
         :xml_display => c01.to_xml,
-        :unittitle_t => label,
+        :title_t => label,
         :hierarchy => "Collection Inventory::#{label}"
       })
       
@@ -195,7 +198,7 @@ class EADSolrMapper
         docs << self.base_doc.merge({
           :id => "#{id}-#{ii}",
           :xml_display => cnode.to_xml,
-          :unittitle_t => llabel,
+          :title_t => llabel,
           # make sure that the : separator occurs no more than twice in a row
           # "::" is the hierarchy separator...
           :hierarchy => "Collection Inventory::#{label}::#{llabel}".gsub(/:{3,}/, '::'),
