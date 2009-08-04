@@ -227,49 +227,4 @@ class EADSolrMapper
     docs
   end
   
-  # creates an array of ead/archdesc/dsc/c docs
-=begin
-  def create_item_docs
-    i=0
-    @xml.search('ead/archdesc/dsc/c01[@level="series"]').inject([]) do |docs,c01|
-      #puts "mapping c01 ##{i}"
-      label = c01.at('did/unittitle').text.capitalize rescue "Unknown-#{i}"
-      
-      # remove leading/trailing : values (messes up the hierarchy calculations)
-      label = label.gsub(/^\:+|\:+$/, '')
-      
-      rel_id = to_one_line(c01.at('did/unitid').text) rescue "Unknown ID-#{i}"
-      i += 1
-      id = generate_id(rel_id)
-      docs << self.base_doc.merge({
-        :id => id,
-        :xml_display => c01.to_xml,
-        :title_t => label,
-        :hierarchy => "Collection Inventory::#{label}"
-      })
-      
-      c01.css('c02').each_with_index do |cnode,ii|
-        
-        llabel = cnode.at('did/unittitle').text rescue nil
-        llabel = "Unknown-#{i}-#{ii}" if llabel.blank?
-        # remove line endings, tabs and trailing spaces
-        llabel = llabel.gsub(/^\:+|\:+$/, '')
-        
-        format = c01.at('did/unittitle').text rescue 'Unknown'
-        docs << self.base_doc.merge({
-          :id => "#{id}-#{ii}",
-          :xml_display => cnode.to_xml,
-          :title_t => llabel,
-          # make sure that the : separator occurs no more than twice in a row
-          # "::" is the hierarchy separator...
-          :hierarchy => "Collection Inventory::#{label}::#{llabel}".gsub(/:{3,}/, '::'),
-          :part_of => [id],
-          :format_code_t => format.downcase.gsub(' ', '_').gsub(/\W+/, '')
-          #:format_facet => format.capitalize
-        })
-      end
-      docs
-    end
-  end
-=end
 end
