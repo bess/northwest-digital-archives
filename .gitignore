@@ -1,13 +1,13 @@
 raw_data/
 **/.svn
-**/.svn/**
+**/.svn/
 **~
 config/database.yml
 .DS_Store
 db/test.sqlite3
 jetty/solr/data/*
-jetty/logs/*
-log/*
-public/tmp
+jetty/logs/
+log/
+public/tmp/
 app/views/catalog/show.html.erb-nwda
 db/schema.rb

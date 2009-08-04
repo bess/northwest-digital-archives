@@ -1,9 +1,7 @@
 <div class="yui-g">
 	
 	<dl class="indexDefList">
-	
-		<%#= document.inspect %>
-		 
+		
 	    <dt>Collection</dt><dd><%= h document[:collection_facet] %></dd>
 		
 		<% if document[:date_display] %>
@@ -19,7 +17,8 @@
 		<% end %>
 		
 		<% if document[:abstract_t] %>
-			<dt>Abstract</dt><dd><%= h truncate(document[:abstract_t].join('; '), :length=>170) %></dd>
+			<dt>Abstract</dt>
+			<dd><%= h truncate(document[:abstract_t].join('; '), :length=>170) %></dd>
 		<% end %>
 		
 	</dl>

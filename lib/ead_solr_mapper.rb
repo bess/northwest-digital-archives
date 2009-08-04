@@ -22,8 +22,10 @@ class EADSolrMapper
     @xml = Nokogiri::XML(raw)
   end
   
+  # removes newlines, tabs, multiple spaces and beginning/trailing spaces.
+  # if the argument is an Array, each item in the array is processed recursively.
   def to_one_line(v)
-    v.is_a?(String) ? v.to_s.gsub(/\n+|\t+| +$/, ' ') : v.map{|vv|to_one_line(vv)}
+    v.is_a?(Array) ? v.map{|vv|to_one_line(vv)} : v.to_s.gsub(/\n+|\t+/, '').gsub(/ +/, ' ').strip
   end
   
   # returns an array of hashes, suitable for solr consumption...
@@ -87,7 +89,9 @@ class EADSolrMapper
       doc[:text] << doc[:title_t] << doc[:institution_t] << doc[:collection_facet]
       
       # clean all values...
-      doc.each_pair {|k,v| doc[k] = to_one_line(v)}
+      doc.each_pair do |k,v|
+        doc[k] = to_one_line(v)
+      end
       doc
     )
   end
@@ -168,7 +172,7 @@ class EADSolrMapper
       label = c01.at('did/unittitle').text.capitalize rescue "Unknown-#{i}"
       
       # remove leading/trailing : values (messes up the hierarchy calculations)
-      label = to_one_line(label).gsub(/^\:+|\:+$/, '')
+      label = label.gsub(/^\:+|\:+$/, '')
       
       rel_id = to_one_line(c01.at('did/unitid').text) rescue "Unknown ID-#{i}"
       i += 1
@@ -185,9 +189,9 @@ class EADSolrMapper
         llabel = cnode.at('did/unittitle').text rescue nil
         llabel = "Unknown-#{i}-#{ii}" if llabel.blank?
         # remove line endings, tabs and trailing spaces
-        llabel = to_one_line(llabel).gsub(/^\:+|\:+$/, '')
+        llabel = llabel.gsub(/^\:+|\:+$/, '')
         
-        format = to_one_line(c01.at('did/unittitle').text) rescue 'Unknown'
+        format = c01.at('did/unittitle').text rescue 'Unknown'
         docs << self.base_doc.merge({
           :id => "#{id}-#{ii}",
           :xml_display => cnode.to_xml,
