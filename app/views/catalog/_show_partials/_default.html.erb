@@ -8,6 +8,12 @@
 end
 %>
 
+<% if @document[:fullimage_display] and @document[:preview_display] %>
+	<a href="<%=@document[:fullimage_display]%>" rel="lightbox" title="<%= @document[:title_t]%>">
+	<%= image_tag(@document[:preview_display], :class => "preview", :alt => @document[:title_t]) %>
+	</a>
+<% end %>
+
 <dl class="defList">
 
 	<% document_show_fields.each do |solr_fname| -%>
@@ -20,14 +26,8 @@ end
 	<% if @document.respond_to?(:ead) %>
 		<dt>Part of:</dt>
 		<dd>
-			<%= link_to root.value, first_top_level_node.object[:id] %> / <%= link_to target_nav.parent.value, target_nav.parent.object[:id] %>
+			<%= link_to root.value, first_top_level_node.object[:id] %> / <%= link_to target_nav.parent.value, target_nav.parent.object[:id] rescue "Unknown" %>
 		</dd>
-	<% end %>
-	
-	<% if @document[:fullimage_display] and @document[:preview_display] %>
-		<a href="<%=@document[:fullimage_display]%>" rel="lightbox" title="<%= @document[:title_t]%>">
-		<%= image_tag(@document[:preview_display], :class => "preview", :alt => @document[:title_t]) %>
-		</a>
 	<% end %>
 	
 </dl>
