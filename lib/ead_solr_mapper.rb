@@ -218,6 +218,8 @@ class EADSolrMapper
           :format_code_t => item_format,
           :hierarchy => [self.title, "Collection Inventory", label, llabel],
           :format_facet => "Archival Document",
+          :description_t => c03.at('.//scopecontent/p/text()'),
+          :note_t => c03.at('.//note/p/text()'),
           :collapse_collection_id => "#{id}-#{ii}"
         })
         
@@ -226,7 +228,7 @@ class EADSolrMapper
         if image_data and image_data['href']
           #puts "FOUND IMAGE DATA..."
           path, num = image_data['href'].split('?').last.split(',')
-          base = "https://content-dev.lib.washington.edu/cgi-bin/getimage.exe"
+          base = "http://content-dev.lib.washington.edu/cgi-bin/getimage.exe"
           docs.last[:preview_display] = "#{base}?CISOROOT=#{path}&CISOPTR=#{num}&DMSCALE=25.00000"
           docs.last[:fullimage_display] = "#{base}?CISOROOT=#{path}&CISOPTR=#{num}&DMSCALE=100.00000"
           #puts docs.last.inspect
