@@ -67,6 +67,23 @@ Feature: Display EAD files correctly
 		
 	Scenario: Only collapse archival collection guides, not the items within them
 		Given I am on the homepage
+		When I fill in "q" with "Seattle Historical Society Founders' Day and Other Events"
+		And I press "search"
 		And I follow "Museum of History & Industry"
 		And I follow "Archival Document"
 		Then I should get 104 results
+		
+	Scenario: Individual photographs are discoverable
+		Given I am on the homepage
+		When I fill in "q" with "Mrs. William Biglow dressed up as Princess Angeline"
+		And I press "search"
+		Then I should get 1 results
+		
+	Scenario: Archival guides are discoverable and have the correct title
+		Given I am on the homepage
+		When I fill in "q" with "Seattle Historical Society Founders' Day and Other Events"
+		And I press "search"
+		And I follow "Archival Collection Guide"
+		Then I should get 1 results
+
+

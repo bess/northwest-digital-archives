@@ -8,7 +8,10 @@ module ApplicationHelper
   end
   
   def index_document_title(document)
-    if document[:hierarchy]
+    # display the title_t for Archival Documents
+     if document[:format_facet].to_s=="Archival Document" and document[:hierarchy]
+      document[:title_t]
+    elsif document[:hierarchy]
       document[:hierarchy].to_s.split("::")[0]
     elsif document[:title_t]
         document[:title_t]
