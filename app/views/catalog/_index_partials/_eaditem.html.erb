@@ -24,8 +24,10 @@
 			<dt>Format</dt><dd><%= document[:format_facet].join(", ") %></dd>
 		<% end %>
 	
-		<% if document[:abstract_t] %>
-			<dt>Abstract</dt>
+		<% if document[:description_t] %>
+			<dt>Description</dt><dd><%= document[:description_t] %></dd>
+		<% elsif document[:abstract_t] %>
+			<dt>Collection Abstract</dt>
 			<dd><%= h truncate(document[:abstract_t].join('; '), :length=>170) %></dd>
 		<% end %>
 	
