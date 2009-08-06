@@ -1,0 +1,56 @@
+<%# default partial to display solr document fields in catalog show view -%>
+<% if @document.respond_to?(:ead)
+	target_nav = @document.ead.navigation.descendants.detect do |n|
+		n.object and n.object[:id]==@document[:id]
+	end
+	root = @document.ead.navigation.children.first
+	first_top_level_node = root.children.first
+end
+%>
+
+<% if @document[:fullimage_display] and @document[:preview_display] %>
+	<a href="<%=@document[:fullimage_display]%>" rel="lightbox" title="<%= @document[:title_t]%>">
+	<%= image_tag(@document[:preview_display], :class => "preview", :alt => @document[:title_t]) %>
+	</a>
+<% end %>
+
+<dl class="defList">
+
+	<% if @document[:description_t] %>
+    <dt>Description</dt><dd><%= @document[:description_t] %></dd>
+	<% end %>
+	
+	<% if @document[:note_t] %>
+    <dt>Note</dt><dd><%= @document[:note_t] %></dd>
+	<% end %>
+	
+	<% if @document[:date_display] %>
+	<dt>Date</dt><dd><%= @document[:date_display] %></dd>
+	<% end %>
+	
+	<% if @document[:source_t] %>
+	<dt>Source</dt><dd><%= @document[:source_t] %></dd>
+	<% end %>
+	
+	<% if @document[:contributor_t] %>
+	<dt>Contributor(s)</dt><dd><%= @document[:contributor_t] %></dd>
+	<% end %>
+	
+	
+	<% if @document[:institution_facet] %>
+	<dt>Institution</dt><dd><%= @document[:institution_facet] %></dd>
+	<% end %>
+	
+	<% if @document[:rights_t] %>
+	<dt>Rights</dt><dd><%= @document[:rights_t] %></dd>
+	<% end %>
+
+	
+	<% if @document.respond_to?(:ead) %>
+		<dt>Part of:</dt>
+		<dd>
+			<%= link_to root.value, first_top_level_node.object[:id] %> / <%= link_to target_nav.parent.value, target_nav.parent.object[:id] rescue "Unknown" %>
+		</dd>
+	<% end %>
+	
+</dl>

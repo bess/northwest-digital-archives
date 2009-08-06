@@ -1,0 +1,34 @@
+<div class="yui-g">
+	<% if document[:fullimage_display] %>
+	
+	<div class="yui-u">
+			<a href="<%=document[:fullimage_display]%>" rel="lightbox" title="<%= document[:title_t]%>" class="indexImage">
+			<%= image_tag(document[:preview_display], :class => "preview", :alt => document[:title_t]) %>
+			</a>
+	</div>
+	
+	<div class="yui-u">
+		<% end %>
+		
+	<dl class="indexDefList">
+	
+		<%#= document.inspect %>
+		 
+	    <dt>Collection</dt><dd><%= document[:collection_facet] %></dd>
+
+		<% if document[:date_display] %>
+		<dt>Date</dt><dd><%= document[:date_display] %></dd>
+		<% end %>
+	
+		<% if document[:format_facet] %>
+			<dt>Format</dt><dd><%= document[:format_facet].join(", ") %></dd>
+		<% end %>
+	
+		<% if document[:abstract_t] %>
+			<dt>Abstract</dt>
+			<dd><%= h truncate(document[:abstract_t].join('; '), :length=>170) %></dd>
+		<% end %>
+	
+	</dl>
+	<% if document[:fullimage_display] %></div><% end %>
+</div>

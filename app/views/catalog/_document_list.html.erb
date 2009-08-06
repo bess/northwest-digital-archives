@@ -25,6 +25,8 @@
 		 <% # main container for doc partial view -%>
 			<% if document[:collection_facet] && document[:collection_facet][0] == 'City of Pullman Collection'%>
 		  		<%= render_specified_document_partial document, :index, :pullman %>
+			<% elsif document[:format_facet] && document[:format_facet].to_s == 'Archival Document'%>
+		  		<%= render_specified_document_partial document, :index, :eaditem %>
 			<% elsif document[:collection_facet] && document[:collection_facet][0] == 'Oregon State University Herbarium'%>
 		  		<%= render_specified_document_partial document, :index, :herbarium %>
 			<% elsif document[:collection_facet] && document[:collection_facet][0] == 'Oregon State Baseball'%>

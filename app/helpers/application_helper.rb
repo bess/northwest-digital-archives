@@ -20,15 +20,15 @@ module ApplicationHelper
     end
   end
   
-  def document_title
-    if @document[:format_facet].to_s=="Archival Document" and @document[:hierarchy]
-     @document[:title_t]
-    elsif @document[:hierarchy]
-      @document[:hierarchy]
-    elsif @document[:title_t]
-      @document[:title_t]
-    elsif @document[:unittitle_t]
-      @document[:unittitle_t]
+  def document_title(document)
+    if document[:format_facet].to_s=="Archival Document" and document[:hierarchy]
+     document[:title_t]
+    elsif document[:hierarchy]
+      document[:hierarchy]
+    elsif document[:title_t]
+      document[:title_t]
+    elsif document[:unittitle_t]
+      document[:unittitle_t]
     else
       "Unknown Title"
     end

@@ -19,7 +19,7 @@
 <%# this should be in a partial -%>
 <div id="document">
   <div id="doc_<%= @document[:id] %>">
-    <h1><%= document_title %></h1>
+    <h1><%= document_title(@document) %></h1>
 		<% if @document[:unittitle_t] %>
 		<h2><%= @document[:unittitle_t]%></h2>
 		<% end %>
@@ -36,8 +36,8 @@
 			<%= render_specified_document_partial @document, :show, :bestof %>
 		<% elsif @document['collection_facet'].to_s == 'Washington State University Theses'%>
 			<%= render_specified_document_partial @document, :show, :uwtheses %>
-		<% elsif @document['collection_facet'].to_s == 'National Japanese American Student Relocation Council Records'%>
-			<%= render_specified_document_partial @document, :show, :jasr %>
+		<% elsif @document['format_facet'].to_s == 'Archival Document'%>
+			<%= render_specified_document_partial @document, :show, :eaditem %>
 		<% else %>
 	     	<%= render_document_partial @document, :show %>
 		<% end%>    
