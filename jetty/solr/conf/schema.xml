@@ -102,6 +102,10 @@
     
     <!-- used to link related (EAD collection etc.) documents together -->
     <field name="collection_id"  type="string"  indexed="true"  stored="true" multiValued="false"/>
+
+    <!-- used to collapse a set of documents into a single document -->
+    <field name="collapse_collection_id"  type="string"  indexed="true"  stored="true" multiValued="false"/>
+
     
     <dynamicField name="*_i"  type="sint"    indexed="true"  stored="true"/>
     <dynamicField name="*_s"  type="string"  indexed="true"  stored="true" multiValued="true"/>

@@ -63,3 +63,10 @@ Feature: Display EAD files correctly
 		When I fill in "q" with "Leone Cass Baer"
 		And I press "search"
 		And I should see a search results value "Abstract" of "The collection consists primarily of autographed publicity portraits of music, theater, and movie personalities, given to Leone Cass Baer, ca. 1910-1921, when she was ..."
+		
+		
+	Scenario: Only collapse archival collection guides, not the items within them
+		Given I am on the homepage
+		And I follow "Museum of History & Industry"
+		And I follow "Archival Document"
+		Then I should get 104 results

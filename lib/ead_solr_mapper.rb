@@ -88,7 +88,7 @@ class EADSolrMapper
     @base_doc ||= (
       doc = {
         :format_code_t => 'ead',
-        :format_facet => 'Archival Documents',
+        :format_facet => 'Archival Collection Guide',
         :filename_t => @base_filename,
         
         #:unittitle_t => (
@@ -103,6 +103,7 @@ class EADSolrMapper
         :rights_facet => self.rights_facet, 
         :rights_t => self.rights_text,
         :hierarchy_scope => self.collection_id,
+        :collapse_collection_id => self.collection_id,
         :collection_id => self.collection_id,
         :collection_facet => "Northwest Digital Archives EAD Guides",
         :availability_facet => "Not online. Must visit contributing institution.",
@@ -215,7 +216,9 @@ class EADSolrMapper
           # make sure that the : separator occurs no more than twice in a row
           # "::" is the hierarchy separator...
           :format_code_t => item_format,
-          :hierarchy => [self.title, "Collection Inventory", label, llabel]
+          :hierarchy => [self.title, "Collection Inventory", label, llabel],
+          :format_facet => "Archival Document",
+          :collapse_collection_id => "#{id}-#{ii}"
         })
         
         image_data = c03.xpath('.//did/daogrp/daoloc').first
