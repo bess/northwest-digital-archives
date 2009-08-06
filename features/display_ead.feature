@@ -85,5 +85,12 @@ Feature: Display EAD files correctly
 		And I press "search"
 		And I follow "Archival Collection Guide"
 		Then I should get 1 results
+		
+	Scenario: Archival documents have the right title in the show view
+		Given I am on the document page for id wasmhi2008_3_1xml-20083145-5
+		Then I should see a title of "Seattle Historical Society members, including Morgan J. Carkeek, around bell tower in Carkeek Park"
+
+
+
 
 

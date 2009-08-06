@@ -21,7 +21,9 @@ module ApplicationHelper
   end
   
   def document_title
-    if @document[:hierarchy]
+    if @document[:format_facet].to_s=="Archival Document" and @document[:hierarchy]
+     @document[:title_t]
+    elsif @document[:hierarchy]
       @document[:hierarchy]
     elsif @document[:title_t]
       @document[:title_t]
