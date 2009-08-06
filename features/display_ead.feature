@@ -19,18 +19,18 @@ Feature: Display EAD files correctly
 	
 	Scenario: formatting for a guide
 		Given I am on the document page for id owsmss001xml-summary
-		Then I should see a title of "Guide to the Robert C. Notson papers"
-		And I should see a subtitle of "Summary Information"
+		Then I should see a title of "Guide to the Robert C. Notson papers::Summary Information"
 		And I should see "Biography/History"
 	
 	Scenario: correct capitalization for sections
 		Given I am on the document page for id owsmss007-biography_history
-		Then I should see a title of "Guide to the Freshmen Glee records"
-		And I should see a subtitle of "Historical note"
+		Then I should see a title of "Guide to the Freshmen Glee records::Historical note"
 	
 	Scenario: correct facets
 		Given I am on the homepage
-		When I follow "Montana Historical Society Archives"
+		When I fill in "q" with "Montana"
+		And I press "search"
+		And I follow "Montana Historical Society Archives"
 		Then I should see a facet category "Availability" with a link "Not online. Must visit contributing institution."
 
 	# KNOWN BUG: Searching with the ampersand in the query will break

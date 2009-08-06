@@ -7,6 +7,28 @@ module ApplicationHelper
     'NWDA Discovery Interface'
   end
   
+  def index_document_title(document)
+    if document[:hierarchy]
+      document[:hierarchy].to_s.split("::")[0]
+    elsif document[:title_t]
+        document[:title_t]
+    else
+      "Unknown Title"
+    end
+  end
+  
+  def document_title
+    if @document[:hierarchy]
+      @document[:hierarchy]
+    elsif @document[:title_t]
+      @document[:title_t]
+    elsif @document[:unittitle_t]
+      @document[:unittitle_t]
+    else
+      "Unknown Title"
+    end
+  end 
+  
   # given a doc, an action_name, and the name of a specific partial, 
   # this method attempts to render the named partial template
   # if this value is blank (nil/empty) the "default" is used

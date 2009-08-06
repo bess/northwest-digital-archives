@@ -39,7 +39,7 @@ describe "catalog/show.html.erb" do
   
   it "should display the title" do 
     render "catalog/show.html.erb" 
-    response.should contain(@document[:title_t]) 
+    response.should contain(@document[:hierarchy]) 
     # puts response.body    
   end 
   
