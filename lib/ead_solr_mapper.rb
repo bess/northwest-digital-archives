@@ -231,6 +231,7 @@ class EADSolrMapper
           base = "http://content-dev.lib.washington.edu/cgi-bin/getimage.exe"
           docs.last[:preview_display] = "#{base}?CISOROOT=#{path}&CISOPTR=#{num}&DMSCALE=25.00000"
           docs.last[:fullimage_display] = "#{base}?CISOROOT=#{path}&CISOPTR=#{num}&DMSCALE=100.00000"
+          docs.last[:availability_facet] = "Available online"
           #puts docs.last.inspect
         end
         
