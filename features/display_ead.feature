@@ -14,17 +14,17 @@ Feature: Display EAD files correctly
 	  When I fill in "q" with "'Robert C. Notson'"
 	  And I press "search"
 	  Then I should get 1 results
-	  And I should see a search result heading for "Guide to the Robert C. Notson papers"
+	  And I should see a search result heading for "Robert C. Notson papers"
 	  And I should see a search results value "Institution" of "Willamette University Archives and Special Collections"
 	
 	Scenario: formatting for a guide
 		Given I am on the document page for id owsmss001xml-summary
-		Then I should see a title of "Guide to the Robert C. Notson papers::Summary Information"
+		Then I should see a title of "Robert C. Notson papers::Summary Information"
 		And I should see "Biography/History"
 	
 	Scenario: correct capitalization for sections
 		Given I am on the document page for id owsmss007-biography_history
-		Then I should see a title of "Guide to the Freshmen Glee records::Historical note"
+		Then I should see a title of "Freshman Glee records::Historical note"
 	
 	Scenario: correct facets
 		Given I am on the homepage
