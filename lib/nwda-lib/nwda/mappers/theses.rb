@@ -24,6 +24,7 @@ class NWDA::Mappers::Theses
         self.getURI
 
         @doc[:collection_facet] = "Washington State University Theses"
+        @doc[:collapse_collection_id] = @doc[:id]
         @doc[:institution_facet] = "Washington State University"
         @doc[:availability_facet] = "Available online"
       

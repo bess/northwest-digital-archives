@@ -22,6 +22,7 @@ class NWDA::Mappers::Baseball
       self.getDescription
       # 
       @doc[:collection_facet] = "Oregon State Baseball"
+      @doc[:collapse_collection_id] = @doc[:id]
       @doc[:institution_facet] = "Oregon State University"
       @doc[:availability_facet] = "Available online"
       

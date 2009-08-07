@@ -32,6 +32,7 @@ class NWDA::Mappers::BestOf
       
       #self.storeRecord
       @doc[:collection_facet] = "University of Oregon Photograph Collection"
+      @doc[:collapse_collection_id] = @doc[:id]
       @doc[:institution_facet] = "University of Oregon"
       @doc[:availability_facet] = "Available online"
       @doc

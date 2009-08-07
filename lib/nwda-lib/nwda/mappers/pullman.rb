@@ -22,6 +22,7 @@ class NWDA::Mappers::Pullman
       self.getDescription
 
       @doc[:collection_facet] = "City of Pullman Collection"
+      @doc[:collapse_collection_id] = @doc[:id]
       @doc[:institution_facet] = "Washington State University"
       @doc[:availability_facet] = "Available online"
       
